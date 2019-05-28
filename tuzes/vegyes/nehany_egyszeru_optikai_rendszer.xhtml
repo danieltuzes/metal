@@ -1,0 +1,3653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" 
+               "http://www.w3.org/TR/MathML2/dtd/xhtml-math11-f.dtd" [
+  <!ENTITY mathml "http://www.w3.org/1998/Math/MathML">
+]>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hu">
+<head>
+<title>Analízis</title>
+
+<style type="text/css">
+@charset "utf-8";
+/* CSS Document */
+
+annotation {
+	display: none;
+}
+.bigger {
+	background-color: #FFF9D7;
+	border: 1px solid #999999;
+	padding: 1%;
+	margin: 4%;
+	line-height: 140%;
+}
+.big {
+	font-size: 105%;
+	font-weight: bold;
+}
+
+.date {
+	float: right;
+}
+math {
+	display:inline;
+	padding-right:0px;
+	margin-right:0px;
+}
+.underline {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: dashed;
+	border-right-style: dashed;
+	border-bottom-style: dashed;
+	border-left-style: dashed;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+}
+h1, h2 {
+	text-align: center;
+}
+.tetel {
+	color:#990000;
+	text-decoration: underline;
+	font-weight:bold;
+}
+.bizonyitas {
+	color:#990000;
+}
+.def {
+	text-decoration:underline;
+	font-weight:bold;
+}
+.pelda {
+	font-weight:bold;
+}
+.allitas {
+	color:#990000;
+	text-decoration: underline;
+}
+</style>
+</head>
+<body>
+Gömb: a következő mátrixok írják le: <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+       <mtd>
+        <mn>0</mn>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mo>&#x2212;</mo><mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           <mo>&#x2212;</mo><msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow><mo>&#x22C5;</mo><mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mn>2</mn><msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mn>0</mn>
+       </mtd>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow><mo>&#x22C5;</mo><mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+       <mtd>
+        <mn>0</mn>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mo>&#x2212;</mo><msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeWaaeWaa8aabaqbaeqabiGaaaqaa8qacaaIXaaapaqaa8qacaaIWaaapaqaa8qacqGHsisldaWcaaWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaak8qacqGHsislcaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaaGcbaWdbiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaaaaaGcbaWdbiaaigdaaaaacaGLOaGaayzkaaGaeyyXIC9aaeWaa8aabaqbaeqabiGaaaqaa8qacaaIXaaapaqaa8qadaWcaaWdaeaapeGaaGOmaiaadkfadaWgaaWcbaGaaGymaaqabaaak8aabaWdbiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaaaaaGcbaWdbiaaicdaa8aabaWdbiaaigdaaaaacaGLOaGaayzkaaGaeyyXIC9aaeWaa8aabaqbaeqabiGaaaqaa8qacaaIXaaapaqaa8qacaaIWaaapaqaa8qadaWcaaWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHsislcaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaGcbaWdbiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaaaaaGcbaWdbiaaigdaaaaacaGLOaGaayzkaaaaaa@7544@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+ a szorzás eredménye:
+<!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mn>2</mn><msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         <mo>&#x2212;</mo><mn>1</mn>
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mn>2</mn><msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mn>2</mn><msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mrow><mo>(</mo>
+            <mrow>
+             <msub>
+              <mi>n</mi>
+              <mn>1</mn>
+             </msub>
+             <mo>&#x2212;</mo><msub>
+              <mi>n</mi>
+              <mn>2</mn>
+             </msub>
+             
+            </mrow>
+           <mo>)</mo></mrow>
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mn>2</mn><msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         <mo>&#x2212;</mo><mn>1</mn>
+        </mrow>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeWaaeWaa8aabaqbaeqabiGaaaqaa8qadaWcaaWdaeaapeGaaGOmaiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaaakeaapeGaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaaaaGcpeGaeyOeI0IaaGymaaWdaeaapeWaaSaaa8aabaWdbiaaikdacaWGsbWdamaaBaaaleaapeGaaGymaaWdaeqaaaGcbaWdbiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaaaaaGcbaWdbmaalaaapaqaa8qacaaIYaGaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qadaqadaWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHsislcaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaGcpeGaayjkaiaawMcaaaWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaak8qacaWGsbWdamaaBaaaleaapeGaaGymaaWdaeqaaaaaaOqaa8qadaWcaaWdaeaapeGaaGOmaiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaaakeaapeGaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaaaaGcpeGaeyOeI0IaaGymaaaaaiaawIcacaGLPaaaaaa@7258@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+
+<hr />Egy félgömb alakú vastag lencse mátrixa: <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+       <mtd>
+        <mn>0</mn>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mo>&#x2212;</mo><mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           <mo>&#x2212;</mo><msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow><mo>&#x22C5;</mo><mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mn>0</mn>
+       </mtd>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mo>&#x2212;</mo><msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeWaaeWaa8aabaqbaeqabiGaaaqaa8qacaaIXaaapaqaa8qacaaIWaaapaqaa8qacqGHsisldaWcaaWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaak8qacqGHsislcaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaaGcbaWdbiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaaaaaGcbaWdbiaaigdaaaaacaGLOaGaayzkaaGaeyyXIC9aaeWaa8aabaqbaeqabiGaaaqaa8qacaaIXaaapaqaa8qadaWcaaWdaeaapeGaamOuamaaBaaaleaacaaIXaaabeaaaOWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaaaaaakeaapeGaaGimaaWdaeaapeGaaGymaaaaaiaawIcacaGLPaaacqGH9aqpdaqadaWdaeaafaqabeGacaaabaWdbiaaigdaa8aabaWdbmaalaaapaqaa8qacaWGsbWdamaaBaaaleaapeGaaGymaaWdaeqaaaGcbaWdbiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaaaaaGcbaWdbmaalaaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbiabgkHiTiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaaakeaapeGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaaaaaakeaapeWaaSaaa8aabaWdbiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaaakeaapeGaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaaaaaaaaGcpeGaayjkaiaawMcaaaaa@7A7C@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+.<br />
+Egy másik irányba fordítotté: <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mn>0</mn>
+       </mtd>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow><mo>&#x22C5;</mo><mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+       <mtd>
+        <mn>0</mn>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mo>&#x2212;</mo><msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mo>&#x2212;</mo><msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeWaaeWaa8aabaqbaeqabiGaaaqaa8qacaaIXaaapaqaa8qadaWcaaWdaeaapeGaamOuamaaBaaaleaacaaIXaaabeaaaOWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaaaaaakeaapeGaaGimaaWdaeaapeGaaGymaaaaaiaawIcacaGLPaaacqGHflY1daqadaWdaeaafaqabeGacaaabaWdbiaaigdaa8aabaWdbiaaicdaa8aabaWdbmaalaaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbiabgkHiTiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaaakeaapeGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaaaaaakeaapeGaaGymaaaaaiaawIcacaGLPaaacqGH9aqpdaqadaWdaeaafaqabeGacaaabaWdbmaalaaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaaGcbaWdbiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaaaaaGcbaWdbmaalaaapaqaa8qacaWGsbWdamaaBaaaleaapeGaaGymaaWdaeqaaaGcbaWdbiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaaaaaGcbaWdbmaalaaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbiabgkHiTiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaaakeaapeGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaaaaaakeaapeGaaGymaaaaaiaawIcacaGLPaaaaaa@7970@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->.<hr />Két egymás felé fordított lencséé: <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>3</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mn>0</mn>
+       </mtd>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow><mo>&#x22C5;</mo><mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+       <mtd>
+        <mn>0</mn>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mo>&#x2212;</mo><msub>
+            <mi>n</mi>
+            <mn>3</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow><mo>&#x22C5;</mo><mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+       <mtd>
+        <mn>0</mn>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mo>&#x2212;</mo><mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           <mo>&#x2212;</mo><msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow><mo>&#x22C5;</mo><mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mn>0</mn>
+       </mtd>
+       <mtd>
+        <mn>1</mn>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mrow><mo>(</mo>
+            <mrow>
+             <msub>
+              <mi>R</mi>
+              <mn>1</mn>
+             </msub>
+             <mo>+</mo><msub>
+              <mi>R</mi>
+              <mn>2</mn>
+             </msub>
+             
+            </mrow>
+           <mo>)</mo></mrow><mo>&#x2212;</mo><msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           <msub>
+            <mi>R</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>3</mn>
+           </msub>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mrow><mo>(</mo>
+            <mrow>
+             <msub>
+              <mi>R</mi>
+              <mn>1</mn>
+             </msub>
+             <mo>+</mo><msub>
+              <mi>R</mi>
+              <mn>2</mn>
+             </msub>
+             
+            </mrow>
+           <mo>)</mo></mrow>
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           <msub>
+            <mi>n</mi>
+            <mn>3</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mo>&#x2212;</mo><msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         <mo>+</mo><mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mo>&#x2212;</mo><msub>
+            <mi>n</mi>
+            <mn>3</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>R</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mrow><mo>(</mo>
+            <mrow>
+             <msub>
+              <mi>R</mi>
+              <mn>1</mn>
+             </msub>
+             <mo>+</mo><msub>
+              <mi>R</mi>
+              <mn>2</mn>
+             </msub>
+             
+            </mrow>
+           <mo>)</mo></mrow><mo>&#x2212;</mo><msub>
+            <mi>n</mi>
+            <mn>3</mn>
+           </msub>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           <msub>
+            <mi>R</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeWaaeWaa8aabaqbaeqabiGaaaqaa8qacaaIXaaapaqaa8qadaWcaaWdaeaapeGaamOuamaaBaaaleaacaaIYaaabeaaaOWdaeaapeGaamOBa8aadaWgaaWcbaGaaG4maaqabaaaaaGcbaWdbiaaicdaa8aabaWdbiaaigdaaaaacaGLOaGaayzkaaGaeyyXIC9aaeWaa8aabaqbaeqabiGaaaqaa8qacaaIXaaapaqaa8qacaaIWaaapaqaa8qadaWcaaWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHsislcaWGUbWdamaaBaaaleaacaaIZaaabeaaaOqaa8qacaWGsbWdamaaBaaaleaacaaIYaaabeaaaaaakeaapeGaaGymaaaaaiaawIcacaGLPaaacqGHflY1daqadaWdaeaafaqabeGacaaabaWdbiaaigdaa8aabaWdbiaaicdaa8aabaWdbiabgkHiTmaalaaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaOWdbiabgkHiTiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaaakeaapeGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaaaaaakeaapeGaaGymaaaaaiaawIcacaGLPaaacqGHflY1daqadaWdaeaafaqabeGacaaabaWdbiaaigdaa8aabaWdbmaalaaapaqaa8qacaWGsbWaaSbaaSqaaiaaigdaaeqaaaGcpaqaa8qacaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaaaaOqaa8qacaaIWaaapaqaa8qacaaIXaaaaaGaayjkaiaawMcaaiabg2da9maabmaapaqaauaabeqaciaaaeaapeWaaSaaa8aabaWdbiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeWaaeWaa8aabaWdbiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaey4kaSIaamOua8aadaWgaaWcbaWdbiaaikdaa8aabeaaaOWdbiaawIcacaGLPaaacqGHsislcaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaOWdbiaadkfapaWaaSbaaSqaa8qacaaIYaaapaqabaaakeaapeGaamOBa8aadaWgaaWcbaWdbiaaiodaa8aabeaak8qacaWGsbWdamaaBaaaleaapeGaaGymaaWdaeqaaaaaaOqaa8qadaWcaaWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qadaqadaWdaeaapeGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHRaWkcaWGsbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaGcpeGaayjkaiaawMcaaaWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaak8qacaWGUbWdamaaBaaaleaapeGaaG4maaWdaeqaaaaaaOqaa8qadaWcaaWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHsislcaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaGcbaWdbiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaaaaOWdbiabgUcaRmaalaaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbiabgkHiTiaad6gapaWaaSbaaSqaa8qacaaIZaaapaqabaaakeaapeGaamOua8aadaWgaaWcbaWdbiaaikdaa8aabeaaaaaakeaapeWaaSaaa8aabaWdbiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeWaaeWaa8aabaWdbiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaey4kaSIaamOua8aadaWgaaWcbaWdbiaaikdaa8aabeaaaOWdbiaawIcacaGLPaaacqGHsislcaWGUbWdamaaBaaaleaapeGaaG4maaWdaeqaaOWdbiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaaakeaapeGaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaak8qacaWGsbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaaaaaaak8qacaGLOaGaayzkaaaaaa@C2E8@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+Ha <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>=</mo><mn>1,</mn><mtext>&#x2003;</mtext><msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>=</mo><msub>
+    <mi>n</mi>
+    <mn>3</mn>
+   </msub>
+   <mo>=</mo><mi>n</mi><mo>,</mo><mtext>&#x2003;</mtext><msub>
+    <mi>R</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>=</mo><msub>
+    <mi>R</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>=</mo><mi>R</mi>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeGaamOBamaaBaaaleaacaaIXaaabeaakiabg2da9iaaigdacaGGSaGaaGzbVlaad6gadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWGUbWaaSbaaSqaaiaaiodaaeqaaOGaeyypa0JaamOBaiaacYcacaaMf8UaamOuamaaBaaaleaacaaIXaaabeaakiabg2da9iaadkfadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWGsbaaaa@64EE@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+: <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mn>2</mn>
+         <mi>n</mi>
+        </mfrac>
+        <mo>&#x2212;</mo><mn>1</mn>
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mn>2</mn><mi>R</mi>
+         </mrow>
+         <mrow>
+          <msup>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msup>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mn>2</mn><mo>&#x2212;</mo><mn>2</mn><mi>n</mi>
+         </mrow>
+         <mi>R</mi>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mn>2</mn>
+         <mi>n</mi>
+        </mfrac>
+        <mo>&#x2212;</mo><mn>1</mn>
+       </mrow>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOaeaaaaaaaaa8qabaWaaeWaa8aabaqbaeqabiGaaaqaa8qadaWcaaWdaeaapeGaaGOmaaWdaeaapeGaamOBaaaacqGHsislcaaIXaaapaqaa8qadaWcaaWdaeaapeGaaGOmaiaadkfaa8aabaWdbiaad6gapaWaaWbaaSqabeaapeGaaGOmaaaaaaaak8aabaWdbmaalaaapaqaa8qacaaIYaGaeyOeI0IaaGOmaiaad6gaa8aabaWdbiaadkfaaaaapaqaa8qadaWcaaWdaeaapeGaaGOmaaWdaeaapeGaamOBaaaacqGHsislcaaIXaaaaaGaayjkaiaawMcaaaaa@6150@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+.<br />
+Egy irányba fordítotté: <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+      <mtd>
+       <mn>0</mn>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mo>&#x2212;</mo><mfrac>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <mo>&#x2212;</mo><msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow><mo>&#x22C5;</mo><mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mn>0</mn>
+      </mtd>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow><mo>&#x22C5;</mo><mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+      <mtd>
+       <mn>0</mn>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mo>&#x2212;</mo><mfrac>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <mo>&#x2212;</mo><msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow><mo>&#x22C5;</mo><mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mn>0</mn>
+      </mtd>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mrow><mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        <mo>+</mo><mn>1</mn>
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          <mo>+</mo><msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <mrow><mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow>
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        <mo>+</mo><mfrac>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <mo>&#x2212;</mo><msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          <msubsup>
+           <mi>n</mi>
+           <mn>1</mn>
+           <mn>2</mn>
+          </msubsup>
+          <mo>+</mo><mrow><mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>3</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOaeaaaaaaaaa8qabaWaaeWaa8aabaqbaeqabiGaaaqaa8qacaaIXaaapaqaa8qacaaIWaaapaqaa8qacqGHsisldaWcaaWdaeaapeGaamOBa8aadaWgaaWcbaGaaG4maaqabaGcpeGaeyOeI0IaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaaaOqaa8qacaWGsbWdamaaBaaaleaacaaIYaaabeaaaaaakeaapeGaaGymaaaaaiaawIcacaGLPaaacqGHflY1daqadaWdaeaafaqabeGacaaabaWdbiaaigdaa8aabaWdbmaalaaapaqaa8qacaWGsbWaaSbaaSqaaiaaikdaaeqaaaGcpaqaa8qacaWGUbWdamaaBaaaleaacaaIZaaabeaaaaaakeaapeGaaGimaaWdaeaapeGaaGymaaaaaiaawIcacaGLPaaacqGHflY1daqadaWdaeaafaqabeGacaaabaWdbiaaigdaa8aabaWdbiaaicdaa8aabaWdbiabgkHiTmaalaaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaOWdbiabgkHiTiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaaakeaapeGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaaaaaakeaapeGaaGymaaaaaiaawIcacaGLPaaacqGHflY1daqadaWdaeaafaqabeGacaaabaWdbiaaigdaa8aabaWdbmaalaaapaqaa8qacaWGsbWaaSbaaSqaaiaaigdaaeqaaaGcpaqaa8qacaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaaaaOqaa8qacaaIWaaapaqaa8qacaaIXaaaaaGaayjkaiaawMcaaiabg2da9maabmaapaqaauaabeqaciaaaeaapeWaaSaaa8aabaWdbmaabmaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbiabgkHiTiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaaak8qacaGLOaGaayzkaaGaamOua8aadaWgaaWcbaWdbiaaikdaa8aabeaaaOqaa8qacaWGUbWdamaaBaaaleaapeGaaG4maaWdaeqaaOWdbiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaaaaOWdbiabgUcaRiaaigdaa8aabaWdbmaalaaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaG4maaWdaeqaaOWdbiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaey4kaSIaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacaWGsbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaGcbaWdbiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaGcpeGaamOBa8aadaWgaaWcbaWdbiaaiodaa8aabeaaaaaakeaapeWaaSaaa8aabaWdbiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeWaaeWaa8aabaWdbiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaeyOeI0IaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaaaOWdbiaawIcacaGLPaaaa8aabaWdbiaad6gapaWaaSbaaSqaa8qacaaIZaaapaqabaGcpeGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaaaaGcpeGaey4kaSYaaSaaa8aabaWdbiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaeyOeI0IaamOBa8aadaWgaaWcbaWdbiaaiodaa8aabeaaaOqaa8qacaWGsbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaaaaOqaa8qadaWcaaWdaeaapeGaamOua8aadaWgaaWcbaWdbiaaikdaa8aabeaak8qacaWGUbWdamaaDaaaleaapeGaaGymaaWdaeaapeGaaGOmaaaakiabgUcaRmaabmaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbiabgkHiTiaad6gapaWaaSbaaSqaa8qacaaIZaaapaqabaaak8qacaGLOaGaayzkaaGaamOBa8aadaWgaaWcbaWdbiaaiodaa8aabeaak8qacaWGsbWdamaaBaaaleaapeGaaGymaaWdaeqaaaGcbaWdbiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaGcpeGaamOBa8aadaWgaaWcbaWdbiaaiodaa8aabeaak8qacaWGsbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaaaaaaak8qacaGLOaGaayzkaaaaaa@CC2D@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+ha <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>=</mo><mn>1,</mn><mtext>&#x2003;</mtext><msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>=</mo><msub>
+    <mi>n</mi>
+    <mn>3</mn>
+   </msub>
+   <mo>=</mo><mi>n</mi><mo>,</mo><mtext>&#x2003;</mtext><msub>
+    <mi>R</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>=</mo><msub>
+    <mi>R</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>=</mo><mi>R</mi>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeGaamOBamaaBaaaleaacaaIXaaabeaakiabg2da9iaaigdacaGGSaGaaGzbVlaad6gadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWGUbWaaSbaaSqaaiaaiodaaeqaaOGaeyypa0JaamOBaiaacYcacaaMf8UaamOuamaaBaaaleaacaaIXaaabeaakiabg2da9iaadkfadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWGsbaaaa@64EE@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+: <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mn>1</mn>
+         <mi>n</mi>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mo stretchy='false'>(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy='false'>)</mo><mi>R</mi>
+         </mrow>
+         <mrow>
+          <msup>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msup>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mn>1</mn><mo>&#x2212;</mo><msup>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msup>
+          
+         </mrow>
+         <mrow>
+          <mi>n</mi><mi>R</mi>
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mo>&#x2212;</mo><mn>1</mn><mo>+</mo><mfrac>
+         <mn>1</mn>
+         <mi>n</mi>
+        </mfrac>
+        <mo>+</mo><mfrac>
+         <mn>1</mn>
+         <mrow>
+          <msup>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msup>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOaeaaaaaaaaa8qabaWaaeWaa8aabaqbaeqabiGaaaqaa8qadaWcaaWdaeaapeGaaGymaaWdaeaapeGaamOBaaaaa8aabaWdbmaalaaapaqaa8qacaGGOaGaamOBaiabgUcaRiaaigdacaGGPaGaamOuaaWdaeaapeGaamOBa8aadaahaaWcbeqaa8qacaaIYaaaaaaaaOWdaeaapeWaaSaaa8aabaWdbiaaigdacqGHsislcaWGUbWdamaaCaaaleqabaWdbiaaikdaaaaak8aabaWdbiaad6gacaWGsbaaaaWdaeaapeGaeyOeI0IaaGymaiabgUcaRmaalaaapaqaa8qacaaIXaaapaqaa8qacaWGUbaaaiabgUcaRmaalaaapaqaa8qacaaIXaaapaqaa8qacaWGUbWdamaaCaaaleqabaWdbiaaikdaaaaaaaaaaOGaayjkaiaawMcaaaaa@68ED@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+. Másik irányba fordítottaké: <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mn>0</mn>
+      </mtd>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow><mo>&#x22C5;</mo><mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+      <mtd>
+       <mn>0</mn>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <mo>&#x2212;</mo><msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow><mo>&#x22C5;</mo><mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mn>0</mn>
+      </mtd>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow><mo>&#x22C5;</mo><mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+      <mtd>
+       <mn>0</mn>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <mo>&#x2212;</mo><msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mn>1</mn>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          <msubsup>
+           <mi>n</mi>
+           <mn>1</mn>
+           <mn>2</mn>
+          </msubsup>
+          <mo>+</mo><mrow><mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          <mo>+</mo><msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <mo>&#x2212;</mo><msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        <mo>+</mo><mfrac>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <mrow><mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>3</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow>
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mrow><mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>3</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        <mo>+</mo><mn>1</mn>
+       </mrow>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOaeaaaaaaaaa8qabaWaaeWaa8aabaqbaeqabiGaaaqaa8qacaaIXaaapaqaa8qadaWcaaWdaeaapeGaamOuamaaBaaaleaacaaIYaaabeaaaOWdaeaapeGaamOBa8aadaWgaaWcbaGaaG4maaqabaaaaaGcbaWdbiaaicdaa8aabaWdbiaaigdaaaaacaGLOaGaayzkaaGaeyyXIC9aaeWaa8aabaqbaeqabiGaaaqaa8qacaaIXaaapaqaa8qacaaIWaaapaqaa8qadaWcaaWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHsislcaWGUbWdamaaBaaaleaacaaIZaaabeaaaOqaa8qacaWGsbWdamaaBaaaleaacaaIYaaabeaaaaaakeaapeGaaGymaaaaaiaawIcacaGLPaaacqGHflY1daqadaWdaeaafaqabeGacaaabaWdbiaaigdaa8aabaWdbmaalaaapaqaa8qacaWGsbWaaSbaaSqaaiaaigdaaeqaaaGcpaqaa8qacaWGUbWdamaaBaaaleaacaaIYaaabeaaaaaakeaapeGaaGimaaWdaeaapeGaaGymaaaaaiaawIcacaGLPaaacqGHflY1daqadaWdaeaafaqabeGacaaabaWdbiaaigdaa8aabaWdbiaaicdaa8aabaWdbmaalaaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbiabgkHiTiaad6gapaWaaSbaaSqaaiaaikdaaeqaaaGcbaWdbiaadkfapaWaaSbaaSqaaiaaigdaaeqaaaaaaOqaa8qacaaIXaaaaaGaayjkaiaawMcaaiabg2da9maabmaapaqaauaabeqaciaaaeaapeWaaSaaa8aabaWdbiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaamOBa8aadaqhaaWcbaWdbiaaigdaa8aabaWdbiaaikdaaaGccqGHRaWkdaqadaWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHsislcaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaGcpeGaayjkaiaawMcaaiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaGcpeGaamOua8aadaWgaaWcbaWdbiaaikdaa8aabeaaaOqaa8qacaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaOWdbiaad6gapaWaaSbaaSqaa8qacaaIZaaapaqabaGcpeGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaaaaaakeaapeWaaSaaa8aabaWdbiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHRaWkcaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaOWdbiaadkfapaWaaSbaaSqaa8qacaaIYaaapaqabaaakeaapeGaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaak8qacaWGUbWdamaaBaaaleaapeGaaG4maaWdaeqaaaaaaOqaa8qadaWcaaWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHsislcaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaGcbaWdbiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaaaaOWdbiabgUcaRmaalaaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbmaabmaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbiabgkHiTiaad6gapaWaaSbaaSqaa8qacaaIZaaapaqabaaak8qacaGLOaGaayzkaaaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaOWdbiaadkfapaWaaSbaaSqaa8qacaaIYaaapaqabaaaaaGcbaWdbmaalaaapaqaa8qadaqadaWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHsislcaWGUbWdamaaBaaaleaapeGaaG4maaWdaeqaaaGcpeGaayjkaiaawMcaaiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaaakeaapeGaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaak8qacaWGsbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaaak8qacqGHRaWkcaaIXaaaaaGaayjkaiaawMcaaaaa@C9D2@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+, ha <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>=</mo><mn>1,</mn><mtext>&#x2003;</mtext><msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>=</mo><msub>
+    <mi>n</mi>
+    <mn>3</mn>
+   </msub>
+   <mo>=</mo><mi>n</mi><mo>,</mo><mtext>&#x2003;</mtext><msub>
+    <mi>R</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>=</mo><msub>
+    <mi>R</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>=</mo><mi>R</mi>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeGaamOBamaaBaaaleaacaaIXaaabeaakiabg2da9iaaigdacaGGSaGaaGzbVlaad6gadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWGUbWaaSbaaSqaaiaaiodaaeqaaOGaeyypa0JaamOBaiaacYcacaaMf8UaamOuamaaBaaaleaacaaIXaaabeaakiabg2da9iaadkfadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWGsbaaaa@64EE@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+:<!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mo>&#x2212;</mo><mn>1</mn><mo>+</mo><mfrac>
+         <mn>1</mn>
+         <mi>n</mi>
+        </mfrac>
+        <mo>+</mo><mfrac>
+         <mn>1</mn>
+         <mrow>
+          <msup>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msup>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mo stretchy='false'>(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy='false'>)</mo><mi>R</mi>
+         </mrow>
+         <mrow>
+          <msup>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msup>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mn>1</mn><mo>&#x2212;</mo><msup>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msup>
+          
+         </mrow>
+         <mrow>
+          <mi>n</mi><mi>R</mi>
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mn>1</mn>
+         <mi>n</mi>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOaeaaaaaaaaa8qabaWaaeWaa8aabaqbaeqabiGaaaqaa8qacqGHsislcaaIXaGaey4kaSYaaSaaa8aabaWdbiaaigdaa8aabaWdbiaad6gaaaGaey4kaSYaaSaaa8aabaWdbiaaigdaa8aabaWdbiaad6gapaWaaWbaaSqabeaapeGaaGOmaaaaaaaak8aabaWdbmaalaaapaqaa8qacaGGOaGaamOBaiabgUcaRiaaigdacaGGPaGaamOuaaWdaeaapeGaamOBa8aadaahaaWcbeqaa8qacaaIYaaaaaaaaOWdaeaapeWaaSaaa8aabaWdbiaaigdacqGHsislcaWGUbWdamaaCaaaleqabaWdbiaaikdaaaaak8aabaWdbiaad6gacaWGsbaaaaWdaeaapeWaaSaaa8aabaWdbiaaigdaa8aabaWdbiaad6gaaaaaaaGaayjkaiaawMcaaaaa@68ED@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+<hr />Gömb és félgömb:  <math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mrow><mo>(</mo>
+           <mrow>
+            <mn>2</mn><msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          <mo>+</mo><mn>2</mn><msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <mrow><mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mn>2</mn><msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          <mo>+</mo><mrow><mo>(</mo>
+           <mrow>
+            <mn>2</mn><msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mfrac>
+           <mrow>
+            <mn>2</mn><mrow><mo>(</mo>
+             <mrow>
+              <msub>
+               <mi>n</mi>
+               <mn>1</mn>
+              </msub>
+              <mo>&#x2212;</mo><msub>
+               <mi>n</mi>
+               <mn>2</mn>
+              </msub>
+              
+             </mrow>
+            <mo>)</mo></mrow><msubsup>
+             <mi>n</mi>
+             <mn>1</mn>
+             <mn>2</mn>
+            </msubsup>
+            
+           </mrow>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>3</mn>
+            </msub>
+            <msub>
+             <mi>R</mi>
+             <mn>1</mn>
+            </msub>
+            
+           </mrow>
+          </mfrac>
+          <mo>+</mo><mfrac>
+           <mrow>
+            <mrow><mo>(</mo>
+             <mrow>
+              <mn>2</mn><msub>
+               <mi>n</mi>
+               <mn>1</mn>
+              </msub>
+              <mo>&#x2212;</mo><msub>
+               <mi>n</mi>
+               <mn>2</mn>
+              </msub>
+              
+             </mrow>
+            <mo>)</mo></mrow><mrow><mo>(</mo>
+             <mrow>
+              <msub>
+               <mi>n</mi>
+               <mn>1</mn>
+              </msub>
+              <mo>&#x2212;</mo><msub>
+               <mi>n</mi>
+               <mn>3</mn>
+              </msub>
+              
+             </mrow>
+            <mo>)</mo></mrow>
+           </mrow>
+           <mrow>
+            <msub>
+             <mi>R</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          </mfrac>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mn>2</mn><mrow><mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>3</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          <mo>+</mo><msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <mrow><mo>(</mo>
+           <mrow>
+            <mn>2</mn><msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow>
+ <annotation encoding='MathType-MTEF'>
+ </annotation>
+ </semantics>
+</math>
+<br />
+ha <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>=</mo><mn>1,</mn><mtext>&#x2003;</mtext><msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>=</mo><msub>
+    <mi>n</mi>
+    <mn>3</mn>
+   </msub>
+   <mo>=</mo><mi>n</mi><mo>,</mo><mtext>&#x2003;</mtext><msub>
+    <mi>R</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>=</mo><msub>
+    <mi>R</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>=</mo><mi>R</mi>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeGaamOBamaaBaaaleaacaaIXaaabeaakiabg2da9iaaigdacaGGSaGaaGzbVlaad6gadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWGUbWaaSbaaSqaaiaaiodaaeqaaOGaeyypa0JaamOBaiaacYcacaaMf8UaamOuamaaBaaaleaacaaIXaaabeaakiabg2da9iaadkfadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWGsbaaaa@64EE@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+:<!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mn>2</mn>
+          <mrow>
+           <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msup>
+           
+          </mrow>
+         </mfrac>
+         <mo>&#x2212;</mo><mn>1</mn>
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mo stretchy='false'>(</mo><mi>n</mi><mo>+</mo><mn>2</mn><mo stretchy='false'>)</mo><mi>R</mi>
+          </mrow>
+          <mrow>
+           <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msup>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>3</mn><mo stretchy='false'>)</mo><msup>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msup>
+           <mo>+</mo><mn>2</mn>
+          </mrow>
+          <mrow>
+           <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msup>
+           <mi>R</mi>
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mi>n</mi><mo>+</mo><mn>2</mn>
+          </mrow>
+          <mrow>
+           <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msup>
+           
+          </mrow>
+         </mfrac>
+         <mo>&#x2212;</mo><mn>2</mn>
+        </mrow>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeWaaeWaa8aabaqbaeqabiGaaaqaa8qadaWcaaWdaeaapeGaaGOmaaWdaeaapeGaamOBa8aadaahaaWcbeqaa8qacaaIYaaaaaaakiabgkHiTiaaigdaa8aabaWdbmaalaaapaqaa8qacaGGOaGaamOBaiabgUcaRiaaikdacaGGPaGaamOuaaWdaeaapeGaamOBa8aadaahaaWcbeqaa8qacaaIYaaaaaaaaOWdaeaapeWaaSaaa8aabaWdbiaacIcacaWGUbGaeyOeI0IaaG4maiaacMcacaWGUbWdamaaCaaaleqabaWdbiaaikdaaaGccqGHRaWkcaaIYaaapaqaa8qacaWGUbWdamaaCaaaleqabaWdbiaaikdaaaGccaWGsbaaaaWdaeaapeWaaSaaa8aabaWdbiaad6gacqGHRaWkcaaIYaaapaqaa8qacaWGUbWdamaaCaaaleqabaWdbiaaikdaaaaaaOGaeyOeI0IaaGOmaaaaaiaawIcacaGLPaaaaaa@6EBE@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+<br />
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mrow><mo>(</mo>
+            <mrow>
+             <mn>2</mn><msub>
+              <mi>n</mi>
+              <mn>1</mn>
+             </msub>
+             <mrow><mo>(</mo>
+              <mrow>
+               <msub>
+                <mi>R</mi>
+                <mn>1</mn>
+               </msub>
+               <mo>+</mo><msub>
+                <mi>R</mi>
+                <mn>2</mn>
+               </msub>
+               
+              </mrow>
+             <mo>)</mo></mrow><mo>&#x2212;</mo><msub>
+              <mi>n</mi>
+              <mn>2</mn>
+             </msub>
+             <mrow><mo>(</mo>
+              <mrow>
+               <msub>
+                <mi>R</mi>
+                <mn>1</mn>
+               </msub>
+               <mo>+</mo><mn>2</mn><msub>
+                <mi>R</mi>
+                <mn>2</mn>
+               </msub>
+               
+              </mrow>
+             <mo>)</mo></mrow>
+            </mrow>
+           <mo>)</mo></mrow>
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           <msub>
+            <mi>n</mi>
+            <mn>3</mn>
+           </msub>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mn>2</mn><msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mrow><mo>(</mo>
+            <mrow>
+             <msub>
+              <mi>R</mi>
+              <mn>1</mn>
+             </msub>
+             <mo>+</mo><msub>
+              <mi>R</mi>
+              <mn>2</mn>
+             </msub>
+             
+            </mrow>
+           <mo>)</mo></mrow><mo>&#x2212;</mo><msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           <msub>
+            <mi>R</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           <msub>
+            <mi>n</mi>
+            <mn>3</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mrow><mo>(</mo>
+            <mrow>
+             <mn>2</mn><msub>
+              <mi>n</mi>
+              <mn>1</mn>
+             </msub>
+             <mo>&#x2212;</mo><msub>
+              <mi>n</mi>
+              <mn>2</mn>
+             </msub>
+             
+            </mrow>
+           <mo>)</mo></mrow><mrow><mo>(</mo>
+            <mrow>
+             <msub>
+              <mi>n</mi>
+              <mn>1</mn>
+             </msub>
+             <mo>&#x2212;</mo><msub>
+              <mi>n</mi>
+              <mn>3</mn>
+             </msub>
+             
+            </mrow>
+           <mo>)</mo></mrow><msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           <mo>+</mo><mn>2</mn><msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mrow><mo>(</mo>
+            <mrow>
+             <msub>
+              <mi>n</mi>
+              <mn>1</mn>
+             </msub>
+             <mo>&#x2212;</mo><msub>
+              <mi>n</mi>
+              <mn>2</mn>
+             </msub>
+             
+            </mrow>
+           <mo>)</mo></mrow><msub>
+            <mi>R</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           <msub>
+            <mi>R</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mo>&#x2212;</mo><mn>2</mn><msub>
+            <mi>n</mi>
+            <mn>3</mn>
+           </msub>
+           <msub>
+            <mi>R</mi>
+            <mn>1</mn>
+           </msub>
+           <mo>&#x2212;</mo><msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           <msub>
+            <mi>R</mi>
+            <mn>2</mn>
+           </msub>
+           <mo>+</mo><mn>2</mn><msub>
+            <mi>n</mi>
+            <mn>1</mn>
+           </msub>
+           <mrow><mo>(</mo>
+            <mrow>
+             <msub>
+              <mi>R</mi>
+              <mn>1</mn>
+             </msub>
+             <mo>+</mo><msub>
+              <mi>R</mi>
+              <mn>2</mn>
+             </msub>
+             
+            </mrow>
+           <mo>)</mo></mrow>
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msub>
+           <msub>
+            <mi>R</mi>
+            <mn>2</mn>
+           </msub>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ </annotation>
+ </semantics>
+</math> ha <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>=</mo><mn>1,</mn><mtext>&#x2003;</mtext><msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>=</mo><msub>
+    <mi>n</mi>
+    <mn>3</mn>
+   </msub>
+   <mo>=</mo><mi>n</mi><mo>,</mo><mtext>&#x2003;</mtext><msub>
+    <mi>R</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>=</mo><msub>
+    <mi>R</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>=</mo><mi>R</mi>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeGaamOBamaaBaaaleaacaaIXaaabeaakiabg2da9iaaigdacaGGSaGaaGzbVlaad6gadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWGUbWaaSbaaSqaaiaaiodaaeqaaOGaeyypa0JaamOBaiaacYcacaaMf8UaamOuamaaBaaaleaacaaIXaaabeaakiabg2da9iaadkfadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWGsbaaaa@64EE@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+: <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mn>4</mn>
+          <mi>n</mi>
+         </mfrac>
+         <mo>&#x2212;</mo><mn>3</mn>
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mo>&#x2212;</mo><mfrac>
+          <mrow>
+           <mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>4</mn><mo stretchy='false'>)</mo><mi>R</mi>
+          </mrow>
+          <mrow>
+           <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msup>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>5</mn><mo stretchy='false'>)</mo><mi>n</mi><mo>+</mo><mn>4</mn>
+          </mrow>
+          <mrow>
+           <mi>n</mi><mi>R</mi>
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mn>4</mn><mo>&#x2212;</mo><mn>3</mn><mi>n</mi>
+          </mrow>
+          <mrow>
+           <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msup>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeWaaeWaa8aabaqbaeqabiGaaaqaa8qadaWcaaWdaeaapeGaaGinaaWdaeaapeGaamOBaaaacqGHsislcaaIZaaapaqaa8qacqGHsisldaWcaaWdaeaapeGaaiikaiaad6gacqGHsislcaaI0aGaaiykaiaadkfaa8aabaWdbiaad6gapaWaaWbaaSqabeaapeGaaGOmaaaaaaaak8aabaWdbmaalaaapaqaa8qacaGGOaGaamOBaiabgkHiTiaaiwdacaGGPaGaamOBaiabgUcaRiaaisdaa8aabaWdbiaad6gacaWGsbaaaaWdaeaapeWaaSaaa8aabaWdbiaaisdacqGHsislcaaIZaGaamOBaaWdaeaapeGaamOBa8aadaahaaWcbeqaa8qacaaIYaaaaaaaaaaakiaawIcacaGLPaaaaaa@6BAB@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+.<br />
+<!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mo>&#x2212;</mo><mn>2</mn><msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          <mo>&#x2212;</mo><msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          <mo>+</mo><mn>2</mn><msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <mrow><mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>R</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>+</mo><msub>
+             <mi>R</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow>
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mn>2</mn><msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <mrow><mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>R</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>+</mo><msub>
+             <mi>R</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><mo>&#x2212;</mo><msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mrow><mo>(</mo>
+           <mrow>
+            <mn>2</mn><msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><mrow><mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>3</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          <mo>+</mo><mn>2</mn><msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <mrow><mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <mrow><mo>(</mo>
+           <mrow>
+            <mn>2</mn><msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mrow><mo>(</mo>
+             <mrow>
+              <msub>
+               <mi>R</mi>
+               <mn>1</mn>
+              </msub>
+              <mo>+</mo><msub>
+               <mi>R</mi>
+               <mn>2</mn>
+              </msub>
+              
+             </mrow>
+            <mo>)</mo></mrow><mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>2</mn>
+            </msub>
+            <mrow><mo>(</mo>
+             <mrow>
+              <msub>
+               <mi>R</mi>
+               <mn>1</mn>
+              </msub>
+              <mo>+</mo><mn>2</mn><msub>
+               <mi>R</mi>
+               <mn>2</mn>
+              </msub>
+              
+             </mrow>
+            <mo>)</mo></mrow>
+           </mrow>
+          <mo>)</mo></mrow>
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOaeaaaaaaaaa8qabaWaaeWaa8aabaqbaeqabiGaaaqaa8qadaWcaaWdaeaapeGaeyOeI0IaaGOmaiaad6gapaWaaSbaaSqaa8qacaaIZaaapaqabaGcpeGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHsislcaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaOWdbiaadkfapaWaaSbaaSqaa8qacaaIYaaapaqabaGcpeGaey4kaSIaaGOmaiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeWaaeWaa8aabaWdbiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaey4kaSIaamOua8aadaWgaaWcbaWdbiaaikdaa8aabeaaaOWdbiaawIcacaGLPaaaa8aabaWdbiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaGcpeGaamOua8aadaWgaaWcbaWdbiaaikdaa8aabeaaaaaakeaapeWaaSaaa8aabaWdbiaaikdacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbmaabmaapaqaa8qacaWGsbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbiabgUcaRiaadkfapaWaaSbaaSqaa8qacaaIYaaapaqabaaak8qacaGLOaGaayzkaaGaeyOeI0IaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaak8qacaWGsbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaGcbaWdbiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaGcpeGaamOBa8aadaWgaaWcbaWdbiaaiodaa8aabeaaaaaakeaapeWaaSaaa8aabaWdbmaabmaapaqaa8qacaaIYaGaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHsislcaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaGcpeGaayjkaiaawMcaamaabmaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbiabgkHiTiaad6gapaWaaSbaaSqaa8qacaaIZaaapaqabaaak8qacaGLOaGaayzkaaGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHRaWkcaaIYaGaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qadaqadaWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHsislcaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaGcpeGaayjkaiaawMcaaiaadkfapaWaaSbaaSqaa8qacaaIYaaapaqabaaakeaapeGaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaak8qacaWGsbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbiaadkfapaWaaSbaaSqaa8qacaaIYaaapaqabaaaaaGcbaWdbmaalaaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbmaabmaapaqaa8qacaaIYaGaamOBa8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qadaqadaWdaeaapeGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHRaWkcaWGsbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaGcpeGaayjkaiaawMcaaiabgkHiTiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaGcpeWaaeWaa8aabaWdbiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaey4kaSIaaGOmaiaadkfapaWaaSbaaSqaa8qacaaIYaaapaqabaaak8qacaGLOaGaayzkaaaacaGLOaGaayzkaaaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaOWdbiaad6gapaWaaSbaaSqaa8qacaaIZaaapaqabaGcpeGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaaaaaaaaGcpeGaayjkaiaawMcaaaaa@BFB5@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->ha <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>=</mo><mn>1,</mn><mtext>&#x2003;</mtext><msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>=</mo><msub>
+    <mi>n</mi>
+    <mn>3</mn>
+   </msub>
+   <mo>=</mo><mi>n</mi><mo>,</mo><mtext>&#x2003;</mtext><msub>
+    <mi>R</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>=</mo><msub>
+    <mi>R</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>=</mo><mi>R</mi>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeGaamOBamaaBaaaleaacaaIXaaabeaakiabg2da9iaaigdacaGGSaGaaGzbVlaad6gadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWGUbWaaSbaaSqaaiaaiodaaeqaaOGaeyypa0JaamOBaiaacYcacaaMf8UaamOuamaaBaaaleaacaaIXaaabeaakiabg2da9iaadkfadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWGsbaaaa@64EE@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+: <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mn>4</mn><mo>&#x2212;</mo><mn>3</mn><mi>n</mi>
+          </mrow>
+          <mrow>
+           <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msup>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mo>&#x2212;</mo><mfrac>
+          <mrow>
+           <mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>4</mn><mo stretchy='false'>)</mo><mi>R</mi>
+          </mrow>
+          <mrow>
+           <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msup>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>5</mn><mo stretchy='false'>)</mo><mi>n</mi><mo>+</mo><mn>4</mn>
+          </mrow>
+          <mrow>
+           <mi>n</mi><mi>R</mi>
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mn>4</mn>
+          <mi>n</mi>
+         </mfrac>
+         <mo>&#x2212;</mo><mn>3</mn>
+        </mrow>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeWaaeWaa8aabaqbaeqabiGaaaqaa8qadaWcaaWdaeaapeGaaGinaiabgkHiTiaaiodacaWGUbaapaqaa8qacaWGUbWdamaaCaaaleqabaWdbiaaikdaaaaaaaGcpaqaa8qacqGHsisldaWcaaWdaeaapeGaaiikaiaad6gacqGHsislcaaI0aGaaiykaiaadkfaa8aabaWdbiaad6gapaWaaWbaaSqabeaapeGaaGOmaaaaaaaak8aabaWdbmaalaaapaqaa8qacaGGOaGaamOBaiabgkHiTiaaiwdacaGGPaGaamOBaiabgUcaRiaaisdaa8aabaWdbiaad6gacaWGsbaaaaWdaeaapeWaaSaaa8aabaWdbiaaisdaa8aabaWdbiaad6gaaaGaeyOeI0IaaG4maaaaaiaawIcacaGLPaaaaaa@6BAB@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+.<br />
+<!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow><mo>(</mo>
+   <mrow>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mfrac>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mrow><mo>(</mo>
+             <mrow>
+              <mn>2</mn><msub>
+               <mi>n</mi>
+               <mn>1</mn>
+              </msub>
+              <mo>&#x2212;</mo><msub>
+               <mi>n</mi>
+               <mn>2</mn>
+              </msub>
+              
+             </mrow>
+            <mo>)</mo></mrow>
+           </mrow>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>3</mn>
+            </msub>
+            
+           </mrow>
+          </mfrac>
+          <mo>+</mo><mfrac>
+           <mrow>
+            <mn>2</mn><mrow><mo>(</mo>
+             <mrow>
+              <msub>
+               <mi>n</mi>
+               <mn>1</mn>
+              </msub>
+              <mo>&#x2212;</mo><msub>
+               <mi>n</mi>
+               <mn>3</mn>
+              </msub>
+              
+             </mrow>
+            <mo>)</mo></mrow><msub>
+             <mi>R</mi>
+             <mn>1</mn>
+            </msub>
+            
+           </mrow>
+           <mrow>
+            <msub>
+             <mi>R</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          </mfrac>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mn>2</mn><msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          <mo>+</mo><mrow><mo>(</mo>
+           <mrow>
+            <mn>2</mn><msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mfrac>
+           <mrow>
+            <mn>2</mn><mrow><mo>(</mo>
+             <mrow>
+              <msub>
+               <mi>n</mi>
+               <mn>1</mn>
+              </msub>
+              <mo>&#x2212;</mo><msub>
+               <mi>n</mi>
+               <mn>2</mn>
+              </msub>
+              
+             </mrow>
+            <mo>)</mo></mrow><msubsup>
+             <mi>n</mi>
+             <mn>1</mn>
+             <mn>2</mn>
+            </msubsup>
+            
+           </mrow>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>3</mn>
+            </msub>
+            <msub>
+             <mi>R</mi>
+             <mn>1</mn>
+            </msub>
+            
+           </mrow>
+          </mfrac>
+          <mo>+</mo><mfrac>
+           <mrow>
+            <mrow><mo>(</mo>
+             <mrow>
+              <mn>2</mn><msub>
+               <mi>n</mi>
+               <mn>1</mn>
+              </msub>
+              <mo>&#x2212;</mo><msub>
+               <mi>n</mi>
+               <mn>2</mn>
+              </msub>
+              
+             </mrow>
+            <mo>)</mo></mrow><mrow><mo>(</mo>
+             <mrow>
+              <msub>
+               <mi>n</mi>
+               <mn>1</mn>
+              </msub>
+              <mo>&#x2212;</mo><msub>
+               <mi>n</mi>
+               <mn>3</mn>
+              </msub>
+              
+             </mrow>
+            <mo>)</mo></mrow>
+           </mrow>
+           <mrow>
+            <msub>
+             <mi>R</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          </mfrac>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mrow><mo>(</mo>
+           <mrow>
+            <mn>2</mn><msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          <mo>+</mo><mn>2</mn><msub>
+           <mi>n</mi>
+           <mn>1</mn>
+          </msub>
+          <mrow><mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>n</mi>
+             <mn>1</mn>
+            </msub>
+            <mo>&#x2212;</mo><msub>
+             <mi>n</mi>
+             <mn>2</mn>
+            </msub>
+            
+           </mrow>
+          <mo>)</mo></mrow><msub>
+           <mi>R</mi>
+           <mn>2</mn>
+          </msub>
+          
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>n</mi>
+           <mn>2</mn>
+          </msub>
+          <msub>
+           <mi>n</mi>
+           <mn>3</mn>
+          </msub>
+          <msub>
+           <mi>R</mi>
+           <mn>1</mn>
+          </msub>
+          
+         </mrow>
+        </mfrac>
+        
+       </mrow>
+      </mtd>
+     </mtr>
+     
+    </mtable>
+   </mrow>
+  <mo>)</mo></mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOaeaaaaaaaaa8qabaWaaeWaa8aabaqbaeqabiGaaaqaa8qadaWcaaWdaeaapeWaaSaaa8aabaWdbiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeWaaeWaa8aabaWdbiaaikdacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbiabgkHiTiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaaak8qacaGLOaGaayzkaaaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaG4maaWdaeqaaaaak8qacqGHRaWkdaWcaaWdaeaapeGaaGOmamaabmaapaqaa8qacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbiabgkHiTiaad6gapaWaaSbaaSqaa8qacaaIZaaapaqabaaak8qacaGLOaGaayzkaaGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaaaOqaa8qacaWGsbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaaaaOqaa8qacaWGUbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaaaaOqaa8qadaWcaaWdaeaapeGaaGOmaiaad6gapaWaaSbaaSqaa8qacaaIZaaapaqabaGcpeGaamOua8aadaWgaaWcbaWdbiaaigdaa8aabeaak8qacqGHRaWkdaqadaWdaeaapeGaaGOmaiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaeyOeI0IaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaaaOWdbiaawIcacaGLPaaacaWGsbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaGcbaWdbiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaGcpeGaamOBa8aadaWgaaWcbaWdbiaaiodaa8aabeaaaaaakeaapeWaaSaaa8aabaWdbmaalaaapaqaa8qacaaIYaWaaeWaa8aabaWdbiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaeyOeI0IaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaaaOWdbiaawIcacaGLPaaacaWGUbWdamaaDaaaleaapeGaaGymaaWdaeaapeGaaGOmaaaaaOWdaeaapeGaamOBa8aadaWgaaWcbaWdbiaaiodaa8aabeaak8qacaWGsbWdamaaBaaaleaapeGaaGymaaWdaeqaaaaak8qacqGHRaWkdaWcaaWdaeaapeWaaeWaa8aabaWdbiaaikdacaWGUbWdamaaBaaaleaapeGaaGymaaWdaeqaaOWdbiabgkHiTiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaaak8qacaGLOaGaayzkaaWaaeWaa8aabaWdbiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaeyOeI0IaamOBa8aadaWgaaWcbaWdbiaaiodaa8aabeaaaOWdbiaawIcacaGLPaaaa8aabaWdbiaadkfapaWaaSbaaSqaa8qacaaIYaaapaqabaaaaaGcbaWdbiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaaaaaGcbaWdbmaalaaapaqaa8qadaqadaWdaeaapeGaaGOmaiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaeyOeI0IaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaaaOWdbiaawIcacaGLPaaacaWGUbWdamaaBaaaleaapeGaaG4maaWdaeqaaOWdbiaadkfapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaey4kaSIaaGOmaiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeWaaeWaa8aabaWdbiaad6gapaWaaSbaaSqaa8qacaaIXaaapaqabaGcpeGaeyOeI0IaamOBa8aadaWgaaWcbaWdbiaaikdaa8aabeaaaOWdbiaawIcacaGLPaaacaWGsbWdamaaBaaaleaapeGaaGOmaaWdaeqaaaGcbaWdbiaad6gapaWaaSbaaSqaa8qacaaIYaaapaqabaGcpeGaamOBa8aadaWgaaWcbaWdbiaaiodaa8aabeaak8qacaWGsbWdamaaBaaaleaapeGaaGymaaWdaeqaaaaaaaaak8qacaGLOaGaayzkaaaaaa@C216@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->, ha <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>=</mo><mn>1,</mn><mtext>&#x2003;</mtext><msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>=</mo><msub>
+    <mi>n</mi>
+    <mn>3</mn>
+   </msub>
+   <mo>=</mo><mi>n</mi><mo>,</mo><mtext>&#x2003;</mtext><msub>
+    <mi>R</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>=</mo><msub>
+    <mi>R</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>=</mo><mi>R</mi>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeGaamOBamaaBaaaleaacaaIXaaabeaakiabg2da9iaaigdacaGGSaGaaGzbVlaad6gadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWGUbWaaSbaaSqaaiaaiodaaeqaaOGaeyypa0JaamOBaiaacYcacaaMf8UaamOuamaaBaaaleaacaaIXaaabeaakiabg2da9iaadkfadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWGsbaaaa@64EE@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+: <!-- MathType@Translator@5@5@MathML2 (namespace attr).tdl@MathML 2.0 (namespace attr)@ -->
+<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+ <semantics>
+  <mrow>
+   <mrow><mo>(</mo>
+    <mrow>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mi>n</mi><mo>+</mo><mn>2</mn>
+          </mrow>
+          <mrow>
+           <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msup>
+           
+          </mrow>
+         </mfrac>
+         <mo>&#x2212;</mo><mn>2</mn>
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mo stretchy='false'>(</mo><mi>n</mi><mo>+</mo><mn>2</mn><mo stretchy='false'>)</mo><mi>R</mi>
+          </mrow>
+          <mrow>
+           <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msup>
+           
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>3</mn><mo stretchy='false'>)</mo><msup>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msup>
+           <mo>+</mo><mn>2</mn>
+          </mrow>
+          <mrow>
+           <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msup>
+           <mi>R</mi>
+          </mrow>
+         </mfrac>
+         
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+         <mfrac>
+          <mn>2</mn>
+          <mrow>
+           <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+           </msup>
+           
+          </mrow>
+         </mfrac>
+         <mo>&#x2212;</mo><mn>1</mn>
+        </mrow>
+       </mtd>
+      </mtr>
+      
+     </mtable>
+    </mrow>
+   <mo>)</mo></mrow>
+  </mrow>
+ <annotation encoding='MathType-MTEF'>
+ MathType@MTEF@5@5@+=feaagaart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfwBIjxAHbstHrhAaerbuLwBLnhiov2DGi1BTfMBaeXatLxBI9gBaeXafv3ySLgzGmvETj2BSbWefv3ySLgznfgDOjdaryqr1ngBPrginfgDObcv39gatuuDJXwAK1uy0HwmaeXbfv3ySLgzG0uy0Hgip5wzaebbnrfifHhDYfgasaacH8qrps0lbbf9q8WrFfeu0xh8Eeeu0xXdbba9frFj0=OqFfea0dXdd9vqaq=JfrVkFHe9pgea0dXdar=Jb9hs0dXdbPYxe9vr0=vr0=vqpWqaaiaabiWacmaaeaqabeaafaGbaCaaaOqaaabaaaaaaaaapeWaaeWaa8aabaqbaeqabiGaaaqaa8qadaWcaaWdaeaapeGaamOBaiabgUcaRiaaikdaa8aabaWdbiaad6gapaWaaWbaaSqabeaapeGaaGOmaaaaaaGccqGHsislcaaIYaaapaqaa8qadaWcaaWdaeaapeGaaiikaiaad6gacqGHRaWkcaaIYaGaaiykaiaadkfaa8aabaWdbiaad6gapaWaaWbaaSqabeaapeGaaGOmaaaaaaaak8aabaWdbmaalaaapaqaa8qacaGGOaGaamOBaiabgkHiTiaaiodacaGGPaGaamOBa8aadaahaaWcbeqaa8qacaaIYaaaaOGaey4kaSIaaGOmaaWdaeaapeGaamOBa8aadaahaaWcbeqaa8qacaaIYaaaaOGaamOuaaaaa8aabaWdbmaalaaapaqaa8qacaaIYaaapaqaa8qacaWGUbWdamaaCaaaleqabaWdbiaaikdaaaaaaOGaeyOeI0IaaGymaaaaaiaawIcacaGLPaaaaaa@6EBE@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+.
+</body>
+</html>

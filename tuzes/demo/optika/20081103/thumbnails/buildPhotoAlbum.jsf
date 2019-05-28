@@ -1,0 +1,132 @@
+App.progressCountTotal = 16;
+App.progressCountCurrent = 0;
+fw.dismissBatchDialogWhenDone = true;
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030256.JPG');
+App.progressCountCurrent = 1;
+App.batchStatusString = 'P1030256.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030256_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030256_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030256_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030256_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030256_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030256_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030259.JPG');
+App.progressCountCurrent = 2;
+App.batchStatusString = 'P1030259.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030259_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030259_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030259_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030259_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030259_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030259_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030262.JPG');
+App.progressCountCurrent = 3;
+App.batchStatusString = 'P1030262.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030262_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030262_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030262_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030262_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030262_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030262_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030265.JPG');
+App.progressCountCurrent = 4;
+App.batchStatusString = 'P1030265.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030265_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030265_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030265_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030265_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030265_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030265_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030267.JPG');
+App.progressCountCurrent = 5;
+App.batchStatusString = 'P1030267.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030267_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030267_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030267_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030267_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030267_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030267_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030268.JPG');
+App.progressCountCurrent = 6;
+App.batchStatusString = 'P1030268.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030268_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030268_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030268_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030268_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030268_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030268_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030269.JPG');
+App.progressCountCurrent = 7;
+App.batchStatusString = 'P1030269.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030269_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030269_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030269_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030269_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030269_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030269_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030270.JPG');
+App.progressCountCurrent = 8;
+App.batchStatusString = 'P1030270.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030270_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030270_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030270_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030270_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030270_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030270_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030271.JPG');
+App.progressCountCurrent = 9;
+App.batchStatusString = 'P1030271.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030271_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030271_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030271_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030271_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030271_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030271_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030272.JPG');
+App.progressCountCurrent = 10;
+App.batchStatusString = 'P1030272.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030272_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030272_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030272_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030272_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030272_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030272_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030273.JPG');
+App.progressCountCurrent = 11;
+App.batchStatusString = 'P1030273.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030273_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030273_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030273_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030273_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030273_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030273_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030274.JPG');
+App.progressCountCurrent = 12;
+App.batchStatusString = 'P1030274.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030274_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030274_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030274_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030274_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030274_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030274_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030275.JPG');
+App.progressCountCurrent = 13;
+App.batchStatusString = 'P1030275.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030275_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030275_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030275_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030275_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030275_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030275_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030279.JPG');
+App.progressCountCurrent = 14;
+App.batchStatusString = 'P1030279.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030279_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030279_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030279_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030279_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030279_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030279_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030280.JPG');
+App.progressCountCurrent = 15;
+App.batchStatusString = 'P1030280.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030280_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030280_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030280_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030280_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030280_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030280_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/P1030281.JPG');
+App.progressCountCurrent = 16;
+App.batchStatusString = 'P1030281.JPG';
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030281_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030281_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/images/P1030281_JPG.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"100", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030281_JPG.jpg') || confirm('file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030281_JPG.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///E|/web/linkgroup/tuzes/demo/optika/20081103/thumbnails/P1030281_JPG.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:60, jpegSmoothness:2, jpegSubsampling:1, name:"JPEG - Smaller File", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-144, ySize:-144}));
+fw.closeDocument(doc);
+'done';

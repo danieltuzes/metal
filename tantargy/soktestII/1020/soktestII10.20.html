@@ -1,0 +1,3851 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Kétrészecske kölcsönhatás</title>
+<link href="../display.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<center>
+  <div class="mainclass">
+    
+    <h1>Kétrészecske kölcsönhatás vákuumban</h1><div class="floatright">
+      <object data="10.15_1_LJ-pot.svg" type="image/svg+xml" class="svgfloatright" style="width: 100%; hight: 100%">
+      </object>
+      <div class="imagetext">Kétrészecske potenciál általános alakja<br>
+Lennard-Jones-potenciál közelítésben
+<!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+<math>
+ <semantics>
+  <mrow>
+   <msub>
+    <mi>r</mi>
+    <mn>0</mn>
+   </msub>
+   
+  </mrow>
+  <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGYbWaaSbaaSqaaiaaicdaaeqaaaaa@4AD7@</annotation>
+ </semantics>
+</math> hatótávval
+<!-- MathType@End@5@5@ -->
+</div>
+    </div>
+    <p>Két részecskénk van csak egyelőre, 2 bozon vagy fermion. A Hamilton-operátor: 
+  <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mi>H</mi>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <msubsup>
+                <mi>p</mi>
+                <mn>1</mn>
+                <mn>2</mn>
+              </msubsup>
+                
+            </mrow>
+            <mrow>
+              <mn>2</mn>
+              <mi>m</mi>
+            </mrow>
+          </mfrac>
+          <mo>+</mo>
+          <mfrac>
+            <mrow>
+              <msubsup>
+                <mi>p</mi>
+                <mn>2</mn>
+                <mn>2</mn>
+              </msubsup>
+                
+            </mrow>
+            <mrow>
+              <mn>2</mn>
+              <mi>m</mi>
+            </mrow>
+          </mfrac>
+          <mo>+</mo>
+          <mi>v</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>r</mi>
+                </mstyle>
+                <mn>1</mn>
+              </msub>
+              <mo>&#x2212;</mo>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>r</mi>
+                </mstyle>
+                <mn>2</mn>
+              </msub>
+                
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGibGaeyypa0ZaaSaaaeaacaWGWbWaa0baaSqaaiaaigdaaeaacaaIYaaaaaGcbaGaaGOmaiaad2gaaaGaey4kaSYaaSaaaeaacaWGWbWaa0baaSqaaiaaikdaaeaacaaIYaaaaaGcbaGaaGOmaiaad2gaaaGaey4kaSIaamODamaabmaabaGaaCOCamaaBaaaleaacaaIXaaabeaakiabgkHiTiaahkhadaWgaaWcbaGaaGOmaaqabaaakiaawIcacaGLPaaaaaa@5C9F@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      
+      Ekkor a Schrödinger egyenlet <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mi>H</mi>
+          <mi>&#x03C8;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>r</mi>
+                </mstyle>
+                <mn>1</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>r</mi>
+                </mstyle>
+                <mn>2</mn>
+              </msub>
+                
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mi>E</mi>
+          <mi>&#x03C8;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>r</mi>
+                </mstyle>
+                <mn>1</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>r</mi>
+                </mstyle>
+                <mn>2</mn>
+              </msub>
+                
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGibGaeqiYdK3aaeWaaeaacaWHYbWaaSbaaSqaaiaaigdaaeqaaOGaaiilaiaahkhadaWgaaWcbaGaaGOmaaqabaaakiaawIcacaGLPaaacqGH9aqpcaWGfbGaeqiYdK3aaeWaaeaacaWHYbWaaSbaaSqaaiaaigdaaeqaaOGaaiilaiaahkhadaWgaaWcbaGaaGOmaaqabaaakiaawIcacaGLPaaaaaa@5B58@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      
+      Bevezethetünk új térkoordinátákat, a tömegközéppontit és a relítvat: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mstyle mathvariant='bold'>
+            <mi>R</mi>
+          </mstyle>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>r</mi>
+                </mstyle>
+                <mn>1</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>r</mi>
+                </mstyle>
+                <mn>2</mn>
+              </msub>
+                
+            </mrow>
+            <mn>2</mn>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWHsbGaeyypa0ZaaSaaaeaacaWHYbWaaSbaaSqaaiaaigdaaeqaaOGaey4kaSIaaCOCamaaBaaaleaacaaIYaaabeaaaOqaaiaaikdaaaaaaa@5063@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+     <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mstyle mathvariant='bold'>
+            <mi>r</mi>
+          </mstyle>
+          <mo>=</mo>
+          <msub>
+            <mstyle mathvariant='bold'>
+              <mi>r</mi>
+            </mstyle>
+            <mn>1</mn>
+          </msub>
+          <mo>&#x2212;</mo>
+          <msub>
+            <mstyle mathvariant='bold'>
+              <mi>r</mi>
+            </mstyle>
+            <mn>2</mn>
+          </msub>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWHYbGaeyypa0JaaCOCamaaBaaaleaacaaIXaaabeaakiabgkHiTiaahkhadaWgaaWcbaGaaGOmaaqabaaaaa@4FB8@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      
+      És új impulzusokat: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mstyle mathvariant='bold'>
+            <mi>P</mi>
+          </mstyle>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>p</mi>
+                </mstyle>
+                <mn>1</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>p</mi>
+                </mstyle>
+                <mn>2</mn>
+              </msub>
+                
+            </mrow>
+            <mn>2</mn>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWHqbGaeyypa0ZaaSaaaeaacaWHWbWaaSbaaSqaaiaaigdaaeqaaOGaey4kaSIaaCiCamaaBaaaleaacaaIYaaabeaaaOqaaiaaikdaaaaaaa@505D@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ --><!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mstyle mathvariant='bold'>
+              <mi>p</mi>
+          </mstyle>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msub>
+                  <mstyle mathvariant='bold'>
+                    <mi>p</mi>
+                  </mstyle>
+                  <mn>1</mn>
+                </msub>
+                <mo>&#x2212;</mo>
+                <msub>
+                  <mstyle mathvariant='bold'>
+                    <mi>p</mi>
+                  </mstyle>
+                  <mn>2</mn>
+                </msub>
+                
+              </mrow>
+              <mn>2</mn>
+            </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWHWbGaeyypa0ZaaSaaaeaacaWHWbWaaSbaaSqaaiaaigdaaeqaaOGaeyOeI0IaaCiCamaaBaaaleaacaaIYaaabeaaaOqaaiaaikdaaaaaaa@5088@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      
+      Ekkor <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mi>&#x03C8;</mi>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqaHipqEaaa@4AC9@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      térfüggése felírható szorzatalakban: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mi>&#x03C8;</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mstyle mathvariant='bold'>
+                  <mi>R</mi>
+                </mstyle>
+                <mo>,</mo>
+                <mstyle mathvariant='bold'>
+                  <mi>r</mi>
+                </mstyle>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>=</mo>
+            <mi>&#x03C8;</mi>
+            <mrow>
+              <mo>(</mo>
+              <mstyle mathvariant='bold'>
+                <mi>r</mi>
+              </mstyle>
+              <mo>)</mo>
+            </mrow>
+            <mo>&#x22C5;</mo>
+            <msup>
+              <mi>e</mi>
+              <mrow>
+                <mi>i</mi>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                  <mi>R</mi>
+                </mstyle>
+              </mrow>
+            </msup>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqaHipqEdaqadaqaaiaahkfacaGGSaGaaCOCaaGaayjkaiaawMcaaiabg2da9iabeI8a5naabmaabaGaaCOCaaGaayjkaiaawMcaaiabgwSixlaadwgadaahaaWcbeqaaiaadMgacaWHRbGaaCOuaaaaaaa@5A4E@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      
+      A Hamilton operátor az új koordinátákkal, bevezetve az össztömeg <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+<math>
+ <semantics>
+  <mrow>
+   <mi>M</mi><mo>=</mo><mi>m</mi><mo>+</mo><mi>m</mi>
+  </mrow>
+  <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGnbGaeyypa0JaamyBaiabgUcaRiaad2gaaaa@4D99@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+ és redukált tömeg <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+<math>
+ <semantics>
+  <mrow>
+   <mi>&#x03BC;</mi><mo>=</mo><mfrac>
+    <mrow>
+     <mi>m</mi><mo>+</mo><mi>m</mi>
+    </mrow>
+    <mrow>
+     <mi>m</mi><mo>&#x22C5;</mo><mi>m</mi>
+    </mrow>
+   </mfrac>
+   
+  </mrow>
+  <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqaH8oqBcqGH9aqpdaWcaaqaaiaad2gacqGHRaWkcaWGTbaabaGaamyBaiabgwSixlaad2gaaaaaaa@52BB@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+ kifejezéseit (különböző tömegű részecskék esetén <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+<math>
+ <semantics>
+  <mi>m</mi>
+  <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGTbaaaa@49ED@</annotation>
+ </semantics>
+</math><!-- MathType@End@5@5@ -->-ek  értelemszerű indexelésével): <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+<math display="block">
+ <semantics>
+  <mrow>
+   <mi>H</mi><mo>=</mo><mfrac>
+    <mrow>
+     <msup>
+      <mi>P</mi>
+      <mn>2</mn>
+     </msup>
+     
+    </mrow>
+    <mrow>
+     <mn>2</mn><mi>M</mi>
+    </mrow>
+   </mfrac>
+   <mo>+</mo><mfrac>
+    <mrow>
+     <msup>
+      <mi>p</mi>
+      <mn>2</mn>
+     </msup>
+     
+    </mrow>
+    <mrow>
+     <mn>2</mn><mi>&#x03BC;</mi>
+    </mrow>
+   </mfrac>
+   <mo>+</mo><mi>v</mi><mrow><mo>(</mo>
+    <mstyle mathvariant='bold' ><mi>r</mi></mstyle>
+   <mo>)</mo></mrow>
+  </mrow>
+  <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGibGaeyypa0ZaaSaaaeaacaWGqbWaaWbaaSqabeaacaaIYaaaaaGcbaGaaGOmaiaad2eaaaGaey4kaSYaaSaaaeaacaWGWbWaaWbaaSqabeaacaaIYaaaaaGcbaGaaGOmaiabeY7aTbaacqGHRaWkcaWG2bWaaeWaaeaacaWHYbaacaGLOaGaayzkaaaaaa@57E1@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+
+      <!-- MathType@End@5@5@ -->
+      Így a Schrödinger-egyenlet: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mrow>
+            <mo>[</mo> 
+            <mrow>
+              <mfrac>
+                <mrow>
+                  <mo>&#x2212;</mo>
+                  <msup>
+                    <mi>&#x210F;</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <msub>
+                    <mi>&#x0394;</mi>
+                    <mstyle mathvariant='bold'>
+                      <mi>r</mi>
+                    </mstyle>
+                  </msub>
+                    
+                </mrow>
+                <mrow>
+                  <mn>2</mn>
+                  <mi>M</mi>
+                </mrow>
+              </mfrac>
+              <mo>+</mo>
+              <mfrac>
+                <mrow>
+                  <msup>
+                    <mi>&#x210F;</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <msup>
+                    <mi>K</mi>
+                    <mn>2</mn>
+                  </msup>
+                    
+                </mrow>
+                <mrow>
+                  <mn>2</mn>
+                  <mi>M</mi>
+                </mrow>
+              </mfrac>
+              <mo>+</mo>
+              <mi>v</mi>
+              <mrow>
+                <mo>(</mo>
+                <mstyle mathvariant='bold'>
+                  <mi>r</mi>
+                </mstyle>
+                <mo>)</mo>
+              </mrow>
+            </mrow> 
+            <mo>]</mo>
+          </mrow>
+          <mi>&#x03C8;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant='bold'>
+              <mi>r</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mi>E</mi>
+          <mi>&#x03C8;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant='bold'>
+              <mi>r</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaadaWadaqaaabaaaaaaaaapeWaaSaaaeaapaGaeyOeI0Ydbiabl+qiOnaaCaaaleqabaGaaGOmaaaakiabfs5aenaaBaaaleaacaWHYbaabeaaaOqaaiaaikdacaWGnbaaaiabgUcaRmaalaaabaGaeS4dHG2aaWbaaSqabeaacaaIYaaaaOGaam4samaaCaaaleqabaGaaGOmaaaaaOqaaiaaikdacaWGnbaaaiabgUcaRiaadAhadaqadaqaaiaahkhaaiaawIcacaGLPaaaa8aacaGLBbGaayzxaaGaeqiYdK3aaeWaaeaacaWHYbaacaGLOaGaayzkaaGaeyypa0JaamyraiabeI8a5naabmaabaGaaCOCaaGaayjkaiaawMcaaaaa@67AD@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      
+      Ekkor bevezetve a <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <msup>
+            <mi>k</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>=</mo>
+          <mfrac>
+            <mi>m</mi>
+            <mrow>
+              <msup>
+                <mi>&#x210F;</mi>
+                <mn>2</mn>
+              </msup>
+                
+            </mrow>
+          </mfrac>
+          <mi>E</mi>
+          <mo>&#x2212;</mo>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mi>K</mi>
+                <mn>2</mn>
+              </msup>
+                
+            </mrow>
+            <mn>4</mn>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGRbWaaWbaaSqabeaacaaIYaaaaOGaeyypa0ZaaSaaaeaacaWGTbaabaaeaaaaaaaaa8qacqWIpecAdaahaaWcbeqaaiaaikdaaaaaaOWdaiaadweacqGHsisldaWcaaqaaiaadUeadaahaaWcbeqaaiaaikdaaaaakeaacaaI0aaaaaaa@5379@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      és <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <mi>V</mi>
+            <mrow>
+              <mo>(</mo>
+              <mstyle mathvariant='bold'>
+                <mi>r</mi>
+              </mstyle>
+              <mo>)</mo>
+            </mrow>
+            <mo>=</mo>
+            <mfrac>
+              <mi>m</mi>
+              <mrow>
+                <msup>
+                  <mi>&#x210F;</mi>
+                  <mn>2</mn>
+                </msup>
+                
+              </mrow>
+            </mfrac>
+          <mi>v</mi>
+            <mrow>
+              <mo>(</mo>
+              <mstyle mathvariant='bold'>
+                <mi>r</mi>
+              </mstyle>
+              <mo>)</mo>
+            </mrow>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGwbWaaeWaaeaacaWHYbaacaGLOaGaayzkaaGaeyypa0ZaaSaaaeaacaWGTbaabaGaeS4dHG2aaWbaaSqabeaacaaIYaaaaaaakiaadAhadaqadaqaaiaahkhaaiaawIcacaGLPaaaaaa@53FD@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      mennyiségeket, a Schrödinger egyenlet a következő alakban írható: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mrow>
+              <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>&#x0394;</mi>
+                <mstyle mathvariant='bold'>
+                    <mi>r</mi>
+                </mstyle>
+              </msub>
+              <mo>+</mo>
+                <msup>
+                  <mi>k</mi>
+                  <mn>2</mn>
+                </msup>
+                
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+            <mi>&#x03C8;</mi>
+            <mrow>
+              <mo>(</mo>
+              <mstyle mathvariant='bold'>
+                <mi>r</mi>
+              </mstyle>
+              <mo>)</mo>
+            </mrow>
+            <mo>=</mo>
+            <mi>V</mi>
+            <mrow>
+              <mo>(</mo>
+              <mstyle mathvariant='bold'>
+                <mi>r</mi>
+              </mstyle>
+              <mo>)</mo>
+            </mrow>
+            <mi>&#x03C8;</mi>
+            <mrow>
+              <mo>(</mo>
+              <mstyle mathvariant='bold'>
+                <mi>r</mi>
+              </mstyle>
+              <mo>)</mo>
+            </mrow>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaadaqadaqaaiabfs5aenaaBaaaleaacaWHYbaabeaakiabgUcaRiaadUgadaahaaWcbeqaaiaaikdaaaaakiaawIcacaGLPaaacqaHipqEdaqadaqaaiaahkhaaiaawIcacaGLPaaacqGH9aqpcaWGwbWaaeWaaeaacaWHYbaacaGLOaGaayzkaaGaeqiYdK3aaeWaaeaacaWHYbaacaGLOaGaayzkaaaaaa@5CE9@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      
+      Definiáljuk a Schrödinger egyenlet Green-függvényét: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display='block'>
+      <semantics>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>&#x0394;</mi>
+                <mstyle mathvariant='bold'>
+                  <mi>r</mi>
+                </mstyle>
+              </msub>
+              <mo>+</mo>
+              <msup>
+                <mi>k</mi>
+                <mn>2</mn>
+              </msup>
+                
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <msubsup>
+            <mi>G</mi>
+            <mstyle mathvariant='bold'>
+              <mi>k</mi>
+            </mstyle>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mo>+</mo>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </msubsup>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>r</mi>
+              </mstyle>
+              <mo>&#x2212;</mo>
+              <mstyle mathvariant='bold'>
+                <mi>r</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mo>&#x2212;</mo>
+          <mi>&#x03B4;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>r</mi>
+              </mstyle>
+              <mo>&#x2212;</mo>
+              <mstyle mathvariant='bold'>
+                <mi>r</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaadaqadaqaaiabfs5aenaaBaaaleaacaWHYbaabeaakiabgUcaRiaadUgadaahaaWcbeqaaiaaikdaaaaakiaawIcacaGLPaaacaWGhbWaa0baaSqaaiaahUgaaeaadaqadaqaaiabgUcaRaGaayjkaiaawMcaaaaakmaabmaabaGaaCOCaiabgkHiTiaahkhacaGGNaaacaGLOaGaayzkaaGaeyypa0JaeyOeI0IaeqiTdq2aaeWaaeaacaWHYbGaeyOeI0IaaCOCaiaacEcaaiaawIcacaGLPaaaaaa@6207@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+    A Schrödinger egyenlet megoldásai:</p>
+    <ul><li>Kölcsönhatás-mentes esetben, azaz ha <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+       <semantics>
+         <mrow>
+           <mi>V</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+         </mrow>
+         <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGwbGaeyypa0JaaGimaaaa@4B96@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      , az egyik megoldás: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+       <semantics>
+         <mrow>
+           <msubsup>
+             <mi>&#x03C8;</mi>
+             <mstyle mathvariant='bold'>
+                <mi>k</mi>
+             </mstyle>
+             <mrow>
+               <mrow>
+                  <mo>(</mo>
+                 <mo>+</mo>
+                 <mo>)</mo>
+               </mrow>
+             </mrow>
+           </msubsup>
+           <mrow>
+              <mo>(</mo>
+             <mstyle mathvariant='bold'>
+                <mi>r</mi>
+             </mstyle>
+             <mo>)</mo>
+           </mrow>
+            <mo>=</mo>
+            <msup>
+              <mi>e</mi>
+              <mrow>
+                <mi>i</mi>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                  <mi>r</mi>
+                </mstyle>
+              </mrow>
+            </msup>
+            
+         </mrow>
+         <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqaHipqEdaqhaaWcbaGaaC4AaaqaamaabmaabaGaey4kaScacaGLOaGaayzkaaaaaOWaaeWaaeaacaWHYbaacaGLOaGaayzkaaGaeyypa0JaamyzamaaCaaaleqabaGaamyAaiaahUgacaWHYbaaaaaa@55DD@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ --></li><li>
+      
+      kölcsönható (általános) esetben az egyik megoldás: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+<math display='block'>
+ <semantics>
+  <mrow>
+   <msubsup>
+    <mi>&#x03C8;</mi>
+    <mstyle mathvariant='bold' ><mi>k</mi></mstyle>
+    <mrow>
+     <mrow><mo>(</mo>
+      <mo>+</mo>
+     <mo>)</mo></mrow>
+    </mrow>
+   </msubsup>
+   <mrow><mo>(</mo>
+    <mstyle mathvariant='bold' ><mi>r</mi></mstyle>
+   <mo>)</mo></mrow><mo>=</mo><mi>&#x03BB;</mi><mo>&#x22C5;</mo><msup>
+    <mi>e</mi>
+    <mrow>
+     <mi>i</mi><mstyle mathvariant='bold' ><mi>k</mi><mi>r</mi></mstyle>
+    </mrow>
+   </msup>
+   <mo>&#x2212;</mo><mstyle displaystyle='true'>
+    <mrow><mo>&#x222B;</mo>
+     <mrow>
+      <msubsup>
+       <mi>G</mi>
+       <mstyle mathvariant='bold' ><mi>k</mi></mstyle>
+       <mrow>
+        <mrow><mo>(</mo>
+         <mo>+</mo>
+        <mo>)</mo></mrow>
+       </mrow>
+      </msubsup>
+      <mrow><mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='bold' ><mi>r</mi></mstyle><mo>&#x2212;</mo><mstyle mathvariant='bold' ><mi>r</mi></mstyle><mo>&#x0027;</mo>
+       </mrow>
+      <mo>)</mo></mrow><mi>V</mi><mrow><mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='bold' ><mi>r</mi></mstyle><mo>&#x0027;</mo>
+       </mrow>
+      <mo>)</mo></mrow><msubsup>
+       <mi>&#x03C8;</mi>
+       <mstyle mathvariant='bold' ><mi>k</mi></mstyle>
+       <mrow>
+        <mrow><mo>(</mo>
+         <mo>+</mo>
+        <mo>)</mo></mrow>
+       </mrow>
+      </msubsup>
+      <mrow><mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='bold' ><mi>r</mi></mstyle><mo>&#x0027;</mo>
+       </mrow>
+      <mo>)</mo></mrow>
+     </mrow>
+    </mrow>
+    
+   </mstyle><msup>
+    <mi>d</mi>
+    <mn>3</mn>
+   </msup>
+   <mi>r</mi><mo>&#x0027;</mo>
+  </mrow>
+  <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqaHipqEdaqhaaWcbaGaaC4AaaqaamaabmaabaGaey4kaScacaGLOaGaayzkaaaaaOWaaeWaaeaacaWHYbaacaGLOaGaayzkaaGaeyypa0Jaeq4UdWMaeyyXICTaamyzamaaCaaaleqabaGaamyAaiaahUgacaWHYbaaaOGaeyOeI0Yaa8qaaeaacaWGhbWaa0baaSqaaiaahUgaaeaadaqadaqaaiabgUcaRaGaayjkaiaawMcaaaaakmaabmaabaGaaCOCaiabgkHiTiaahkhacaGGNaaacaGLOaGaayzkaaGaamOvamaabmaabaGaaCOCaiaacEcaaiaawIcacaGLPaaacqaHipqEdaqhaaWcbaGaaC4AaaqaamaabmaabaGaey4kaScacaGLOaGaayzkaaaaaOWaaeWaaeaacaWHYbGaai4jaaGaayjkaiaawMcaaaWcbeqab0Gaey4kIipakiaadsgadaahaaWcbeqaaiaaiodaaaGccaWGYbGaai4jaaaa@766B@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+      <!-- MathType@End@5@5@ -->
+      
+      Ennek megoldását már más tárgyakból is tanultuk: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display='block'>
+      <semantics>
+        <mrow>
+          <msubsup>
+            <mi>G</mi>
+            <mstyle mathvariant='bold'>
+              <mi>k</mi>
+            </mstyle>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mo>+</mo>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </msubsup>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>r</mi>
+              </mstyle>
+              <mo>&#x2212;</mo>
+              <mstyle mathvariant='bold'>
+                <mi>r</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mstyle displaystyle='true'>
+            <mrow>
+              <mo>&#x222B;</mo>
+              <mrow>
+                <mfrac>
+                  <mrow>
+                    <msup>
+                      <mi>d</mi>
+                      <mn>3</mn>
+                    </msup>
+                    <mi>q</mi>
+                  </mrow>
+                  <mrow>
+                    <msup>
+                      <mrow>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <mn>2</mn>
+                            <mi>&#x03C0;</mi>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                      <mn>3</mn>
+                    </msup>
+                      
+                  </mrow>
+                </mfrac>
+                <mfrac>
+                  <mrow>
+                    <msup>
+                      <mi>e</mi>
+                      <mrow>
+                        <mi>i</mi>
+                        <mstyle mathvariant='bold'>
+                          <mi>q</mi>
+                        </mstyle>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <mstyle mathvariant='bold'>
+                              <mi>r</mi>
+                            </mstyle>
+                            <mo>&#x2212;</mo>
+                            <mstyle mathvariant='bold'>
+                              <mi>r</mi>
+                            </mstyle>
+                            <mo>&#x0027;</mo>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                    </msup>
+                      
+                  </mrow>
+                  <mrow>
+                    <msup>
+                      <mi>q</mi>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>&#x2212;</mo>
+                    <msup>
+                      <mi>k</mi>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>&#x2212;</mo>
+                    <mi>i</mi>
+                    <mi>&#x03B7;</mi>
+                  </mrow>
+                </mfrac>
+                  
+              </mrow>
+            </mrow>
+              
+          </mstyle>
+          <mo>=</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mn>4</mn>
+              <mi>&#x03C0;</mi>
+            </mrow>
+          </mfrac>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mi>e</mi>
+                <mrow>
+                  <mi>i</mi>
+                  <mi>k</mi>
+                  <mrow>
+                    <mo>|</mo> 
+                    <mrow>
+                      <mstyle mathvariant='bold'>
+                        <mi>r</mi>
+                      </mstyle>
+                      <mo>&#x2212;</mo>
+                      <mstyle mathvariant='bold'>
+                        <mi>r</mi>
+                      </mstyle>
+                      <mo>&#x0027;</mo>
+                    </mrow> 
+                    <mo>|</mo>
+                  </mrow>
+                </mrow>
+              </msup>
+                
+            </mrow>
+            <mrow>
+              <mrow>
+                <mo>|</mo> 
+                <mrow>
+                  <mstyle mathvariant='bold'>
+                    <mi>r</mi>
+                  </mstyle>
+                  <mo>&#x2212;</mo>
+                  <mstyle mathvariant='bold'>
+                    <mi>r</mi>
+                  </mstyle>
+                  <mo>&#x0027;</mo>
+                </mrow> 
+                <mo>|</mo>
+              </mrow>
+            </mrow>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGhbWaa0baaSqaaiaahUgaaeaadaqadaqaaiabgUcaRaGaayjkaiaawMcaaaaakmaabmaabaGaaCOCaiabgkHiTiaahkhacaGGNaaacaGLOaGaayzkaaGaeyypa0Zaa8qaaeaadaWcaaqaaiaadsgadaahaaWcbeqaaiaaiodaaaGccaWGXbaabaWaaeWaaeaacaaIYaGaeqiWdahacaGLOaGaayzkaaWaaWbaaSqabeaacaaIZaaaaaaakmaalaaabaGaamyzamaaCaaaleqabaGaamyAaiaahghadaqadaqaaiaahkhacqGHsislcaWHYbGaai4jaaGaayjkaiaawMcaaaaaaOqaaiaadghadaahaaWcbeqaaiaaikdaaaGccqGHsislcaWGRbWaaWbaaSqabeaacaaIYaaaaOGaeyOeI0IaamyAaiabeE7aObaaaSqabeqaniabgUIiYdGccqGH9aqpdaWcaaqaaiaaigdaaeaacaaI0aGaeqiWdahaamaalaaabaGaamyzamaaCaaaleqabaGaamyAaiaadUgadaabdaqaaiaahkhacqGHsislcaWHYbGaai4jaaGaay5bSlaawIa7aaaaaOqaamaaemaabaGaaCOCaiabgkHiTiaahkhacaGGNaaacaGLhWUaayjcSdaaaaaa@8282@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ --></li></ul><div class="floatright"><object data="10.15_2_kk'r.svg" type="image/svg+xml" class="svgfloatright" style="width: 100%; hight: 100%"></object>
+  <div class="imagetext">A hullámszámvektor<br>
+    és helykoordináta </div></div><p>Ha <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <mi>r</mi>
+          <mo>&#x226B;</mo>
+          <msub>
+            <mi>r</mi>
+            <mn>0</mn>
+          </msub>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGYbGaeS4AI8JaamOCamaaBaaaleaacaaIWaaabeaaaaa@4D2C@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      , <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <msubsup>
+            <mi>G</mi>
+            <mstyle mathvariant='bold'>
+              <mi>k</mi>
+            </mstyle>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mo>+</mo>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </msubsup>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGhbWaa0baaSqaaiaahUgaaeaadaqadaqaaiabgUcaRaGaayjkaiaawMcaaaaaaaa@4D53@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      sorbafejthető, mert <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+<math>
+ <semantics>
+  <mrow>
+   <mrow><mo>|</mo> <mrow>
+    <mstyle mathvariant='bold'><mi>r</mi></mstyle><mo>&#x2212;</mo><mstyle mathvariant='bold'><mi>r</mi></mstyle><mo>&#x0027;</mo>
+   </mrow> <mo>|</mo></mrow><mo>=</mo><mi>r</mi><mrow><mo>|</mo> <mrow>
+    <msub>
+     <mstyle mathvariant='bold'><mi>e</mi></mstyle>
+     <mstyle mathvariant='bold'><mi>r</mi></mstyle>
+    </msub>
+    <mo>&#x2212;</mo><mstyle mathvariant='bold'><mi>r</mi></mstyle><mo>&#x0027;</mo><mo>/</mo><mi>r</mi>
+   </mrow> <mo>|</mo></mrow><mo>&#x2248;</mo><mi>r</mi><mo>&#x2212;</mo><mstyle mathvariant='bold'><mi>r</mi><mi>r</mi></mstyle><mo>&#x0027;</mo><mo>/</mo><mi>r</mi><mo>+</mo><mi>O</mi><mrow><mo>(</mo>
+    <mrow>
+     <msub>
+      <mi>r</mi>
+      <mn>0</mn>
+     </msub>
+     <mo>/</mo><mi>r</mi>
+    </mrow>
+   <mo>)</mo></mrow>
+  </mrow>
+  <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaadaabdaqaaiaahkhacqGHsislcaWHYbGaai4jaaGaay5bSlaawIa7aiabg2da9iaadkhadaabdaqaaiaahwgadaWgaaWcbaGaaCOCaaqabaGccqGHsislcaWHYbGaai4jaiaac+cacaWGYbaacaGLhWUaayjcSdGaeyisISRaamOCaiabgkHiTiaahkhacaWHYbGaai4jaiaac+cacaWGYbGaey4kaSIaam4tamaabmaabaGaamOCamaaBaaaleaacaaIWaaabeaakiaac+cacaWGYbaacaGLOaGaayzkaaaaaa@69D6@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+
+      <!-- MathType@End@5@5@ -->
+      , így : <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <msubsup>
+            <mi>G</mi>
+            <mstyle mathvariant='bold'>
+              <mi>k</mi>
+            </mstyle>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mo>+</mo>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </msubsup>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>r</mi>
+              </mstyle>
+              <mo>&#x2212;</mo>
+              <mstyle mathvariant='bold'>
+                <mi>r</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mn>4</mn>
+              <mi>&#x03C0;</mi>
+            </mrow>
+          </mfrac>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mi>e</mi>
+                <mrow>
+                  <mi>i</mi>
+                  <mi>k</mi>
+                  <mi>r</mi>
+                </mrow>
+              </msup>
+                
+            </mrow>
+            <mi>r</mi>
+          </mfrac>
+          <msup>
+            <mi>e</mi>
+            <mrow>
+              <mo>&#x2212;</mo>
+              <mfrac>
+                <mrow>
+                  <mi>i</mi>
+                  <mi>k</mi>
+                  <mstyle mathvariant='bold'>
+                    <mi>r</mi>
+                    <mi>r</mi>
+                  </mstyle>
+                  <mo>&#x0027;</mo>
+                </mrow>
+                <mi>r</mi>
+              </mfrac>
+                
+            </mrow>
+          </msup>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGhbWaa0baaSqaaiaahUgaaeaadaqadaqaaiabgUcaRaGaayjkaiaawMcaaaaakmaabmaabaGaaCOCaiabgkHiTiaahkhacaGGNaaacaGLOaGaayzkaaGaeyypa0ZaaSaaaeaacaaIXaaabaGaaGinaiabec8aWbaadaWcaaqaaiaadwgadaahaaWcbeqaaiaadMgacaWGRbGaamOCaaaaaOqaaiaadkhaaaGaamyzamaaCaaaleqabaGaeyOeI0YaaSaaaeaacaWGPbGaam4AaiaahkhacaWHYbGaai4jaaqaaiaadkhaaaaaaaaa@6347@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      .</p>
+    <p>Ekkor a megoldás: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <msubsup>
+            <mi>&#x03C8;</mi>
+            <mstyle mathvariant='bold'>
+              <mi>k</mi>
+            </mstyle>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mo>+</mo>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </msubsup>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant='bold'>
+              <mi>r</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+          <mo>&#x223C;</mo>
+          <msup>
+            <mi>e</mi>
+            <mrow>
+              <mi>i</mi>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+                <mi>r</mi>
+              </mstyle>
+            </mrow>
+          </msup>
+          <mo>&#x2212;</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mn>4</mn>
+              <mi>&#x03C0;</mi>
+            </mrow>
+          </mfrac>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mi>e</mi>
+                <mrow>
+                  <mi>i</mi>
+                  <mi>k</mi>
+                  <mi>r</mi>
+                </mrow>
+              </msup>
+                
+            </mrow>
+            <mi>r</mi>
+          </mfrac>
+          <mstyle displaystyle='true'>
+            <mrow>
+              <mo>&#x222B;</mo>
+              <mrow>
+                <msup>
+                  <mi>e</mi>
+                  <mrow>
+                    <mo>&#x2212;</mo>
+                    <mi>i</mi>
+                    <mstyle mathvariant='bold'>
+                      <mi>k</mi>
+                    </mstyle>
+                    <mo>&#x0027;</mo>
+                    <mstyle mathvariant='bold'>
+                      <mi>r</mi>
+                    </mstyle>
+                    <mo>&#x0027;</mo>
+                  </mrow>
+                </msup>
+                <mo>&#x22C5;</mo>
+                <mi>V</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mstyle mathvariant='bold'>
+                      <mi>r</mi>
+                    </mstyle>
+                    <mo>&#x0027;</mo>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+                <msubsup>
+                  <mi>&#x03C8;</mi>
+                  <mstyle mathvariant='bold'>
+                    <mi>k</mi>
+                  </mstyle>
+                  <mrow>
+                    <mrow>
+                      <mo>(</mo>
+                      <mo>+</mo>
+                      <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                </msubsup>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mstyle mathvariant='bold'>
+                      <mi>r</mi>
+                    </mstyle>
+                    <mo>&#x0027;</mo>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+              </mrow>
+            </mrow>
+              
+          </mstyle>
+          <msup>
+            <mi>d</mi>
+            <mn>3</mn>
+          </msup>
+          <mi>r</mi>
+          <mo>&#x0027;</mo>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqaHipqEdaqhaaWcbaGaaC4AaaqaamaabmaabaGaey4kaScacaGLOaGaayzkaaaaaOWaaeWaaeaacaWHYbaacaGLOaGaayzkaaGaeSipIOJaamyzamaaCaaaleqabaGaamyAaiaahUgacaWHYbaaaOGaeyOeI0YaaSaaaeaacaaIXaaabaGaaGinaiabec8aWbaadaWcaaqaaiaadwgadaahaaWcbeqaaiaadMgacaWGRbGaamOCaaaaaOqaaiaadkhaaaWaa8qaaeaacaWGLbWaaWbaaSqabeaacqGHsislcaWGPbGaaC4AaiaacEcacaWHYbGaai4jaaaakiabgwSixlaadAfadaqadaqaaiaahkhacaGGNaaacaGLOaGaayzkaaGaeqiYdK3aa0baaSqaaiaahUgaaeaadaqadaqaaiabgUcaRaGaayjkaiaawMcaaaaakmaabmaabaGaaCOCaiaacEcaaiaawIcacaGLPaaaaSqabeqaniabgUIiYdGccaWGKbWaaWbaaSqabeaacaaIZaaaaOGaamOCaiaacEcaaaa@79E6@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      
+      Definiálhatjuk a szórási amplitúdót: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <msup>
+            <mi>f</mi>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mo>+</mo>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </msup>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>,</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>:</mo>
+          <mo>=</mo>
+          <mo>&#x2212;</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mn>4</mn>
+              <mi>&#x03C0;</mi>
+            </mrow>
+          </mfrac>
+          <mstyle displaystyle='true'>
+            <mrow>
+              <mo>&#x222B;</mo>
+              <mrow>
+                <msup>
+                  <mi>e</mi>
+                  <mrow>
+                    <mo>&#x2212;</mo>
+                    <mi>i</mi>
+                    <mstyle mathvariant='bold'>
+                      <mi>k</mi>
+                    </mstyle>
+                    <mo>&#x0027;</mo>
+                    <mstyle mathvariant='bold'>
+                      <mi>r</mi>
+                    </mstyle>
+                    <mo>&#x0027;</mo>
+                  </mrow>
+                </msup>
+                <mi>V</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mstyle mathvariant='bold'>
+                      <mi>r</mi>
+                    </mstyle>
+                    <mo>&#x0027;</mo>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+                <msubsup>
+                  <mi>&#x03C8;</mi>
+                  <mstyle mathvariant='bold'>
+                    <mi>k</mi>
+                  </mstyle>
+                  <mrow>
+                    <mrow>
+                      <mo>(</mo>
+                      <mo>+</mo>
+                      <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                </msubsup>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mstyle mathvariant='bold'>
+                      <mi>r</mi>
+                    </mstyle>
+                    <mo>&#x0027;</mo>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+              </mrow>
+            </mrow>
+              
+          </mstyle>
+          <msup>
+            <mi>d</mi>
+            <mn>3</mn>
+          </msup>
+          <mi>r</mi>
+          <mo>&#x0027;</mo>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGMbWaaWbaaSqabeaadaqadaqaaiabgUcaRaGaayjkaiaawMcaaaaakmaabmaabaGaaC4AaiaacYcacaWHRbGaai4jaaGaayjkaiaawMcaaiaacQdacqGH9aqpcqGHsisldaWcaaqaaiaaigdaaeaacaaI0aGaeqiWdahaamaapeaabaGaamyzamaaCaaaleqabaGaeyOeI0IaamyAaiaahUgacaGGNaGaaCOCaiaacEcaaaGccaWGwbWaaeWaaeaacaWHYbGaai4jaaGaayjkaiaawMcaaiabeI8a5naaDaaaleaacaWHRbaabaWaaeWaaeaacqGHRaWkaiaawIcacaGLPaaaaaGcdaqadaqaaiaahkhacaGGNaaacaGLOaGaayzkaaaaleqabeqdcqGHRiI8aOGaamizamaaCaaaleqabaGaaG4maaaakiaadkhacaGGNaaaaa@6FAD@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->      </p>
+    <p>Megjegyzés:
+      ott, ahol <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <mi>V</mi>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant='bold'>
+              <mi>r</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGwbWaaeWaaeaacaWHYbaacaGLOaGaayzkaaaaaa@4C5A@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      divergál, ott <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <msubsup>
+            <mi>&#x03C8;</mi>
+            <mstyle mathvariant='bold'>
+                <mi>k</mi>
+            </mstyle>
+            <mrow>
+              <mrow>
+                  <mo>(</mo>
+                <mo>+</mo>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </msubsup>
+          <mrow>
+              <mo>(</mo>
+            <mstyle mathvariant='bold'>
+                <mi>r</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqaHipqEdaqhaaWcbaGaaC4AaaqaamaabmaabaGaey4kaScacaGLOaGaayzkaaaaaOWaaeWaaeaacaWHYbaacaGLOaGaayzkaaaaaa@50E3@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      eltűnik, viszont <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <msup>
+            <mi>f</mi>
+            <mrow>
+              <mrow>
+                  <mo>(</mo>
+                <mo>+</mo>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </msup>
+          <mrow>
+              <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+              </mstyle>
+                <mo>,</mo>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGMbWaaWbaaSqabeaadaqadaqaaiabgUcaRaGaayjkaiaawMcaaaaakmaabmaabaGaaC4AaiaacYcacaWHRbGaai4jaaGaayjkaiaawMcaaaaa@5154@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      véges marad. Perturbatív kezelés nem lehetséges, mert véges rendben nem lehet levinni <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mi>&#x03C8;</mi>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqaHipqEaaa@4AC9@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      -t 0-ba.</p>
+    <p>Fourier-transzformáljuk a potenciált és a hulláfüggvényt: 
+      <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mi>V</mi>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant='bold'>
+              <mi>q</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mstyle displaystyle='true'>
+            <mrow>
+              <mo>&#x222B;</mo>
+              <mrow>
+                <msup>
+                  <mi>e</mi>
+                  <mrow>
+                    <mo>&#x2212;</mo>
+                    <mi>i</mi>
+                    <mstyle mathvariant='bold'>
+                      <mi>q</mi>
+                      <mi>r</mi>
+                    </mstyle>
+                  </mrow>
+                </msup>
+                  
+              </mrow>
+            </mrow>
+              
+          </mstyle>
+          <mo>&#x22C5;</mo>
+          <mi>V</mi>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant='bold'>
+              <mi>r</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+          <msup>
+            <mi>d</mi>
+            <mn>3</mn>
+          </msup>
+          <mi>r</mi>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGwbWaaeWaaeaacaWHXbaacaGLOaGaayzkaaGaeyypa0Zaa8qaaeaacaWGLbWaaWbaaSqabeaacqGHsislcaWGPbGaaCyCaiaahkhaaaaabeqab0Gaey4kIipakiabgwSixlaadAfadaqadaqaaiaahkhaaiaawIcacaGLPaaacaWGKbWaaWbaaSqabeaacaaIZaaaaOGaamOCaaaa@5CBD@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ --><!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <msub>
+            <mi>&#x03C8;</mi>
+            <mstyle mathvariant='bold'>
+              <mi>k</mi>
+            </mstyle>
+          </msub>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant='bold'>
+              <mi>q</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mstyle displaystyle='true'>
+            <mrow>
+              <mo>&#x222B;</mo>
+              <mrow>
+                <msup>
+                  <mi>e</mi>
+                  <mrow>
+                    <mo>&#x2212;</mo>
+                    <mi>i</mi>
+                    <mstyle mathvariant='bold'>
+                      <mi>q</mi>
+                      <mi>r</mi>
+                    </mstyle>
+                  </mrow>
+                </msup>
+                <msubsup>
+                  <mi>&#x03C8;</mi>
+                  <mstyle mathvariant='bold'>
+                    <mi>k</mi>
+                  </mstyle>
+                  <mrow>
+                    <mrow>
+                      <mo>(</mo>
+                      <mo>+</mo>
+                      <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                </msubsup>
+                <mrow>
+                  <mo>(</mo>
+                  <mstyle mathvariant='bold'>
+                    <mi>r</mi>
+                  </mstyle>
+                  <mo>)</mo>
+                </mrow>
+              </mrow>
+            </mrow>
+              
+          </mstyle>
+          <mo>=</mo>
+          <msup>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mn>2</mn>
+                  <mi>&#x03C0;</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+            <mn>3</mn>
+          </msup>
+          <mi>&#x03B4;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>q</mi>
+              </mstyle>
+              <mo>&#x2212;</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&#x2212;</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <msup>
+                <mi>q</mi>
+                <mn>2</mn>
+              </msup>
+              <mo>&#x2212;</mo>
+              <msup>
+                <mi>k</mi>
+                <mn>2</mn>
+              </msup>
+              <mo>&#x2212;</mo>
+              <mi>i</mi>
+              <mi>&#x03B7;</mi>
+            </mrow>
+          </mfrac>
+          <mstyle displaystyle='true'>
+            <mrow>
+              <mo>&#x222B;</mo>
+              <mrow>
+                <mi>V</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mstyle mathvariant='bold'>
+                    <mi>p</mi>
+                  </mstyle>
+                  <mo>)</mo>
+                </mrow>
+                <msub>
+                  <mi>&#x03C8;</mi>
+                  <mstyle mathvariant='bold'>
+                    <mi>k</mi>
+                  </mstyle>
+                </msub>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mstyle mathvariant='bold'>
+                      <mi>q</mi>
+                    </mstyle>
+                    <mo>&#x2212;</mo>
+                    <mstyle mathvariant='bold'>
+                      <mi>p</mi>
+                    </mstyle>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+              </mrow>
+            </mrow>
+              
+          </mstyle>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mi>d</mi>
+                <mn>3</mn>
+              </msup>
+              <mi>p</mi>
+            </mrow>
+            <mrow>
+              <msup>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mn>2</mn>
+                      <mi>&#x03C0;</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+                <mn>3</mn>
+              </msup>
+                
+            </mrow>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqaHipqEdaWgaaWcbaGaaC4AaaqabaGcdaqadaqaaiaahghaaiaawIcacaGLPaaacqGH9aqpdaWdbaqaaiaadwgadaahaaWcbeqaaiabgkHiTiaadMgacaWHXbGaaCOCaaaakiabeI8a5naaDaaaleaacaWHRbaabaWaaeWaaeaacqGHRaWkaiaawIcacaGLPaaaaaGcdaqadaqaaiaahkhaaiaawIcacaGLPaaaaSqabeqaniabgUIiYdGccqGH9aqpdaqadaqaaiaaikdacqaHapaCaiaawIcacaGLPaaadaahaaWcbeqaaiaaiodaaaGccqaH0oazdaqadaqaaiaahghacqGHsislcaWHRbaacaGLOaGaayzkaaGaeyOeI0YaaSaaaeaacaaIXaaabaGaamyCamaaCaaaleqabaGaaGOmaaaakiabgkHiTiaadUgadaahaaWcbeqaaiaaikdaaaGccqGHsislcaWGPbGaeq4TdGgaamaapeaabaGaamOvamaabmaabaGaaCiCaaGaayjkaiaawMcaaiabeI8a5naaBaaaleaacaWHRbaabeaakmaabmaabaGaaCyCaiabgkHiTiaahchaaiaawIcacaGLPaaaaSqabeqaniabgUIiYdGcdaWcaaqaaiaadsgadaahaaWcbeqaaiaaiodaaaGccaWGWbaabaWaaeWaaeaacaaIYaGaeqiWdahacaGLOaGaayzkaaWaaWbaaSqabeaacaaIZaaaaaaaaaa@88E8@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      Ekkor a szórási amplitúdók kifejezhetőek ezekkel a mennyiségekkel: 
+      <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mover accent='true'>
+            <mrow>
+              <msup>
+                <mi>f</mi>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mo>+</mo>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+              </msup>
+                
+            </mrow>
+            <mo stretchy='true'>&#x02DC;</mo>
+          </mover>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>,</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>:</mo>
+          <mo>=</mo>
+          <mo>&#x2212;</mo>
+          <mn>4</mn>
+          <mi>&#x03C0;</mi>
+          <msup>
+            <mi>f</mi>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mo>+</mo>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </msup>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>,</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mstyle displaystyle='true'>
+            <mrow>
+              <mo>&#x222B;</mo>
+              <mrow>
+                <mi>V</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mstyle mathvariant='bold'>
+                    <mi>p</mi>
+                  </mstyle>
+                  <mo>)</mo>
+                </mrow>
+                <msub>
+                  <mi>&#x03C8;</mi>
+                  <mstyle mathvariant='bold'>
+                    <mi>k</mi>
+                  </mstyle>
+                </msub>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mstyle mathvariant='bold'>
+                      <mi>k</mi>
+                    </mstyle>
+                    <mo>&#x0027;</mo>
+                    <mo>&#x2212;</mo>
+                    <mstyle mathvariant='bold'>
+                      <mi>p</mi>
+                    </mstyle>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+              </mrow>
+            </mrow>
+              
+          </mstyle>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mi>d</mi>
+                <mn>3</mn>
+              </msup>
+              <mi>p</mi>
+            </mrow>
+            <mrow>
+              <msup>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mn>2</mn>
+                      <mi>&#x03C0;</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+                <mn>3</mn>
+              </msup>
+                
+            </mrow>
+          </mfrac>
+          <mo>=</mo>
+          <mstyle displaystyle='true'>
+            <mrow>
+              <mo>&#x222B;</mo>
+              <mrow>
+                <mi>V</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mstyle mathvariant='bold'>
+                      <mi>k</mi>
+                    </mstyle>
+                    <mo>&#x0027;</mo>
+                    <mo>&#x2212;</mo>
+                    <mstyle mathvariant='bold'>
+                      <mi>p</mi>
+                    </mstyle>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+                <msub>
+                  <mi>&#x03C8;</mi>
+                  <mstyle mathvariant='bold'>
+                    <mi>k</mi>
+                  </mstyle>
+                </msub>
+                <mrow>
+                  <mo>(</mo>
+                  <mstyle mathvariant='bold'>
+                    <mi>p</mi>
+                  </mstyle>
+                  <mo>)</mo>
+                </mrow>
+              </mrow>
+            </mrow>
+              
+          </mstyle>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mi>d</mi>
+                <mn>3</mn>
+              </msup>
+              <mi>P</mi>
+            </mrow>
+            <mrow>
+              <msup>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mn>2</mn>
+                      <mi>&#x03C0;</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+                <mn>3</mn>
+                  
+              </msup>
+                
+            </mrow>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaadaaiaaqaaiaadAgadaahaaWcbeqaamaabmaabaGaey4kaScacaGLOaGaayzkaaaaaaGccaGLdmaadaqadaqaaiaahUgacaGGSaGaaC4AaiaacEcaaiaawIcacaGLPaaacaGG6aGaeyypa0JaeyOeI0IaaGinaiabec8aWjaadAgadaahaaWcbeqaamaabmaabaGaey4kaScacaGLOaGaayzkaaaaaOWaaeWaaeaacaWHRbGaaiilaiaahUgacaGGNaaacaGLOaGaayzkaaGaeyypa0Zaa8qaaeaacaWGwbWaaeWaaeaacaWHWbaacaGLOaGaayzkaaGaeqiYdK3aaSbaaSqaaiaahUgaaeqaaOWaaeWaaeaacaWHRbGaai4jaiabgkHiTiaahchaaiaawIcacaGLPaaaaSqabeqaniabgUIiYdGcdaWcaaqaaiaadsgadaahaaWcbeqaaiaaiodaaaGccaWGWbaabaWaaeWaaeaacaaIYaGaeqiWdahacaGLOaGaayzkaaWaaWbaaSqabeaacaaIZaaaaaaakiabg2da9maapeaabaGaamOvamaabmaabaGaaC4AaiaacEcacqGHsislcaWHWbaacaGLOaGaayzkaaGaeqiYdK3aaSbaaSqaaiaahUgaaeqaaOWaaeWaaeaacaWHWbaacaGLOaGaayzkaaaaleqabeqdcqGHRiI8aOWaaSaaaeaacaWGKbWaaWbaaSqabeaacaaIZaaaaOGaamiuaaqaamaabmaabaGaaGOmaiabec8aWbGaayjkaiaawMcaamaaCaaaleqabaGaaG4maaaaaaaaaa@8BFD@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ --><!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math  display="block">
+      <semantics>
+        <mrow>
+          <mover accent='true'>
+            <mrow>
+              <msup>
+                <mi>f</mi>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mo>+</mo>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+              </msup>
+                
+            </mrow>
+            <mo stretchy='true'>&#x02DC;</mo>
+          </mover>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>,</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mi>V</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x2212;</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mstyle displaystyle='true'>
+            <mrow>
+              <mo>&#x222B;</mo>
+              <mrow>
+                <mfrac>
+                  <mrow>
+                    <mi>V</mi>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <mstyle mathvariant='bold'>
+                          <mi>k</mi>
+                        </mstyle>
+                        <mo>&#x0027;</mo>
+                        <mo>&#x2212;</mo>
+                        <mstyle mathvariant='bold'>
+                          <mi>p</mi>
+                        </mstyle>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                    <mover accent='true'>
+                      <mrow>
+                        <msup>
+                          <mi>f</mi>
+                          <mrow>
+                            <mrow>
+                              <mo>(</mo>
+                              <mo>+</mo>
+                              <mo>)</mo>
+                            </mrow>
+                          </mrow>
+                        </msup>
+                          
+                      </mrow>
+                      <mo stretchy='true'>&#x02DC;</mo>
+                    </mover>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <mstyle mathvariant='bold'>
+                          <mi>k</mi>
+                        </mstyle>
+                        <mo>,</mo>
+                        <mstyle mathvariant='bold'>
+                          <mi>p</mi>
+                        </mstyle>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                  <mrow>
+                    <msup>
+                      <mi>k</mi>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>&#x2212;</mo>
+                    <msup>
+                      <mi>p</mi>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <mi>i</mi>
+                    <mi>&#x03B7;</mi>
+                  </mrow>
+                </mfrac>
+                  
+              </mrow>
+            </mrow>
+              
+          </mstyle>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mi>d</mi>
+                <mn>3</mn>
+              </msup>
+              <mi>p</mi>
+            </mrow>
+            <mrow>
+              <msup>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mn>2</mn>
+                      <mi>&#x03C0;</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+                <mn>3</mn>
+              </msup>
+                
+            </mrow>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaadaaiaaqaaiaadAgadaahaaWcbeqaamaabmaabaGaey4kaScacaGLOaGaayzkaaaaaaGccaGLdmaadaqadaqaaiaahUgacaGGSaGaaC4AaiaacEcaaiaawIcacaGLPaaacqGH9aqpcaWGwbWaaeWaaeaacaWHRbGaeyOeI0IaaC4AaiaacEcaaiaawIcacaGLPaaadaWdbaqaamaalaaabaGaamOvamaabmaabaGaaC4AaiaacEcacqGHsislcaWHWbaacaGLOaGaayzkaaWaaacaaeaacaWGMbWaaWbaaSqabeaadaqadaqaaiabgUcaRaGaayjkaiaawMcaaaaaaOGaay5adaWaaeWaaeaacaWHRbGaaiilaiaahchaaiaawIcacaGLPaaaaeaacaWGRbWaaWbaaSqabeaacaaIYaaaaOGaeyOeI0IaamiCamaaCaaaleqabaGaaGOmaaaakiabgUcaRiaadMgacqaH3oaAaaaaleqabeqdcqGHRiI8aOWaaSaaaeaacaWGKbWaaWbaaSqabeaacaaIZaaaaOGaamiCaaqaamaabmaabaGaaGOmaiabec8aWbGaayjkaiaawMcaamaaCaaaleqabaGaaG4maaaaaaaaaa@7975@</annotation>
+      </semantics>
+      </math><a id="szorasi_amplitudo"></a><a href="#szorasi_amplitudo" name="szorasi_amplitudo" class="eqnnumber">(2)</a>
+      <!-- MathType@End@5@5@ -->      </p>
+    <h3>Megjegyzés: </h3>
+    <ul><li>
+      <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <mi>f</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>,</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGMbWaaeWaaeaacaWHRbGaaiilaiaahUgacaGGNaaacaGLOaGaayzkaaaaaa@4EB2@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      -t megkapjuk nem csak a tömeghéjon</li><li>
+      erős taszító potenciálban megoldva minden rend divergens</li><li>
+      Born-közelítés: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <mover accent='true'>
+            <mrow>
+              <msup>
+                <mi>f</mi>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mo>+</mo>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+              </msup>
+                
+            </mrow>
+            <mo stretchy='true'>&#x02DC;</mo>
+          </mover>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>,</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mi>V</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x2212;</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaadaaiaaqaaiaadAgadaahaaWcbeqaamaabmaabaGaey4kaScacaGLOaGaayzkaaaaaaGccaGLdmaadaqadaqaaiaahUgacaGGSaGaaC4AaiaacEcaaiaawIcacaGLPaaacqGH9aqpcaWGwbWaaeWaaeaacaWHRbGaeyOeI0IaaC4AaiaacEcaaiaawIcacaGLPaaaaaa@5900@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ --></li><li>
+      
+      Parciális hullámok módszere: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mi>f</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>,</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mo>&#x2212;</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mn>4</mn>
+              <mi>&#x03C0;</mi>
+            </mrow>
+          </mfrac>
+          <mover accent='true'>
+            <mi>f</mi>
+            <mo stretchy='true'>&#x02DC;</mo>
+          </mover>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>,</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mstyle displaystyle='true'>
+            <munderover>
+              <mo>&#x2211;</mo>
+              <mrow>
+                <mi>l</mi>
+                <mo>=</mo>
+                <mn>0</mn>
+              </mrow>
+              <mi>&#x221E;</mi>
+            </munderover>
+            <mrow>
+              <mfrac>
+                <mrow>
+                  <mn>2</mn>
+                  <mi>l</mi>
+                  <mo>+</mo>
+                  <mn>1</mn>
+                </mrow>
+                <mi>k</mi>
+              </mfrac>
+              <mi>sin</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>&#x03B4;</mi>
+                    <mi>l</mi>
+                  </msub>
+                    
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <msub>
+                <mi>P</mi>
+                <mi>l</mi>
+              </msub>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>cos</mi>
+                  <mi>&#x03D1;</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </mstyle>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGMbWaaeWaaeaacaWHRbGaaiilaiaahUgacaGGNaaacaGLOaGaayzkaaGaeyypa0JaeyOeI0YaaSaaaeaacaaIXaaabaGaaGinaiabec8aWbaadaaiaaqaaiaadAgaaiaawoWaamaabmaabaGaaC4AaiaacYcacaWHRbGaai4jaaGaayjkaiaawMcaaiabg2da9maaqahabaWaaSaaaeaacaaIYaGaamiBaiabgUcaRiaaigdaaeaacaWGRbaaaiGacohacaGGPbGaaiOBamaabmaabaGaeqiTdq2aaSbaaSqaaiaadYgaaeqaaaGccaGLOaGaayzkaaGaamiuamaaBaaaleaacaWGSbaabeaakmaabmaabaGaci4yaiaac+gacaGGZbGaeqy0dOeacaGLOaGaayzkaaaaleaacaWGSbGaeyypa0JaaGimaaqaaiabg6HiLcqdcqGHris5aaaa@7545@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ --><!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <msub>
+            <mi>&#x03B4;</mi>
+            <mn>0</mn>
+          </msub>
+          <mo>=</mo>
+          <mo>&#x2212;</mo>
+          <mi>k</mi>
+          <mi>a</mi>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqaH0oazdaWgaaWcbaGaaGimaaqabaGccqGH9aqpcqGHsislcaWGRbGaamyyaaaa@4F59@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      (s-hullámú szórási hossz), <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <msub>
+            <mi>&#x03B4;</mi>
+            <mi>l</mi>
+          </msub>
+          <mo>=</mo>
+          <msup>
+            <mrow>
+              <mrow>
+                <mo>|</mo> 
+                <mrow>
+                  <mi>k</mi>
+                  <mi>a</mi>
+                </mrow> 
+                <mo>|</mo>
+              </mrow>
+            </mrow>
+            <mrow>
+              <mn>2</mn>
+              <mi>l</mi>
+              <mo>+</mo>
+              <mn>1</mn>
+            </mrow>
+          </msup>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqaH0oazdaWgaaWcbaGaamiBaaqabaGccqGH9aqpdaabdaqaaiaadUgacaWGHbaacaGLhWUaayjcSdWaaWbaaSqabeaacaaIYaGaamiBaiabgUcaRiaaigdaaaaaaa@553C@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      
+      Ga <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <mrow>
+            <mo>|</mo> 
+            <mrow>
+              <mi>k</mi>
+              <mo>&#x22C5;</mo>
+              <mi>a</mi>
+            </mrow> 
+            <mo>|</mo>
+          </mrow>
+          <mo>&#x226A;</mo>
+          <mn>1</mn>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaadaabdaqaaiaadUgacqGHflY1caWGHbaacaGLhWUaayjcSdGaeSOAI0JaaGymaaaa@5252@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      , akkor elég csak az s-hullámot figyelembe venni: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <mo>&#x21D2;</mo>
+          <mi>f</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>,</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mo>&#x2212;</mo>
+          <mi>a</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mn>1</mn>
+              <mo>+</mo>
+              <mi>O</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>k</mi>
+                  <mo>&#x22C5;</mo>
+                  <mi>a</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqGHshI3caWGMbWaaeWaaeaacaWHRbGaaiilaiaahUgacaGGNaaacaGLOaGaayzkaaGaeyypa0JaeyOeI0IaamyyamaabmaabaGaaGymaiabgUcaRiaad+eadaqadaqaaiaadUgacqGHflY1caWGHbaacaGLOaGaayzkaaaacaGLOaGaayzkaaaaaa@5D8B@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      , így <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display='block'>
+      <semantics>
+        <mrow>
+          <mover accent='true'>
+            <mi>f</mi>
+            <mo stretchy='true'>&#x02DC;</mo>
+          </mover>
+          <mo>=</mo>
+          <mn>4</mn>
+          <mi>&#x03C0;</mi>
+          <mi>a</mi>
+          <mo>&#x21D2;</mo>
+          <mi>V</mi>
+          <mrow>
+            <mo>(</mo>
+            <mi>k</mi>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mn>4</mn>
+          <mi>&#x03C0;</mi>
+          <mi>a</mi>
+          <mo>&#x21D2;</mo>
+          <mi>v</mi>
+          <mrow>
+            <mo>(</mo>
+            <mi>k</mi>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <mn>4</mn>
+              <mi>&#x03C0;</mi>
+              <msup>
+                <mi>&#x210F;</mi>
+                <mn>2</mn>
+              </msup>
+              <mi>a</mi>
+            </mrow>
+            <mi>m</mi>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaadaaiaaqaaiaadAgaaiaawoWaaiabg2da9iaaisdacqaHapaCcaWGHbGaeyO0H4TaamOvamaabmaabaGaam4AaaGaayjkaiaawMcaaiabg2da9iaaisdacqaHapaCcaWGHbGaeyO0H4TaamODamaabmaabaGaam4AaaGaayjkaiaawMcaaiabg2da9maalaaabaGaaGinaiabec8aWjabl+qiOnaaCaaaleqabaGaaGOmaaaakiaadggaaeaacaWGTbaaaaaa@667C@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      </li><li>
+      Merev gömbű, <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <msub>
+            <mi>r</mi>
+            <mn>0</mn>
+          </msub>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGYbWaaSbaaSqaaiaaicdaaeqaaaaa@4AD8@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      sugarú potenciálra a szórási hossz, ha csak az s hullámú szórási hossz vesszük figyelembe, épp <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <mn>2</mn>
+          <mo>&#x22C5;</mo>
+          <msub>
+            <mi>r</mi>
+            <mn>0</mn>
+          </msub>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaaIYaGaeyyXICTaamOCamaaBaaaleaacaaIWaaabeaaaaa@4DDE@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ --></li></ul>
+    <h2>Kétrészecske szórás közegben</h2>
+    <p> Definiáljuk a négypontfüggvényt, vagy más néven T-mátrixot:<!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <mi>&#x0393;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mn>1</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mn>2</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mn>3</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mn>4</mn>
+              </msub>
+                
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mi>v</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mn>1</mn>
+              </msub>
+              <mo>&#x2212;</mo>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mn>3</mn>
+              </msub>
+                
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&#x2212;</mo>
+          <mstyle displaystyle='true'>
+            <mrow>
+              <mo>&#x222B;</mo>
+              <mrow>
+                <mfrac>
+                  <mn>1</mn>
+                  <mrow>
+                    <mi>&#x03B2;</mi>
+                    <msup>
+                      <mi>&#x210F;</mi>
+                      <mn>2</mn>
+                    </msup>
+                      
+                  </mrow>
+                </mfrac>
+                <mstyle displaystyle='true'>
+                  <munder>
+                    <mo>&#x2211;</mo>
+                    <mi>m</mi>
+                  </munder>
+                  <mrow>
+                    <mi>v</mi>
+                    <mrow>
+                      <mo>(</mo>
+                      <mstyle mathvariant='bold'>
+                        <mi>q</mi>
+                      </mstyle>
+                      <mo>)</mo>
+                    </mrow>
+                    <msub>
+                      <mi>G</mi>
+                      <mrow>
+                        <mrow>
+                          <mo>(</mo>
+                          <mn>0</mn>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                    </msub>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <msub>
+                          <mstyle mathvariant='bold'>
+                            <mi>k</mi>
+                          </mstyle>
+                          <mn>1</mn>
+                        </msub>
+                        <mo>&#x2212;</mo>
+                        <mstyle mathvariant='bold'>
+                          <mi>q</mi>
+                        </mstyle>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                    <msub>
+                      <mi>G</mi>
+                      <mrow>
+                        <mrow>
+                          <mo>(</mo>
+                          <mn>0</mn>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                    </msub>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <msub>
+                          <mstyle mathvariant='bold'>
+                            <mi>k</mi>
+                          </mstyle>
+                          <mn>2</mn>
+                        </msub>
+                        <mo>+</mo>
+                        <mstyle mathvariant='bold'>
+                          <mi>q</mi>
+                        </mstyle>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                    <mi>&#x0393;</mi>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <msub>
+                          <mstyle mathvariant='bold'>
+                            <mi>k</mi>
+                          </mstyle>
+                          <mn>1</mn>
+                        </msub>
+                        <mo>&#x2212;</mo>
+                        <mstyle mathvariant='bold'>
+                          <mi>q</mi>
+                        </mstyle>
+                        <mo>,</mo>
+                        <msub>
+                          <mstyle mathvariant='bold'>
+                            <mi>k</mi>
+                          </mstyle>
+                          <mn>2</mn>
+                        </msub>
+                        <mo>+</mo>
+                        <mstyle mathvariant='bold'>
+                          <mi>q</mi>
+                        </mstyle>
+                        <mo>,</mo>
+                        <msub>
+                          <mstyle mathvariant='bold'>
+                            <mi>k</mi>
+                          </mstyle>
+                          <mn>3</mn>
+                        </msub>
+                        <mo>,</mo>
+                        <msub>
+                          <mstyle mathvariant='bold'>
+                            <mi>k</mi>
+                          </mstyle>
+                          <mn>4</mn>
+                        </msub>
+                          
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                </mstyle>
+              </mrow>
+            </mrow>
+              
+          </mstyle>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mi>d</mi>
+                <mn>3</mn>
+              </msup>
+              <mi>q</mi>
+            </mrow>
+            <mrow>
+              <msup>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mn>2</mn>
+                      <mi>&#x03C0;</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+                <mn>3</mn>
+              </msup>
+                
+            </mrow>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqqHtoWrdaqadaqaaiaahUgadaWgaaWcbaGaaGymaaqabaGccaGGSaGaaC4AamaaBaaaleaacaaIYaaabeaakiaacYcacaWHRbWaaSbaaSqaaiaaiodaaeqaaOGaaiilaiaahUgadaWgaaWcbaGaaGinaaqabaaakiaawIcacaGLPaaacqGH9aqpcaWG2bWaaeWaaeaacaWHRbWaaSbaaSqaaiaaigdaaeqaaOGaeyOeI0IaaC4AamaaBaaaleaacaaIZaaabeaaaOGaayjkaiaawMcaaiabgkHiTmaapeaabaWaaSaaaeaacaaIXaaabaGaeqOSdiMaeS4dHG2aaWbaaSqabeaacaaIYaaaaaaakmaaqafabaGaamODamaabmaabaGaaCyCaaGaayjkaiaawMcaaiaadEeadaWgaaWcbaWaaeWaaeaacaaIWaaacaGLOaGaayzkaaaabeaakmaabmaabaGaaC4AamaaBaaaleaacaaIXaaabeaakiabgkHiTiaahghaaiaawIcacaGLPaaacaWGhbWaaSbaaSqaamaabmaabaGaaGimaaGaayjkaiaawMcaaaqabaGcdaqadaqaaiaahUgadaWgaaWcbaGaaGOmaaqabaGccqGHRaWkcaWHXbaacaGLOaGaayzkaaGaeu4KdC0aaeWaaeaacaWHRbWaaSbaaSqaaiaaigdaaeqaaOGaeyOeI0IaaCyCaiaacYcacaWHRbWaaSbaaSqaaiaaikdaaeqaaOGaey4kaSIaaCyCaiaacYcacaWHRbWaaSbaaSqaaiaaiodaaeqaaOGaaiilaiaahUgadaWgaaWcbaGaaGinaaqabaaakiaawIcacaGLPaaaaSqaaiaad2gaaeqaniabggHiLdaaleqabeqdcqGHRiI8aOWaaSaaaeaacaWGKbWaaWbaaSqabeaacaaIZaaaaOGaamyCaaqaamaabmaabaGaaGOmaiabec8aWbGaayjkaiaawMcaamaaCaaaleqabaGaaG4maaaaaaaaaa@953D@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      A T-mátrix diagramja:</p>      <center><object data="10.15_3Tmatrix.svg" type="image/svg+xml" style="width:100%">
+      </object></center>
+    <p>Állítás: <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mi>&#x0393;</mi>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqqHtoWraaa@4A63@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      nem függ az átadott frekvenciától. Ezért a Matsubara-frekvenciákra való összegzés elvégezhető.
+      <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mi>&#x03B2;</mi>
+              <msup>
+                <mi>&#x210F;</mi>
+                <mn>2</mn>
+              </msup>
+                
+            </mrow>
+          </mfrac>
+          <mstyle displaystyle='true'>
+            <munder>
+              <mo>&#x2211;</mo>
+              <mi>m</mi>
+            </munder>
+            <mrow>
+              <msub>
+                <mi>G</mi>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>0</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+              </msub>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mstyle mathvariant='bold'>
+                      <mi>k</mi>
+                    </mstyle>
+                    <mn>1</mn>
+                  </msub>
+                  <mo>&#x2212;</mo>
+                  <mstyle mathvariant='bold'>
+                    <mi>q</mi>
+                  </mstyle>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <msub>
+                <mi>G</mi>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>0</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+              </msub>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mstyle mathvariant='bold'>
+                      <mi>k</mi>
+                    </mstyle>
+                    <mn>2</mn>
+                  </msub>
+                  <mo>+</mo>
+                  <mstyle mathvariant='bold'>
+                    <mi>q</mi>
+                  </mstyle>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </mstyle>
+          <mo>=</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mi>&#x03B2;</mi>
+              <msup>
+                <mi>&#x210F;</mi>
+                <mn>2</mn>
+              </msup>
+                
+            </mrow>
+          </mfrac>
+          <mstyle displaystyle='true'>
+            <munder>
+              <mo>&#x2211;</mo>
+              <mi>m</mi>
+            </munder>
+            <mrow>
+              <mfrac>
+                <mn>1</mn>
+                <mrow>
+                  <mi>i</mi>
+                  <msub>
+                    <mi>&#x03C9;</mi>
+                    <mn>1</mn>
+                  </msub>
+                  <mo>&#x2212;</mo>
+                  <mi>i</mi>
+                  <msub>
+                    <mi>&#x03BD;</mi>
+                    <mi>m</mi>
+                  </msub>
+                  <mo>&#x2212;</mo>
+                  <msup>
+                    <mi>&#x210F;</mi>
+                    <mrow>
+                      <mo>&#x2212;</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <msub>
+                        <mi>e</mi>
+                        <mrow>
+                          <msub>
+                            <mstyle mathvariant='bold'>
+                              <mi>k</mi>
+                            </mstyle>
+                            <mn>1</mn>
+                          </msub>
+                          <mo>&#x2212;</mo>
+                          <mstyle mathvariant='bold'>
+                            <mi>q</mi>
+                          </mstyle>
+                        </mrow>
+                      </msub>
+                      <mo>&#x2212;</mo>
+                      <mi>&#x03BC;</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+              </mfrac>
+              <mo>&#x22C5;</mo>
+              <mfrac>
+                <mn>1</mn>
+                <mrow>
+                  <mi>i</mi>
+                  <msub>
+                    <mi>&#x03C9;</mi>
+                    <mn>2</mn>
+                  </msub>
+                  <mo>+</mo>
+                  <mi>i</mi>
+                  <msub>
+                    <mi>&#x03C9;</mi>
+                    <mi>m</mi>
+                  </msub>
+                  <mo>&#x2212;</mo>
+                  <msup>
+                    <mi>&#x210F;</mi>
+                    <mrow>
+                      <mo>&#x2212;</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <msub>
+                        <mi>e</mi>
+                        <mrow>
+                          <mstyle mathvariant='bold'>
+                            <mi>k</mi>
+                          </mstyle>
+                          <mo>+</mo>
+                          <mstyle mathvariant='bold'>
+                            <mi>q</mi>
+                          </mstyle>
+                        </mrow>
+                      </msub>
+                      <mo>&#x2212;</mo>
+                      <mi>&#x03BC;</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+              </mfrac>
+                
+            </mrow>
+          </mstyle>
+          <mo>=</mo>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaadaWcaaqaaiaaigdaaeaacqaHYoGycqWIpecAdaahaaWcbeqaaiaaikdaaaaaaOWaaabuaeaacaWGhbWaaSbaaSqaamaabmaabaGaaGimaaGaayjkaiaawMcaaaqabaGcdaqadaqaaiaahUgadaWgaaWcbaGaaGymaaqabaGccqGHsislcaWHXbaacaGLOaGaayzkaaGaam4ramaaBaaaleaadaqadaqaaiaaicdaaiaawIcacaGLPaaaaeqaaOWaaeWaaeaacaWHRbWaaSbaaSqaaiaaikdaaeqaaOGaey4kaSIaaCyCaaGaayjkaiaawMcaaaWcbaGaamyBaaqab0GaeyyeIuoakiabg2da9maalaaabaGaaGymaaqaaiabek7aIjabl+qiOnaaCaaaleqabaGaaGOmaaaaaaGcdaaeqbqaamaalaaabaGaaGymaaqaaiaadMgacqaHjpWDdaWgaaWcbaGaaGymaaqabaGccqGHsislcaWGPbGaeqyVd42aaSbaaSqaaiaad2gaaeqaaOGaeyOeI0IaeS4dHG2aaWbaaSqabeaacqGHsislcaaIXaaaaOWaaeWaaeaacaWGLbWaaSbaaSqaaiaahUgadaWgaaadbaGaaGymaaqabaWccqGHsislcaWHXbaabeaakiabgkHiTiabeY7aTbGaayjkaiaawMcaaaaacqGHflY1daWcaaqaaiaaigdaaeaacaWGPbGaeqyYdC3aaSbaaSqaaiaaikdaaeqaaOGaey4kaSIaamyAaiabeM8a3naaBaaaleaacaWGTbaabeaakiabgkHiTiabl+qiOnaaCaaaleqabaGaeyOeI0IaaGymaaaakmaabmaabaGaamyzamaaBaaaleaacaWHRbGaey4kaSIaaCyCaaqabaGccqGHsislcqaH8oqBaiaawIcacaGLPaaaaaaaleaacaWGTbaabeqdcqGHris5aOGaeyypa0daaa@9958@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mo>=</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mi>&#x03B2;</mi>
+              <msup>
+                <mi>&#x210F;</mi>
+                <mn>2</mn>
+              </msup>
+                
+            </mrow>
+          </mfrac>
+          <mstyle displaystyle='true'>
+            <munder>
+              <mo>&#x2211;</mo>
+              <mi>m</mi>
+            </munder>
+            <mrow>
+              <mfrac>
+                <mn>1</mn>
+                <mrow>
+                  <mi>i</mi>
+                  <msub>
+                    <mi>&#x03C9;</mi>
+                    <mn>1</mn>
+                  </msub>
+                  <mo>+</mo>
+                  <mi>i</mi>
+                  <msub>
+                    <mi>&#x03C9;</mi>
+                    <mn>2</mn>
+                  </msub>
+                  <mo>&#x2212;</mo>
+                  <msup>
+                    <mi>&#x210F;</mi>
+                    <mrow>
+                      <mo>&#x2212;</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <msub>
+                        <mi>e</mi>
+                        <mrow>
+                          <msub>
+                            <mstyle mathvariant='bold'>
+                              <mi>k</mi>
+                            </mstyle>
+                            <mn>1</mn>
+                          </msub>
+                          <mo>&#x2212;</mo>
+                          <mstyle mathvariant='bold'>
+                            <mi>q</mi>
+                          </mstyle>
+                        </mrow>
+                      </msub>
+                      <mo>+</mo>
+                      <msub>
+                        <mi>e</mi>
+                        <mrow>
+                          <msub>
+                            <mstyle mathvariant='bold'>
+                              <mi>k</mi>
+                            </mstyle>
+                            <mn>2</mn>
+                          </msub>
+                          <mo>+</mo>
+                          <mstyle mathvariant='bold'>
+                            <mi>q</mi>
+                          </mstyle>
+                        </mrow>
+                      </msub>
+                      <mo>&#x2212;</mo>
+                      <mn>2</mn>
+                      <mi>&#x03BC;</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+              </mfrac>
+              <mrow>
+                <mo>[</mo> 
+                <mrow>
+                  <mfrac>
+                    <mn>1</mn>
+                    <mrow>
+                      <mi>i</mi>
+                      <msub>
+                        <mi>&#x03C9;</mi>
+                        <mn>1</mn>
+                      </msub>
+                      <mo>&#x2212;</mo>
+                      <mi>i</mi>
+                      <msub>
+                        <mi>&#x03BD;</mi>
+                        <mi>m</mi>
+                      </msub>
+                      <mo>&#x2212;</mo>
+                      <msup>
+                        <mi>&#x210F;</mi>
+                        <mrow>
+                          <mo>&#x2212;</mo>
+                          <mn>1</mn>
+                        </mrow>
+                      </msup>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <msub>
+                            <mi>e</mi>
+                            <mrow>
+                              <msub>
+                                <mstyle mathvariant='bold'>
+                                  <mi>k</mi>
+                                </mstyle>
+                                <mn>1</mn>
+                              </msub>
+                              <mo>&#x2212;</mo>
+                              <mstyle mathvariant='bold'>
+                                <mi>q</mi>
+                              </mstyle>
+                            </mrow>
+                          </msub>
+                          <mo>&#x2212;</mo>
+                          <mi>&#x03BC;</mi>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                  </mfrac>
+                  <mo>+</mo>
+                  <mfrac>
+                    <mn>1</mn>
+                    <mrow>
+                      <mi>i</mi>
+                      <msub>
+                        <mi>&#x03C9;</mi>
+                        <mn>2</mn>
+                      </msub>
+                      <mo>+</mo>
+                      <mi>i</mi>
+                      <msub>
+                        <mi>&#x03BD;</mi>
+                        <mi>m</mi>
+                      </msub>
+                      <mo>&#x2212;</mo>
+                      <msup>
+                        <mi>&#x210F;</mi>
+                        <mrow>
+                          <mo>&#x2212;</mo>
+                          <mn>1</mn>
+                        </mrow>
+                      </msup>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <msub>
+                            <mi>e</mi>
+                            <mrow>
+                              <msub>
+                                <mstyle mathvariant='bold'>
+                                  <mi>k</mi>
+                                </mstyle>
+                                <mn>2</mn>
+                              </msub>
+                              <mo>+</mo>
+                              <mstyle mathvariant='bold'>
+                                <mi>q</mi>
+                              </mstyle>
+                            </mrow>
+                          </msub>
+                          <mo>&#x2212;</mo>
+                          <mi>&#x03BC;</mi>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                  </mfrac>
+                    
+                </mrow> 
+                <mo>]</mo>
+              </mrow>
+            </mrow>
+          </mstyle>
+          <mo>=</mo>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqGH9aqpdaWcaaqaaiaaigdaaeaacqaHYoGycqWIpecAdaahaaWcbeqaaiaaikdaaaaaaOWaaabuaeaadaWcaaqaaiaaigdaaeaacaWGPbGaeqyYdC3aaSbaaSqaaiaaigdaaeqaaOGaey4kaSIaamyAaiabeM8a3naaBaaaleaacaaIYaaabeaakiabgkHiTiabl+qiOnaaCaaaleqabaGaeyOeI0IaaGymaaaakmaabmaabaGaamyzamaaBaaaleaacaWHRbWaaSbaaWqaaiaaigdaaeqaaSGaeyOeI0IaaCyCaaqabaGccqGHRaWkcaWGLbWaaSbaaSqaaiaahUgadaWgaaadbaGaaGOmaaqabaWccqGHRaWkcaWHXbaabeaakiabgkHiTiaaikdacqaH8oqBaiaawIcacaGLPaaaaaWaamWaaeaadaWcaaqaaiaaigdaaeaacaWGPbGaeqyYdC3aaSbaaSqaaiaaigdaaeqaaOGaeyOeI0IaamyAaiabe27aUnaaBaaaleaacaWGTbaabeaakiabgkHiTiabl+qiOnaaCaaaleqabaGaeyOeI0IaaGymaaaakmaabmaabaGaamyzamaaBaaaleaacaWHRbWaaSbaaWqaaiaaigdaaeqaaSGaeyOeI0IaaCyCaaqabaGccqGHsislcqaH8oqBaiaawIcacaGLPaaaaaGaey4kaSYaaSaaaeaacaaIXaaabaGaamyAaiabeM8a3naaBaaaleaacaaIYaaabeaakiabgUcaRiaadMgacqaH9oGBdaWgaaWcbaGaamyBaaqabaGccqGHsislcqWIpecAdaahaaWcbeqaaiabgkHiTiaaigdaaaGcdaqadaqaaiaadwgadaWgaaWcbaGaaC4AamaaBaaameaacaaIYaaabeaaliabgUcaRiaahghaaeqaaOGaeyOeI0IaeqiVd0gacaGLOaGaayzkaaaaaaGaay5waiaaw2faaaWcbaGaamyBaaqab0GaeyyeIuoakiabg2da9aaa@9E87@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mo>=</mo>
+          <mo>&#x2212;</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mi>&#x210F;</mi>
+          </mfrac>
+          <mfrac>
+            <mrow>
+              <mn>1</mn>
+              <mo>+</mo>
+              <msup>
+                <mi>n</mi>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>0</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+              </msup>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mstyle mathvariant='bold'>
+                      <mi>k</mi>
+                    </mstyle>
+                    <mn>1</mn>
+                  </msub>
+                  <mo>&#x2212;</mo>
+                  <mstyle mathvariant='bold'>
+                    <mi>q</mi>
+                  </mstyle>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mo>+</mo>
+              <msup>
+                <mi>n</mi>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>0</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+              </msup>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mstyle mathvariant='bold'>
+                      <mi>k</mi>
+                    </mstyle>
+                    <mn>2</mn>
+                  </msub>
+                  <mo>+</mo>
+                  <mstyle mathvariant='bold'>
+                    <mi>q</mi>
+                  </mstyle>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+            <mrow>
+              <mi>i</mi>
+              <msub>
+                <mi>&#x03C9;</mi>
+                <mrow>
+                  <msub>
+                    <mi>n</mi>
+                    <mn>1</mn>
+                  </msub>
+                    
+                </mrow>
+              </msub>
+              <mo>+</mo>
+              <mi>i</mi>
+              <msub>
+                <mi>&#x03C9;</mi>
+                <mrow>
+                  <msub>
+                    <mi>n</mi>
+                    <mn>2</mn>
+                  </msub>
+                    
+                </mrow>
+              </msub>
+              <mo>&#x2212;</mo>
+              <msup>
+                <mi>&#x210F;</mi>
+                <mrow>
+                  <mo>&#x2212;</mo>
+                  <mn>1</mn>
+                </mrow>
+              </msup>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>e</mi>
+                    <mrow>
+                      <msub>
+                        <mstyle mathvariant='bold'>
+                          <mi>k</mi>
+                        </mstyle>
+                        <mn>1</mn>
+                      </msub>
+                      <mo>&#x2212;</mo>
+                      <mstyle mathvariant='bold'>
+                        <mi>q</mi>
+                      </mstyle>
+                    </mrow>
+                  </msub>
+                  <mo>+</mo>
+                  <msub>
+                    <mi>e</mi>
+                    <mrow>
+                      <msub>
+                        <mstyle mathvariant='bold'>
+                          <mi>k</mi>
+                        </mstyle>
+                        <mn>2</mn>
+                      </msub>
+                      <mo>+</mo>
+                      <mstyle mathvariant='bold'>
+                        <mi>q</mi>
+                      </mstyle>
+                    </mrow>
+                  </msub>
+                  <mo>&#x2212;</mo>
+                  <mn>2</mn>
+                  <mi>&#x03BC;</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqGH9aqpcqGHsisldaWcaaqaaiaaigdaaeaacqWIpecAaaWaaSaaaeaacaaIXaGaey4kaSIaamOBamaaCaaaleqabaWaaeWaaeaacaaIWaaacaGLOaGaayzkaaaaaOWaaeWaaeaacaWHRbWaaSbaaSqaaiaaigdaaeqaaOGaeyOeI0IaaCyCaaGaayjkaiaawMcaaiabgUcaRiaad6gadaahaaWcbeqaamaabmaabaGaaGimaaGaayjkaiaawMcaaaaakmaabmaabaGaaC4AamaaBaaaleaacaaIYaaabeaakiabgUcaRiaahghaaiaawIcacaGLPaaaaeaacaWGPbGaeqyYdC3aaSbaaSqaaiaad6gadaWgaaadbaGaaGymaaqabaaaleqaaOGaey4kaSIaamyAaiabeM8a3naaBaaaleaacaWGUbWaaSbaaWqaaiaaikdaaeqaaaWcbeaakiabgkHiTiabl+qiOnaaCaaaleqabaGaeyOeI0IaaGymaaaakmaabmaabaGaamyzamaaBaaaleaacaWHRbWaaSbaaWqaaiaaigdaaeqaaSGaeyOeI0IaaCyCaaqabaGccqGHRaWkcaWGLbWaaSbaaSqaaiaahUgadaWgaaadbaGaaGOmaaqabaWccqGHRaWkcaWHXbaabeaakiabgkHiTiaaikdacqaH8oqBaiaawIcacaGLPaaaaaaaaa@7F0D@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+       ahol <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math>
+      <semantics>
+        <mrow>
+          <msup>
+            <mi>n</mi>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mn>0</mn>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </msup>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant='bold'>
+              <mi>k</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <msup>
+                <mi>e</mi>
+                <mrow>
+                  <mi>&#x03B2;</mi>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <msub>
+                        <mi>e</mi>
+                        <mstyle mathvariant='bold'>
+                          <mi>k</mi>
+                        </mstyle>
+                      </msub>
+                      <mo>&#x2212;</mo>
+                      <mi>&#x03BC;</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+              </msup>
+              <mo>&#x2212;</mo>
+              <mn>1</mn>
+            </mrow>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGUbWaaWbaaSqabeaadaqadaqaaiaaicdaaiaawIcacaGLPaaaaaGcdaqadaqaaiaahUgaaiaawIcacaGLPaaacqGH9aqpdaWcaaqaaiaaigdaaeaacaWGLbWaaWbaaSqabeaacqaHYoGydaqadaqaaiaadwgadaWgaaadbaGaaC4AaaqabaWccqGHsislcqaH8oqBaiaawIcacaGLPaaaaaGccqGHsislcaaIXaaaaaaa@5B62@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      .      </p>
+    <p>Tömegközépponti és relatív koordinátákkal: 
+      <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mstyle mathvariant='bold'>
+            <mi>K</mi>
+          </mstyle>
+          <mo>=</mo>
+          <msub>
+            <mstyle mathvariant='bold'>
+              <mi>k</mi>
+            </mstyle>
+            <mn>1</mn>
+          </msub>
+          <mo>+</mo>
+          <msub>
+            <mstyle mathvariant='bold'>
+              <mi>k</mi>
+            </mstyle>
+            <mn>2</mn>
+          </msub>
+          <mo>=</mo>
+          <msub>
+            <mstyle mathvariant='bold'>
+              <mi>k</mi>
+            </mstyle>
+            <mn>3</mn>
+          </msub>
+          <mo>+</mo>
+          <msub>
+            <mstyle mathvariant='bold'>
+              <mi>k</mi>
+            </mstyle>
+            <mn>4</mn>
+          </msub>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWHlbGaeyypa0JaaC4AamaaBaaaleaacaaIXaaabeaakiabgUcaRiaahUgadaWgaaWcbaGaaGOmaaqabaGccqGH9aqpcaWHRbWaaSbaaSqaaiaaiodaaeqaaOGaey4kaSIaaC4AamaaBaaaleaacaaI0aaabeaaaaa@552F@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      
+      <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mstyle mathvariant='bold'>
+            <mi>k</mi>
+          </mstyle>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mn>1</mn>
+              </msub>
+              <mo>&#x2212;</mo>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mn>2</mn>
+              </msub>
+                
+            </mrow>
+            <mn>2</mn>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWHRbGaeyypa0ZaaSaaaeaacaWHRbWaaSbaaSqaaiaaigdaaeqaaOGaeyOeI0IaaC4AamaaBaaaleaacaaIYaaabeaaaOqaaiaaikdaaaaaaa@5079@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      
+      <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mstyle mathvariant='bold'>
+            <mi>k</mi>
+          </mstyle>
+          <mo>&#x0027;</mo>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mn>3</mn>
+              </msub>
+              <mo>&#x2212;</mo>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mn>4</mn>
+              </msub>
+                
+            </mrow>
+            <mn>2</mn>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWHRbGaai4jaiabg2da9maalaaabaGaaC4AamaaBaaaleaacaaIZaaabeaakiabgkHiTiaahUgadaWgaaWcbaGaaGinaaqabaaakeaacaaIYaaaaaaa@5128@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      
+      Ekkor <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mi>i</mi>
+          <msub>
+            <mi>&#x03C9;</mi>
+            <mi>N</mi>
+          </msub>
+          <mo>=</mo>
+          <mi>i</mi>
+          <msub>
+            <mi>&#x03C9;</mi>
+            <mrow>
+              <msub>
+                <mi>n</mi>
+                <mn>1</mn>
+              </msub>
+                
+            </mrow>
+          </msub>
+          <mo>+</mo>
+          <mi>i</mi>
+          <msub>
+            <mi>&#x03C9;</mi>
+            <mrow>
+              <msub>
+                <mi>n</mi>
+                <mn>2</mn>
+              </msub>
+                
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mi>i</mi>
+          <msub>
+            <mi>&#x03C9;</mi>
+            <mrow>
+              <msub>
+                <mi>n</mi>
+                <mn>3</mn>
+              </msub>
+                
+            </mrow>
+          </msub>
+          <mo>+</mo>
+          <mi>i</mi>
+          <msub>
+            <mi>&#x03C9;</mi>
+            <mrow>
+              <msub>
+                <mi>n</mi>
+                <mn>4</mn>
+              </msub>
+                
+            </mrow>
+          </msub>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGPbGaeqyYdC3aaSbaaSqaaiaad6eaaeqaaOGaeyypa0JaamyAaiabeM8a3naaBaaaleaacaWGUbWaaSbaaWqaaiaaigdaaeqaaaWcbeaakiabgUcaRiaadMgacqaHjpWDdaWgaaWcbaGaamOBamaaBaaameaacaaIYaaabeaaaSqabaGccqGH9aqpcaWGPbGaeqyYdC3aaSbaaSqaaiaad6gadaWgaaadbaGaaG4maaqabaaaleqaaOGaey4kaSIaamyAaiabeM8a3naaBaaaleaacaWGUbWaaSbaaWqaaiaaisdaaeqaaaWcbeaaaaa@63E7@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ --><!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mi>z</mi>
+          <mo>&#x2212;</mo>
+          <mn>2</mn>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>e</mi>
+                <mrow>
+                  <mstyle mathvariant='bold'>
+                    <mi>k</mi>
+                  </mstyle>
+                  <mo>+</mo>
+                  <mstyle mathvariant='bold'>
+                    <mi>q</mi>
+                  </mstyle>
+                </mrow>
+              </msub>
+              <mo>&#x2212;</mo>
+              <mi>&#x03BC;</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>:</mo>
+          <mo>=</mo>
+          <mi>&#x210F;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>i</mi>
+              <msub>
+                <mi>&#x03C9;</mi>
+                <mrow>
+                  <msub>
+                    <mi>n</mi>
+                    <mn>1</mn>
+                  </msub>
+                    
+                </mrow>
+              </msub>
+              <mo>+</mo>
+              <mi>i</mi>
+              <msub>
+                <mi>&#x03C9;</mi>
+                <mrow>
+                  <msub>
+                    <mi>n</mi>
+                    <mn>2</mn>
+                  </msub>
+                    
+                </mrow>
+              </msub>
+              <mo>&#x2212;</mo>
+              <msup>
+                <mi>&#x210F;</mi>
+                <mrow>
+                  <mo>&#x2212;</mo>
+                  <mn>1</mn>
+                </mrow>
+              </msup>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>e</mi>
+                    <mrow>
+                      <msub>
+                        <mstyle mathvariant='bold'>
+                          <mi>k</mi>
+                        </mstyle>
+                        <mn>1</mn>
+                      </msub>
+                      <mo>&#x2212;</mo>
+                      <mstyle mathvariant='bold'>
+                        <mi>q</mi>
+                      </mstyle>
+                    </mrow>
+                  </msub>
+                  <mo>+</mo>
+                  <msub>
+                    <mi>e</mi>
+                    <mrow>
+                      <msub>
+                        <mstyle mathvariant='bold'>
+                          <mi>k</mi>
+                        </mstyle>
+                        <mn>2</mn>
+                      </msub>
+                      <mo>+</mo>
+                      <mstyle mathvariant='bold'>
+                        <mi>q</mi>
+                      </mstyle>
+                        
+                    </mrow>
+                  </msub>
+                  <mo>&#x2212;</mo>
+                  <mn>2</mn>
+                  <mi>&#x03BC;</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mi>i</mi>
+          <mi>&#x210F;</mi>
+          <msub>
+            <mi>&#x03C9;</mi>
+            <mi>N</mi>
+          </msub>
+          <mo>&#x2212;</mo>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mi>&#x210F;</mi>
+                <mn>2</mn>
+              </msup>
+              <msup>
+                <mi>K</mi>
+                <mn>2</mn>
+              </msup>
+                
+            </mrow>
+            <mrow>
+              <mn>4</mn>
+              <mi>m</mi>
+            </mrow>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWG6bGaeyOeI0IaaGOmamaabmaabaGaamyzamaaBaaaleaacaWHRbGaey4kaSIaaCyCaaqabaGccqGHsislcqaH8oqBaiaawIcacaGLPaaacaGG6aGaeyypa0JaeS4dHG2aaeWaaeaacaWGPbGaeqyYdC3aaSbaaSqaaiaad6gadaWgaaadbaGaaGymaaqabaaaleqaaOGaey4kaSIaamyAaiabeM8a3naaBaaaleaacaWGUbWaaSbaaWqaaiaaikdaaeqaaaWcbeaakiabgkHiTiabl+qiOnaaCaaaleqabaGaeyOeI0IaaGymaaaakmaabmaabaGaamyzamaaBaaaleaacaWHRbWaaSbaaWqaaiaaigdaaeqaaSGaeyOeI0IaaCyCaaqabaGccqGHRaWkcaWGLbWaaSbaaSqaaiaahUgadaWgaaadbaGaaGOmaaqabaWccqGHRaWkcaWHXbaabeaakiabgkHiTiaaikdacqaH8oqBaiaawIcacaGLPaaaaiaawIcacaGLPaaacqGH9aqpcaWGPbGaeS4dHGMaeqyYdC3aaSbaaSqaaiaad6eaaeqaaOGaeyOeI0YaaSaaaeaacqWIpecAdaahaaWcbeqaaiaaikdaaaGccaWGlbWaaWbaaSqabeaacaaIYaaaaaGcbaGaaGinaiaad2gaaaaaaa@82D6@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->
+      illetve <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mi>&#x0393;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mn>1</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mn>2</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mn>3</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mstyle mathvariant='bold'>
+                  <mi>k</mi>
+                </mstyle>
+                <mn>4</mn>
+              </msub>
+                
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&#x2192;</mo>
+          <mi>&#x0393;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>,</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+              <mo>,</mo>
+              <mstyle mathvariant='bold'>
+                <mi>K</mi>
+              </mstyle>
+              <mo>,</mo>
+              <mi>z</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqqHtoWrdaqadaqaaiaahUgadaWgaaWcbaGaaGymaaqabaGccaGGSaGaaC4AamaaBaaaleaacaaIYaaabeaakiaacYcacaWHRbWaaSbaaSqaaiaaiodaaeqaaOGaaiilaiaahUgadaWgaaWcbaGaaGinaaqabaaakiaawIcacaGLPaaacqGHsgIRcqqHtoWrdaqadaqaaiaahUgacaGGSaGaaC4AaiaacEcacaGGSaGaaC4saiaacYcacaWG6baacaGLOaGaayzkaaaaaa@60EA@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ -->      </p>
+    <p> Ekkor az jön ki, hogy <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+      <math display="block">
+      <semantics>
+        <mrow>
+          <mi>&#x0393;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>,</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+              <mo>,</mo>
+              <mstyle mathvariant='bold'>
+                <mi>K</mi>
+              </mstyle>
+              <mo>,</mo>
+              <mi>z</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mi>v</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x2212;</mo>
+              <mstyle mathvariant='bold'>
+                <mi>k</mi>
+              </mstyle>
+              <mo>&#x0027;</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>+</mo>
+          <mstyle displaystyle='true'>
+            <mrow>
+              <mo>&#x222B;</mo>
+              <mrow>
+                <mi>v</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mstyle mathvariant='bold'>
+                    <mi>q</mi>
+                  </mstyle>
+                  <mo>)</mo>
+                </mrow>
+                <mfrac>
+                  <mrow>
+                    <msub>
+                      <mi>F</mi>
+                      <mrow>
+                        <mrow>
+                          <mo>(</mo>
+                          <mo>+</mo>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                    </msub>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <mstyle mathvariant='bold'>
+                          <mi>K</mi>
+                        </mstyle>
+                        <mo>,</mo>
+                        <mstyle mathvariant='bold'>
+                          <mi>k</mi>
+                        </mstyle>
+                        <mo>&#x2212;</mo>
+                        <mstyle mathvariant='bold'>
+                          <mi>q</mi>
+                        </mstyle>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                  <mrow>
+                    <mi>z</mi>
+                    <mo>&#x2212;</mo>
+                    <mn>2</mn>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <msub>
+                          <mi>e</mi>
+                          <mrow>
+                            <mstyle mathvariant='bold'>
+                              <mi>k</mi>
+                            </mstyle>
+                            <mo>+</mo>
+                            <mstyle mathvariant='bold'>
+                              <mi>q</mi>
+                            </mstyle>
+                          </mrow>
+                        </msub>
+                        <mo>&#x2212;</mo>
+                        <mi>&#x03BC;</mi>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                </mfrac>
+                <mi>&#x0393;</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mstyle mathvariant='bold'>
+                      <mi>k</mi>
+                    </mstyle>
+                    <mo>&#x2212;</mo>
+                    <mstyle mathvariant='bold'>
+                      <mi>q</mi>
+                    </mstyle>
+                    <mo>,</mo>
+                    <mstyle mathvariant='bold'>
+                      <mi>k</mi>
+                    </mstyle>
+                    <mo>&#x0027;</mo>
+                    <mo>,</mo>
+                    <mstyle mathvariant='bold'>
+                      <mi>K</mi>
+                    </mstyle>
+                    <mo>,</mo>
+                    <mi>z</mi>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+              </mrow>
+            </mrow>
+              
+          </mstyle>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mi>d</mi>
+                <mn>3</mn>
+              </msup>
+              <mi>q</mi>
+            </mrow>
+            <mrow>
+              <msup>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mn>2</mn>
+                      <mi>&#x03C0;</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+                <mn>3</mn>
+              </msup>
+                
+            </mrow>
+          </mfrac>
+            
+        </mrow>
+        <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacqqHtoWrdaqadaqaaiaahUgacaGGSaGaaC4AaiaacEcacaGGSaGaaC4saiaacYcacaWG6baacaGLOaGaayzkaaGaeyypa0JaamODamaabmaabaGaaC4AaiabgkHiTiaahUgacaGGNaaacaGLOaGaayzkaaGaey4kaSYaa8qaaeaacaWG2bWaaeWaaeaacaWHXbaacaGLOaGaayzkaaWaaSaaaeaacaWGgbWaaSbaaSqaamaabmaabaGaey4kaScacaGLOaGaayzkaaaabeaakmaabmaabaGaaC4saiaacYcacaWHRbGaeyOeI0IaaCyCaaGaayjkaiaawMcaaaqaaiaadQhacqGHsislcaaIYaWaaeWaaeaacaWGLbWaaSbaaSqaaiaahUgacqGHRaWkcaWHXbaabeaakiabgkHiTiabeY7aTbGaayjkaiaawMcaaaaacqqHtoWrdaqadaqaaiaahUgacqGHsislcaWHXbGaaiilaiaahUgacaGGNaGaaiilaiaahUeacaGGSaGaamOEaaGaayjkaiaawMcaaaWcbeqab0Gaey4kIipakmaalaaabaGaamizamaaCaaaleqabaGaaG4maaaakiaadghaaeaadaqadaqaaiaaikdacqaHapaCaiaawIcacaGLPaaadaahaaWcbeqaaiaaiodaaaaaaaaa@8716@</annotation>
+      </semantics>
+      </math>
+      <!-- MathType@End@5@5@ --><a id="T-matrix"></a><a href="#T-matrix" name="T-matrix" class="eqnnumber">(3)</a>
+       melyben </p>
+    <!-- MathType@Translator@5@5@MathML2 (no namespace).tdl@MathML 2.0 (no namespace)@ -->
+<math display="block">
+ <semantics>
+  <mrow>
+   <msub>
+    <mi>F</mi>
+    <mrow>
+     <mrow><mo>(</mo>
+      <mo>+</mo>
+     <mo>)</mo></mrow>
+    </mrow>
+   </msub>
+   <mrow><mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='bold'><mi>K</mi></mstyle><mo>,</mo><mstyle mathvariant='bold'><mi>k</mi></mstyle><mo>&#x2212;</mo><mstyle mathvariant='bold'><mi>q</mi></mstyle>
+    </mrow>
+   <mo>)</mo></mrow><mo>=</mo><mn>1</mn><mo>+</mo><msup>
+    <mi>n</mi>
+    <mrow>
+     <mrow><mo>(</mo>
+      <mn>0</mn>
+     <mo>)</mo></mrow>
+    </mrow>
+   </msup>
+
+   <mrow><mo>(</mo>
+    <mrow>
+     <msub>
+      <mstyle mathvariant='bold'><mi>k</mi></mstyle>
+      <mn>1</mn>
+     </msub>
+     <mo>&#x2212;</mo><mstyle mathvariant='bold'><mi>q</mi></mstyle>
+    </mrow>
+   <mo>)</mo></mrow><mo>+</mo><msup>
+    <mi>n</mi>
+    <mrow>
+     <mrow><mo>(</mo>
+      <mn>0</mn>
+     <mo>)</mo></mrow>
+    </mrow>
+   </msup>
+   <mrow><mo>(</mo>
+    <mrow>
+     <msub>
+      <mstyle mathvariant='bold'><mi>k</mi></mstyle>
+      <mn>2</mn>
+     </msub>
+     <mo>+</mo><mstyle mathvariant='bold'><mi>q</mi></mstyle>
+    </mrow>
+   <mo>)</mo></mrow><mo>=</mo><mn>1</mn><mo>+</mo><msup>
+    <mi>n</mi>
+    <mrow>
+     <mrow><mo>(</mo>
+      <mn>0</mn>
+     <mo>)</mo></mrow>
+    </mrow>
+   </msup>
+   <mrow><mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='bold'><mi>K</mi></mstyle><mo>/</mo><mn>2</mn><mo>+</mo><mstyle mathvariant='bold'><mi>k</mi></mstyle><mo>&#x2212;</mo><mstyle mathvariant='bold'><mi>q</mi></mstyle>
+    </mrow>
+   <mo>)</mo></mrow><mo>+</mo><msup>
+    <mi>n</mi>
+    <mrow>
+     <mrow><mo>(</mo>
+      <mn>0</mn>
+     <mo>)</mo></mrow>
+    </mrow>
+   </msup>
+   <mrow><mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='bold'><mi>K</mi></mstyle><mo>/</mo><mn>2</mn><mo>&#x2212;</mo><mstyle mathvariant='bold'><mi>k</mi></mstyle><mo>+</mo><mstyle mathvariant='bold'><mi>q</mi></mstyle>
+    </mrow>
+   <mo>)</mo></mrow>
+  </mrow>
+  <annotation encoding='MathType-MTEF' style="display:none">MathType@MTEF@5@5@+=feaagCart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbdfgBPjMCPbqefmuyTjMCPfgarmqr1ngBPrgitLxBI9gBamrr1ngBPrwtHrhAYaqeguuDJXwAKbstHrhAGq1DVbWefv3ySLgznfgDOfdarCqr1ngBPrginfgDObYtUvgarqqr1ngBPrgifHhDYfgasaacH8qrps0lbbf9q8WrFfeuY=Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0=yr0RYxir=Jbba9q8aq0=yq=He9q8qqQ8frFve9Fve9Ff0dmeaacaGacmGadaWaaiqacaabauaagaaakeaacaWGgbWaaSbaaSqaamaabmaabaGaey4kaScacaGLOaGaayzkaaaabeaakmaabmaabaGaaC4saiaacYcacaWHRbGaeyOeI0IaaCyCaaGaayjkaiaawMcaaiabg2da9iaaigdacqGHRaWkcaWGUbWaaWbaaSqabeaadaqadaqaaiaaicdaaiaawIcacaGLPaaaaaGcdaqadaqaaiaahUgadaWgaaWcbaGaaGymaaqabaGccqGHsislcaWHXbaacaGLOaGaayzkaaGaey4kaSIaamOBamaaCaaaleqabaWaaeWaaeaacaaIWaaacaGLOaGaayzkaaaaaOWaaeWaaeaacaWHRbWaaSbaaSqaaiaaikdaaeqaaOGaey4kaSIaaCyCaaGaayjkaiaawMcaaiabg2da9iaaigdacqGHRaWkcaWGUbWaaWbaaSqabeaadaqadaqaaiaaicdaaiaawIcacaGLPaaaaaGcdaqadaqaaiaahUeacaGGVaGaaGOmaiabgUcaRiaahUgacqGHsislcaWHXbaacaGLOaGaayzkaaGaey4kaSIaamOBamaaCaaaleqabaWaaeWaaeaacaaIWaaacaGLOaGaayzkaaaaaOWaaeWaaeaacaWHlbGaai4laiaaikdacqGHsislcaWHRbGaey4kaSIaaCyCaaGaayjkaiaawMcaaaaa@80BF@</annotation>
+ </semantics>
+</math>
+<!-- MathType@End@5@5@ -->
+
+</div>
+</center>
+</body>
+</html>

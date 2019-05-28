@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+.matekszoveg {
+	font-style:italic;
+}
+annotation {
+	display: none;
+}
+.bigger {/*
+	background-color: #FFF9D7;
+	border: 1px solid #999999;
+	margin: 4%;
+	padding: 1%;*/
+}
+.big {
+	font-size: 105%;
+	font-weight: bold;
+}
+
+.date {
+	float: right;
+}
+math {
+	display:inline;
+	padding-right:0px;
+	margin-right:0px;
+}
+.megj {
+	font-weight:bold;
+}
+.underline {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: dashed;
+	border-right-style: dashed;
+	border-bottom-style: dashed;
+	border-left-style: dashed;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+}
+h1, h2 {
+	text-align: center;
+}
+h1, h2, h3, h4, h5 {
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+.tetel {
+	color:#990000;
+	text-decoration: underline;
+	font-weight:bold;
+}
+.bizonyitas {
+	color:#990000;
+}
+.def {
+	text-decoration:underline;
+	font-weight:bold;
+}
+.pelda {
+	font-weight:bold;
+}
+.allitas {
+	color:#990000;
+	text-decoration: underline;
+}
+p {
+	line-height:200%;
+}
+math {
+	line-height:100%;
+}
+.indent {
+	padding-left:5%;
+}

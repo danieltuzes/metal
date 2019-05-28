@@ -1,0 +1,1 @@
+pandoc analizisIb.html -t markdown -o analizisIb.md -s --template=template.md

@@ -1,0 +1,92 @@
+\usepackage{environ} % azért kell, mert egyes környezeteket el akarok rejteni
+\usepackage{amsthm}
+\usepackage{newunicodechar} % unicode-ban egyszerűbb tárolni, viszont a latex alapból nem ismeri ezeket
+\newunicodechar{■}{\qed}
+\newunicodechar{∎}{\qed}
+\newunicodechar{↣}{\rightarrowtail}
+
+\renewcommand{\contentsname}{Tartalomjegyzék}
+
+
+\definecolor{sotetvoros}{HTML}{900000} % a színekre így hivatkozok
+\definecolor{sotetzold}{HTML}{009900} % a színekre így hivatkozok
+\usepackage{tcolorbox} % a def, tétel, bizonyítás, állítás, megjegyzés körüli színes kerethez.
+\tcbuselibrary{most} % a def, tétel, bizonyítás, állítás, megjegyzés körüli színes kerethez.
+
+%
+% Saját környezetek definiálása, hogy a definíciók, tételek, bizonyítások és megjegyzések külön,
+% de egységesen formázhatóak legyenek. A NewEnviron azért kell, hogy egyes környezetek
+% elrejthetőek legyenek. Pl. azon extra definíciók, tételek, bizonyítások, amelyek a régi
+% jegyzetben benne voltak, de most már nem szükségesek. Elrejthető továbbá az "ajánló" rovat,
+% amely nem a tananyaghoz kapcsolódó vicces, közéleti, de a természettudományokhoz, vagy az
+% emberi kultúrkincshez valahogy másképp hozzájárul.
+%
+
+\newenvironment{definicio}{}{}
+\tcolorboxenvironment{definicio}{blanker,breakable,left=5mm, right=5mm,
+before skip=10pt,after skip=10pt,borderline west={1.5mm}{0pt}{black},borderline east={1.5mm}{0pt}{black}}
+
+\NewEnviron{def_extra}{
+\begin{definicio} % ennek és az alábbi sornak a kikommentelésel eltűnik az apró oldalsó színes vonal a régi, már nem szükséges tartalomról
+%\BODY
+\end{definicio} % ennek és az alábbi sornak a kikommentelésel eltűnik az apró oldalsó színes vonal a régi, már nem szükséges tartalomról
+}
+
+
+\newenvironment{tetel}{}{}
+\tcolorboxenvironment{tetel}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={1.5mm}{0pt}{sotetvoros},borderline east={1.5mm}{0pt}{sotetvoros}}
+
+\NewEnviron{tetel_extra}{
+\begin{tetel} % ennek és az alábbi sornak a kikommentelésel eltűnik az apró oldalsó színes vonal a régi, már nem szükséges tartalomról
+%\BODY
+\end{tetel} % ennek és az alábbi sornak a kikommentelésel eltűnik az apró oldalsó színes vonal a régi, már nem szükséges tartalomról
+}
+
+
+\newenvironment{bizonyitas}{}{}
+\tcolorboxenvironment{bizonyitas}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={1.5mm}{0pt}{sotetvoros},borderline east={1.5mm}{0pt}{sotetvoros}}
+
+\NewEnviron{biz_extra}{
+\begin{bizonyitas} % ennek és az alábbi sornak a kikommentelésel eltűnik az apró oldalsó színes vonal a régi, már nem szükséges tartalomról
+%\BODY
+\end{bizonyitas} % ennek és az alábbi sornak a kikommentelésel eltűnik az apró oldalsó színes vonal a régi, már nem szükséges tartalomról
+}
+
+\newenvironment{allitas}{}{}
+\tcolorboxenvironment{allitas}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={0.75mm}{0pt}{sotetvoros},borderline east={0.75mm}{0pt}{sotetvoros}}
+
+\NewEnviron{all_extra}{
+\begin{allitas} % ennek és az alábbi sornak a kikommentelésel eltűnik az apró oldalsó színes vonal a régi, már nem szükséges tartalomról
+%\BODY
+\end{allitas} % ennek és az alábbi sornak a kikommentelésel eltűnik az apró oldalsó színes vonal a régi, már nem szükséges tartalomról
+}
+
+\newenvironment{megjegyzes}{}{}
+\tcolorboxenvironment{megjegyzes}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={0.75mm}{0pt}{lightgray},borderline east={0.75mm}{0pt}{lightgray}}
+
+\NewEnviron{megj_extra}{
+\begin{megjegyzes} % ennek és az alábbi sornak a kikommentelésel eltűnik az apró oldalsó színes vonal a régi, már nem szükséges tartalomról
+%\BODY
+\end{megjegyzes} % ennek és az alábbi sornak a kikommentelésel eltűnik az apró oldalsó színes vonal a régi, már nem szükséges tartalomról
+}
+
+
+\newenvironment{pelda}{}{}
+\tcolorboxenvironment{pelda}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={1.5mm}{	0pt}{sotetzold},borderline east={1.5mm}{0pt}{sotetzold}}
+
+
+\newenvironment{ajanlofig}{\begin{figure}\begin{center}}{
+\end{center}\end{figure}}
+
+\NewEnviron{ajanlo}{
+\begin{samepage} % az alábbi sorok kikommentelésével eltűnnek az ajánlók
+\footnotesize
+\BODY
+\normalsize
+\end{samepage} % eddig kell kikommentelni, hogy az ajánlók eltűnjenek
+}

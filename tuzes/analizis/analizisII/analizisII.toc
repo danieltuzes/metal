@@ -1,0 +1,43 @@
+\select@language {magyar} \contentsline {section}{\numberline {1}\textbf {Binomi\IeC {\'a}lis sor}}{2}{section.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {1.1}Taylor formula t\IeC {\"o}bbv\IeC {\'a}ltoz\IeC {\'o}s f\IeC {\"u}ggv\IeC {\'e}nyekre}{4}{subsection.1.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2}T\IeC {\"o}bbv\IeC {\'a}ltoz\IeC {\'o}s f\IeC {\"u}ggv\IeC {\'e}nyek lok\IeC {\'a}lis sz\IeC {\'e}ls\IeC {\H o}\IeC {\'e}rt\IeC {\'e}ke}{5}{subsection.1.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {1.3}Implicit f\IeC {\"u}ggv\IeC {\'e}nyt\IeC {\'e}tel}{7}{subsection.1.3}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {1.3.1}A t\IeC {\'e}tel \IeC {\'a}ltal\IeC {\'a}nos\IeC {\'\i }t\IeC {\'a}sa \(\left . \Phi :{\mathbb {R}}^{n} \times {\mathbb {R}}^{m}\rightarrow {\mathbb {R}}^{m} \right .\) f\IeC {\"u}ggv\IeC {\'e}nyekre:}{9}{subsubsection.1.3.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {1.3.2}Inverz f\IeC {\"u}ggv\IeC {\'e}ny t\IeC {\'e}tel}{9}{subsubsection.1.3.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {1.4}Felt\IeC {\'e}teles sz\IeC {\'e}ls\IeC {\H o}\IeC {\'e}rt\IeC {\'e}k}{10}{subsection.1.4}
+\select@language {magyar} \contentsline {section}{\numberline {2}Vonalintegr\IeC {\'a}l}{11}{section.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1}Folytonosan differenci\IeC {\'a}lhat\IeC {\'o} \IeC {\'u}t, illetve g\IeC {\"o}rbe, \IeC {\'\i }vhossz kisz\IeC {\'a}m\IeC {\'\i }t\IeC {\'a}sa}{12}{subsection.2.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2}A vonalintegr\IeC {\'a}l alaptulajdons\IeC {\'a}gai}{16}{subsection.2.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3}A vonalintegr\IeC {\'a}l \IeC {\'u}tt\IeC {\'o}l val\IeC {\'o} f\IeC {\"u}ggetlens\IeC {\'e}ge}{16}{subsection.2.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.4}Param\IeC {\'e}teres integr\IeC {\'a}lok}{20}{subsection.2.4}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {2.4.1}A vonalintegr\IeC {\'a}lr\IeC {\'o}l sz\IeC {\'o}l\IeC {\'o} t\IeC {\'e}tel bizony\IeC {\'\i }t\IeC {\'a}sa}{21}{subsubsection.2.4.1}
+\select@language {magyar} \contentsline {section}{\numberline {3}Komplex f\IeC {\"u}ggv\IeC {\'e}nytan}{22}{section.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.1}A komplex differenci\IeC {\'a}lhat\IeC {\'o}s\IeC {\'a}g sz\IeC {\"u}ks\IeC {\'e}ges felt\IeC {\'e}tele}{22}{subsection.3.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2}A Cauchy alapt\IeC {\'e}tel k\IeC {\"o}zvetlen k\IeC {\"o}vetkezm\IeC {\'e}nyei}{24}{subsection.3.2}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.2.1}Cauchy-f\IeC {\'e}le integr\IeC {\'a}lformula}{25}{subsubsection.3.2.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.2.2}Cauchy-t\IeC {\'\i }pus\IeC {\'u} integr\IeC {\'a}l}{26}{subsubsection.3.2.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3}A primit\IeC {\'\i }v f\IeC {\"u}ggv\IeC {\'e}ny \IeC {\'e}s a vonalintegr\IeC {\'a}l kapcsolata}{27}{subsection.3.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4}Taylor-sorfejt\IeC {\'e}s komplex f\IeC {\"u}ggv\IeC {\'e}nyeken}{28}{subsection.3.4}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.5}Egyenletes konvergencia}{29}{subsection.3.5}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.5.1}Weierstrass-t\IeC {\'e}tele komplex f\IeC {\"u}ggv\IeC {\'e}nyekre}{29}{subsubsection.3.5.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.5.2}Eg\IeC {\'e}sz f\IeC {\"u}ggv\IeC {\'e}nyek, Liouville t\IeC {\'e}tele}{32}{subsubsection.3.5.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.6}Az algebra alapt\IeC {\'e}tele}{33}{subsection.3.6}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.6.1}Az exponenci\IeC {\'a}lis, a szinusz \IeC {\'e}s koszinusz f\IeC {\"u}ggv\IeC {\'e}nyek komplex v\IeC {\'a}ltoz\IeC {\'o}kon}{33}{subsubsection.3.6.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.7}Izol\IeC {\'a}lt szingul\IeC {\'a}ris pontok, Laurent-sorfejt\IeC {\'e}s}{34}{subsection.3.7}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.7.1}Az izol\IeC {\'a}lt szingul\IeC {\'a}ris pontok oszt\IeC {\'a}lyoz\IeC {\'a}sa}{35}{subsubsection.3.7.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.7.2}Reziduum kisz\IeC {\'a}m\IeC {\'\i }t\IeC {\'a}sa p\IeC {\'o}lus eset\IeC {\'e}n}{36}{subsubsection.3.7.2}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.7.3}Komplex f\IeC {\"u}ggv\IeC {\'e}nyek inverze}{38}{subsubsection.3.7.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.8}Konform lek\IeC {\'e}pez\IeC {\'e}sek}{39}{subsection.3.8}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.8.1}Alkalmaz\IeC {\'a}s \IeC {\'a}raml\IeC {\'a}stani feladatokra}{39}{subsubsection.3.8.1}
+\select@language {magyar} \contentsline {section}{\numberline {4}Lebesgue-integr\IeC {\'a}l}{40}{section.4}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.1}L\IeC {\'e}pcs\IeC {\H o}s f\IeC {\"u}ggv\IeC {\'e}nyek integr\IeC {\'a}lja}{42}{subsection.4.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.1.1}Az integr\IeC {\'a}l tulajdons\IeC {\'a}gai \(C_{1}\) -ben}{45}{subsubsection.4.1.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2}Integr\IeC {\'a}l\IeC {\'a}s a \(C_{2}\) oszt\IeC {\'a}ly\IeC {\'a}ban}{45}{subsection.4.2}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.2.1}A \(C_{2}\) -beli integr\IeC {\'a}l tulajdons\IeC {\'a}gai:}{45}{subsubsection.4.2.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.2.2}Lebesgue t\IeC {\'e}tel}{50}{subsubsection.4.2.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3}M\IeC {\'e}rhet\IeC {\H o} f\IeC {\"u}ggv\IeC {\'e}nyek}{51}{subsection.4.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4}M\IeC {\'e}rhet\IeC {\H o} halmazok, m\IeC {\'e}rt\IeC {\'e}k}{53}{subsection.4.4}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.1}Integr\IeC {\'a}l\IeC {\'a}s m\IeC {\'e}rhet\IeC {\H o} halmazokon}{54}{subsubsection.4.4.1}
+\select@language {magyar} \contentsline {paragraph}{\numberline {4.4.1.1}A Lebesgue \IeC {\'e}s Riemann integr\IeC {\'a}l kapcsolata}{54}{paragraph.4.4.1.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2}Az \(L^{2}\left ( M \right )\) f\IeC {\"u}ggv\IeC {\'e}nyt\IeC {\'e}r}{56}{subsubsection.4.4.2}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.3}Az \(L^{p}\left ( M \right )\) f\IeC {\"u}ggv\IeC {\'e}nyt\IeC {\'e}r}{57}{subsubsection.4.4.3}

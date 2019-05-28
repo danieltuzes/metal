@@ -1,0 +1,1 @@
+pandoc analizisI.html -t markdown -o analizisI.md -s --template=template.md

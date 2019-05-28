@@ -1,0 +1,1 @@
+pandoc -f markdown+header_attributes+auto_identifiers+ascii_identifiers --filter pandoc-latex-environment analizisI.md -o analizisI.tex -s --toc -H header.tex --variable=colorlinks:true  --toc-depth=6 --variable=secnumdepth:4 -N --template="template_header.tex"

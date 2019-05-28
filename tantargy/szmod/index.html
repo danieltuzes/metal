@@ -1,0 +1,577 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gadget-2 szimulációs program használata</title>
+<script src="/~tuzes/Scripts-n-styles/SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
+<script language="JavaScript" src="/~tuzes/Scripts-n-styles/syntaxhighlighter/shCore.js" type="text/javascript"></script>
+<script language="JavaScript" src="/~tuzes/Scripts-n-styles/syntaxhighlighter/shBrushBash.js" type="text/javascript"></script>
+<script language="JavaScript" src="/~tuzes/Scripts-n-styles/syntaxhighlighter/shBrushXml.js" type="text/javascript"></script>
+<script language="JavaScript" src="/~tuzes/Scripts-n-styles/syntaxhighlighter/shBrushIdl.js" type="text/javascript"></script>
+<script language="JavaScript" src="/~tuzes/Scripts-n-styles/syntaxhighlighter/shBrushCpp.js" type="text/javascript"></script>
+<link href="/~tuzes/Scripts-n-styles/SpryAssets/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css">
+<link href="/~tuzes/main.css" rel="stylesheet" type="text/css">
+<link href="/~tuzes/Scripts-n-styles/syntaxhighlighter/Styles/shCore.css" rel="stylesheet" type="text/css">
+<link href="/~tuzes/Scripts-n-styles/syntaxhighlighter/Styles/shThemeDefault.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+
+
+<body>
+<h1>Gadget-2 szimulációs program használata</h1>
+<div id="CollapsiblePanel1" class="CollapsiblePanel">
+  <div class="CollapsiblePanelTab" tabindex="0">
+    <h2>Gadget-2 telepítése</h2></div>
+  <div class="CollapsiblePanelContent">
+    <p>A számítógépes modellezés c. óra teljesítési típusa évközbeni, és az egyik feladat a Gadget 2 nevű program használata. A programot és függőségeit fel kell telepíteni egy rendszerre, majd valamilyen kezdőfeltételekből kiindulva szimulációt futtatni, majd az eredményeket ábrázolni. Nem cél új tudományos eredmény bemutatása, csak el kell érni, hogy a program működjön, és kívánt feltételekből a szimulációt elindítva, a kapott eredményt ábrázolni tudjuk. </p>
+    <p> Két rendszeren valósítottam meg a futtatást. Egy Lenovo x300-as notebookon és az ELTE Atlasz nevű számítógép-klaszterén diák jogosultságokkal. Az elindításig a tapasztalatok a két rendszerre külön tárgyalom.</p><br>
+    <div id="CollapsiblePanel9" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">
+        <h3>Lenovo X300-as gépen telepítési tapasztalatok</h3>
+      </div>
+      <div class="CollapsiblePanelContent"><ol>
+            <li>Nehézséget jelentett UNIX alapú rendszert telepíteni a 64GB-os SSD háttértárolóra, ami egészében NTFS-re volt formázva. A wubi installer ezt a gondot megoldotta, mely akár meglévő Windows rendszerből képes az általa használt partícióra telepíteni pl. Ubuntut.</li>
+            <li>A gadget csomagjának letöltése és kitömörítése grafikus felület alól igazán könnyen ment. A függőséget ellenőrzése nélkül megpróbálva lefordítani a kódot, természetesen akadályokba ütköztem.</li>
+            <li>A user guide-ban részletezett programokon kívül fortran fordítót is be kellett szereznem első lépésként. Hiába töltöttem le fortran fordítót, nem sikerült a fordítóprogrami hibát megszüntetni. A csomagkezelővel frissítve az Ubuntu 10.04-es verziójának GNU fordítóját, a fordítóprogrami probléma megoldódott.</li>
+            <li>A user guide-ban található programokat letöltve és lefordítva, a Gadget 2. fordítása hibával zárult. Ennek oka, hogy a lefordított programokat nem telepítettem és nem is linkeltem a Gadget 2 számára. Csabai István a problémára rávilágított a tanórán, így sikerült a függőségeket feltennem. Megtaláltam az interneten a Gadget 2 – Best Practices nevű pdf dokumentumot, melyben az utolsó, fordítást megakadályozó problémát is meg tudtam oldani.</li>
+            <li>A Gadget programnak beadva a kezdeti értékek paraméterfile-ját, annak elindítása hibával zárult, melynek oka, hogy a futtatási mappában nem létezett a paraméterfile nevével azonos nevű mappa. Megoldása nem volt elégséges, a Gadget továbbra is hibával állt le, mert az ICs nevű mappát nem találta, ami egy szinttel feljebb volt a futtatandó programnál – világított rá Csabai. A problémát soft linkeléssel sikerült megoldani.</li>
+            <li>Ezek után a program sikeresen futtatható volt, de természetesen csak 1 számítógépen.<br>
+            </li>
+      </ol></div>
+    </div>
+    <br>
+    <div id="CollapsiblePanel10" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">
+        <h3>Az ELTE Atlasz számítógép-klaszterén telepítési tapasztalatok</h3>
+      </div>
+      <div class="CollapsiblePanelContent"><p>Az ELTE lehetőséget ad számítógép-klaszter használatára  tipikusan számítógépes-modellezés céljából. Csak ELTE-s IP címről érhető el a  klaszter fejgépe, csak SSH-n keresztül. A diákok a BLADE nevű klasztert  használhatják a maga 46 processzormagjával. A logint igényelni kell az ELTE  Operátori szolgálatánál, tanár írásbeli hozzájárulásával.</p>
+          <ol>
+            <li>Megoldandó probléma volt, hogy otthonról is  kényelmesen lehessen kapcsolatot létesíti az Atlasszal. Windows alatt ehhez a  WinSCP nevű programot használtam, mely grafikus felületet nyújt a fileok át- és  visszatöltésére, a kapcsolódási jelszót (jelszavakat) tárolja, és SSH tunnel  funkciója biztosítja, hogy a már létező Caesar-os loginommal ELTE-s IP címet  szerezve menjek tovább az Atlaszra, továbbá egyből belogolt terminál ablakot is  nyit az Atlaszra.</li>
+            <li>A Gadget 2 programot és az Atlasz gépén nem levő  függőségét (FFTW) WinSCP programmal kicsomagolva áttöltöttem a klaszter  fejgépére. A Gadget 2 FFTW-s függőségét nem tudtam megoldani, mert az FFTW  mappa futtatható file-jaihoz nem volt futtatási jogom. Csabai találta meg ezt a  problémát. Oka az volt, hogy a WinSCP alapértelmezetten úgy tölti át a  futtatható fileokat, hogy azokra ne legyen az áttöltőnek futtatási joga.  Engedályezve magamnak a futtatást, a Gadget 2 összes fordítási problémáját  sikeresen megoldottam az X300-as tapasztalatok alapján.</li>
+            <li>Az X300-as tapasztalok alapján a Gadget 2-t  futtatni is sikerült a rendelkezésre álló BLADE klaszter több mint 32  processzormagján.</li>
+      </ol></div>
+    </div>
+  </div></div><br>
+
+<div id="CollapsiblePanel2" class="CollapsiblePanel">
+  <div class="CollapsiblePanelTab" tabindex="0">
+    <h2>Adatok kimentése az alapértelmezett kimenetből GDL segítségével (HDF5 nélkül)</h2>
+  </div>
+  <div class="CollapsiblePanelContent">
+    <div id="CollapsiblePanel3" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">
+        <h3>A program bemutatása, linkek</h3>
+      </div>
+      <div class="CollapsiblePanelContent">
+        <p>Lehetőség van a snapshot fileok grafikus ábrázolására, az alapvetően IDL-hez szánt, alapértelmezett kimenet alapján. Ehhez a <a href="http://gnudatalanguage.sourceforge.net/">GDL</a> nevű programot kell használni, mely immár (2011.10.21. óta) az Atlasz klaszteren is elérhető. <span class="off">A programot egyébként <a href="http://gnudatalanguage.sourceforge.net/downloads.php"> különféle disztribúcókhoz tölthetünk le</a>, többet között az<a href="http://packages.debian.org/search?keywords=gnudatalanguage"> Atlasz klaszterhez való</a> Debianosat is. Az aktuális stabil változatát, a <a href="http://packages.debian.org/squeeze/gnudatalanguage">squeeze</a>-t <a href="http://ftp.hu.debian.org/debian/pool/main/g/gnudatalanguage/gnudatalanguage_0.9~rc3-1.1+b2_amd64.deb">letölthetjük amd64-es architectúrára</a> is, mint amilyen az Atlaszhoz kell.</span></p>
+        <p>A program egyelőre erősen béta állapotú, az IDL-nek csak a 80%át tudja kb, a dokumenticáió is hiányos hozzá, bár ami már meg lett valósítva az IDL-ből, ahhoz jó az IDL dokumentációja is.      </p>
+      </div>
+    </div><br>
+
+    <div id="CollapsiblePanel4" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">
+        <h3>GDL futtatása</h3>
+      </div>
+      <div class="CollapsiblePanelContent">
+        <p>Példaként a galaxy szimulációt veszem. Az alábbi dolgokat kell végrehajtani a GDL sikeres futtatásához, amennyiben legalább a snapshot_000 file már rendelkezésre áll:</p>
+        <ol>
+          <li>a <code>galaxy</code> mappába másoljuk az <code>Analysis</code> mappa <code>show_galaxy.pro</code> file-ját: <code>/h/mnt/user03/users/tudpaat/Gadget-2.0.7/Analysis/show_galaxy.pro</code></li>
+          <li>módosítsuk a file <code>frun</code> sorát: </li>
+        <pre  class="brush: idl">frun=&quot;/h/mnt/user03/users/tudpaat/Gadget-2.0.7/Gadget2/galaxy/&quot; </pre>
+  <li>a <code>/h/mnt/user03/users/tudpaat/Gadget-2.0.7/Gadget2/galaxy</code> mappában adjuk ki a <code>gdl</code> utasítást!</li>
+          <li>a <code>&gt;GDL</code> promptnak adjuk ki a <code>.run show_galaxy.pro</code> utasítást!</li>
+        </ol>
+      </div>
+    </div><br>
+
+    <div id="CollapsiblePanel5" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">
+        <h3>A program futása távoli gépen, PS és egyszerű ASCII kimenet előállítása</h3>
+      </div>
+      <div class="CollapsiblePanelContent">
+        <p>A <code>show_galaxy.pro</code> tartamazza, hogy a GDL mit csináljon az adatokkal. A kimenet típusát, hogy monitorra, .ps vagy .eps fileba kerüljön, szintén ebben lehet beállítani, valamint meg lehet adni, hogy fileba is iírodjon, hogy mi hol van, koordinátánként, majd ábrázolhatjuk a nekünk kedves programmal, pl gnuplottal. Továbbá itt kerül beállításra a részecskék jelölésének módja, a különféle vetületek típusa, az arány ... stb, és a kimenet fileneve is. Hogy a több snapshot fileból több ps legyen, az alábbikat kell tennünk:</p>
+        <ol>
+          <li>Állítsuk át a kimenetet .ps-re, és kapcsoljuk ki az ablakmegjelenítési információkat, így parancssorból, távoli gépen is futtathatjuk a kódot:</li>
+          <pre  class="brush: idl">set_plot,'ps'
+;window,xsize=1000,ysize=333</pre>
+          <li>Adjunk nevet az egyes keletkező ps fileoknak, ehhez a for ciklus eleje így nézzen ki:</li>
+          <pre  class="brush: idl">for num=0,15 do begin
+device,file='myplot' + STRING(num,FORMAT='(I3)') + '.ps'</pre>
+          <li>A zárójel belsejében lévő <code>(I3)</code> arra utal, hogy 3 jegyben jeleníti meg a sorszámát az ábrának. Most már a ps fileba ír a GDL. Azonban a filet az írás be kell zárni, és el kell menteni. Ehhez a <code>.pro</code> file vége így nézzen ki:
+          <pre  class="brush: idl">plot, xdisk, ydisk, psym=3, xrange= [-xlen,xlen], yrange= [-xlen,xlen], xstyle=1,ystyle=1
+plot, xdisk, zdisk, psym=3, xrange= [-xlen,xlen], yrange= [-xlen,xlen], xstyle=1,ystyle=1
+plot, ydisk, zdisk, psym=3, xrange= [-xlen,xlen], yrange= [-xlen,xlen], xstyle=1,ystyle=1
+DEVICE,/CLOSE</pre></li>
+          <li>Állítsuk be, hogy kiírja a részecskék helyzetét! Ehhez először hozzuk létre a létrehozandó fileok neveit <em>x, y, z</em> koordináták szerint:<br><pre name="code" class="brush: idl">
+	fnameoutx='myplot_x_' + STRING(num,FORMAT='(I3)') + '.txt'
+	fnameouty='myplot_y_' + STRING(num,FORMAT='(I3)') + '.txt'
+	fnameoutz='myplot_z_' + STRING(num,FORMAT='(I3)') + '.txt'</pre><br>
+Majd miután monitorra vagy ps-be kiírattuk a fileokat, írassuk ki txt-be is: nyissuk be, írjunk bele, majd zárjuk be!<br>
+<pre nanme="code" class="brush: idl">openw,4,fnameoutx
+openw,5,fnameouty
+openw,6,fnameoutz
+printf,4,xdisk
+printf,5,ydisk
+printf,6,zdisk
+close, 4,5,6</pre>
+          </li>
+          A teljes kód egyben:
+          <pre name="code" class="brush: idl; collapse:true;  toolbar: true;">
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Example showing how the file format of Gadget can    ;;
+;; be read-in in IDL                                    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+frun="/h/mnt/user03/users/tudpaat/Gadget-2.0.7/Gadget2/galaxy/"  
+set_plot,'ps'
+;window,xsize=1000,ysize=333
+!P.multi=[0,3,1]
+
+
+
+xlen=300
+
+
+
+for num=0,15 do begin
+
+device,file='myplot' + STRING(num,FORMAT='(I3)') + '.ps'
+fnameoutx='myplot_x_' + STRING(num,FORMAT='(I3)') + '.txt'
+fnameouty='myplot_y_' + STRING(num,FORMAT='(I3)') + '.txt'
+fnameoutz='myplot_z_' + STRING(num,FORMAT='(I3)') + '.txt'
+
+    exts='000'
+    exts=exts+strcompress(string(num),/remove_all)
+    exts=strmid(exts,strlen(exts)-3,3)
+
+    fname=frun+"/snapshot_"+exts
+    fname=strcompress(fname,/remove_all)
+
+    
+    npart=lonarr(6)	
+    massarr=dblarr(6)
+    time=0.0D
+    redshift=0.0D
+    flag_sfr=0L
+    flag_feedback=0L
+    npartTotal=lonarr(6)	
+    bytesleft=256-6*4 - 6*8 - 8 - 8 - 2*4-6*4
+    la=intarr(bytesleft/2)
+
+
+    print,fname
+    openr,1,fname,/f77_unformatted
+    readu,1,npart,massarr,time,redshift,flag_sfr,flag_feedback,npartTotal,la
+
+    print,"Time= ", time
+
+    N=total(npart)
+    pos=fltarr(3,N)
+    vel=fltarr(3,N)
+    id=lonarr(N)
+ 
+    ind=where((npart gt 0) and (massarr eq 0)) 
+    if ind(0) ne -1 then begin
+	Nwithmass= total(npart(ind))
+        mass=fltarr(Nwithmass)
+    endif else begin	
+        Nwithmass= 0
+    endelse
+
+    readu,1,pos
+    readu,1,vel
+    readu,1,id
+    if Nwithmass gt 0 then begin
+      readu,1,mass
+    endif
+
+    NGas=npart(0)
+    NHalo=npart(1)
+    NDisk=npart(2)
+    NBulge=npart(3)
+    NStars=npart(4)
+
+    if Ngas gt 0 then begin
+        u=fltarr(Ngas)
+        readu,1,u
+
+        rho=fltarr(Ngas)
+        readu,1,rho
+
+        if flag_sfr gt 0 then begin
+            sfr=fltarr(Ngas)
+            mfs=fltarr(Ngas)
+            readu,1,sfr
+            readu,1,mfs
+        endif
+    endif
+    close,1
+
+    if Ngas gt 0 then begin
+        xgas=fltarr(Ngas) &amp;  ygas=fltarr(Ngas)  &amp; zgas=fltarr(Ngas) &amp; mgas=fltarr(Ngas)
+        xgas(*)=pos(0,0:Ngas-1)
+        ygas(*)=pos(1,0:Ngas-1)
+        zgas(*)=pos(2,0:Ngas-1)
+        if massarr(0) eq 0 then begin
+            mgas(*)=mass(0:Ngas-1)	
+        endif else begin
+            mgas(*)= massarr(0)
+	endelse
+    endif
+
+    if Nhalo gt 0 then begin
+        xhalo=fltarr(NHalo) &amp;  yhalo=fltarr(Nhalo) &amp; zhalo=fltarr(Nhalo) &amp; mhalo=fltarr(Nhalo)
+        xhalo(*)=pos(0,0+Ngas:Nhalo+Ngas-1)
+        yhalo(*)=pos(1,0+Ngas:Nhalo+Ngas-1)
+        zhalo(*)=pos(2,0+Ngas:Nhalo+Ngas-1)
+        if massarr(1) eq 0 then begin
+	    skip=0L
+            for t=0,0 do begin	
+                if (npart(t) gt 0) and (massarr(t) eq 0) then begin
+			skip=skip + npart(t)
+                endif
+            endfor
+            mhalo(*)=mass(0+skip:Nhalo-1+skip)	
+        endif else begin
+            mhalo(*)= massarr(1)
+	endelse
+    endif
+
+    if Ndisk gt 0 then begin
+        xdisk=fltarr(NDisk) &amp;  ydisk=fltarr(NDisk) &amp;  zdisk=fltarr(NDisk) &amp; mdisk=fltarr(NDisk)
+        xdisk(*)=pos(0,Nhalo+Ngas:Nhalo+Ndisk+Ngas-1)
+        ydisk(*)=pos(1,Nhalo+Ngas:Nhalo+Ndisk+Ngas-1)
+        zdisk(*)=pos(2,Nhalo+Ngas:Nhalo+Ndisk+Ngas-1)
+        if massarr(2) eq 0 then begin
+	    skip=0L
+            for t=0,1 do begin	
+                if (npart(t) gt 0) and (massarr(t) eq 0) then begin
+			skip=skip + npart(t)
+                endif
+            endfor
+            mdisk(*)=mass(0+skip:Ndisk-1+skip)	
+        endif else begin
+            mdisk(*)= massarr(2)
+	endelse
+    endif
+
+    if Nbulge gt 0 then begin
+        xbulge=fltarr(NBulge) &amp;  ybulge=fltarr(NBulge) &amp;  zbulge=fltarr(NBulge) &amp; mbulge=fltarr(NBulge)
+        xbulge(*)=pos(0,Nhalo+Ndisk+Ngas:Nhalo+Ndisk+Ngas+Nbulge-1)
+        ybulge(*)=pos(1,Nhalo+Ndisk+Ngas:Nhalo+Ndisk+Ngas+Nbulge-1)
+        zbulge(*)=pos(2,Nhalo+Ndisk+Ngas:Nhalo+Ndisk+Ngas+Nbulge-1)
+        if massarr(3) eq 0 then begin
+	    skip=0L
+            for t=0,2 do begin	
+                if (npart(t) gt 0) and (massarr(t) eq 0) then begin
+			skip=skip + npart(t)
+                endif
+            endfor
+            mbulge(*)=mass(0+skip:Nbulge-1+skip)	
+        endif else begin
+            mbulge(*)= massarr(3)
+	endelse
+    endif
+
+
+    if Nstars gt 0 then begin
+        xstars=fltarr(Nstars) &amp;  ystars=fltarr(Nstars)  &amp; zstars=fltarr(Nstars)  &amp; mstars=fltarr(Nstars)
+        xstars(*)=pos(0,Nhalo+Ngas+Ndisk+Nbulge:Nhalo+Ndisk+Ngas+NBulge+Nstars-1)
+        ystars(*)=pos(1,Nhalo+Ngas+Ndisk+Nbulge:Nhalo+Ndisk+Ngas+Nbulge+Nstars-1)
+        zstars(*)=pos(2,Nhalo+Ngas+Ndisk+Nbulge:Nhalo+Ndisk+Ngas+NBulge+Nstars-1)
+        if massarr(4) eq 0 then begin
+	    skip=0L
+            for t=0,2 do begin	
+                if (npart(t) gt 0) and (massarr(t) eq 0) then begin
+			skip=skip + npart(t)
+                endif
+            endfor
+            mstars(*)=mass(0+skip:Nstars-1+skip)	
+        endif else begin
+            mstars(*)= massarr(4)
+	endelse
+    endif
+
+    plot, xdisk, ydisk, psym=3, xrange= [-xlen,xlen], yrange= [-xlen,xlen], xstyle=1,ystyle=1
+    plot, xdisk, zdisk, psym=3, xrange= [-xlen,xlen], yrange= [-xlen,xlen], xstyle=1,ystyle=1
+    plot, ydisk, zdisk, psym=3, xrange= [-xlen,xlen], yrange= [-xlen,xlen], xstyle=1,ystyle=1
+ DEVICE,/CLOSE
+openw,4,fnameoutx
+openw,5,fnameouty
+openw,6,fnameoutz
+printf,4,xdisk
+printf,5,ydisk
+printf,6,zdisk
+close, 4,5,6
+    wait, 0.5	
+
+endfor	
+
+end
+</pre></ol>
+        <h4>További javaslatok:</h4>
+        <ul>
+        <li>A keletkező <code>.ps</code> fileok egyes megjelenítőkön hibásan jelenhetek meg, ugyanis a <code>.ps</code> file 2. sora a
+            <pre>%%BoundingBox: 52 206 566 585</pre>
+          karaktereket (vagy hasonlót) tartalmazza. Ennek eltávolítása (az egész sor törlése) megoldja a problémát.</li>
+          <li>Ha szükséges, a <code>.pro</code> fileban a <code>num</code> értékének futását 15-ről emeljük a kívánt szintig, ami a snapshotok száma.</li>
+          <li>Távoli gépről való áttöltés előtt célszerű tömöríteni a fileokat, mert a .ps és a .txt jól tömöríthető, és nagyok is.</li>
+        </ul>
+      </div>
+    </div><br>
+  </div>
+</div>
+<br>
+<div id="CollapsiblePanel6" class="CollapsiblePanel">
+  <div class="CollapsiblePanelTab" tabindex="0">
+    <h2>Kezdeti feltételek előállítása a Starscream programmal</h2>
+  </div>
+  <div class="CollapsiblePanelContent">
+    <div id="CollapsiblePanel7" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">
+        <h3>A program ismertetése és telepítés</h3>
+      </div>
+      <div class="CollapsiblePanelContent">
+        <p>Lehetőség van a kezdeti feltételek megadására, azaz egy kezdeti snapshot file létrehozására. A Gadget-2 dokumentációja részletezi, hogy ezt hogyan lehet, ám kicsit hosszadalmas lehet a megértése. A <a href="http://code.google.com/p/starscream/">Starscream</a> program ebben segít, mely <a href="http://starscream.googlecode.com/files/starscream_20110625.tar.gz">letölthető .tar formátumba tömörítve</a>. A program függőségei a <a href="http://www.gnu.org/s/gsl/">GSL</a> és az <a href="http://www.fftw.org/">FFTW3</a>, ezért ezeket fel kell tennünk a telepítése előtt.</p>
+        <p>A Starscream honalpján levő dokumentáció elavult, a telepítési útmutatója nem is megfelelő már. Kitömörítés után menjünk be a létrehozott mappába. Ekkor a <code>configure</code> programmal előállíthatjuk a megfelelő <code>makefile</code>-t, mely után lefordíthatjuk a programot, majd telepíthetjük és tesztelhetjük. Ezekhez az alábbi utasításokat tegyük.</p>
+        <ol>
+          <li>Az alábbi kódban cseréljük a GSL és FFTW3 mappáinak helyét a megfelelőkre, és futtassuk:
+            <pre class="brush: bash">./configure --with-fftw3=/h/mnt/user03/users/tudpaat/fftw-3.3 --with-gsl=/h/mnt/user03/users/tudpaat/gsl</pre>
+          </li>
+          <li>állítsuk elő a megfelelő telepítendő fileokat a <code>make</code> utasítással</li>
+          <li>ügyelve arra, hogy majd csak a saját mappánkba tehetjük a programot, az Atlasz fő programkönyvtárához nincs hozzáférésünk, telepíthetjük a programot:
+            <pre class="brush: bash">make install exec_prefix=/h/mnt/user03/users/tudpaat/starscream_20110625 prefix=/h/mnt/user03/users/tudpaat/starscream_20110625
+          </pre>
+          </li>
+          <li>Ezek után a <code>make check</code> utasítást kiadva meggyőződhetünk a sikeres telepítésről.</li>
+          <li>A <code>/h/mnt/user03/users/tudpaat/starscream_20110625/src</code> mappában levő <code>starscream.c</code> file tartalmát írjuk át a nekünk kellőre. Itt állíthatjuk elő, hogy milyen galaxisokat szeretnénk ütköztetni és milyen paraméterekkel.</li>
+          <li>Fordítsuk le a programot a 
+            <pre class="brush: bash">
+gcc -o starscream -I/h/mnt/user03/users/tudpaat/gsl/include/gsl/ starscream.c        -L/h/mnt/user03/users/tudpaat/starscream_20110625/lib -lstarscream -lgslcblas -lgsl</pre> 
+            utasítással.
+          Ez ugyan nem így szerepel a program manualjában, de 7 óra alatt könnyen kitalálható.</li>
+        </ol>
+        <p>&nbsp;</p>
+      </div>
+    </div><br>
+
+    <div id="CollapsiblePanel8" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">
+        <h3>A program használata</h3>
+      </div>
+      <div class="CollapsiblePanelContent">RTM, néhány paramétert tekergethetünk.</div>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+</div>
+<br>
+<div id="CollapsiblePanel11" class="CollapsiblePanel">
+  <div class="CollapsiblePanelTab" tabindex="0">
+    <h2>Adatok ábrázolása és filmmé fűzése</h2>
+  </div>
+  <div class="CollapsiblePanelContent">
+    <p>Minthogy már magvannak a kimeneti filejaink, a txt-ket érdemes volna egybe fűzni. Ehhez egy szofisztikált programot írtam, mely snapshot0.txt néven előállítja az egyes pillanatokhoz tartozó adatokat, melyeket ezután ábrázolhatunk xy, xz vagy akár yz projekció szerint is. A cpp programom forrása:</p>
+    <pre class="brush: cpp; collapse:true">// fileba_olvas.cpp : Defines the entry point for the console application.
+  // Ez a program arra jó, hogy (ismeretlen méretű) fileokat tartalmát beolvassa.
+  // Futás közben foglalja le a szükséges memóriát, és mikor az egészet beolvasta,
+  // akkor elkezdi kiírni az értékeket. A memóriát a futás után szabadítja fel.
+#include &lt;stdio.h&gt;
+#include &lt;cstdio&gt;
+#include &lt;tchar.h&gt;
+#include &lt;cstdlib&gt;
+int main()
+  {
+  int i;
+  int dim=3;
+  int countermax=10000;
+  int countermaxparam;
+  int snapshotcounter;
+  FILE * paramfile;
+  paramfile = fopen(&quot;param.txt&quot;,&quot;r&quot;);
+  if (paramfile !=NULL &amp;&amp; fscanf(paramfile,&quot;countermax = %i\nsnapshotdb = %i&quot;,&amp;countermaxparam,&amp;snapshotcounter)) {
+  countermax=countermaxparam;
+  fclose(paramfile);
+  }
+  printf(&quot;countermax=%i\n&quot;,countermax);
+ 
+  int darab; //darab=counter % countermaxs
+  int counter=0;
+  int nagyszamlalo=1;
+  double ** nums = NULL;
+  if (nums = (double**) calloc (countermax,sizeof(double*))) {
+  for (i=0; i&lt; dim; i++) {
+  if (nums[i]=(double*) calloc (countermax,sizeof(double))) {
+  printf(&quot;Sikeres %i. mem. foglalas.\n&quot;,i);
+  }
+  else printf(&quot;Nem sikerult memoriat lefoglalni elso alkalommal sem.\n&quot;);
+  }
+  }
+  else printf(&quot;Nem sikerult memoriat lefoglalni elso alkalommal sem.\n&quot;);
+
+ FILE * inputfile0;
+  FILE * inputfile1;
+  FILE * inputfile2;
+  FILE * outputfile;
+ char filenamex[50];
+  char filenamey[50];
+  char filenamez[50];
+  char outputfilename[50];
+  int sorsz;
+  for (sorsz=0; sorsz-1 != snapshotcounter; sorsz++) {
+  darab=0;
+ sprintf(filenamex,&quot;myplot_x_%3i.txt&quot;,sorsz);
+  sprintf(filenamey,&quot;myplot_y_%3i.txt&quot;,sorsz);
+  sprintf(filenamez,&quot;myplot_z_%3i.txt&quot;,sorsz);
+  sprintf(outputfilename,&quot;snapshot%i.txt&quot;,sorsz);
+  inputfile0 = fopen(filenamex,&quot;r&quot;);
+  inputfile1 = fopen(filenamey,&quot;r&quot;);
+  inputfile2 = fopen(filenamez,&quot;r&quot;);
+  outputfile = fopen(outputfilename,&quot;w&quot;);
+  if (inputfile0==NULL) {
+  printf(&quot;Nem sikerult megnyitni az 1. filet.&quot;);
+  char c; c = getchar();
+  return 1;
+  }
+  if (inputfile1==NULL) {
+  printf(&quot;Nem sikerult megnyitni a 2. filet.&quot;);
+  char c; c = getchar();
+  return 1;
+  }
+  if (inputfile2==NULL) {
+  printf(&quot;Nem sikerult megnyitni a 3. filet.&quot;);
+  char c; c = getchar();
+  return 1;
+  }
+ while (fscanf(inputfile0,&quot;%Lf&quot;,&amp;nums[0][darab])!=EOF &amp;&amp; fscanf(inputfile1,&quot;%Lf&quot;,&amp;nums[1][darab])!=EOF &amp;&amp; fscanf(inputfile2,&quot;%Lf&quot;,&amp;nums[2][darab])!=EOF) {
+  //printf(&quot;nums[%i][%i]=%f\n&quot;,0,darab,nums[0][darab]);
+  darab++;
+  counter++;
+  while (counter+1&lt;countermax*nagyszamlalo &amp;&amp; fscanf(inputfile0,&quot;%Lf&quot;,&amp;nums[0][darab])!=EOF &amp;&amp; fscanf(inputfile1,&quot;%Lf&quot;,&amp;nums[1][darab])!=EOF &amp;&amp; fscanf(inputfile2,&quot;%Lf&quot;,&amp;nums[2][darab])!=EOF) {
+  //printf(&quot;nums[%i][%i]=%f\n&quot;,0,darab,nums[0][darab]);
+  //char c; c = getchar();
+  darab++;
+  counter++;
+  }
+  if (counter+1 == countermax*nagyszamlalo) {
+  //printf(&quot;Memoriabovites kell.\n&quot;);
+  if (nums = (double**) realloc (nums,nagyszamlalo*countermax*sizeof(double*))) {
+  for (i=0; i&lt;dim; i++) {
+  if (nums[i] = (double*) realloc (nums[i],nagyszamlalo*countermax*sizeof(double)))	{
+  //printf(&quot;sikeres memoriafoglalas atadassal\n&quot;);
+  }
+  else {
+  printf(&quot;Nem sikerult a %i mem. bovites.&quot;,i);
+  char c; c = getchar();
+  return 1;
+  };
+  }
+  nagyszamlalo++;
+  }
+  }
+  }
+  fclose(inputfile0);
+  fclose(inputfile1);
+  fclose(inputfile2);
+  for (int i=0; i &lt; darab; i++) {
+  fprintf(outputfile,&quot;%f\t%f\t%f\n&quot;,nums[0][i],nums[1][i],nums[2][i]);
+  }
+  fclose(outputfile);
+  printf(&quot;%s kesz\n&quot;,outputfilename);
+  }
+  free (nums);
+  printf(&quot;A program lefutott, %i adat beolvasva es kiirva&quot;,darab); char c; c = getchar();
+  return 0;
+  }</pre>
+    <p>A működéshez szükséges egy <code>param.txt</code> file, mely megmondja, hogy mekkora adatblokkonként tárolja a program az adatokat, illetve hogy meddig fusson. Pl ilyen lehet a file tartalma:</p>
+    <pre>countermax=100000
+snapshotdb=354</pre>
+    <p>Ezek után kell az alábbi program, mely a gnuplotnak készíti el az utasításokat. A következő cpp program előállítja a gnuplot utasítások magját, de a kimeneti típust, a méretet, a tartományokat még bele kell írni. A program kimeneti fileját a gnuplotban a <code>load &quot;script.txt&quot;</code> utasítással futtathatjuk le. A cpp program tehát</p>
+    <pre class="brush: cpp; collapse: true">
+#include &lt;stdio.h&gt;
+#include &lt;tchar.h&gt;
+
+int main ()
+       {
+       int i, imax, ical;
+       char readingdir[200];
+       char outputdir[200];
+       char inputfilename[200];
+       char outputfilename[200];
+       char project[200];
+       char command[200];
+       FILE * paramfile;
+       paramfile = fopen(&quot;param.txt&quot;,&quot;r&quot;);
+       fscanf(paramfile,&quot;snapshotdb = %i\n&quot;,&amp;imax);
+       fscanf(paramfile,&quot;ical = %i\n&quot;,&amp;ical);
+       fscanf(paramfile,&quot;project = %s\n&quot;,&amp;project);
+       fscanf(paramfile,&quot;command = %s\n&quot;,&amp;command);
+       fscanf(paramfile,&quot;readingdir = %s\n&quot;,&amp;readingdir);
+       fscanf(paramfile,&quot;outputdir = %s\n&quot;,&amp;outputdir);
+       fscanf(paramfile,&quot;inputfilename = %s\n&quot;,&amp;inputfilename);
+       fscanf(paramfile,&quot;outputfilename = %s\n&quot;,&amp;outputfilename);
+     
+       fclose(paramfile);
+       FILE * outputfile;
+       outputfile = fopen(&quot;script.txt&quot;,&quot;w&quot;);
+       for (i=0; i&lt;imax; i++) {
+   	    fprintf(outputfile,&quot;set output \&quot;%s/%s%.*i.png\&quot;\n%s \&quot;%s/%s%i.txt\&quot; using %s with dots\n&quot;,outputdir,outputfilename,ical,i,command,readingdir,inputfilename,i,project);
+       }
+       fclose(outputfile);
+       return 0;
+       }  </pre>
+    <p>Ennek a programnak a használatához egy másik param.txt file kell, melynek tartalma pl. a következő: </p>
+    <pre>snapshotdb = 354
+ical = 3
+project= 1:2
+command = plot
+readingdir = galaxy2
+outputdir = galaxy2
+inputfilename = snapshot
+outputfilename = plot</pre>
+    <p>A keletkező soksok png képet pl a Freemake Video Converterrel is egymásba fűzhetjük.</p>
+  </div>
+</div>
+<br>
+<div id="CollapsiblePanel12" class="CollapsiblePanel">
+  <div class="CollapsiblePanelTab" tabindex="0">
+    <h2>Eredmények</h2>
+  </div>
+  <div class="CollapsiblePanelContent">
+    <p>A gyári galaxisszimulációt lefuttatva, <a href="galaxy.avi">azt aviba fűztem.</a></p>
+    <p>A starscream program két egyforma, 
+    </p>
+    <pre class="brush: cpp">     parts[0] = 10000;
+     parts[1] = 20000;
+     m_d = 0.025;
+     j_d = m_d;
+     lambda = 0.050;
+     c = 15.0;
+     v200 = 1.6E7;
+     N = 128;
+     space = 2.0;</pre>
+    <p>paraméterekkel rendelekkel rendelkező galaxist ütköztetésének kezdőfeltételeit állította elő, az ütközés előállítása a <code class="brush: cpp">set_orbit_parabolic(galaxy_1,galaxy_2,galaxy_1-&gt;r200,3.5);</code> kód szerint történt. Ez annyit jelent, hogy kezdeti távolságuk a halo nagysága hozzávetőleg, és a tömegközépppontjuk távolsága a parabolikus pálya minimumán pedig Gadget2 egységekben 3.5.</p>
+    <p>0.1 időegységenként csináltam felvételt 10 órányi futtatással, így keletkezett 353 snapshot. A felvételek első 100 elemét <a href="galaxy2.avi">egybefűztem avi formátumba</a>.</p>
+    <p>Ez utóbbiról rövid elemzést készítettem. A távolságnégyzetekből bizonyos snapshot fileok esetén hisztogramot építettem. A hisztogramból kivehető a két galaxis, hogy már az ütközés előtt az egyik kicsit kiszakít a másikból galaxisokat, és hogy összeolvadás után, mikor szemmel már nem történik számottevő dolog, még mindig zajalanak folyamatok. A hisztogramokat egybefűztem <a href="galaxy2_distsquarehist.avi">aviba</a>.</p>
+  </div>
+</div>
+<script language="JavaScript" type="text/javascript">
+SyntaxHighlighter.all();
+var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1", {contentIsOpen:false, enableAnimation:false});
+var CollapsiblePanel2 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel2", {contentIsOpen:false, enableAnimation:false});
+var CollapsiblePanel3 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel3", {enableAnimation:false, contentIsOpen:false});
+var CollapsiblePanel4 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel4", {contentIsOpen:false, enableAnimation:false});
+var CollapsiblePanel5 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel5", {enableAnimation:false, contentIsOpen:false});
+var CollapsiblePanel6 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel6", {enableAnimation:false, contentIsOpen:false});
+var CollapsiblePanel7 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel7", {enableAnimation:false, contentIsOpen:false});
+var CollapsiblePanel8 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel8", {contentIsOpen:false, enableAnimation:false});
+var CollapsiblePanel9 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel9", {enableAnimation:false, contentIsOpen:false});
+var CollapsiblePanel10 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel10", {enableAnimation:false, contentIsOpen:false});
+var CollapsiblePanel11 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel11", {enableAnimation:false, contentIsOpen:false});
+var CollapsiblePanel12 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel12");
+</script>
+</body>
+</html>

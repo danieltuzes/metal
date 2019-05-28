@@ -1,0 +1,4834 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"/>
+<title>Analízis I</title>
+<link href="math.css" rel="stylesheet" type="text/css" />
+<!--<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML">
+</script>-->
+</head>
+<body>
+<h1>Analízis I</h1>
+<p style="text-align:center">Előadásjegyzet fizikusoknak matematikusoktól</p>
+<p>Ajánlott irodalom: </p>
+<ol>
+  <li><a href="http://www.typotex.hu/index.php?page=konyvek&amp;book_id=240">Komornik Vilmos: Valós analízis előadások</a></li>
+  <li><a href="https://notendur.hi.is/vae11/Þekking/principles_of_mathematical_analysis_walter_rudin.pdf">W. Rudin: Principles of Mathematical Analysis, McGraw-Hill, 1976. (angol nyelvű)</a></li>
+  <li><a href="http://www.cs.elte.hu/~simonp/jegyzet1.pdf">Mezei István, Faragó István, Simon Péter: Bevezetés az analízisbe</a></li>
+</ol>
+<p>Ez a jegyzet <strong>nem</strong> szakirodalom és nem garantált, hogy az órai anyagot teljesen lefedi, az előadásokra bejárni ajánlott. Az eredeti jegyzet Simon László előadásai alapján Tüzes Dániel készítette, és lektorálta 2009-ben Simon László, majd frissítette 2016-2017-ben Izsák Ferenc.</p>
+<p>Ha a jegyzetben helyesírási, tartalmi vagy formai hibát találsz, kérlek jelezd az előadónak vagy a <a href="mailto:tuzesdaniel@gmail.com">tuzesdaniel@gmail.com</a> e-mail címen! Ha a jegyzet nem jelenik meg helyesen, olvasd el az <a href="http://fizweb.extra.hu/index.php?dir=kalkulus,analizis/analizisI/&amp;file=utmutato.html">útmutatót</a>, vagy  egyszerűen  használd a <a href="http://www.mozilla.com/en-US/firefox/all.html">Firefox legújabb böngészőjét!</a></p>
+<!--A jegyzetet készítette Tüzes Dániel.-->
+<div class="bigger">
+  <div class="date">09.16</div>
+  <p>A korábban (középiskolában) tanultakból általánosítunk.
+    <math>
+      <mrow>
+        <msup>
+          <mi>&reals;</mi> <mi>n</mi>
+        </msup>
+      </mrow>
+    </math>
+    -ben éltünk eddig, ahol vektor alatt ezt értettük:
+    <math>
+      <mrow>
+        <mstyle mathvariant='bold' mathsize='normal'>
+          <mi>v</mi>
+        </mstyle>
+        <mo>=</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>v</mi> <mn>1</mn>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>v</mi> <mn>2</mn>
+            </msub>
+            <mn>...</mn>
+            <msub>
+              <mi>v</mi> <mi>n</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    ahol
+    <math>
+      <mrow>
+        <msub>
+          <mi>v</mi> <mi>j</mi>
+        </msub>
+        <mo>&#x2208;</mo><mi>&reals;</mi>
+      </mrow>
+    </math>
+    és
+    <math>
+      <mrow>
+        <mstyle mathvariant='bold' mathsize='normal'>
+          <mi>v</mi>
+        </mstyle>
+        <mo>&#x2208;</mo>
+        <msup>
+          <mi>&reals;</mi> <mi>n</mi>
+        </msup>
+      </mrow>
+    </math>. Ezen vektorfogalmat fogjuk általánosítani úgy, hogy a már korábban tanult vektorok némely tulajdonságait kiválasztjuk, s egy halmaz (<math>
+ <mi>&Vopf;</mi>
+</math>)
+elemeit (<span class="matekszoveg">a, b </span>és <span class="matekszoveg">c</span>) akkor fogjuk vektoroknak nevezni, ha az alább kiválaszott - és korábban (középiskolában) már tanult - tulajdonságokat (a műveletekkel) teljesítik.</p>
+  <ul>
+    <li>összeadás +<br />
+      <math>
+        <mrow>
+          <msup>
+            <mi>&reals;</mi> <mi>n</mi>
+          </msup>
+        </mrow>
+      </math>
+      -ben 
+      azt mondtuk, hogy
+      <math display="block">
+        <mrow>
+          <mstyle mathvariant='bold' mathsize='normal'>
+            <mi>v</mi>
+          </mstyle>
+          <mo>+</mo>
+          <mstyle mathvariant='bold' mathsize='normal'>
+            <mi>u</mi>
+          </mstyle>
+          <mo>=</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>v</mi> <mn>1</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>v</mi> <mn>2</mn>
+              </msub>
+              <mn>...</mn>
+              <msub>
+                <mi>v</mi> <mi>n</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>+</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>u</mi> <mn>1</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>u</mi> <mn>2</mn>
+              </msub>
+              <mn>...</mn>
+              <msub>
+                <mi>u</mi> <mi>n</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>v</mi> <mn>1</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>u</mi> <mn>1</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>v</mi> <mn>2</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>u</mi> <mn>2</mn>
+              </msub>
+              <mn>...</mn>
+              <msub>
+                <mi>v</mi> <mi>n</mi>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>u</mi> <mi>n</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow> 
+      </math> Ezek tulajdonságaiból az alábbiakat általánosítjuk:
+      <ol>
+        <li>
+          <math>
+            <mrow>
+              <mi>a</mi><mo>+</mo>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>b</mi><mo>+</mo><mi>c</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mo>=</mo>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>a</mi><mo>+</mo><mi>b</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mo>+</mo><mi>c</mi>
+            </mrow>
+          </math>
+          (asszociativitás)</li>
+        <li>
+          <math>
+ <mrow>
+  <mo>&#x2203;</mo><mo>!</mo><mn>0</mn><mo>&#x2208;</mo><mi>&Vopf;</mi>
+  <mo>:</mo><mi>a</mi><mo>+</mo><mn>0</mn><mo>=</mo><mn>0</mn><mo>+</mo><mi>a</mi><mo>=</mo><mi>a</mi>
+ </mrow>
+</math>
+          (egység, semleges elem létezése)</li>
+        <li>
+          <math>
+ <mrow>
+  <mo>&#x2200;</mo><mi>a</mi><mo>&#x2208;</mo><mi>&Vopf;</mi><mo>&#x2203;</mo><mo>!</mo><mo stretchy='false'>(</mo><mo>&#x2212;</mo><mi>a</mi><mo stretchy='false'>)</mo><mo>&#x2208;</mo><mi>&Vopf;</mi><mo>:</mo><mi>a</mi><mo>+</mo><mo stretchy='false'>(</mo><mo>&#x2212;</mo><mi>a</mi><mo stretchy='false'>)</mo><mo>=</mo><mn>0</mn>
+ </mrow>
+</math>
+          (inverz elem létezése)</li>
+        <li>
+          <math>
+            <mrow>
+              <mi>a</mi><mo>+</mo><mi>b</mi><mo>=</mo><mi>b</mi><mo>+</mo><mi>a</mi>
+            </mrow>
+          </math>
+          (kommutativitás)<br />
+        </li>
+      </ol>
+      Az első 3 tulajdonságokkal rendelkező struktúrát csoportnak, a 4-ikkel is rendelkezőt Abel-csoportnak, vagy kommutatív csoportnak nevezzük.</li>
+    <li>skalárral való szorzás &middot;<br />
+      Legyen
+      <math>
+        <mrow>
+          <mi>&#x03BB;</mi><mo>,</mo><mi>&#x03B2;</mi><mo>&#x2208;</mo><mi>&reals;</mi>
+        </mrow>
+      </math>!
+      <math>
+        <mrow>
+          <msup>
+            <mi>&reals;</mi> <mi>n</mi>
+          </msup>
+        </mrow>
+      </math>-ben azt mondtuk, hogy
+      <math>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mstyle mathvariant='bold' mathsize='normal'>
+            <mi>v</mi>
+          </mstyle>
+          <mo>=</mo><mi>&#x03BB;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>v</mi> <mn>1</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>v</mi> <mn>2</mn>
+              </msub>
+              <mn>...</mn>
+              <msub>
+                <mi>v</mi> <mi>n</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>&#x03BB;</mi>
+              <msub>
+                <mi>v</mi> <mn>1</mn>
+              </msub>
+              <mo>,</mo><mi>&#x03BB;</mi>
+              <msub>
+                <mi>v</mi> <mn>2</mn>
+              </msub>
+              <mn>...</mn><mi>&#x03BB;</mi>
+              <msub>
+                <mi>v</mi> <mi>n</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </math>, ezek tulajdonságaiból az alábbiakat általánosítjuk:
+      <ol>
+        <li>
+          <math>
+            <mrow>
+              <mi>&#x03BB;</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>a</mi><mo>+</mo><mi>b</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mo>=</mo><mi>&#x03BB;</mi><mi>a</mi><mo>+</mo><mi>&#x03BB;</mi><mi>b</mi><mo>,</mo>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>&#x03BB;</mi><mo>+</mo><mi>&#x03BC;</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mi>a</mi><mo>=</mo><mi>&#x03BB;</mi><mi>a</mi><mo>+</mo><mi>&#x03BC;</mi><mi>a</mi>
+            </mrow>
+          </math>
+          (disztributivitás)</li>
+        <li>
+          <math>
+            <mrow>
+              <mi>&#x03BB;</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>&#x03B2;</mi><mi>a</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mo>=</mo>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>&#x03BB;</mi><mi>&#x03B2;</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mi>a</mi>
+            </mrow>
+          </math>
+        </li>
+        <li>
+          <math>
+            <mrow>
+              <mn>1</mn><mi>a</mi><mo>=</mo><mi>a</mi>
+            </mrow>
+          </math>
+        </li>
+      </ol>
+    </li>
+  </ul>
+  <p><span class="def">Definíció</span>: Ha egy halmazon értelmezve van az összeadás és a skalárral való szorzás a fentiek szerint, akkor azt vektortérnek (avagy lineáris térnek) nevezzük.</p>
+  <p>Ismert művelet volt
+    <math>
+      <mrow>
+        <msup>
+          <mi>&reals;</mi> <mi>n</mi>
+        </msup>
+      </mrow>
+    </math>-ben a skaláris szorzás, ezt értettük alatta:
+    <math>
+      <mrow>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mstyle mathvariant='bold' mathsize='normal'>
+              <mi>v</mi>
+            </mstyle>
+            <mo>,</mo>
+            <mstyle mathvariant='bold' mathsize='normal'>
+              <mi>u</mi>
+            </mstyle>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+        <mo>=</mo>
+        <mstyle displaystyle='true'>
+          <munderover>
+            <mo>&#x2211;</mo>
+            <mrow>
+              <mi>j</mi><mo>=</mo><mn>1</mn>
+            </mrow>
+            <mi>n</mi>
+          </munderover>
+          <mrow>
+            <msub>
+              <mi>v</mi> <mi>j</mi>
+            </msub>
+            <msub>
+              <mi>u</mi> <mi>j</mi>
+            </msub>
+          </mrow>
+        </mstyle>
+      </mrow>
+    </math>. Erre érvényesek az alábbi tulajdonságok:</p>
+  <ul>
+    <li>
+      <math>
+        <mrow>
+          <mrow>
+            <mo>&#x2329;</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>b</mi><mo>+</mo><mi>c</mi>
+            </mrow>
+            <mo>&#x0232A;</mo>
+          </mrow>
+          <mo>=</mo>
+          <mrow>
+            <mo>&#x2329;</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>b</mi>
+            </mrow>
+            <mo>&#x0232A;</mo>
+          </mrow>
+          <mo>+</mo>
+          <mrow>
+            <mo>&#x2329;</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>c</mi>
+            </mrow>
+            <mo>&#x0232A;</mo>
+          </mrow>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mrow>
+            <mo>&#x2329;</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>b</mi>
+            </mrow>
+            <mo>&#x0232A;</mo>
+          </mrow>
+          <mo>=</mo>
+          <mrow>
+            <mo>&#x2329;</mo>
+            <mrow>
+              <mi>b</mi><mo>,</mo><mi>a</mi>
+            </mrow>
+            <mo>&#x0232A;</mo>
+          </mrow>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+ <mrow>
+  <mi>&#x03BB;</mi><mrow><mo>&#x2329;</mo> <mrow>
+   <mi>a</mi><mo>,</mo><mi>b</mi>
+  </mrow> <mo>&#x0232A;</mo></mrow><mo>=</mo><mrow><mo>&#x2329;</mo> <mrow>
+   <mi>&#x03BB;</mi><mi>a</mi><mo>,</mo><mi>b</mi>
+  </mrow> <mo>&#x0232A;</mo></mrow>
+ </mrow>
+</math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mrow>
+            <mo>&#x2329;</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>a</mi>
+            </mrow>
+            <mo>&#x0232A;</mo>
+          </mrow>
+          <mo>&#x2265;</mo><mn>0</mn>
+        </mrow>
+      </math>
+      és
+      <math>
+        <mrow>
+          <mrow>
+            <mo>&#x2329;</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>a</mi>
+            </mrow>
+            <mo>&#x0232A;</mo>
+          </mrow>
+          <mo>=</mo><mn>0</mn><mo>&#x21D4;</mo><mi>a</mi><mo>=</mo><mn>0</mn>
+        </mrow>
+      </math>
+    </li>
+  </ul>
+  <p><span class='def'>Definíció</span>: Legyen <span class="matekszoveg">X</span> vektortér, amelynek elemei között értelmezve van a skaláris szorzat (két elem skaláris szorzata egy
+    <math>
+      <mi>&reals;</mi>
+    </math>
+    -beli szám) a fenti tulajdonságokkal. Ekkor <span class="matekszoveg">X</span>-t valós euklideszi (eukleidészi) térnek nevezzük.<br />
+    Jó <strong>példa</strong> az euklideszi térre  a
+    <math>
+      <mrow>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mn>0,1</mn>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+      </mrow>
+    </math>
+    intervallumon értelmezett folytonos függvények összessége (röviden
+    <math>
+      <mrow>
+        <mi>C</mi>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mn>0,1</mn>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+      </mrow>
+    </math>
+    ) a szokásos összeadással, számmal való szorzással, ha a skaláris szorzat definíciója:
+    <math>
+      <mrow>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mi>f</mi><mo>,</mo><mi>g</mi>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+        <mo>:</mo><mo>=</mo>
+        <mstyle displaystyle='true'>
+          <mrow>
+            <msubsup>
+              <mo>&#x222B;</mo> <mn>0</mn> <mn>1</mn>
+            </msubsup>
+            <mrow>
+              <mi>f</mi><mo>&#x22C5;</mo><mi>g</mi>
+            </mrow>
+          </mrow>
+        </mstyle>
+      </mrow>
+    </math>.</p>
+  <p><span class='def'>Definíció</span>: Legyen <span class="matekszoveg">X</span> valós euklideszi tér! Ekkor egy
+    <math>
+      <mrow>
+        <mi>a</mi><mo>&#x2208;</mo><mi>X</mi>
+      </mrow>
+    </math>
+    elem normáját így határozhatjuk meg:
+    <math>
+      <mrow>
+        <mrow>
+          <mo>&#x2016;</mo> <mi>a</mi> <mo>&#x2225;</mo>
+        </mrow>
+        <mo>:</mo><mo>=</mo>
+        <msqrt>
+          <mrow>
+            <mrow>
+              <mo>&#x2329;</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>a</mi>
+              </mrow>
+              <mo>&#x0232A;</mo>
+            </mrow>
+          </mrow>
+        </msqrt>
+      </mrow>
+    </math>
+    <br />
+    A norma tulajdonságai:</p>
+  <ol>
+    <li>
+      <math>
+        <mrow>
+          <mrow>
+            <mo>&#x2016;</mo> <mi>a</mi> <mo>&#x2225;</mo>
+          </mrow>
+          <mo>&#x2265;</mo><mn>0</mn>
+        </mrow>
+      </math>
+      és
+      <math>
+        <mrow>
+          <mrow>
+            <mo>&#x2016;</mo> <mi>a</mi> <mo>&#x2225;</mo>
+          </mrow>
+          <mo>=</mo><mn>0</mn><mo>&#x21D4;</mo><mi>a</mi><mo>=</mo><mn>0</mn>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mrow>
+            <mo>&#x2016;</mo>
+            <mrow>
+              <mi>&#x03BB;</mi><mi>a</mi>
+            </mrow>
+            <mo>&#x2225;</mo>
+          </mrow>
+          <mo>=</mo>
+          <mrow>
+            <mo>|</mo> <mi>&#x03BB;</mi> <mo>|</mo>
+          </mrow>
+          <mo>&#x22C5;</mo>
+          <mrow>
+            <mo>&#x2016;</mo> <mi>a</mi> <mo>&#x2225;</mo>
+          </mrow>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mrow>
+            <mo>&#x2016;</mo>
+            <mrow>
+              <mi>a</mi><mo>+</mo><mi>b</mi>
+            </mrow>
+            <mo>&#x2225;</mo>
+          </mrow>
+          <mo>&#x2264;</mo>
+          <mrow>
+            <mo>&#x2016;</mo> <mi>a</mi> <mo>&#x2225;</mo>
+          </mrow>
+          <mo>+</mo>
+          <mrow>
+            <mo>&#x2016;</mo> <mi>b</mi> <mo>&#x2225;</mo>
+          </mrow>
+        </mrow>
+      </math>
+      (háromszög egyenlőtlenség), mert
+      <math>
+        <mrow>
+          <mrow>
+            <mo>&#x2329;</mo>
+            <mrow>
+              <mi>a</mi><mo>+</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo>+</mo><mi>b</mi>
+            </mrow>
+            <mo>&#x0232A;</mo>
+          </mrow>
+          <mo>=</mo>
+          <mrow>
+            <mo>&#x2329;</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>a</mi>
+            </mrow>
+            <mo>&#x0232A;</mo>
+          </mrow>
+          <mo>+</mo>
+          <mrow>
+            <mo>&#x2329;</mo>
+            <mrow>
+              <mi>b</mi><mo>,</mo><mi>a</mi>
+            </mrow>
+            <mo>&#x0232A;</mo>
+          </mrow>
+          <mo>+</mo>
+          <mrow>
+            <mo>&#x2329;</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>b</mi>
+            </mrow>
+            <mo>&#x0232A;</mo>
+          </mrow>
+          <mo>+</mo>
+          <mrow>
+            <mo>&#x2329;</mo>
+            <mrow>
+              <mi>b</mi><mo>,</mo><mi>b</mi>
+            </mrow>
+            <mo>&#x0232A;</mo>
+          </mrow>
+          <mo>=</mo>
+        </mrow>
+      </math>
+      <math>
+        <mrow>
+          <mo>=</mo>
+          <msup>
+            <mrow>
+              <mrow>
+                <mo>&#x2016;</mo> <mi>a</mi> <mo>&#x2225;</mo>
+              </mrow>
+            </mrow>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mrow>
+              <mrow>
+                <mo>&#x2016;</mo> <mi>b</mi> <mo>&#x2225;</mo>
+              </mrow>
+            </mrow>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo><mn>2</mn>
+          <mrow>
+            <mo>&#x2329;</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>b</mi>
+            </mrow>
+            <mo>&#x0232A;</mo>
+          </mrow>
+          <mo>&#x2264;</mo>
+          <msup>
+            <mrow>
+              <mrow>
+                <mo>&#x2016;</mo> <mi>a</mi> <mo>&#x2225;</mo>
+              </mrow>
+            </mrow>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mrow>
+              <mrow>
+                <mo>&#x2016;</mo> <mi>b</mi> <mo>&#x2225;</mo>
+              </mrow>
+            </mrow>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo><mn>2</mn>
+          <mrow>
+            <mo>&#x2016;</mo> <mi>a</mi> <mo>&#x2225;</mo>
+          </mrow>
+          <mo>&#x22C5;</mo>
+          <mrow>
+            <mo>&#x2016;</mo> <mi>b</mi> <mo>&#x2225;</mo>
+          </mrow>
+          <mo>=</mo>
+          <msup>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mrow>
+                    <mo>&#x2016;</mo> <mi>a</mi> <mo>&#x2225;</mo>
+                  </mrow>
+                  <mo>+</mo>
+                  <mrow>
+                    <mo>&#x2016;</mo> <mi>b</mi> <mo>&#x2225;</mo>
+                  </mrow>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+            <mn>2</mn>
+          </msup>
+        </mrow>
+      </math>. Itt felhasználtuk az ún Cauchy-Schwarz-egyenlőtlenséget, mely szerint:</li>
+  </ol>
+  <p><span class='tetel'>Tétel</span>: Legyen <span class="matekszoveg">X</span> valós euklideszi tér! Ekkor
+    <math>
+      <mrow>
+        <mo>&#x2200;</mo> <mi>a</mi> <mo>,</mo> <mi>b</mi> <mo>&#x2208;</mo> <mi>X</mi>
+      </mrow>
+    </math>
+    esetén
+    <math>
+      <mrow>
+        <mrow>
+          <mo>|</mo>
+          <mrow>
+            <mrow>
+              <mo>&#x2329;</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>b</mi>
+              </mrow>
+              <mo>&#x0232A;</mo>
+            </mrow>
+          </mrow>
+          <mo>|</mo>
+        </mrow>
+        <mo>&#x2264;</mo>
+        <mrow>
+          <mo>&#x2016;</mo> <mi>a</mi> <mo>&#x2225;</mo>
+        </mrow>
+        <mo>&#x22C5;</mo>
+        <mrow>
+          <mo>&#x2016;</mo> <mi>b</mi> <mo>&#x2225;</mo>
+        </mrow>
+      </mrow>
+    </math>. (Cauchy-Schwarz egyenlőtlenség, röviden CS)<a href="#" id="cauchy_schwarz"></a><br />
+    <span class='bizonyitas'>Bizonyítás</span>:
+    <math>
+      <mrow>
+        <mn>0</mn><mo>&#x2264;</mo>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mi>a</mi><mo>+</mo><mi>&#x03BB;</mi><mi>b</mi><mo>,</mo><mi>a</mi><mo>+</mo><mi>&#x03BB;</mi><mi>b</mi>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mi>a</mi><mo>,</mo><mi>a</mi>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+        <mo>+</mo>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mi>&#x03BB;</mi><mi>b</mi><mo>,</mo><mi>a</mi>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+        <mo>+</mo>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mi>a</mi><mo>,</mo><mi>&#x03BB;</mi><mi>b</mi>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+        <mo>+</mo>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mi>&#x03BB;</mi><mi>b</mi><mo>,</mo><mi>&#x03BB;</mi><mi>b</mi>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mi>a</mi><mo>,</mo><mi>a</mi>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+        <mo>+</mo><mn>2</mn><mi>&#x03BB;</mi>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mi>a</mi><mo>,</mo><mi>b</mi>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+        <mo>+</mo>
+        <msup>
+          <mi>&#x03BB;</mi> <mn>2</mn>
+        </msup>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mi>b</mi><mo>,</mo><mi>b</mi>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+      </mrow>
+    </math>, ez teljesül minden <math>
+ <mi>&#x03BB;</mi>
+</math>
+ értékre, így
+    <math>
+      <mrow>
+        <mn>4</mn>
+        <msup>
+          <mrow>
+            <mrow>
+              <mo>&#x2329;</mo>
+              <mrow>
+                <mi>a</mi> <mo>,</mo> <mi>b</mi>
+              </mrow>
+              <mo>&#x0232A;</mo>
+            </mrow>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+        <mo>&#x2212;</mo> <mn>4</mn>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mi>a</mi> <mo>,</mo> <mi>a</mi>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mi>b</mi> <mo>,</mo> <mi>b</mi>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+        <mo>&#x2264;</mo> <mn>0</mn>
+      </mrow>
+    </math>, vagyis
+    <math>
+      <mrow>
+        <msup>
+          <mrow>
+            <mrow>
+              <mo>&#x2329;</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>b</mi>
+              </mrow>
+              <mo>&#x0232A;</mo>
+            </mrow>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+        <mo>&#x2264;</mo>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mi>a</mi><mo>,</mo><mi>a</mi>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mi>b</mi><mo>,</mo><mi>b</mi>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+        <mo>&#x21D2;</mo>
+        <mrow>
+          <mo>|</mo>
+          <mrow>
+            <mrow>
+              <mo>&#x2329;</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>b</mi>
+              </mrow>
+              <mo>&#x0232A;</mo>
+            </mrow>
+          </mrow>
+          <mo>|</mo>
+        </mrow>
+        <mo>&#x2264;</mo>
+        <msqrt>
+          <mrow>
+            <mrow>
+              <mo>&#x2329;</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>a</mi>
+              </mrow>
+              <mo>&#x0232A;</mo>
+            </mrow>
+          </mrow>
+        </msqrt>
+        <msqrt>
+          <mrow>
+            <mrow>
+              <mo>&#x2329;</mo>
+              <mrow>
+                <mi>b</mi><mo>,</mo><mi>b</mi>
+              </mrow>
+              <mo>&#x0232A;</mo>
+            </mrow>
+          </mrow>
+        </msqrt>
+        <mo>=</mo>
+        <mrow>
+          <mo>&#x2016;</mo> <mi>a</mi> <mo>&#x2225;</mo>
+        </mrow>
+        <mo>&#x22C5;</mo>
+        <mrow>
+          <mo>&#x2016;</mo> <mi>b</mi> <mo>&#x2225;</mo>
+        </mrow>
+      </mrow>
+    </math>, és pont ezt akartuk igazolni.</p>
+  <p><span class="def">Definíció</span>: legyen <span class="matekszoveg">X</span> vektortér, amelyen értelmezve van egy norma a fenti tulajdonságokkal, ekkor <span class="matekszoveg">X</span>-t normált térnek nevezzük.<br />
+    <span class='pelda'>Példa</span>:
+    <math>
+      <mrow>
+        <mi>X</mi><mo>=</mo><mi>C</mi>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mn>0,1</mn>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+      </mrow>
+    </math>, a függvény normája pedig
+    <math>
+      <mrow>
+        <mrow>
+          <mo>&#x2016;</mo> <mi>f</mi> <mo>&#x2225;</mo>
+        </mrow>
+        <mo>:</mo><mo>=</mo><mi>sup</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>|</mo> <mi>f</mi> <mo>|</mo>
+        </mrow>
+      </mrow>
+    </math>.</p>
+  <p>Egy normált térben mindig értelmezhető az elemek <math>
+ <mi>&#x03C1;</mi>
+</math>
+ távolsága,
+    <math>
+      <mrow>
+        <mi>&#x03C1;</mi>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mi>a</mi><mo>,</mo><mi>b</mi>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>:</mo><mo>=</mo>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <mi>a</mi><mo>&#x2212;</mo><mi>b</mi>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+      </mrow>
+    </math>. A távolság (metrika) tulajdonságai:</p>
+  <ol>
+    <li>
+      <math>
+        <mrow>
+          <mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>b</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&#x2265;</mo><mn>0</mn>
+        </mrow>
+      </math>
+      és
+      <math>
+        <mrow>
+          <mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>b</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo><mn>0</mn><mo>&#x21D4;</mo><mi>a</mi><mo>=</mo><mi>b</mi>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>b</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo><mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>b</mi><mo>,</mo><mi>a</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>c</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&#x2264;</mo><mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>b</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>+</mo><mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>b</mi><mo>,</mo><mi>c</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </math>
+      (háromszög egyenlőtlenség) </li>
+  </ol>
+  <p><span class='def'>Definíció</span>: Legyen <span class="matekszoveg">X</span> valamilyen halmaz és tfh értelmezve van
+    <math>
+      <mrow>
+        <mi>&#x03C1;</mi> <mo>:</mo> <mi>X</mi> <mo>&#x00D7;</mo> <mi>X</mi> <mo>&#x2192;</mo> <mi>&reals;</mi>
+      </mrow>
+    </math>
+    függvény (metrika, távolság) a fenti tulajdonságokkal! Ekkor <span class="matekszoveg">X</span>-t metrikus térnek nevezzük.</p>
+  <h2>Topológiai alapfogalmak a metrikus térben</h2>
+  <ul>
+    <li>Legyen <span class="matekszoveg">X</span> metrikus tér! Egy
+      <math>
+        <mrow>
+          <mi>a</mi><mo>&#x2208;</mo><mi>X</mi>
+        </mrow>
+      </math>
+      pont <span class="matekszoveg">r</span> sugarú környezete azon pontok összessége, amelyek <span class="matekszoveg">a</span>-tól <span class="matekszoveg">r</span>-nél kisebb távolságra vannak:
+      <math>
+        <mrow>
+          <msub>
+            <mi>B</mi> <mi>r</mi>
+          </msub>
+          <mrow>
+            <mo>(</mo> <mi>a</mi> <mo>)</mo>
+          </mrow>
+          <mo>:</mo><mo>=</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <mi>x</mi><mo>&#x2208;</mo><mi>X</mi><mo>:</mo><mi>&#x03C1;</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>x</mi><mo>,</mo><mi>a</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mo>&lt;</mo><mi>r</mi>
+            </mrow>
+            <mo>}</mo>
+          </mrow>
+        </mrow>
+      </math>
+    </li>
+  </ul>
+  <h3>Pont és halmaz viszonya</h3>
+  <p>Legyen
+    <math>
+    <mrow>
+          <mi>a</mi>
+          <mo>&#x2208;</mo>
+          <mi>X</mi>
+          <mo>,</mo>
+          <mi>M</mi>
+          <mo>&#x2282;</mo>
+          <mi>X</mi>
+        </mrow>
+      </math>
+  !  </p>
+  <p><span class='def'>Definíció</span>: azt mondjuk, hogy az <span class="matekszoveg">a</span> pont az <span class="matekszoveg">M</span> halmaznak belső pontja, ha létezik <span class="matekszoveg">a</span>-nak olyan <span class="matekszoveg">r</span> sugarú környezete, hogy
+    <math>
+      <mrow>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2282;</mo> <mi>M</mi>
+      </mrow>
+    </math>. Jele:
+    <math>
+      <mrow>
+        <mi>a</mi> <mo>&#x2208;</mo> <mi>int</mi> <mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+  </p>
+  <p> <span class='def'>Definíció</span>: <span class="matekszoveg">a</span> pont az <span class="matekszoveg">M</span> halmaznak külső pontja, ha létezik <span class="matekszoveg">a</span>-nak olyan <span class="matekszoveg">r</span> sugarú környezete, hogy
+    <math>
+      <mrow>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2229;</mo> <mi>M</mi> <mo>=</mo> <mo>&#x2205;</mo>
+      </mrow>
+    </math>. Jele:
+    <math>
+      <mrow>
+        <mi>a</mi> <mo>&#x2208;</mo> <mi>ext</mi> <mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+  </p>
+  <p> <span class='def'>Definíció</span>: az <span class="matekszoveg">a</span> pont <span class="matekszoveg">M</span>-nek határpontja, ha <span class="matekszoveg">a</span> minden <span class="matekszoveg">r</span> sugarú környezete esetén
+    <math>
+      <mrow>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2229;</mo> <mi>M</mi> <mo>&#x2260;</mo> <mo>&#x2205;</mo>
+      </mrow>
+    </math>
+    és
+    <math>
+      <mrow>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2229;</mo>
+        <msup>
+          <mi>M</mi> <mi>C</mi>
+        </msup>
+        <mo>&#x2260;</mo> <mo>&#x2205;</mo>
+      </mrow>
+    </math>. Jele:
+    <math>
+      <mrow>
+        <mi>a</mi> <mo>&#x2208;</mo> <mo>&#x2202;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+        <mo>=</mo> <mi>front</mi> <mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+  </p>
+  <p> <span class='allitas'>Állítás:</span>
+    <math>
+      <mrow>
+        <mo>&#x2202;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+        <mo>,</mo><mi>ext</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+        <mo>,</mo><mi>int</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    halmazok diszjunktak, uniójuk kiadja <span class="matekszoveg">X</span>-et.</p>
+  <p> <span class='def'>Definíció</span>: egy
+    <math>
+      <mrow>
+        <mi>a</mi> <mo>&#x2208;</mo> <mi>X</mi>
+      </mrow>
+    </math>
+    pontot az <span class="matekszoveg">M</span> halmaz torlódási pontjának nevezünk, ha az <span class="matekszoveg">a</span> pont minden környezetében van <span class="matekszoveg">M</span>-beli, de <span class="matekszoveg">a</span>-tól különböző pont, formailag: <span class="matekszoveg">a</span> torlódási pont, ha
+    <math>
+      <mrow>
+        <mrow>
+          <mo>{</mo>
+          <mrow>
+            <msub>
+              <mi>B</mi> <mi>r</mi>
+            </msub>
+            <mrow>
+              <mo>(</mo> <mi>a</mi> <mo>)</mo>
+            </mrow>
+            <mo>&#x005C;</mo>
+            <mrow>
+              <mo>{</mo> <mi>a</mi> <mo>}</mo>
+            </mrow>
+          </mrow>
+          <mo>}</mo>
+        </mrow>
+        <mo>&#x2229;</mo><mi>M</mi><mo>&#x2260;</mo><mo>&#x2205;</mo>
+      </mrow>
+    </math>.  Az <span class="matekszoveg">M</span> halmaz torlódási pontjainak halmazát <span class="matekszoveg">M</span>'-vel jelöljük.<br />
+    Megjegyzés: ha az <span class="matekszoveg">a</span> pont <span class="matekszoveg">M</span>-nek torlódási pontja, akkor <span class="matekszoveg">a</span>-nak minden környezete végtelen sok pontot tartalmaz az <span class="matekszoveg">M</span> halmazból.</p>
+  <p> <span class='def'>Definíció</span>: egy
+    <math>
+      <mrow>
+        <mi>a</mi> <mo>&#x2208;</mo> <mi>M</mi>
+      </mrow>
+    </math>
+    pontot az <span class="matekszoveg">M</span> halmaz izolált pontjának nevezünk, ha
+    <math>
+      <mrow>
+        <mo>&#x2203;</mo>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>:</mo>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2229;</mo> <mi>M</mi> <mo>=</mo>
+        <mrow>
+          <mo>{</mo> <mi>a</mi> <mo>}</mo>
+        </mrow>
+      </mrow>
+    </math> és
+    <math>
+ <mrow>
+  <mi>r</mi><mo>&#x2260;</mo><mn>0</mn>
+ </mrow>
+</math>.
+</p>
+  <p> <span class='def'>Definíció</span>:
+    az <span class="matekszoveg">M</span> halmaz belső és határpontjainak összességét az <span class="matekszoveg">M</span> halmaz lezárásának nevezzük,
+    <math>
+      <mrow>
+        <mover accent='true'>
+          <mi>M</mi> <mo stretchy='true'>&#x00AF;</mo>
+        </mover>
+        <mo>=</mo><mi>int</mi><mo>&#x2061;</mo><mi>M</mi><mo>&#x222A;</mo><mo>&#x2202;</mo><mi>M</mi>
+      </mrow>
+    </math>. <br />
+    Megjegyzés:
+    <math>
+      <mrow>
+        <mover accent='true'>
+          <mi>M</mi> <mo stretchy='true'>&#x00AF;</mo>
+        </mover>
+      </mrow>
+    </math>
+    pontjait szokás <span class="matekszoveg">M</span> érintkezési pontjainak is  nevezni. Továbbá
+    <math>
+      <mrow>
+        <mi>a</mi><mo>&#x2208;</mo>
+        <mover accent='true'>
+          <mi>M</mi> <mo stretchy='true'>&#x00AF;</mo>
+        </mover>
+        <mo>&#x21D4;</mo><mo>&#x2200;</mo>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2229;</mo><mi>M</mi><mo>&#x2260;</mo><mo>&#x2205;</mo>
+      </mrow>
+    </math>.</p>
+  <span class='pelda'>Példák:</span>
+  <ul>
+    <li>
+      <math>
+        <mrow>
+          <mi>X</mi><mo>=</mo><mi>&reals;</mi><mo>,</mo><mi>M</mi><mo>=</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mn>0,1</mn>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&#x21D2;</mo><mi>M</mi><mo>'</mo><mo>=</mo>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <mn>0,1</mn>
+            </mrow>
+            <mo>]</mo>
+          </mrow>
+        </mrow>
+      </math>, izolált pontja nincs,
+      <math>
+        <mrow>
+          <mo>&#x2202;</mo><mi>M</mi><mo>=</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <mn>0,1</mn>
+            </mrow>
+            <mo>}</mo>
+          </mrow>
+          <mo>,</mo><mi>int</mi><mo>&#x2061;</mo><mi>M</mi><mo>=</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mn>0,1</mn>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>,</mo>
+          <mover accent='true'>
+            <mi>M</mi> <mo stretchy='true'>&#x00AF;</mo>
+          </mover>
+          <mo>=</mo>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <mn>0,1</mn>
+            </mrow>
+            <mo>]</mo>
+          </mrow>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mi>X</mi><mo>=</mo><mi>&reals;</mi><mo>,</mo><mi>M</mi><mo>=</mo><mi>&integers;</mi><mo>&#x21D2;</mo><mi>M</mi><mo>'</mo><mo>=</mo><mo>&#x2205;</mo>
+        </mrow>
+      </math>, minden pontja izolált,
+      <math>
+        <mrow>
+          <mo>&#x2202;</mo><mi>M</mi><mo>=</mo><mi>&integers;</mi><mo>,</mo><mi>int</mi><mo>&#x2061;</mo><mi>M</mi><mo>=</mo><mo>&#x2205;</mo><mo>,</mo>
+          <mover accent='true'>
+            <mi>M</mi> <mo stretchy='true'>&#x00AF;</mo>
+          </mover>
+          <mo>=</mo><mi>&integers;</mi>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mi>X</mi><mo>=</mo><mi>&reals;</mi><mo>,</mo><mi>M</mi><mo>=</mo>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <mn>0,1</mn>
+            </mrow>
+            <mo>]</mo>
+          </mrow>
+          <mo>&#x21D2;</mo><mi>M</mi><mo>&#x0027;</mo><mo>=</mo>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <mn>0,1</mn>
+            </mrow>
+            <mo>]</mo>
+          </mrow>
+        </mrow>
+      </math>, nincs izolált pontja,
+      <math>
+        <mrow>
+          <mo>&#x2202;</mo><mi>M</mi><mo>=</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <mn>0,1</mn>
+            </mrow>
+            <mo>}</mo>
+          </mrow>
+          <mo>,</mo><mi>int</mi><mo>&#x2061;</mo><mi>M</mi><mo>=</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mn>0,1</mn>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>,</mo>
+          <mover accent='true'>
+            <mi>M</mi> <mo stretchy='true'>&#x00AF;</mo>
+          </mover>
+          <mo>=</mo>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <mn>0,1</mn>
+            </mrow>
+            <mo>]</mo>
+          </mrow>
+        </mrow>
+      </math>
+    </li>
+  </ul>
+  <h3>Nyílt és zárt halmazok </h3>
+  <p><span class='def'>Definíció</span>: egy
+    <math>
+      <mrow>
+        <mi>M</mi> <mo>&#x2282;</mo> <mi>X</mi>
+      </mrow>
+    </math>
+    halmazt nyíltnak nevezünk, ha
+    <math>
+      <mrow>
+        <mo>&#x2200;</mo><mi>x</mi><mo>&#x2208;</mo><mi>M</mi>
+      </mrow>
+    </math>
+    esetén
+    <math>
+      <mrow>
+        <mi>x</mi><mo>&#x2208;</mo><mi>int</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x21D4;</mo><mi>M</mi><mo>&#x2282;</mo><mi>int</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x21D4;</mo><mi>M</mi><mo>&#x2229;</mo><mo>&#x2202;</mo><mi>M</mi><mo>=</mo><mo>&#x2205;</mo>
+      </mrow>
+    </math>. </p>
+  <p> <span class='def'>Definíció</span>: egy <span class="matekszoveg">M</span> halmazt zártnak nevezünk, ha tartalmazza az összes határpontját
+    <math>
+      <mrow>
+        <mo>&#x21D4;</mo> <mo>&#x2202;</mo> <mi>M</mi> <mo>&#x2282;</mo> <mi>M</mi>
+      </mrow>
+    </math>.<br />
+    <span class="pelda">Példák</span> (legyen
+    <math>
+      <mrow>
+        <mi>X</mi> 
+        <mo>:</mo> 
+        <mo>=</mo> 
+        <mi>&reals;</mi>
+      </mrow>
+    </math>
+    ):</p>
+  <ul>
+    <li>
+      <math>
+        <mrow>
+          <mi>M</mi><mo>=</mo>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <mn>0,1</mn>
+            </mrow>
+            <mo>]</mo>
+          </mrow>
+        </mrow>
+      </math>
+    zárt halmaz</li>
+    <li>
+      <math>
+        <mrow>
+          <mi>M</mi><mo>=</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mn>0,1</mn>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </math>
+      nyílt halmaz</li>
+    <li>
+      <math>
+        <mrow>
+          <mi>M</mi><mo>=</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mn>0,1</mn>
+            </mrow>
+            <mo>]</mo>
+          </mrow>
+        </mrow>
+      </math>
+      se nem nyílt, se nem zárt halmaz</li>
+    <li>
+      <math>
+        <mrow>
+          <mi>M</mi><mo>=</mo><mi>&integers;</mi>
+        </mrow>
+      </math>
+      zárt halmaz (minden pontja izolált is)</li>
+  </ul>
+  <p> <span class='allitas'>Állítás:</span> egy
+    <math>
+      <mrow>
+        <mi>M</mi> <mo>&#x2282;</mo> <mi>X</mi>
+      </mrow>
+    </math>
+    halmaz zárt
+    <math>
+      <mrow>
+        <mo>&#x21D4;</mo> <mi>M</mi> <mo>=</mo>
+        <mover accent='true'>
+          <mi>M</mi> <mo stretchy='true'>&#x00AF;</mo>
+        </mover>
+        <mo>&#x21D4;</mo> <mi>M</mi> <mo>'</mo> <mo>&#x2282;</mo> <mi>M</mi>
+      </mrow>
+    </math>. </p>
+  <p><span class="tetel">Tétel</span>: tetszőleges <span class="matekszoveg">M</span> halmaz esetén
+    <math>
+      <mrow>
+        <mi>int</mi> <mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    és
+    <math>
+      <mrow>
+        <mi>ext</mi> <mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    nyílt halmaz.<br />
+    <span class='bizonyitas'>Bizonyítás</span> (
+    <math>
+      <mrow>
+        <mi>int</mi> <mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    nyílt halmaz
+    ): legyen
+    <math>
+      <mrow>
+        <mi>a</mi> <mo>&#x2208;</mo> <mi>int</mi> <mo>&#x2061;</mo> <mi>M</mi>
+      </mrow>
+    </math>. Azt kellene megmutatni, hogy
+    <math>
+      <mrow>
+        <mo>&#x2203;</mo>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2282;</mo> <mi>int</mi> <mo>&#x2061;</mo> <mi>M</mi>
+      </mrow>
+    </math>.
+    <math>
+      <mrow>
+        <mi>a</mi> <mo>&#x2208;</mo> <mi>int</mi> <mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x21D2;</mo> <mo>&#x2203;</mo>
+        <msub>
+          <mi>B</mi> <mi>R</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2282;</mo> <mi>M</mi>
+      </mrow>
+    </math>. Legyen
+    <math>
+      <mrow>
+        <mi>r</mi> <mo>:</mo> <mo>=</mo> <mi>R</mi> <mo>/</mo> <mn>2</mn>
+      </mrow>
+    </math>, ekkor
+    <math>
+      <mrow>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2282;</mo> <mi>int</mi> <mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>, ugyanis ha
+    <math>
+      <mrow>
+        <mi>b</mi><mo>&#x2208;</mo>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>, akkor a háromszög egyenlőtlenség miatt
+    <math>
+      <mrow>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>b</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2282;</mo>
+        <msub>
+          <mi>B</mi> <mi>R</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2282;</mo><mi>M</mi><mo>,</mo><mi>b</mi><mo>&#x2208;</mo><mi>int</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x21D2;</mo>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2282;</mo><mi>int</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>.</p>
+  <p> <span class='allitas'>Állítás:</span>
+    <math>
+      <mrow>
+        <mo>&#x2202;</mo> <mi>M</mi> <mo>,</mo>
+        <mover accent='true'>
+          <mi>M</mi> <mo stretchy='true'>&#x00AF;</mo>
+        </mover>
+        <mo>,</mo> <mi>M</mi> <mo>'</mo>
+      </mrow>
+    </math>
+    zárt halmazok.</p>
+  <p><span class='tetel'>Tétel</span>: ha
+    <math>
+      <mrow>
+        <mi>M</mi><mo>&#x2282;</mo><mi>X</mi>
+      </mrow>
+    </math>
+    nyílt, akkor
+    <math>
+      <mrow>
+        <msup>
+          <mi>M</mi> <mi>C</mi>
+        </msup>
+        <mo>=</mo><mi>X</mi>
+        <mtext>
+          &#x005C;
+        </mtext>
+        <mi>M</mi>
+      </mrow>
+    </math>
+    zárt halmaz.<br />
+    <span class='bizonyitas'>Bizonyítás</span>: tfh <span class="matekszoveg">M</span> nyílt halmaz, ekkor
+    <math>
+      <mrow>
+        <mo>&#x2202;</mo><mi>M</mi><mo>&#x2229;</mo><mi>M</mi><mo>=</mo><mo>&#x2205;</mo>
+      </mrow>
+    </math>,
+    <math>
+      <mrow>
+        <mo>&#x2202;</mo><mi>M</mi><mo>=</mo><mo>&#x2202;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msup>
+              <mi>M</mi> <mi>c</mi>
+            </msup>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>, ezért
+    <math>
+      <mrow>
+        <mo>&#x2202;</mo>
+        <msup>
+          <mi>M</mi> <mi>C</mi>
+        </msup>
+        <mo>&#x2229;</mo><mi>M</mi><mo>=</mo><mo>&#x2205;</mo><mo>&#x21D2;</mo><mo>&#x2202;</mo>
+        <msup>
+          <mi>M</mi> <mi>C</mi>
+        </msup>
+        <mo>&#x2282;</mo>
+        <msup>
+          <mi>M</mi> <mi>C</mi>
+        </msup>
+      </mrow>
+    </math>, vagyis
+    <math>
+      <mrow>
+        <msup>
+          <mi>M</mi> <mi>C</mi>
+        </msup>
+      </mrow>
+    </math>
+    zárt.</p>
+  <p><span class='tetel'>Tétel</span>: akárhány nyílt halmaz uniója nyílt halmaz, és véges sok nyílt halmaz metszete is nyílt.<br />
+    <span class='bizonyitas'>Bizonyítás</span>: legyenek
+    <math>
+      <mrow>
+        <msub>
+          <mi>M</mi>
+          <mrow>
+            <mi>&#x03B3;</mi> <mo>&#x2208;</mo> <mi>I</mi>
+          </mrow>
+        </msub>
+      </mrow>
+    </math>
+    nyílt halmazok (<span class="matekszoveg">I</span> indexhalmaz)! Belátjuk, hogy
+    <math>
+      <mrow>
+        <mi>M</mi> <mo>:</mo> <mo>=</mo>
+        <mstyle displaystyle='true'>
+          <munder>
+            <mo>&#x222A;</mo>
+            <mrow>
+              <mi>&#x03B3;</mi> <mo>&#x2208;</mo> <mi>I</mi>
+            </mrow>
+          </munder>
+          <mrow>
+            <msub>
+              <mi>M</mi> <mi>&#x03B3;</mi>
+            </msub>
+          </mrow>
+        </mstyle>
+      </mrow>
+    </math>
+    nyílt. Legyen
+    <math>
+      <mrow>
+        <mi>a</mi> <mo>&#x2208;</mo> <mi>M</mi> <mo>&#x21D2;</mo> <mo>&#x2203;</mo> <mi>&#x03B3;</mi> <mo>:</mo> <mi>a</mi> <mo>&#x2208;</mo>
+        <msub>
+          <mi>M</mi> <mi>&#x03B3;</mi>
+        </msub>
+      </mrow>
+    </math>. Mivel
+    <math>
+      <mrow>
+        <msub>
+          <mi>M</mi> <mi>&#x03B3;</mi>
+        </msub>
+      </mrow>
+    </math>
+    nyílt, ezért
+    <math>
+      <mrow>
+        <mo>&#x2203;</mo>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2282;</mo>
+        <msub>
+          <mi>M</mi> <mi>&#x03B3;</mi>
+        </msub>
+        <mo>&#x21D2;</mo>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2282;</mo> <mi>M</mi>
+      </mrow>
+    </math>.<br />
+    Legyenek
+    <math>
+      <mrow>
+        <msub>
+          <mi>M</mi>
+          <mrow>
+            <mi>j</mi><mo>&#x2208;</mo><mi>I</mi>
+          </mrow>
+        </msub>
+      </mrow>
+    </math>
+    nyílt halmazok (<span class="matekszoveg">I</span> indexhalmaz)! Belátjuk, hogy
+    <math>
+      <mrow>
+        <mi>M</mi><mo>:</mo><mo>=</mo>
+        <mstyle displaystyle='true'>
+          <munderover>
+            <mo>&#x2229;</mo>
+            <mrow>
+              <mi>j</mi><mo>=</mo><mn>1</mn>
+            </mrow>
+            <mi>p</mi>
+          </munderover>
+          <mrow>
+            <msub>
+              <mi>M</mi> <mi>j</mi>
+            </msub>
+          </mrow>
+        </mstyle>
+      </mrow>
+    </math>
+    nyílt halmaz. Legyen
+    <math>
+      <mrow>
+        <mi>a</mi><mo>&#x2208;</mo><mi>M</mi><mo>&#x21D2;</mo><mi>a</mi><mo>&#x2208;</mo>
+        <msub>
+          <mi>M</mi> <mi>j</mi>
+        </msub>
+        <mo>,</mo><mo>&#x2200;</mo><mi>j</mi><mo>=</mo><mn>1,2...</mn><mi>p</mi>
+      </mrow>
+    </math>. Mivel
+    <math>
+      <mrow>
+        <msub>
+          <mi>M</mi> <mi>j</mi>
+        </msub>
+      </mrow>
+    </math>
+    nyílt, ezért
+    <math>
+      <mrow>
+        <mo>&#x2203;</mo>
+        <msub>
+          <mi>r</mi> <mi>j</mi>
+        </msub>
+        <mo>:</mo>
+        <msub>
+          <mi>B</mi>
+          <mrow>
+            <msub>
+              <mi>r</mi> <mi>j</mi>
+            </msub>
+          </mrow>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2282;</mo>
+        <msub>
+          <mi>M</mi> <mi>j</mi>
+        </msub>
+      </mrow>
+    </math>. Legyen
+    <math>
+      <mrow>
+        <mi>r</mi><mo>=</mo><mi>min</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>{</mo>
+          <mrow>
+            <msub>
+              <mi>r</mi> <mn>1</mn>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>r</mi> <mn>2</mn>
+            </msub>
+            <mn>,..,</mn>
+            <msub>
+              <mi>r</mi> <mi>p</mi>
+            </msub>
+          </mrow>
+          <mo>}</mo>
+        </mrow>
+        <mo>&#x21D2;</mo>
+        <msub>
+          <mi>B</mi> <mi>r</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x2282;</mo>
+        <mstyle displaystyle='true'>
+          <munderover>
+            <mo>&#x2229;</mo>
+            <mrow>
+              <mi>j</mi><mo>=</mo><mn>1</mn>
+            </mrow>
+            <mi>p</mi>
+          </munderover>
+          <mrow>
+            <msub>
+              <mi>M</mi> <mi>j</mi>
+            </msub>
+          </mrow>
+        </mstyle>
+      </mrow>
+    </math>.</p>
+  <p><span class='tetel'>Tétel</span>: akárhány zárt halmaz metszete zárt halmaz, és véges sok zárt halmaz uniója is zárt.<br />
+    <span class='bizonyitas'>Bizonyítás</span>: (belátjuk, hogy metszetük zárt) tfh
+    <math>
+      <mrow>
+        <msub>
+          <mi>M</mi> <mi>&#x03B3;</mi>
+        </msub>
+      </mrow>
+    </math>
+    zárt! Ekkor
+    <math>
+      <mrow>
+        <msubsup>
+          <mi>M</mi> <mi>&#x03B3;</mi> <mi>C</mi>
+        </msubsup>
+      </mrow>
+    </math>
+    nyílt halmaz. Ezért
+    <math>
+      <mrow>
+        <mstyle displaystyle='true'>
+          <munder>
+            <mo>&#x2229;</mo>
+            <mrow>
+              <mi>&#x03B3;</mi><mo>&#x2208;</mo><mi>I</mi>
+            </mrow>
+          </munder>
+          <mrow>
+            <msub>
+              <mi>M</mi> <mi>&#x03B3;</mi>
+            </msub>
+          </mrow>
+        </mstyle>
+        <mo>=</mo>
+        <msup>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mstyle displaystyle='true'>
+                  <munder>
+                    <mo>&#x222A;</mo>
+                    <mrow>
+                      <mi>&#x03B3;</mi><mo>&#x2208;</mo><mi>I</mi>
+                    </mrow>
+                  </munder>
+                  <mrow>
+                    <msubsup>
+                      <mi>M</mi> <mi>&#x03B3;</mi> <mi>C</mi>
+                    </msubsup>
+                  </mrow>
+                </mstyle>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+          <mi>C</mi>
+        </msup>
+      </mrow>
+    </math>
+    zárt. Az unió esete hasonlóan bizonyítható.<br />
+    Megjegyzés: végtelen sok nyílt halmaz metszete általában nem nyílt, az alaphalmaz és az üreshalmaz nyílt és zárt egyszerre.</p>
+</div>
+<div class="bigger">
+  <div class="date">09.18</div>
+  <h2>Sorozatok határértéke a metrikus térben</h2>
+  <p><span class='def'>Definíció</span>: egy
+    <math>
+      <mrow>
+        <mi>f</mi><mo>:</mo><mi>&naturals;</mi><mo>&#x21A3;</mo><mi>X</mi>
+      </mrow>
+    </math>
+    (<span class="matekszoveg">X</span> metrikus tér) függvényt <span class="matekszoveg">X</span>-beli sorozatnak nevezünk. Jelölés: a sorozat <span class="matekszoveg">k</span>-adik tagja
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi> <mi>k</mi>
+        </msub>
+        <mo>:</mo><mo>=</mo><mi>f</mi>
+        <mrow>
+          <mo>(</mo> <mi>k</mi> <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    -nek, a sorozat
+    <math>
+      <mrow>
+        <msub>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi> <mi>k</mi>
+                </msub>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+          <mrow>
+            <mi>k</mi><mo>&#x2208;</mo><mi>&naturals;</mi>
+          </mrow>
+        </msub>
+        <mo>:</mo><mo>=</mo><mi>f</mi>
+      </mrow>
+    </math>
+    <math>
+      <mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo><mi>f</mi>
+      </mrow>
+    </math>.</p>
+  <p><span class='def'>Definíció</span>: azt mondjuk, hogy az
+    <math>
+      <mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    sorozat határértéke (limesze)
+    <math>
+      <mrow>
+        <mi>a</mi><mo>&#x2208;</mo><mi>X</mi>
+      </mrow>
+    </math>, ha az <span class="matekszoveg">a</span> pont tetszőleges <math>
+ <mi>&#x03B5;</mi>
+</math>
+ sugarú környezetéhez létezik olyan
+    <math>
+      <mrow>
+        <msub>
+          <mi>k</mi> <mn>0</mn>
+        </msub>
+        <mo>&#x2208;</mo><mi>&naturals;</mi>
+      </mrow>
+    </math>
+    küszöbszám, hogy
+    <math>
+      <mrow>
+        <mi>k</mi><mo>&gt;</mo>
+        <msub>
+          <mi>k</mi> <mn>0</mn>
+        </msub>
+        <mo>,</mo><mi>k</mi><mo>&#x2208;</mo><mi>&naturals;</mi>
+      </mrow>
+    </math>
+    esetén
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi> <mi>k</mi>
+        </msub>
+        <mo>&#x2208;</mo>
+        <msub>
+          <mi>B</mi> <mi>&#x03B5;</mi>
+        </msub>
+        <mrow>
+          <mo>(</mo> <mi>a</mi> <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>. Másképp:
+    <math>
+      <mrow>
+        <mo>&#x2200;</mo><mi>&#x03B5;</mi><mo>&gt;</mo><mn>0</mn><mo>&#x2203;</mo>
+        <msub>
+          <mi>k</mi> <mn>0</mn>
+        </msub>
+        <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+        <msub>
+          <mi>k</mi> <mn>0</mn>
+        </msub>
+        <mo>&#x21D2;</mo><mi>&#x03C1;</mi>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+            <mo>,</mo><mi>a</mi>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>&lt;</mo><mi>&#x03B5;</mi>
+      </mrow>
+    </math>, ezt így jelöljük:
+    <math>
+      <mrow>
+        <mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>&#x2261;</mo>
+        <munder>
+          <mrow>
+            <mi>lim</mi><mo>&#x2061;</mo>
+          </mrow>
+          <mrow>
+            <mi>k</mi><mo>&#x2192;</mo><mi>&#x221E;</mi>
+          </mrow>
+        </munder>
+        <msub>
+          <mi>a</mi> <mi>k</mi>
+        </msub>
+        <mo>=</mo><mi>a</mi>
+      </mrow>
+    </math>
+  </p>
+  <h3>A limesz tulajdonságai</h3>
+  <ol>
+    <li>ha
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi> <mi>k</mi>
+          </msub>
+          <mo>=</mo><mi>a</mi>
+        </mrow>
+      </math>
+      (minden <span class="matekszoveg">k</span>-ra), akkor
+      <math>
+        <mrow>
+          <mi>lim</mi><mo>&#x2061;</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo><mi>a</mi>
+        </mrow>
+      </math>
+    </li>
+    <li>tfh
+      <math>
+        <mrow>
+          <mi>lim</mi><mo>&#x2061;</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo><mi>a</mi>
+        </mrow>
+      </math>, akkor
+      <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </math>
+      minden részsorozatának határértéke létezik és értékük <span class="matekszoveg">a</span>.<br />
+      Részsorozat:
+      <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </math>
+      véges vagy végtelen sok elemét elhagyom úgy, hogy még mindig végtelen sok maradjon, és a sorrenden nem változtatok. Másképpen: 
+      <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </math>
+      részsorozata
+      <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mrow>
+                  <msub>
+                    <mi>g</mi> <mi>k</mi>
+                  </msub>
+                </mrow>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </math>, ahol
+      <math>
+        <mrow>
+          <mi>g</mi><mo>:</mo><mi>&naturals;</mi><mo>&#x2192;</mo><mi>&naturals;</mi>
+        </mrow>
+      </math>
+      szigorúan monoton növő.<br />
+      <span class='bizonyitas'>Bizonyítás</span>:
+      <math>
+        <mrow>
+          <mi>lim</mi><mo>&#x2061;</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>:</mo><mo>=</mo><mi>a</mi><mo>&#x21D2;</mo><mo>&#x2200;</mo><mi>&#x03B5;</mi><mo>&gt;</mo><mn>0</mn><mo>&#x2203;</mo>
+          <msub>
+            <mi>k</mi> <mn>0</mn>
+          </msub>
+          <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+          <msub>
+            <mi>k</mi> <mn>0</mn>
+          </msub>
+          <mo>&#x21D2;</mo><mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+              <mo>,</mo><mi>a</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&lt;</mo><mi>&#x03B5;</mi>
+        </mrow>
+      </math>. Mivel
+      <math>
+        <mrow>
+          <msub>
+            <mi>g</mi> <mi>k</mi>
+          </msub>
+          <mo>&#x2265;</mo><mi>k</mi><mo>&#x21D2;</mo><mi>k</mi><mo>&gt;</mo>
+          <msub>
+            <mi>k</mi> <mn>0</mn>
+          </msub>
+        </mrow>
+      </math>
+      -ra
+      <math>
+        <mrow>
+          <mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mrow>
+                  <msub>
+                    <mi>g</mi> <mi>k</mi>
+                  </msub>
+                </mrow>
+              </msub>
+              <mo>,</mo><mi>a</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&lt;</mo><mi>&#x03B5;</mi>
+        </mrow>
+      </math>, hisz ekkor
+      <math>
+        <mrow>
+          <msub>
+            <mi>g</mi> <mi>k</mi>
+          </msub>
+          <mo>&gt;</mo>
+          <msub>
+            <mi>k</mi> <mn>0</mn>
+          </msub>
+        </mrow>
+      </math>.</li>
+    <li>a határérték egyértelmű<br />
+      <span class='bizonyitas'>Bizonyítás</span>: tfh
+      <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </math>
+      határértékei <span class="matekszoveg">a</span> és <span class="matekszoveg">b</span> (<span class="matekszoveg">X</span> elemei), Belátandó, hogy
+      <math>
+        <mrow>
+          <mi>a</mi><mo>=</mo><mi>b</mi>
+        </mrow>
+      </math>.
+      <math>
+        <mrow>
+          <mo>&#x2200;</mo><mi>&#x03B5;</mi><mo>&gt;</mo><mn>0</mn><mo>&#x2203;</mo>
+          <msub>
+            <mi>k</mi> <mn>0</mn>
+          </msub>
+          <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+          <msub>
+            <mi>k</mi> <mn>0</mn>
+          </msub>
+          <mo>&#x21D2;</mo><mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+              <mo>,</mo><mi>a</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&lt;</mo><mi>&#x03B5;</mi>
+        </mrow>
+      </math>, másrészt
+      <math>
+        <mrow>
+          <mo>&#x2200;</mo><mi>&#x03B5;</mi><mo>&gt;</mo><mn>0</mn><mo>&#x2203;</mo>
+          <msub>
+            <mi>k</mi> <mn>1</mn>
+          </msub>
+          <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+          <msub>
+            <mi>k</mi> <mn>1</mn>
+          </msub>
+          <mo>,</mo><mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+              <mo>,</mo><mi>b</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&lt;</mo><mi>&#x03B5;</mi>
+        </mrow>
+      </math>
+      <math>
+        <mrow>
+          <mo>&#x21D2;</mo><mi>k</mi><mo>&gt;</mo><mi>max</mi><mo>&#x2061;</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <msub>
+                <mi>k</mi> <mn>0</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>k</mi> <mn>1</mn>
+              </msub>
+            </mrow>
+            <mo>}</mo>
+          </mrow>
+        </mrow>
+      </math>
+      esetén
+      <math>
+        <mrow>
+          <mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+              <mo>,</mo><mi>a</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&lt;</mo><mi>&#x03B5;</mi><mo>,</mo><mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+              <mo>,</mo><mi>b</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&lt;</mo><mi>&#x03B5;</mi>
+        </mrow>
+      </math>, így a háromszög egyenlőtlenség alapján
+      <math>
+        <mrow>
+          <mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>b</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&#x2264;</mo><mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>+</mo><mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+              <mo>,</mo><mi>b</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&lt;</mo><mn>2</mn><mi>&#x03B5;</mi><mo>,</mo><mo>&#x2200;</mo><mi>&#x03B5;</mi><mo>&gt;</mo><mn>0</mn><mo>&#x21D2;</mo><mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>b</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo><mn>0</mn><mo>&#x21D4;</mo><mi>a</mi><mo>=</mo><mi>b</mi>
+        </mrow>
+      </math>
+    </li>
+    <li>ha
+      <math>
+        <mrow>
+          <mi>lim</mi><mo>&#x2061;</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo><mi>a</mi><mo>&#x21D2;</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </math>
+      minden átrendezésének a hatáértéke szintén <span class="matekszoveg">a</span><br />
+      Egy
+      <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </math>
+      átrendezése: veszek egy
+      <math>
+        <mrow>
+          <mi>g</mi><mo>:</mo><mi>&naturals;</mi><mo>&#x2192;</mo><mi>&naturals;</mi>
+        </mrow>
+      </math>
+      bijekciót, az átrendezett sorozat:
+      <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mrow>
+                  <msub>
+                    <mi>g</mi> <mi>k</mi>
+                  </msub>
+                </mrow>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </math>.</li>
+    <li>sorozatok összefésülése<br />
+      <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>,</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>b</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </math>
+      <span class="matekszoveg">X</span>-beli sorozatok összefésülése olyan
+      <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>c</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </math>
+      <span class="matekszoveg">X</span>-beli sorozat, melynek elemei
+      <math>
+
+        <mrow>
+          <msub>
+            <mi>a</mi> <mn>1</mn>
+          </msub>
+          <mo>,</mo>
+          <msub>
+            <mi>b</mi> <mn>1</mn>
+          </msub>
+          <mo>,</mo>
+          <msub>
+            <mi>a</mi> <mn>2</mn>
+          </msub>
+          <mo>,</mo>
+          <msub>
+            <mi>b</mi> <mn>2</mn>
+          </msub>
+          <mn>...</mn>
+        </mrow>
+      </math>. Ha
+      <math>
+        <mrow>
+          <mi>lim</mi><mo>&#x2061;</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo><mi>a</mi><mo>=</mo><mi>lim</mi><mo>&#x2061;</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>b</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&#x21D2;</mo><mi>lim</mi><mo>&#x2061;</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>c</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo><mi>a</mi>
+        </mrow>
+      </math>
+    </li>
+    <li>Ha egy sorozatnak létezik a limesze, akkor korlátos is. (Korlátos: létezik olyan <span class="matekszoveg">n</span> dimenziós gömb, mely tartalmazza a sorozat összes elemét.)<br />
+      <span class='bizonyitas'>Bizonyítás</span>:
+      <math>
+        <mrow>
+          <mi>lim</mi><mo>&#x2061;</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo><mi>a</mi><mo>&#x21D2;</mo><mi>&#x03B5;</mi><mo>=</mo><mn>1</mn><mo>&#x2203;</mo>
+          <msub>
+            <mi>k</mi> <mn>0</mn>
+          </msub>
+          <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+          <msub>
+            <mi>k</mi> <mn>0</mn>
+          </msub>
+          <mo>&#x21D2;</mo><mi>&#x03C1;</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi> <mi>k</mi>
+              </msub>
+              <mo>,</mo><mi>a</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>&lt;</mo><mn>1</mn>
+        </mrow>
+      </math>, így
+      <math>
+        <mrow>
+          <mi>r</mi><mo>:</mo><mo>=</mo><mi>max</mi><mo>&#x2061;</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <mi>&#x03C1;</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>a</mi><mo>,</mo>
+                  <msub>
+                    <mi>a</mi> <mn>1</mn>
+                  </msub>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mo>,</mo><mi>&#x03C1;</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>a</mi><mo>,</mo>
+                  <msub>
+                    <mi>a</mi> <mn>2</mn>
+                  </msub>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mn>,...,</mn><mi>&#x03C1;</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>a</mi><mo>,</mo>
+                  <msub>
+                    <mi>a</mi>
+                    <mrow>
+                      <msub>
+                        <mi>k</mi> <mn>0</mn>
+                      </msub>
+                    </mrow>
+                  </msub>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+            <mo>}</mo>
+          </mrow>
+        </mrow>
+      </math>
+      esetén
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi> <mi>k</mi>
+          </msub>
+          <mo>&#x2208;</mo>
+          <msub>
+            <mi>B</mi>
+            <mrow>
+              <mi>r</mi><mo>+</mo><mn>1</mn>
+            </mrow>
+          </msub>
+          <mrow>
+            <mo>(</mo> <mi>a</mi> <mo>)</mo>
+          </mrow>
+          <mo>&#x2200;</mo><mi>k</mi>
+        </mrow>
+      </math>.</li>
+  </ol>
+  <h3>A limesz műveletei tulajdonságai</h3>
+<h4>Összeadás</h4>
+  <p><span class='tetel'>Tétel</span>: legyen <span class="matekszoveg">X</span> normált tér! Ha
+    <math>
+      <mrow>
+        <mi>lim</mi> <mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo> <mi>a</mi> <mo>,</mo> <mi>lim</mi> <mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>b</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo> <mi>b</mi> <mo>&#x21D2;</mo> <mi>lim</mi> <mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+            <mo>+</mo>
+            <msub>
+              <mi>b</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo> <mi>a</mi> <mo>+</mo> <mi>b</mi>
+      </mrow>
+    </math>. <br />
+    <span class='bizonyitas'>Bizonyítás</span>: mivel
+    <math>
+      <mrow>
+        <mi>lim</mi> <mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo> <mi>a</mi>
+      </mrow>
+    </math>, ezért
+    <math>
+      <mrow>
+        <mo>&#x2200;</mo><mi>&#x03B5;</mi><mo>&gt;</mo><mn>0</mn><mo>&#x2203;</mo>
+        <msub>
+          <mi>k</mi> <mn>0</mn>
+        </msub>
+        <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+        <msub>
+          <mi>k</mi> <mn>0</mn>
+        </msub>
+        <mo>&#x21D2;</mo><mi>&#x03C1;</mi>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mi>a</mi><mo>,</mo>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+            <mo>&#x2212;</mo><mi>a</mi>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>&lt;</mo><mi>&#x03B5;</mi>
+      </mrow>
+    </math>
+    és mivel
+    <math>
+      <mrow>
+        <mi>lim</mi> <mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>b</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo> <mi>b</mi>
+      </mrow>
+    </math>, ezért
+    <math>
+      <mrow>
+        <mo>&#x2200;</mo><mi>&#x03B5;</mi><mo>&gt;</mo><mn>0</mn><mo>&#x2203;</mo>
+        <msub>
+          <mi>k</mi> <mn>1</mn>
+        </msub>
+        <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+        <msub>
+          <mi>k</mi> <mn>1</mn>
+        </msub>
+        <mo>&#x21D2;</mo><mi>&#x03C1;</mi>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mi>b</mi><mo>,</mo>
+            <msub>
+              <mi>b</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <msub>
+              <mi>b</mi> <mi>k</mi>
+            </msub>
+            <mo>&#x2212;</mo><mi>b</mi>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>&lt;</mo><mi>&#x03B5;</mi>
+      </mrow>
+    </math>, így
+    <math>
+      <mrow>
+        <mi>&#x03C1;</mi>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+            <mo>+</mo>
+            <msub>
+              <mi>b</mi> <mi>k</mi>
+            </msub>
+            <mo>,</mo> <mi>a</mi> <mo>+</mo> <mi>b</mi>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi> <mi>k</mi>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>b</mi> <mi>k</mi>
+                </msub>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>&#x2212;</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>a</mi> <mo>+</mo> <mi>b</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi> <mi>k</mi>
+                </msub>
+                <mo>&#x2212;</mo> <mi>a</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>+</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>b</mi> <mi>k</mi>
+                </msub>
+                <mo>&#x2212;</mo> <mi>b</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>&#x2264;</mo>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+            <mo>&#x2212;</mo> <mi>a</mi>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>+</mo>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <msub>
+              <mi>b</mi> <mi>k</mi>
+            </msub>
+            <mo>&#x2212;</mo> <mi>b</mi>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>&lt;</mo> <mn>2</mn> <mi>&#x03B5;</mi>
+      </mrow>
+    </math>, ha
+    <math>
+      <mrow>
+        <mi>k</mi> <mo>&gt;</mo> <mi>max</mi> <mo>&#x2061;</mo>
+        <mrow>
+          <mo>{</mo>
+          <mrow>
+            <msub>
+              <mi>k</mi> <mn>0</mn>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>k</mi> <mn>1</mn>
+            </msub>
+          </mrow>
+          <mo>}</mo>
+        </mrow>
+      </mrow>
+    </math>.    </p>
+<h4>Szorzás</h4>
+  <p><span class='tetel'>Tétel</span>: legyen <span class="matekszoveg">X</span> normált tér! Tfh
+    <math>
+      <mrow>
+        <mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo><mi>a</mi>
+      </mrow>
+    </math>, (
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi> <mi>k</mi>
+        </msub>
+        <mo>&#x2208;</mo><mi>X</mi>
+      </mrow>
+    </math>
+    ) és
+    <math>
+      <mrow>
+        <mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>&#x03BB;</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo><mi>&#x03BB;</mi>
+      </mrow>
+    </math>
+    (
+    <math>
+      <mrow>
+        <msub>
+          <mi>&#x03BB;</mi> <mi>k</mi>
+        </msub>
+        <mo>&#x2208;</mo><mi>&reals;</mi>
+      </mrow>
+    </math>
+    ). Ekkor
+    <math>
+      <mrow>
+        <mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>&#x03BB;</mi> <mi>k</mi>
+            </msub>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo><mi>&#x03BB;</mi><mi>a</mi>
+      </mrow>
+    </math>.<br />
+    <span class='bizonyitas'>Bizonyítás</span>: mivel
+    <math>
+      <mrow>
+        <mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo><mi>a</mi>
+      </mrow>
+    </math>
+    ezért
+    <math>
+      <mrow>
+        <mo>&#x2200;</mo><mi>&#x03B5;</mi><mo>&gt;</mo><mn>0</mn><mo>&#x2203;</mo>
+        <msub>
+          <mi>k</mi> <mn>0</mn>
+        </msub>
+        <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+        <msub>
+          <mi>k</mi> <mn>0</mn>
+        </msub>
+        <mo>&#x21D2;</mo>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+            <mo>&#x2212;</mo><mi>a</mi>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>&lt;</mo><mi>&#x03B5;</mi>
+      </mrow>
+    </math>. Mivel
+    <math>
+      <mrow>
+        <mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>&#x03BB;</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo><mi>k</mi>
+      </mrow>
+    </math>
+    ezért
+    <math>
+      <mrow>
+        <mo>&#x2200;</mo><mi>&#x03B5;</mi><mo>&gt;</mo><mn>0</mn><mo>&#x2203;</mo>
+        <msub>
+          <mi>k</mi> <mn>1</mn>
+        </msub>
+        <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+        <msub>
+          <mi>k</mi> <mn>1</mn>
+        </msub>
+        <mo>&#x21D2;</mo>
+        <mrow>
+          <mo>|</mo>
+          <mrow>
+            <msub>
+              <mi>&#x03BB;</mi> <mi>k</mi>
+            </msub>
+            <mo>&#x2212;</mo><mi>&#x03BB;</mi>
+          </mrow>
+          <mo>|</mo>
+        </mrow>
+        <mo>&lt;</mo><mi>&#x03B5;</mi>
+      </mrow>
+    </math>. Tehát
+    <math>
+      <mrow>
+        <mi>k</mi><mo>&gt;</mo><mi>max</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>{</mo>
+          <mrow>
+            <msub>
+              <mi>k</mi> <mn>0</mn>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>k</mi> <mn>1</mn>
+            </msub>
+          </mrow>
+          <mo>}</mo>
+        </mrow>
+      </mrow>
+    </math>
+    esetén
+    <math>
+      <mrow>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <msub>
+              <mi>&#x03BB;</mi> <mi>k</mi>
+            </msub>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+            <mo>&#x2212;</mo><mi>&#x03BB;</mi><mi>a</mi>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>&#x03BB;</mi> <mi>k</mi>
+                </msub>
+                <msub>
+                  <mi>a</mi> <mi>k</mi>
+                </msub>
+                <mo>&#x2212;</mo><mi>&#x03BB;</mi>
+                <msub>
+                  <mi>a</mi> <mi>k</mi>
+                </msub>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>+</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>&#x03BB;</mi>
+                <msub>
+                  <mi>a</mi> <mi>k</mi>
+                </msub>
+                <mo>&#x2212;</mo><mi>&#x03BB;</mi><mi>a</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>&#x2264;</mo>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <msub>
+              <mi>&#x03BB;</mi> <mi>k</mi>
+            </msub>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+            <mo>&#x2212;</mo><mi>&#x03BB;</mi>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>+</mo>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <mi>&#x03BB;</mi>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+            <mo>&#x2212;</mo><mi>&#x03BB;</mi><mi>a</mi>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>=</mo>
+      </mrow>
+    </math>
+    <math>
+      <mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>&#x03BB;</mi> <mi>k</mi>
+                </msub>
+                <mo>&#x2212;</mo><mi>&#x03BB;</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>+</mo>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <mi>&#x03BB;</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi> <mi>k</mi>
+                </msub>
+                <mo>&#x2212;</mo><mi>a</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>=</mo>
+        <munder>
+          <munder>
+            <mrow>
+              <mrow>
+                <mo>|</mo>
+                <mrow>
+                  <msub>
+                    <mi>&#x03BB;</mi> <mi>k</mi>
+                  </msub>
+                  <mo>&#x2212;</mo><mi>&#x03BB;</mi>
+                </mrow>
+                <mo>|</mo>
+              </mrow>
+            </mrow>
+            <mo stretchy='true'>&#x23df;</mo>
+          </munder>
+          <mrow>
+            <mo>&lt;</mo><mi>&#x03B5;</mi>
+          </mrow>
+        </munder>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>+</mo>
+        <munder>
+          <munder>
+            <mrow>
+              <mrow>
+                <mo>|</mo> <mi>&#x03BB;</mi> <mo>|</mo>
+              </mrow>
+            </mrow>
+            <mo stretchy='true'>&#x23df;</mo>
+          </munder>
+          <mrow>
+            <mtext>rögz.</mtext>
+          </mrow>
+        </munder>
+        <munder>
+          <munder>
+            <mrow>
+              <mrow>
+                <mo>&#x2016;</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi> <mi>k</mi>
+                  </msub>
+                  <mo>&#x2212;</mo><mi>a</mi>
+                </mrow>
+                <mo>&#x2225;</mo>
+              </mrow>
+            </mrow>
+            <mo stretchy='true'>&#x23df;</mo>
+          </munder>
+          <mrow>
+            <mo>&lt;</mo><mi>&#x03B5;</mi>
+          </mrow>
+        </munder>
+      </mrow>
+    </math>. Mivel
+    <math>
+      <mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    korlátos,
+    <math>
+      <mrow>
+        <mo>&#x2203;</mo><mi>M</mi><mo>&gt;</mo><mn>0</mn><mo>:</mo>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>&lt;</mo><mi>M</mi><mo>&#x2200;</mo><mi>k</mi><mo>&#x2208;</mo><mi>&naturals;</mi>
+      </mrow>
+    </math>
+    -re, tehát
+    <math>
+      <mrow>
+        <mi>k</mi><mo>&gt;</mo><mi>max</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>{</mo>
+          <mrow>
+            <msub>
+              <mi>k</mi> <mn>0</mn>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>k</mi> <mn>1</mn>
+            </msub>
+          </mrow>
+          <mo>}</mo>
+        </mrow>
+      </mrow>
+    </math>
+    esetén
+    <math>
+      <mrow>
+        <mrow>
+          <mo>&#x2016;</mo>
+          <mrow>
+            <msub>
+              <mi>&#x03BB;</mi> <mi>k</mi>
+            </msub>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+            <mo>&#x2212;</mo><mi>&#x03BB;</mi><mi>a</mi>
+          </mrow>
+          <mo>&#x2225;</mo>
+        </mrow>
+        <mo>&lt;</mo><mi>&#x03B5;</mi><mi>M</mi><mo>+</mo>
+        <mrow>
+          <mo>|</mo> <mi>&#x03BB;</mi> <mo>|</mo>
+        </mrow>
+        <mi>&#x03B5;</mi><mo>=</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mi>M</mi><mo>+</mo>
+            <mrow>
+              <mo>|</mo> <mi>&#x03BB;</mi> <mo>|</mo>
+            </mrow>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mi>&#x03B5;</mi>
+      </mrow>
+  </math>.</p>
+  <p><span class='tetel'>Tétel</span>: legyen <span class="matekszoveg">X</span> euklideszi tér! Tfh
+    <math>
+      <mrow>
+        <mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo><mi>a</mi>
+      </mrow>
+    </math>
+    és
+    <math>
+      <mrow>
+        <mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>b</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo><mi>b</mi>
+      </mrow>
+    </math>, ahol
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi> <mi>k</mi>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>b</mi> <mi>k</mi>
+        </msub>
+        <mo>&#x2208;</mo><mi>X</mi>
+      </mrow>
+    </math>. Ekkor
+    <math>
+      <mrow>
+        <mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>b</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>&#x2329;</mo>
+          <mrow>
+            <mi>a</mi><mo>,</mo><mi>b</mi>
+          </mrow>
+          <mo>&#x0232A;</mo>
+        </mrow>
+      </mrow>
+    </math>
+    <br />
+    <span class='bizonyitas'>Bizonyítás</span>: a <a href="#cauchy_schwarz">Cauchy-Schwarz</a> felhasználásával.</p>
+  <p><span class='tetel'>Tétel</span>: legyen <span class="matekszoveg">X</span> normált tér! Ha
+    <math>
+      <mrow>
+        <mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>&#x03BB;</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo><mn>0</mn>
+      </mrow>
+    </math>
+    és
+    <math>
+      <mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    korlátos,
+    <math>
+      <mrow>
+        <mo>&#x21D2;</mo><mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>&#x03BB;</mi> <mi>k</mi>
+            </msub>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo><mn>0</mn>
+      </mrow>
+    </math>
+    <br />
+    <span class='bizonyitas'>Bizonyítás</span>: hasonló az előzőhöz. </p>
+  <h4>Osztás</h4>
+  <p><span class='tetel'>Tétel</span>: legyen
+    <math>
+      <mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    egy valós vagy komplex sorozat. Ha
+    <math>
+      <mrow>
+        <mi>a</mi><mo>=</mo><mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>&#x2260;</mo><mn>0</mn><mo>&#x21D2;</mo><mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mfrac>
+              <mn>1</mn>
+              <mrow>
+                <msub>
+                  <mi>a</mi> <mi>k</mi>
+                </msub>
+              </mrow>
+            </mfrac>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mfrac>
+          <mn>1</mn> <mi>a</mi>
+        </mfrac>
+      </mrow>
+    </math>. <br />
+    <span class='bizonyitas'>Bizonyítás</span>: mivel
+    <math>
+      <mrow>
+        <mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo><mi>a</mi><mo>&#x21D2;</mo><mo>&#x2200;</mo><mi>&#x03B5;</mi><mo>&gt;</mo><mn>0</mn><mo>&#x2203;</mo>
+        <msub>
+          <mi>k</mi> <mn>0</mn>
+        </msub>
+        <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+        <msub>
+          <mi>k</mi> <mn>0</mn>
+        </msub>
+        <mo>&#x21D2;</mo>
+        <mrow>
+          <mo>|</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+            <mo>&#x2212;</mo><mi>a</mi>
+          </mrow>
+          <mo>|</mo>
+        </mrow>
+        <mo>&lt;</mo><mi>&#x03B5;</mi>
+      </mrow>
+    </math>, így
+    <math>
+      <mrow>
+        <mo>&#x2203;</mo>
+        <msub>
+          <mi>k</mi> <mn>1</mn>
+        </msub>
+        <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+        <msub>
+          <mi>k</mi> <mn>1</mn>
+        </msub>
+        <mo>&#x21D2;</mo>
+        <mrow>
+          <mo>|</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+            <mo>&#x2212;</mo><mi>a</mi>
+          </mrow>
+          <mo>|</mo>
+        </mrow>
+        <mo>&lt;</mo><mi>&#x03B5;</mi>
+        <msup>
+          <mrow>
+            <mrow>
+              <mo>|</mo> <mi>a</mi> <mo>|</mo>
+            </mrow>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+        <mo>/</mo><mn>2</mn>
+      </mrow>
+    </math>. Legyen
+    <math>
+      <mrow>
+        <mi>&#x03B5;</mi><mo>:</mo><mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mrow>
+              <mo>|</mo> <mi>a</mi> <mo>|</mo>
+            </mrow>
+          </mrow>
+          <mn>2</mn>
+        </mfrac>
+      </mrow>
+    </math>, ekkor
+    <math>
+      <mrow>
+        <mo>&#x2203;</mo>
+        <msub>
+          <mi>k</mi> <mn>2</mn>
+        </msub>
+        <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+        <msub>
+          <mi>k</mi> <mn>2</mn>
+        </msub>
+        <mo>&#x21D2;</mo>
+        <mrow>
+          <mo>|</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>|</mo>
+        </mrow>
+        <mo>&gt;</mo>
+        <mfrac>
+          <mrow>
+            <mrow>
+              <mo>|</mo> <mi>a</mi> <mo>|</mo>
+            </mrow>
+          </mrow>
+          <mn>2</mn>
+        </mfrac>
+      </mrow>
+    </math>. Legyen
+    <math>
+      <mrow>
+        <mi>k</mi><mo>&gt;</mo><mi>max</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>{</mo>
+          <mrow>
+            <msub>
+              <mi>k</mi> <mn>1</mn>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>k</mi> <mn>2</mn>
+            </msub>
+          </mrow>
+          <mo>}</mo>
+        </mrow>
+      </mrow>
+    </math>, ekkor
+    <math>
+      <mrow>
+        <mrow>
+          <mo>|</mo>
+          <mrow>
+            <mfrac>
+              <mn>1</mn>
+              <mrow>
+                <msub>
+                  <mi>a</mi> <mi>k</mi>
+                </msub>
+              </mrow>
+            </mfrac>
+            <mo>&#x2212;</mo>
+            <mfrac>
+              <mn>1</mn> <mi>a</mi>
+            </mfrac>
+          </mrow>
+          <mo>|</mo>
+        </mrow>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mrow>
+              <mo>|</mo>
+              <mrow>
+                <mi>a</mi><mo>&#x2212;</mo>
+                <msub>
+                  <mi>a</mi> <mi>k</mi>
+                </msub>
+              </mrow>
+              <mo>|</mo>
+            </mrow>
+          </mrow>
+          <mrow>
+            <mrow>
+              <mo>|</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi> <mi>k</mi>
+                </msub>
+                <mi>a</mi>
+              </mrow>
+              <mo>|</mo>
+            </mrow>
+          </mrow>
+        </mfrac>
+        <mo>&lt;</mo>
+        <mfrac>
+          <mrow>
+            <mi>&#x03B5;</mi>
+            <msup>
+              <mrow>
+                <mrow>
+                  <mo>|</mo> <mi>a</mi> <mo>|</mo>
+                </mrow>
+              </mrow>
+              <mn>2</mn>
+            </msup>
+            <mo>/</mo><mn>2</mn>
+          </mrow>
+          <mrow>
+            <mrow>
+              <mo>|</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi> <mi>k</mi>
+                </msub>
+              </mrow>
+              <mo>|</mo>
+            </mrow>
+            <mrow>
+              <mo>|</mo> <mi>a</mi> <mo>|</mo>
+            </mrow>
+          </mrow>
+        </mfrac>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mi>&#x03B5;</mi>
+            <mrow>
+              <mo>|</mo> <mi>a</mi> <mo>|</mo>
+            </mrow>
+            <mo>/</mo><mn>2</mn>
+          </mrow>
+          <mrow>
+            <mrow>
+              <mo>|</mo> <mi>a</mi> <mo>|</mo>
+            </mrow>
+            <mo>/</mo><mn>2</mn>
+          </mrow>
+        </mfrac>
+        <mo>=</mo><mi>&#x03B5;</mi>
+      </mrow>
+    </math>, és pont ezt akartuk igazolni.</p>
+  <h3>Zárt halmazok jellemzése sorozatokkal</h3>
+  <p>Emlékeztető: <span class="matekszoveg">X</span> metrikus térben egy <span class="matekszoveg">M</span> halmazt zártnak neveztünk, ha
+    <math>
+      <mrow>
+        <mo>&#x2202;</mo><mi>M</mi><mo>&#x2282;</mo><mi>M</mi><mo>&#x21D4;</mo>
+        <mover accent='true'>
+          <mi>M</mi> <mo stretchy='true'>&#x00AF;</mo>
+        </mover>
+        <mo>&#x2282;</mo><mi>M</mi><mo>&#x21D4;</mo>
+        <mover accent='true'>
+          <mi>M</mi> <mo stretchy='true'>&#x00AF;</mo>
+        </mover>
+        <mo>=</mo><mi>M</mi>
+      </mrow>
+    </math>
+    (ahol
+    <math>
+      <mrow>
+        <mover accent='true'>
+          <mi>M</mi> <mo stretchy='true'>&#x00AF;</mo>
+        </mover>
+        <mo>=</mo><mi>int</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo> <mi>M</mi> <mo>)</mo>
+        </mrow>
+        <mo>&#x222A;</mo><mo>&#x2202;</mo><mi>M</mi>
+      </mrow>
+    </math>
+    ), továbbá
+    <math>
+      <mrow>
+        <mi>a</mi><mo>&#x2208;</mo>
+        <mover accent='true'>
+          <mi>M</mi> <mo stretchy='true'>&#x00AF;</mo>
+        </mover>
+        <mo>&#x21D4;</mo>
+      </mrow>
+    </math>
+    ha <span class="matekszoveg">a</span> bármely környezete tartalmaz <span class="matekszoveg">M</span> béli pontot is. Ezek szerint <span class="matekszoveg">M</span> zárt halmaz pontosan akkor, ha minden olyan pont, amelynek bármely környezetében van <span class="matekszoveg">M</span> beli pont, az <span class="matekszoveg">M</span>-hez tartozik.</p>
+  <p><span class='tetel'>Tétel</span>: egy
+    <math>
+      <mrow>
+        <mi>M</mi><mo>&#x2282;</mo><mi>X</mi>
+      </mrow>
+    </math>
+    halmaz zárt pontosan akkor, ha tetszőleges konvergens sorozatot nézve, melynek tagjai
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi> <mi>k</mi>
+        </msub>
+        <mo>&#x2208;</mo><mi>M</mi>
+      </mrow>
+    </math>
+    <math>
+      <mrow>
+        <mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>&#x2208;</mo><mi>M</mi>
+      </mrow>
+    </math>. <br />
+    <span class='bizonyitas'>Bizonyítás</span>: az előbbiek szerint <span class="matekszoveg">M</span> halmaz zárt pontosan akkor, ha minden olyan pont, amelynek bármely környezetében van <span class="matekszoveg">M</span> beli pont, az <span class="matekszoveg">M</span>-hez tartozik.<br />
+    <math>
+      <mo>&#x21D2;</mo>
+    </math>
+    irányban: tfh <span class="matekszoveg">M</span> zárt! Ha
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi> <mi>k</mi>
+        </msub>
+        <mo>&#x2208;</mo><mi>M</mi>
+      </mrow>
+    </math>
+    és
+    <math>
+      <mrow>
+        <mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo><mi>a</mi>
+      </mrow>
+    </math>, akkor
+    <math>
+      <mrow>
+        <mi>a</mi><mo>&#x2208;</mo><mi>M</mi>
+      </mrow>
+    </math>, mert a minden környezetében van <span class="matekszoveg">M</span> beli pont is (nevezetesen
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi> <mi>k</mi>
+        </msub>
+      </mrow>
+    </math>
+    ).<br />
+    <math>
+      <mo>&#x21D0;</mo>
+    </math>
+    irányban: fordítva is igaz, ha <span class="matekszoveg">a</span> minden környezete tartalmaz <span class="matekszoveg">M</span> béli pontot, akkor
+    <math>
+      <mrow>
+        <mo>&#x2203;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>&#x2208;</mo><mi>M</mi><mo>:</mo><mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo><mi>a</mi>
+      </mrow>
+    </math>. Vagyis minden olyan pont (<span class="matekszoveg">a</span>), amelynek minden környezetében van <span class="matekszoveg">M</span>-beli pont (az
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi> <mi>k</mi>
+        </msub>
+      </mrow>
+    </math>
+    -k), az <span class="matekszoveg">M</span>-nek eleme, és a fentiek szerint ebből következik, hogy <span class="matekszoveg">M</span> zárt.</p>
+  <p class="big">Korlátos és zárt halmazok, illetve sorozatkompakt halmazok </p>
+  <p><span class='tetel'>Tétel</span>: legyen
+    <math>
+      <mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    korlátos sorozat
+    <math>
+      <mrow>
+        <msup>
+          <mi>&reals;</mi> <mi>n</mi>
+        </msup>
+      </mrow>
+    </math>
+    -ben! Ekkor
+    <math>
+      <mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    sorozatnak létezik konvergens részsorozata. (Bolzano-Weierstrass-féle kiválasztási <span>tétel</span>
+    <math>
+      <mrow>
+        <msup>
+          <mi>&reals;</mi> <mi>n</mi>
+        </msup>
+      </mrow>
+    </math>
+    -ben) <br />
+    <span class='bizonyitas'>Bizonyítás</span>: először
+    <math>
+      <mrow>
+        <mi>n</mi><mo>=</mo><mn>1</mn>
+      </mrow>
+    </math>
+    esetre, ekkor
+    <math>
+      <mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi> <mi>k</mi>
+            </msub>
+            <mo>&#x2208;</mo><mi>&reals;</mi>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    korlátos
+    <math>
+      <mrow>
+        <mo>&#x21D2;</mo><mo>&#x2203;</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mi>c</mi><mo>,</mo><mi>d</mi>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>&#x220D;</mo>
+        <msub>
+          <mi>a</mi> <mi>k</mi>
+        </msub>
+        <mo>,</mo><mo>&#x2200;</mo><mi>k</mi>
+      </mrow>
+    </math>. Felezzük
+    <math>
+      <mrow>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mi>c</mi><mo>,</mo><mi>d</mi>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+      </mrow>
+    </math>
+    intervallumot! Ekkor a két zárt fél intervallum közül legalább az egyik végtelen sok tagot tartalmaz a sorozatból. Ez legyen
+    <math>
+      <mrow>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <msub>
+              <mi>c</mi> <mn>1</mn>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>d</mi> <mn>1</mn>
+            </msub>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+      </mrow>
+    </math>. Ezt megint felezzük, melyek közül legalább az egyik végtelen sok tagot tartalmaz a sorozatból, ez legyen
+    <math>
+      <mrow>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <msub>
+              <mi>c</mi> <mn>2</mn>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>d</mi> <mn>2</mn>
+            </msub>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+      </mrow>
+    </math>
+    …Így
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi> <mi>k</mi>
+        </msub>
+      </mrow>
+    </math>
+    -ból kiválasztható egy
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi>
+          <mrow>
+            <msub>
+              <mi>k</mi> <mi>l</mi>
+            </msub>
+          </mrow>
+        </msub>
+      </mrow>
+    </math>
+    részsorozat úgy, hogy
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi>
+          <mrow>
+            <msub>
+              <mi>k</mi> <mi>l</mi>
+            </msub>
+          </mrow>
+        </msub>
+        <mo>&#x2208;</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <msub>
+              <mi>c</mi> <mi>l</mi>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>d</mi> <mi>l</mi>
+            </msub>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+      </mrow>
+    </math>. Belátjuk, hogy
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi>
+          <mrow>
+            <msub>
+              <mi>k</mi> <mi>l</mi>
+            </msub>
+          </mrow>
+        </msub>
+      </mrow>
+    </math>
+    részsorozat konvergens. <br />
+    <math>
+      <mrow>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mi>c</mi><mo>,</mo><mi>d</mi>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>&#x2283;</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <msub>
+              <mi>c</mi> <mn>1</mn>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>d</mi> <mn>1</mn>
+            </msub>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>&#x2283;</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <msub>
+              <mi>c</mi> <mn>2</mn>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>d</mi> <mn>2</mn>
+            </msub>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>&#x2283;</mo><mn>...</mn><mo>&#x2283;</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <msub>
+              <mi>c</mi> <mi>l</mi>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>d</mi> <mi>l</mi>
+            </msub>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+      </mrow>
+    </math>,
+    <math>
+      <mrow>
+        <munder>
+          <mrow>
+            <mi>lim</mi><mo>&#x2061;</mo>
+          </mrow>
+          <mrow>
+            <mi>l</mi><mo>&#x2192;</mo><mi>&#x221E;</mi>
+          </mrow>
+        </munder>
+        <mrow>
+          <mo>|</mo>
+          <mrow>
+            <msub>
+              <mi>c</mi> <mi>l</mi>
+            </msub>
+            <mo>&#x2212;</mo>
+            <msub>
+              <mi>d</mi> <mi>l</mi>
+            </msub>
+          </mrow>
+          <mo>|</mo>
+        </mrow>
+        <mo>=</mo>
+        <munder>
+          <mrow>
+            <mi>lim</mi><mo>&#x2061;</mo>
+          </mrow>
+          <mrow>
+            <mi>l</mi><mo>&#x2192;</mo><mi>&#x221E;</mi>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mrow>
+            <mi>c</mi><mo>&#x2212;</mo><mi>d</mi>
+          </mrow>
+          <mrow>
+            <msup>
+              <mn>2</mn> <mi>l</mi>
+            </msup>
+          </mrow>
+        </mfrac>
+        <mo>=</mo><mn>0</mn>
+      </mrow>
+    </math>. Tudjuk, hogy
+    <math>
+      <mrow>
+        <mrow>
+          <mo>{</mo>
+          <mrow>
+            <msub>
+              <mi>c</mi> <mi>l</mi>
+            </msub>
+            <mo>:</mo><mi>l</mi><mo>&#x2208;</mo><mi>&naturals;</mi>
+          </mrow>
+          <mo>}</mo>
+        </mrow>
+      </mrow>
+    </math>
+    felülről korlátos
+    <math>
+      <mrow>
+        <mo>&#x21D2;</mo><mo>&#x2203;</mo><mi>sup</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>{</mo>
+          <mrow>
+            <msub>
+              <mi>c</mi> <mi>l</mi>
+            </msub>
+            <mo>:</mo><mi>l</mi><mo>&#x2208;</mo><mi>&naturals;</mi>
+          </mrow>
+          <mo>}</mo>
+        </mrow>
+      </mrow>
+    </math>
+    és azt is, hogy
+    <math>
+      <mrow>
+        <mrow>
+          <mo>{</mo>
+          <mrow>
+            <msub>
+              <mi>d</mi> <mi>l</mi>
+            </msub>
+            <mo>:</mo><mi>l</mi><mo>&#x2208;</mo><mi>&naturals;</mi>
+          </mrow>
+          <mo>}</mo>
+        </mrow>
+      </mrow>
+    </math>
+    alulról korlátos
+    <math>
+      <mrow>
+        <mo>&#x21D2;</mo><mo>&#x2203;</mo><mi>inf</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>{</mo>
+          <mrow>
+            <msub>
+              <mi>d</mi> <mi>l</mi>
+            </msub>
+            <mo>:</mo><mi>l</mi><mo>&#x2208;</mo><mi>&naturals;</mi>
+          </mrow>
+          <mo>}</mo>
+        </mrow>
+      </mrow>
+    </math>. Mivel
+    <math>
+      <mrow>
+        <munder>
+          <mrow>
+            <mi>lim</mi><mo>&#x2061;</mo>
+          </mrow>
+          <mrow>
+            <mi>l</mi><mo>&#x2192;</mo><mi>&#x221E;</mi>
+          </mrow>
+        </munder>
+        <mrow>
+          <mo>|</mo>
+          <mrow>
+            <msub>
+              <mi>c</mi> <mi>l</mi>
+            </msub>
+            <mo>&#x2212;</mo>
+            <msub>
+              <mi>d</mi> <mi>l</mi>
+            </msub>
+          </mrow>
+          <mo>|</mo>
+        </mrow>
+        <mo>=</mo><mn>0</mn><mo>&#x21D2;</mo><mi>sup</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>{</mo>
+          <mrow>
+            <msub>
+              <mi>c</mi> <mi>l</mi>
+            </msub>
+            <mo>:</mo><mi>l</mi><mo>&#x2208;</mo><mi>&naturals;</mi>
+          </mrow>
+          <mo>}</mo>
+        </mrow>
+        <mo>=</mo><mi>inf</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>{</mo>
+          <mrow>
+            <msub>
+              <mi>d</mi> <mi>l</mi>
+            </msub>
+            <mo>:</mo><mi>l</mi><mo>&#x2208;</mo><mi>&naturals;</mi>
+          </mrow>
+          <mo>}</mo>
+        </mrow>
+        <mo>:</mo><mo>=</mo><mi>&#x03B1;</mi>
+      </mrow>
+    </math>, továbbá
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi>
+          <mrow>
+            <msub>
+              <mi>k</mi> <mi>l</mi>
+            </msub>
+          </mrow>
+        </msub>
+        <mo>&#x2208;</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <msub>
+              <mi>c</mi> <mi>l</mi>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>d</mi> <mi>l</mi>
+            </msub>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>&#x21D2;</mo><mi>lim</mi><mo>&#x2061;</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi>
+              <mrow>
+                <msub>
+                  <mi>k</mi> <mi>l</mi>
+                </msub>
+              </mrow>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo><mi>&#x03B1;</mi>
+      </mrow>
+    </math>
+    („rendőr-elv”).<br />
+    <math>
+      <mrow>
+        <mi>n</mi><mo>=</mo><mn>2</mn>
+      </mrow>
+    </math>
+    esetre, ekkor
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi> <mi>k</mi>
+        </msub>
+        <mo>=</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msubsup>
+              <mi>a</mi> <mi>k</mi>
+              <mrow>
+                <mrow>
+                  <mo>(</mo> <mn>1</mn> <mo>)</mo>
+                </mrow>
+              </mrow>
+            </msubsup>
+            <mo>,</mo>
+            <msubsup>
+              <mi>a</mi> <mi>k</mi>
+              <mrow>
+                <mrow>
+                  <mo>(</mo> <mn>2</mn> <mo>)</mo>
+                </mrow>
+              </mrow>
+            </msubsup>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>. Mivel
+    <math>
+      <mrow>
+        <msub>
+          <mi>a</mi> <mi>k</mi>
+        </msub>
+      </mrow>
+    </math>
+    korlátos sorozat
+    <math>
+      <mrow>
+        <msup>
+          <mi>&reals;</mi> <mn>2</mn>
+        </msup>
+      </mrow>
+    </math>
+    -ben, így
+    <math>
+      <mrow>
+        <msubsup>
+          <mi>a</mi> <mi>k</mi>
+          <mrow>
+            <mrow>
+              <mo>(</mo> <mn>1</mn> <mo>)</mo>
+            </mrow>
+          </mrow>
+        </msubsup>
+        <mo>,</mo>
+        <msubsup>
+          <mi>a</mi> <mi>k</mi>
+          <mrow>
+            <mrow>
+              <mo>(</mo> <mn>2</mn> <mo>)</mo>
+            </mrow>
+          </mrow>
+        </msubsup>
+      </mrow>
+    </math>
+    korlátos sorozatok
+    <math>
+      <mi>&reals;</mi>
+    </math>
+    -ben. Az előzőek szerint az előbbiből kiválasztható ebből  egy konvergens részsorozat,
+    <math>
+      <mrow>
+        <msub>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msubsup>
+                  <mi>a</mi>
+                  <mrow>
+                    <msub>
+                      <mi>k</mi> <mi>l</mi>
+                    </msub>
+                  </mrow>
+                  <mrow>
+                    <mrow>
+                      <mo>(</mo> <mn>1</mn> <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                </msubsup>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+          <mrow>
+            <mi>l</mi><mo>&#x2208;</mo><mi>&naturals;</mi>
+          </mrow>
+        </msub>
+      </mrow>
+    </math>. Tekintsük az
+    <math>
+      <mrow>
+        <msubsup>
+          <mi>a</mi> <mi>k</mi>
+          <mrow>
+            <mrow>
+              <mo>(</mo> <mn>2</mn> <mo>)</mo>
+            </mrow>
+          </mrow>
+        </msubsup>
+      </mrow>
+    </math>
+    ugyanilyen indexű elemekből álló
+    <math>
+      <mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msubsup>
+              <mi>a</mi>
+              <mrow>
+                <msub>
+                  <mi>k</mi> <mi>l</mi>
+                </msub>
+              </mrow>
+              <mrow>
+                <mrow>
+                  <mo>(</mo> <mn>2</mn> <mo>)</mo>
+                </mrow>
+              </mrow>
+            </msubsup>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    részsorozatát (mely korlátos
+    <math>
+      <mi>&reals;</mi>
+    </math>
+    -ben). Az előzőek szerint ennek létezik konvergens  részsorozata,
+    <math>
+      <mrow>
+        <msub>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msubsup>
+                  <mi>a</mi>
+                  <mrow>
+                    <msub>
+                      <mi>k</mi>
+                      <mrow>
+                        <msub>
+                          <mi>l</mi> <mi>m</mi>
+                        </msub>
+                      </mrow>
+                    </msub>
+                  </mrow>
+                  <mrow>
+                    <mrow>
+                      <mo>(</mo> <mn>2</mn> <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                </msubsup>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+          <mrow>
+            <mi>m</mi><mo>&#x2208;</mo><mi>&naturals;</mi>
+          </mrow>
+        </msub>
+      </mrow>
+    </math>.
+    <math>
+      <mrow>
+        <msub>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msubsup>
+                  <mi>a</mi>
+                  <mrow>
+                    <msub>
+                      <mi>k</mi> <mi>l</mi>
+                    </msub>
+                  </mrow>
+                  <mrow>
+                    <mrow>
+                      <mo>(</mo> <mn>1</mn> <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                </msubsup>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+          <mrow>
+            <mi>l</mi><mo>&#x2208;</mo><mi>&naturals;</mi>
+          </mrow>
+        </msub>
+      </mrow>
+    </math>
+    konvergens, így
+    <math>
+      <mrow>
+        <msub>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msubsup>
+                  <mi>a</mi>
+                  <mrow>
+                    <msub>
+                      <mi>k</mi>
+                      <mrow>
+                        <msub>
+                          <mi>l</mi> <mi>m</mi>
+                        </msub>
+                      </mrow>
+                    </msub>
+                  </mrow>
+                  <mrow>
+                    <mrow>
+                      <mo>(</mo> <mn>1</mn> <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                </msubsup>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+          <mrow>
+            <mi>m</mi><mo>&#x2208;</mo><mi>&naturals;</mi>
+          </mrow>
+        </msub>
+      </mrow>
+    </math>
+    is az, így
+    <math>
+      <mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msub>
+              <mi>a</mi>
+              <mrow>
+                <msub>
+                  <mi>k</mi>
+                  <mrow>
+                    <msub>
+                      <mi>l</mi> <mi>m</mi>
+                    </msub>
+                  </mrow>
+                </msub>
+              </mrow>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>:</mo><mo>=</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msubsup>
+              <mi>a</mi>
+              <mrow>
+                <msub>
+                  <mi>k</mi>
+                  <mrow>
+                    <msub>
+                      <mi>l</mi> <mi>m</mi>
+                    </msub>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mrow>
+                <mrow>
+                  <mo>(</mo> <mn>1</mn> <mo>)</mo>
+                </mrow>
+              </mrow>
+            </msubsup>
+            <mo>,</mo>
+            <msubsup>
+              <mi>a</mi>
+              <mrow>
+                <msub>
+                  <mi>k</mi>
+                  <mrow>
+                    <msub>
+                      <mi>l</mi> <mi>m</mi>
+                    </msub>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mrow>
+                <mrow>
+                  <mo>(</mo> <mn>2</mn> <mo>)</mo>
+                </mrow>
+              </mrow>
+            </msubsup>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    részsorozat konvergens. <br />
+    <math>
+      <mrow>
+        <mi>n</mi><mo>=</mo><mn>3</mn>
+      </mrow>
+    </math>
+    esetén hasonló módon, mint
+    <math>
+      <mrow>
+        <mi>n</mi><mo>=</mo><mn>1</mn>
+      </mrow>
+    </math>
+    -ről váltottunk
+    <math>
+      <mrow>
+        <mi>n</mi><mo>=</mo><mn>2</mn>
+      </mrow>
+    </math>
+    -re, itt is igazolható (tkp teljes indukció). <br />
+    Megjegyzés: hasonló jellegű állítások általában nem igazak tetszőleges  normált terekben, csak véges dimenzióban!</p>
+</div>
+</body>
+</html>

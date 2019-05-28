@@ -1,0 +1,44 @@
+\usepackage{amsthm}
+\usepackage{newunicodechar}
+\newunicodechar{■}{\qed}
+\newunicodechar{∎}{\qed}
+
+\subtitle{Előadásjegyzet fizikusoknak matematikusoktól}
+
+\renewcommand{\contentsname}{Tartalomjegyzék}
+
+\usepackage{xcolor}
+\definecolor{sotetvoros}{HTML}{900000}
+\definecolor{sotetzold}{HTML}{009900}
+\usepackage{mdframed}
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+
+\newenvironment{definicio}{}{}
+\tcolorboxenvironment{definicio}{blanker,breakable,left=5mm, right=5mm,
+before skip=10pt,after skip=10pt,borderline west={1.5mm}{0pt}{black},borderline east={1.5mm}{0pt}{black}}
+
+\newenvironment{tetel}{}{}
+\tcolorboxenvironment{tetel}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={1.5mm}{0pt}{sotetvoros},borderline east={1.5mm}{0pt}{sotetvoros}}
+
+\newenvironment{bizonyitas}{}{}
+\tcolorboxenvironment{bizonyitas}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={1.5mm}{0pt}{sotetvoros},borderline east={1.5mm}{0pt}{sotetvoros}}
+
+\newenvironment{allitas}{}{}
+\tcolorboxenvironment{allitas}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={0.75mm}{0pt}{sotetvoros},borderline east={0.75mm}{0pt}{sotetvoros}}
+
+\newenvironment{pelda}{}{}
+\tcolorboxenvironment{pelda}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={1.5mm}{	0pt}{sotetzold},borderline east={1.5mm}{0pt}{sotetzold}}
+
+\newenvironment{megjegyzes}{}{}
+\tcolorboxenvironment{megjegyzes}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={0.75mm}{0pt}{lightgray},borderline east={0.75mm}{0pt}{lightgray}}
+
+\newenvironment{ajanlofig}{\begin{figure}\begin{center}}{
+\end{center}\end{figure}}
+
+\newenvironment{ajanlo}{\begin{samepage}}{\end{samepage}}

@@ -1,0 +1,3178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" 
+               "http://www.w3.org/TR/MathML2/dtd/xhtml-math11-f.dtd" [
+               
+  <!ENTITY math "http://www.w3.org/1998/Math/MathML">
+]>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hu">
+<head>
+<title>Analízis II</title>
+<link href="math.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<p>Tehát kaptuk, hogy 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>&#x03BB;</mi>
+      <mi>f</mi>
+      <mo>&#x2212;</mo>
+      <mstyle displaystyle='true'>
+        <munderover>
+          <mo>&#x2211;</mo>
+          <mrow>
+            <mi>j</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mi>m</mi>
+        </munderover>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mrow>
+            <mo>&#x2329;</mo> 
+            <mrow>
+              <mi>f</mi>
+              <mo>,</mo>
+              <msub>
+                <mi>&#x03C8;</mi>
+                <mi>j</mi>
+              </msub>
+              
+            </mrow> 
+            <mo>&#x0232A;</mo>
+          </mrow>
+          <msup>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>&#x03BB;</mi>
+                  <mi>I</mi>
+                  <mo>&#x2212;</mo>
+                  <msub>
+                    <mi>B</mi>
+                    <mn>0</mn>
+                  </msub>
+                  
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+            <mrow>
+              <mo>&#x2212;</mo>
+              <mn>1</mn>
+            </mrow>
+          </msup>
+          <msub>
+            <mi>&#x03D5;</mi>
+            <mi>j</mi>
+          </msub>
+          
+        </mrow>
+      </mstyle>
+      <mo>=</mo>
+      <mi>g</mi>
+      <mo>=</mo>
+      <msub>
+        <mi>g</mi>
+        <mi>&#x03BB;</mi>
+      </msub>
+      
+    </mrow>
+  </math>
+. Ez megfelel egy lineáris algebrai egyenletrendszernek: 
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+  <mrow>
+    <mi>&#x03BB;</mi>
+    <mi>&#x2110;</mi>
+    <mi>&#x03BE;</mi>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>&#x212C;</mi>
+      <mi>&#x03BB;</mi>
+    </msub>
+    <mi>&#x03BE;</mi>
+    <mo>=</mo>
+    <msub>
+      <mi>&#x03B2;</mi>
+      <mi>&#x03BB;</mi>
+    </msub>
+    
+  </mrow>
+</math>
+. Ekkor 
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+  <mrow>
+    <mi>det</mi>
+    <mrow>
+      <mo>(</mo>
+      <mrow>
+        <mi>&#x03BB;</mi>
+        <mi>&#x2110;</mi>
+        <mo>&#x2212;</mo>
+        <msub>
+          <mi>&#x212C;</mi>
+          <mi>&#x03BB;</mi>
+        </msub>
+        
+      </mrow>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mn>0</mn>
+  </mrow>
+</math>
+ egyenlet gyökei a sajátértékek. A mátrix (
+ <math xmlns='http://www.w3.org/1998/Math/MathML'>
+   <mrow>
+     <msub>
+       <mi>&#x212C;</mi>
+       <mi>&#x03BB;</mi>
+     </msub>
+     
+   </mrow>
+ </math>
+) és az operátor (
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+  <mrow>
+    <msub>
+      <mi>B</mi>
+      <mi>&#x03BB;</mi>
+    </msub>
+    
+  </mrow>
+</math>
+) sajátértékei azonosak az eredeti operátor (A) sajátértékeivel, és rangjuk is azonos. Belátható, hogy a mátrix elemei a 
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+  <mi>&#x03BB;</mi>
+</math>
+ változónak holomorf függvényei! Így a determináns is holomorf függvénye 
+ <math xmlns='http://www.w3.org/1998/Math/MathML'>
+   <mi>&#x03BB;</mi>
+ </math>
+-nak. Tudjuk, hogy egy holomorf függvény gyökei nem torlódhatnak egy véges pontban, hacsak nem az azonosan 0 függvény. Mivel 
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+  <mrow>
+    <mi>&#x03BB;</mi>
+    <mo>&#x003C;</mo>
+    <mrow>
+      <mo>&#x2016;</mo> 
+      <mi>A</mi> 
+      <mo>&#x02016;</mo>
+    </mrow>
+  </mrow>
+</math>
+, ezért csak véges sok gyök van. Tehát tetszőleges rögzített 
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+  <mi>&#x03B4;</mi>
+</math>
+ esetén A operátornak véges sok 
+ <math xmlns='http://www.w3.org/1998/Math/MathML'>
+   <mi>&#x03B4;</mi>
+ </math>
+-nál nagyobb abszolút értékű sajátértéke van, s ezek véges rangúak.</p>
+<p>Tétel: ha A kompakt operátor, akkor A-nak legfeljebb megszámlálhatóan végtelen sok sajátértéke van, a 0-tól különböző sajátértékek véges rangúak, s a sajátértékek csak a 0-ban torlódhatnak. (Gondoljunk csak a
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>&#x03B4;</mi>
+      <mo>:</mo>
+      <mo>=</mo>
+      <mn>1</mn>
+      <mo>/</mo>
+      <mi>k</mi>
+    </mrow>
+  </math>
+  , 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>k</mi>
+      <mo>&#x2208;</mo>
+      <mi>&#x2115;</mi>
+    </mrow>
+  </math>
+esetre!)</p>
+<p>Tétel (biz. nélkül): minden
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>&#x03BB;</mi>
+      <mo>&#x2260;</mo>
+      <mn>0</mn>
+    </mrow>
+  </math>
+, ami nem sajátérték, az reguláris érték A (kompakt operátorra) nézve.</p>
+<p>Következmény: ha
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>&#x03BB;</mi>
+      <mo>&#x2260;</mo>
+      <mn>0</mn>
+    </mrow>
+  </math>
+  nem sajátérték, 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <mi>f</mi>
+      <mo>=</mo>
+      <mi>b</mi>
+    </mrow>
+  </math>
+  másodfajú egyenletnek 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mo>&#x2200;</mo>
+      <mi>b</mi>
+    </mrow>
+  </math>
+-re létezik egyetlen f megoldás, és ez folytonosan függ b-től.</p>
+<p>Mi a helyzet, ha
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mi>&#x03BB;</mi>
+  </math>
+sajátérték?</p>
+<p>Emlékeztető: tetszőleges korlátos lineáris operátor esetén
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msup>
+        <mrow>
+          <mover accent='true'>
+            <mrow>
+              <msub>
+                <mi>&#x211B;</mi>
+                <mrow>
+                  <mi>&#x03BB;</mi>
+                  <mi>I</mi>
+                  <mo>&#x2212;</mo>
+                  <mi>A</mi>
+                </mrow>
+              </msub>
+              
+            </mrow>
+            <mo stretchy='true'>&#x00AF;</mo>
+          </mover>
+          
+        </mrow>
+        
+        <mo>&#x22A5;</mo>
+      </msup>
+      <mo>=</mo>
+      <msub>
+        <mi>S</mi>
+        <mrow>
+          <mover accent='true'>
+            <mi>&#x03BB;</mi>
+            <mo stretchy='true'>&#x00AF;</mo>
+          </mover>
+          
+        </mrow>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <msup>
+            <mi>A</mi>
+            <mo>*</mo>
+          </msup>
+          
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <mo>&#x21D4;</mo>
+      <mover accent='true'>
+        <mrow>
+          <msub>
+            <mi>&#x211B;</mi>
+            <mrow>
+              <mi>&#x03BB;</mi>
+              <mi>I</mi>
+              <mo>&#x2212;</mo>
+              <mi>A</mi>
+            </mrow>
+          </msub>
+          
+        </mrow>
+        <mo stretchy='true'>&#x00AF;</mo>
+      </mover>
+      <mo>=</mo>
+      <msub>
+        <mi>S</mi>
+        <mrow>
+          <mover accent='true'>
+            <mi>&#x03BB;</mi>
+            <mo stretchy='true'>&#x00AF;</mo>
+          </mover>
+          
+        </mrow>
+      </msub>
+      <msup>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msup>
+                <mi>A</mi>
+                <mo>*</mo>
+              </msup>
+              
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x22A5;</mo>
+      </msup>
+      
+    </mrow>
+  </math>
+  . Ha 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>&#x211B;</mi>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  zárt altér, akkor 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>&#x211B;</mi>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+      </msub>
+      <mo>=</mo>
+      <mover accent='true'>
+        <mrow>
+          <msub>
+            <mi>&#x211B;</mi>
+            <mrow>
+              <mi>&#x03BB;</mi>
+              <mi>I</mi>
+              <mo>&#x2212;</mo>
+              <mi>A</mi>
+            </mrow>
+          </msub>
+          
+        </mrow>
+        <mo stretchy='true'>&#x00AF;</mo>
+      </mover>
+      <mo>=</mo>
+      <msub>
+        <mi>S</mi>
+        <mrow>
+          <mover accent='true'>
+            <mi>&#x03BB;</mi>
+            <mo stretchy='true'>&#x00AF;</mo>
+          </mover>
+          
+        </mrow>
+      </msub>
+      <msup>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msup>
+                <mi>A</mi>
+                <mo>*</mo>
+              </msup>
+              
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x22A5;</mo>
+      </msup>
+      
+    </mrow>
+  </math>
+  .
+</p>
+<p>Tétel: ha A kompakt operátor, akkor
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>&#x03BB;</mi>
+      <mo>&#x2260;</mo>
+      <mn>0</mn>
+    </mrow>
+  </math>
+  esetén 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>&#x211B;</mi>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  zárt altér.
+</p>
+<p>Bizonyítás: látható, hogy
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>&#x211B;</mi>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  lineáris altér. Azt kell bizonyítani, hogy 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>&#x211B;</mi>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  zárt halmaz. Legyen tetszőleges 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>&#x03C8;</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>&#x211B;</mi>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  és 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mo>&#x2203;</mo>
+      <mi>lim</mi>
+      <msub>
+        <mi>&#x03C8;</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>=</mo>
+      <mi>&#x03C8;</mi>
+    </mrow>
+  </math>
+  , ekkor 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>&#x03C8;</mi>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>&#x211B;</mi>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  ? Mivel 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>&#x03C8;</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>&#x211B;</mi>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+      </msub>
+      <mo>&#x21D2;</mo>
+      <mo>&#x2203;</mo>
+      <msub>
+        <mi>&#x03D5;</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>&#x2208;</mo>
+      <mi>X</mi>
+      <mo>:</mo>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <msub>
+        <mi>&#x03D5;</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>=</mo>
+      <msub>
+        <mi>&#x03C8;</mi>
+        <mi>j</mi>
+      </msub>
+      
+    </mrow>
+  </math>
+  . Jelöljük: 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>S</mi>
+        <mi>&#x03BB;</mi>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mi>A</mi>
+        <mo>)</mo>
+      </mrow>
+      <mo>:</mo>
+      <mo>=</mo>
+      <mrow>
+        <mo>{</mo> 
+        <mrow>
+          <mi>&#x03D5;</mi>
+          <mo>&#x2208;</mo>
+          <mi>X</mi>
+          <mo>:</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>&#x03BB;</mi>
+              <mi>I</mi>
+              <mo>&#x2212;</mo>
+              <mi>A</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mrow> 
+        <mo>}</mo>
+      </mrow>
+    </mrow>
+  </math>
+  . Ekkor 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>S</mi>
+        <mi>&#x03BB;</mi>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mi>A</mi>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+  </math>
+  zárt lineáris altér (A folytonos). A Riesz tétel következtében 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>X</mi>
+      <mo>:</mo>
+      <mo>=</mo>
+      <msub>
+        <mi>S</mi>
+        <mi>&#x03BB;</mi>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mi>A</mi>
+        <mo>)</mo>
+      </mrow>
+      <mo>&#x2295;</mo>
+      <msub>
+        <mi>S</mi>
+        <mi>&#x03BB;</mi>
+      </msub>
+      <msup>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mi>A</mi>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x22A5;</mo>
+      </msup>
+      <mo>&#x21D4;</mo>
+      <mo>&#x2200;</mo>
+      <mi>x</mi>
+      <mo>&#x2208;</mo>
+      <mi>X</mi>
+      <mo>&#x2203;</mo>
+      <mo>!</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msub>
+      <mo>:</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>S</mi>
+        <mi>&#x03BB;</mi>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mi>A</mi>
+        <mo>)</mo>
+      </mrow>
+      <mo>,</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msub>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>S</mi>
+        <mi>&#x03BB;</mi>
+      </msub>
+      <msup>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mi>A</mi>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x22A5;</mo>
+      </msup>
+      <mo>,</mo>
+      <mi>x</mi>
+      <mo>=</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>+</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  . Ennek megfelelően 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>X</mi>
+      <mo>&#x220D;</mo>
+      <msub>
+        <mi>&#x03D5;</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>=</mo>
+      <msub>
+        <mi>f</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>+</mo>
+      <msub>
+        <mi>g</mi>
+        <mi>j</mi>
+      </msub>
+      
+    </mrow>
+  </math>
+  , ahol 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>f</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>S</mi>
+        <mi>&#x03BB;</mi>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mi>A</mi>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+  </math>
+  . 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>g</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>S</mi>
+        <mi>&#x03BB;</mi>
+      </msub>
+      <msup>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mi>A</mi>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x22A5;</mo>
+      </msup>
+      
+    </mrow>
+  </math>
+  , 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>&#x03C8;</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>=</mo>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <msub>
+        <mi>&#x03D5;</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>=</mo>
+      <munder>
+        <munder>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>&#x03BB;</mi>
+                <mi>I</mi>
+                <mo>&#x2212;</mo>
+                <mi>A</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <msub>
+              <mi>f</mi>
+              <mi>j</mi>
+            </msub>
+            
+          </mrow>
+          <mo stretchy='true'>&#xFE38;</mo>
+        </munder>
+        <mrow>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mrow>
+      </munder>
+      <mo>+</mo>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <msub>
+        <mi>g</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>&#x21D2;</mo>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <msub>
+        <mi>g</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>=</mo>
+      <msub>
+        <mi>&#x03C8;</mi>
+        <mi>j</mi>
+      </msub>
+      
+    </mrow>
+  </math>
+  . Kis álítás: 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>g</mi>
+                <mi>j</mi>
+              </msub>
+              
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mrow>
+          <mi>j</mi>
+          <mo>&#x2208;</mo>
+          <mi>&#x2115;</mi>
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  korlátos sorozat X-ben.
+</p>
+<p>Bizonyítás (a tétel bizonyításán belül): indirekt feltesszük, hogy
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mo>&#x2203;</mo>
+      <msub>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>g</mi>
+                <mrow>
+                  <msub>
+                    <mi>j</mi>
+                    <mi>k</mi>
+                  </msub>
+                  
+                </mrow>
+              </msub>
+              
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mrow>
+          <mi>k</mi>
+          <mo>&#x2208;</mo>
+          <mi>&#x2115;</mi>
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  részsorozat, hogy 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <munder>
+        <mrow>
+          <mi>lim</mi>
+        </mrow>
+        <mrow>
+          <mi>k</mi>
+          <mo>&#x2192;</mo>
+          <mi>&#x221E;</mi>
+        </mrow>
+      </munder>
+      <msub>
+        <mrow>
+          <mrow>
+            <mo>&#x2016;</mo> 
+            <mrow>
+              <msub>
+                <mi>g</mi>
+                <mrow>
+                  <msub>
+                    <mi>j</mi>
+                    <mi>k</mi>
+                  </msub>
+                  
+                </mrow>
+              </msub>
+              
+            </mrow> 
+            <mo>&#x02016;</mo>
+          </mrow>
+        </mrow>
+        <mi>X</mi>
+      </msub>
+      <mo>=</mo>
+      <mi>&#x221E;</mi>
+    </mrow>
+  </math>
+  . Legyen 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>h</mi>
+        <mrow>
+          <msub>
+            <mi>j</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+      </msub>
+      <mo>=</mo>
+      <mfrac>
+        <mrow>
+          <msub>
+            <mi>g</mi>
+            <mrow>
+              <msub>
+                <mi>j</mi>
+                <mi>k</mi>
+              </msub>
+              
+            </mrow>
+          </msub>
+          
+        </mrow>
+        <mrow>
+          <msub>
+            <mrow>
+              <mrow>
+                <mo>&#x2016;</mo> 
+                <mrow>
+                  <msub>
+                    <mi>g</mi>
+                    <mrow>
+                      <msub>
+                        <mi>j</mi>
+                        <mi>k</mi>
+                      </msub>
+                      
+                    </mrow>
+                  </msub>
+                  
+                </mrow> 
+                <mo>&#x02016;</mo>
+              </mrow>
+            </mrow>
+            <mi>X</mi>
+          </msub>
+          
+        </mrow>
+      </mfrac>
+      
+    </mrow>
+  </math>
+  , ekkor 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mrow>
+          <mrow>
+            <mo>&#x2016;</mo> 
+            <mrow>
+              <msub>
+                <mi>h</mi>
+                <mrow>
+                  <msub>
+                    <mi>j</mi>
+                    <mi>k</mi>
+                  </msub>
+                  
+                </mrow>
+              </msub>
+              
+            </mrow> 
+            <mo>&#x02016;</mo>
+          </mrow>
+        </mrow>
+        <mi>X</mi>
+      </msub>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+  </math>
+  . 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <msub>
+        <mi>g</mi>
+        <mrow>
+          <msub>
+            <mi>j</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+      </msub>
+      <mo>=</mo>
+      <msub>
+        <mi>&#x03C8;</mi>
+        <mrow>
+          <msub>
+            <mi>j</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  egyenletet osztva 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mrow>
+          <msub>
+            <mi>g</mi>
+            <mrow>
+              <msub>
+                <mi>j</mi>
+                <mi>k</mi>
+              </msub>
+              
+            </mrow>
+          </msub>
+          
+        </mrow> 
+        <mo>&#x02016;</mo>
+      </mrow>
+    </mrow>
+  </math>
+  -val: 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <msub>
+        <mi>h</mi>
+        <mrow>
+          <msub>
+            <mi>j</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+      </msub>
+      <mo>=</mo>
+      <mfrac>
+        <mrow>
+          <msub>
+            <mi>&#x03C8;</mi>
+            <mrow>
+              <msub>
+                <mi>j</mi>
+                <mi>k</mi>
+              </msub>
+              
+            </mrow>
+          </msub>
+          
+        </mrow>
+        <mrow>
+          <msub>
+            <mrow>
+              <mrow>
+                <mo>&#x2016;</mo> 
+                <mrow>
+                  <msub>
+                    <mi>g</mi>
+                    <mrow>
+                      <msub>
+                        <mi>j</mi>
+                        <mi>k</mi>
+                      </msub>
+                      
+                    </mrow>
+                  </msub>
+                  
+                </mrow> 
+                <mo>&#x02016;</mo>
+              </mrow>
+            </mrow>
+            <mi>X</mi>
+          </msub>
+          
+        </mrow>
+      </mfrac>
+      <mo>&#x2192;</mo>
+      <msub>
+        <mn>0</mn>
+        <mi>X</mi>
+      </msub>
+      
+    </mrow>
+  </math>
+  , ugyanis 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>&#x03C8;</mi>
+        <mi>j</mi>
+      </msub>
+      
+    </mrow>
+  </math>
+  konvergens 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mo>&#x21D2;</mo>
+  </math>
+  korlátos. 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <munder>
+        <mrow>
+          <mi>lim</mi>
+        </mrow>
+        <mrow>
+          <mi>k</mi>
+          <mo>&#x2192;</mo>
+          <mi>&#x221E;</mi>
+        </mrow>
+      </munder>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <msub>
+            <mi>h</mi>
+            <mrow>
+              <msub>
+                <mi>j</mi>
+                <mi>k</mi>
+              </msub>
+              
+            </mrow>
+          </msub>
+          
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+          <msub>
+            <mi>h</mi>
+            <mrow>
+              <msub>
+                <mi>j</mi>
+                <mi>k</mi>
+              </msub>
+              
+            </mrow>
+          </msub>
+          
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <mo>=</mo>
+      <msub>
+        <mn>0</mn>
+        <mi>X</mi>
+      </msub>
+      
+    </mrow>
+  </math>
+  . 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <msub>
+            <mi>h</mi>
+            <mrow>
+              <msub>
+                <mi>j</mi>
+                <mi>k</mi>
+              </msub>
+              
+            </mrow>
+          </msub>
+          
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+  </math>
+  korlátos sorozat (mert 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mrow>
+          <msub>
+            <mi>h</mi>
+            <mrow>
+              <msub>
+                <mi>j</mi>
+                <mi>k</mi>
+              </msub>
+              
+            </mrow>
+          </msub>
+          
+        </mrow> 
+        <mo>&#x02016;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+  </math>
+  ), A kompakt operátor, ezért 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mo>&#x2203;</mo>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <msub>
+            <mover accent='true'>
+              <mi>h</mi>
+              <mo>&#x02DC;</mo>
+            </mover>
+            
+            <mrow>
+              <msub>
+                <mi>j</mi>
+                <mi>k</mi>
+              </msub>
+              
+            </mrow>
+          </msub>
+          
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+  </math>
+  részsorozat, amelyre 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>A</mi>
+          <msub>
+            <mover accent='true'>
+              <mi>h</mi>
+              <mo>&#x02DC;</mo>
+            </mover>
+            
+            <mrow>
+              <msub>
+                <mi>j</mi>
+                <mi>k</mi>
+              </msub>
+              
+            </mrow>
+          </msub>
+          
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+  </math>
+  konvergens 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mo>&#x21D4;</mo>
+      <msub>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>&#x03BB;</mi>
+              <msub>
+                <mover accent='true'>
+                  <mi>h</mi>
+                  <mo>&#x02DC;</mo>
+                </mover>
+                
+                <mrow>
+                  <msub>
+                    <mi>j</mi>
+                    <mi>k</mi>
+                  </msub>
+                  
+                </mrow>
+              </msub>
+              
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mrow>
+          <mi>k</mi>
+          <mo>&#x2208;</mo>
+          <mi>&#x2115;</mi>
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  . 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>&#x03BB;</mi>
+      <mo>&#x2260;</mo>
+      <mn>0</mn>
+      <mo>&#x21D2;</mo>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <msub>
+            <mover accent='true'>
+              <mi>h</mi>
+              <mo>&#x02DC;</mo>
+            </mover>
+            
+            <mrow>
+              <msub>
+                <mi>j</mi>
+                <mi>k</mi>
+              </msub>
+              
+            </mrow>
+          </msub>
+          
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+  </math>
+  konvergens, 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mover accent='true'>
+                  <mi>h</mi>
+                  <mo>&#x02DC;</mo>
+                </mover>
+                
+                <mrow>
+                  <msub>
+                    <mi>j</mi>
+                    <mi>k</mi>
+                  </msub>
+                  
+                </mrow>
+              </msub>
+              
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mrow>
+          <mi>k</mi>
+          <mo>&#x2208;</mo>
+          <mi>&#x2115;</mi>
+        </mrow>
+      </msub>
+      <mo>&#x2192;</mo>
+      <msub>
+        <mi>h</mi>
+        <mn>0</mn>
+      </msub>
+      <mo>&#x21D2;</mo>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <msub>
+        <mover accent='true'>
+          <mi>h</mi>
+          <mo>&#x02DC;</mo>
+        </mover>
+        
+        <mrow>
+          <msub>
+            <mi>j</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+      </msub>
+      <mo>&#x2192;</mo>
+      <mn>0</mn>
+      <mo>&#x21D2;</mo>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <msub>
+        <mi>h</mi>
+        <mn>0</mn>
+      </msub>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+  </math>
+  . Ebből következik, hogy 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>h</mi>
+        <mn>0</mn>
+      </msub>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>S</mi>
+        <mi>&#x03BB;</mi>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mi>A</mi>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+  </math>
+  . Másrészt 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>h</mi>
+        <mrow>
+          <msub>
+            <mi>j</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+      </msub>
+      <mo>=</mo>
+      <mfrac>
+        <mrow>
+          <msub>
+            <mi>g</mi>
+            <mrow>
+              <mi>j</mi>
+              <mi>k</mi>
+            </mrow>
+          </msub>
+          
+        </mrow>
+        <mrow>
+          <mrow>
+            <mo>&#x2016;</mo> 
+            <mrow>
+              <msub>
+                <mi>g</mi>
+                <mrow>
+                  <mi>j</mi>
+                  <mi>k</mi>
+                </mrow>
+              </msub>
+              
+            </mrow> 
+            <mo>&#x02016;</mo>
+          </mrow>
+        </mrow>
+      </mfrac>
+      
+    </mrow>
+  </math>
+  , 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>g</mi>
+        <mrow>
+          <msub>
+            <mi>j</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+      </msub>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>S</mi>
+        <mi>&#x03BB;</mi>
+      </msub>
+      <msup>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mi>A</mi>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x22A5;</mo>
+      </msup>
+      <mo>&#x21D2;</mo>
+      <msub>
+        <mi>h</mi>
+        <mrow>
+          <msub>
+            <mi>j</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+      </msub>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>S</mi>
+        <mi>&#x03BB;</mi>
+      </msub>
+      <msup>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mi>A</mi>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x22A5;</mo>
+      </msup>
+      <mo>&#x21D2;</mo>
+    </mrow>
+  </math>
+  limeszben 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>h</mi>
+        <mn>0</mn>
+      </msub>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>S</mi>
+        <mi>&#x03BB;</mi>
+      </msub>
+      <msup>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mi>A</mi>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x22A5;</mo>
+      </msup>
+      
+    </mrow>
+  </math>
+  . Másrészt 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>h</mi>
+        <mn>0</mn>
+      </msub>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>S</mi>
+        <mi>&#x03BB;</mi>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mi>A</mi>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+  </math>
+  , így 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>h</mi>
+        <mn>0</mn>
+      </msub>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+  </math>
+  , de ez meg nem lehet, mert 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mrow>
+          <msub>
+            <mover accent='true'>
+              <mi>h</mi>
+              <mo>&#x02DC;</mo>
+            </mover>
+            
+            <mrow>
+              <msub>
+                <mi>j</mi>
+                <mi>k</mi>
+              </msub>
+              
+            </mrow>
+          </msub>
+          
+        </mrow> 
+        <mo>&#x02016;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mn>1</mn>
+      <mo>&#x21D2;</mo>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mrow>
+          <msub>
+            <mi>h</mi>
+            <mn>0</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>&#x02016;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+  </math>
+  kéne lennie.
+</p>
+<p>Tehát
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <msub>
+        <mi>g</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>=</mo>
+      <msub>
+        <mi>&#x03C8;</mi>
+        <mi>j</mi>
+      </msub>
+      
+    </mrow>
+  </math>
+  , 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>lim</mi>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <msub>
+            <mi>&#x03C8;</mi>
+            <mi>j</mi>
+          </msub>
+          
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <mo>=</mo>
+      <mi>&#x03C8;</mi>
+    </mrow>
+  </math>
+  , 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mrow>
+          <mrow>
+            <mo>&#x2016;</mo> 
+            <mrow>
+              <msub>
+                <mi>g</mi>
+                <mi>j</mi>
+              </msub>
+              
+            </mrow> 
+            <mo>&#x02016;</mo>
+          </mrow>
+        </mrow>
+        <mi>X</mi>
+      </msub>
+      
+    </mrow>
+  </math>
+  korlátos. Mivel A kompakt és 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>g</mi>
+        <mi>j</mi>
+      </msub>
+      
+    </mrow>
+  </math>
+  korlátos 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mo>&#x21D2;</mo>
+      <mo>&#x2203;</mo>
+      <msub>
+        <mover accent='true'>
+          <mi>g</mi>
+          <mo>&#x02DC;</mo>
+        </mover>
+        
+        <mrow>
+          <msub>
+            <mi>j</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  részsorozat, hogy 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>A</mi>
+      <msub>
+        <mover accent='true'>
+          <mi>g</mi>
+          <mo>&#x02DC;</mo>
+        </mover>
+        
+        <mrow>
+          <msub>
+            <mi>j</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  konvergens. 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>&#x03C8;</mi>
+        <mrow>
+          <msub>
+            <mi>j</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  is konvergens
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mo>&#x21D2;</mo>
+      <mi>&#x03BB;</mi>
+      <msub>
+        <mi>g</mi>
+        <mrow>
+          <msub>
+            <mi>j</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  is konvergens, 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>&#x03BB;</mi>
+      <mo>&#x2260;</mo>
+      <mn>0</mn>
+      <mo>&#x21D2;</mo>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <msub>
+            <mi>g</mi>
+            <mrow>
+              <msub>
+                <mi>j</mi>
+                <mi>k</mi>
+              </msub>
+              
+            </mrow>
+          </msub>
+          
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+  </math>
+  konvergens. 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>g</mi>
+        <mrow>
+          <msub>
+            <mi>j</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+      </msub>
+      <mo>&#x2192;</mo>
+      <msub>
+        <mi>g</mi>
+        <mn>0</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  X-ben, 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>g</mi>
+        <mn>0</mn>
+      </msub>
+      <mo>&#x2208;</mo>
+      <mi>X</mi>
+    </mrow>
+  </math>
+  . 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <msub>
+        <mi>g</mi>
+        <mn>0</mn>
+      </msub>
+      <mo>=</mo>
+      <mi>&#x03C8;</mi>
+      <mo>&#x21D2;</mo>
+      <mi>&#x03C8;</mi>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>&#x211B;</mi>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  .
+</p>
+<p>Tétel (bizonyítás nélkül): legyen
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>A</mi>
+      <mo>:</mo>
+      <mi>X</mi>
+      <mo>&#x2192;</mo>
+      <mi>X</mi>
+    </mrow>
+  </math>
+  kompakt operátor. Ekkor 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msup>
+        <mi>A</mi>
+        <mo>*</mo>
+      </msup>
+      
+    </mrow>
+  </math>
+  is kompakt. Továbbá 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>&#x03BB;</mi>
+      <mo>&#x2260;</mo>
+      <mn>0</mn>
+    </mrow>
+  </math>
+  az A-nak sajátértéke 
+  <math display='block'>
+    <mrow>
+      <mo>&#x21D4;</mo>
+      <mover accent='true'>
+        <mi>&#x03BB;</mi>
+        <mo stretchy='true'>&#x00AF;</mo>
+      </mover>
+      
+    </mrow>
+  </math>
+  sajátértéke 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msup>
+        <mi>A</mi>
+        <mo>*</mo>
+      </msup>
+      
+    </mrow>
+  </math>
+  -nak, és ekkor a rangok egyenlők.
+</p>
+<p>Összefoglalás (Fredholm alternatíva): legyen
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>A</mi>
+      <mo>:</mo>
+      <mi>X</mi>
+      <mo>&#x2192;</mo>
+      <mi>X</mi>
+    </mrow>
+  </math>
+  kompakt operátor, 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>&#x03BB;</mi>
+      <mo>&#x2260;</mo>
+      <mn>0</mn>
+    </mrow>
+  </math>
+  tetszőleges szám s 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>&#x03BB;</mi>
+          <mi>I</mi>
+          <mo>&#x2212;</mo>
+          <mi>A</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <mi>f</mi>
+      <mo>=</mo>
+      <mi>b</mi>
+    </mrow>
+  </math>
+másodfajú egyenlet. Ekkor két eset lehetséges:</p>
+<ol>
+  <li>ha
+    <math xmlns='http://www.w3.org/1998/Math/MathML'>
+      <mrow>
+        <mi>&#x03BB;</mi>
+        <mo>&#x2260;</mo>
+        <mn>0</mn>
+      </mrow>
+    </math>
+  az A-nak nem sajátértéke (legfeljebb megszámlálhatóan végtelen sok, véges rangú, 0-ban torlódó sajátértékek), akkor a másodfajú egyenletnek 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mo>&#x2200;</mo>
+      <mi>b</mi>
+      <mo>&#x2208;</mo>
+      <mi>X</mi>
+    </mrow>
+  </math>
+  esetén 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mo>&#x2203;</mo>
+      <mo>!</mo>
+      <mi>f</mi>
+    </mrow>
+  </math>
+  megoldása és ez folytonosan függ b-től (
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msup>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>&#x03BB;</mi>
+              <mi>I</mi>
+              <mo>&#x2212;</mo>
+              <mi>A</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mrow>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mrow>
+      </msup>
+      
+    </mrow>
+  </math>
+  folytonos)</li>
+  <li>ha
+    <math xmlns='http://www.w3.org/1998/Math/MathML'>
+      <mrow>
+        <mi>&#x03BB;</mi>
+        <mo>&#x2260;</mo>
+        <mn>0</mn>
+      </mrow>
+    </math>
+    sajátérték, akkor a másodfajú egyenletnek a megoldása nem egyértelmű, a homogén egyenletnek véges sok lineárisan független megoldása van. A megoldás pontosan létezik, ha 
+    <math xmlns='http://www.w3.org/1998/Math/MathML'>
+      <mrow>
+        <mi>b</mi>
+        <mo>&#x22A5;</mo>
+        <msub>
+          <mi>S</mi>
+          <mover accent='true'>
+            <mi>&#x03BB;</mi>
+            <mo>&#x00AF;</mo>
+          </mover>
+          
+        </msub>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <msup>
+              <mi>A</mi>
+              <mo>*</mo>
+            </msup>
+            
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </math>
+    minden elemére. Ez annyi db ortogonalitási feltétel, amennyi a 
+    <math xmlns='http://www.w3.org/1998/Math/MathML'>
+      <mi>&#x03BB;</mi>
+    </math>
+    sajátérték rangja.    </li>
+</ol>
+<p>Önadjungált kompakt operátorok</p>
+<p>Tétel: legyen X szeparábilis Hilbert tér,
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>A</mi>
+      <mo>:</mo>
+      <mi>X</mi>
+      <mo>&#x2192;</mo>
+      <mi>X</mi>
+    </mrow>
+    </math>
+  kompakt és önadjungált operátor, 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>A</mi>
+      <mo>&#x2260;</mo>
+      <mn>0</mn>
+    </mrow>
+  </math>
+  . Ekkor 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mo>&#x2203;</mo>
+      <msub>
+        <mi>&#x03BB;</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  sajátérték: 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>|</mo> 
+        <mrow>
+          <msub>
+            <mi>&#x03BB;</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>|</mo>
+      </mrow>
+      <mo>=</mo>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mi>A</mi> 
+        <mo>&#x02016;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mi>sup</mi>
+      <mrow>
+        <mo>{</mo> 
+        <mrow>
+          <mrow>
+            <mo>|</mo> 
+            <mrow>
+              <mrow>
+                <mo>&#x2329;</mo> 
+                <mrow>
+                  <mi>A</mi>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>x</mi>
+                </mrow> 
+                <mo>&#x0232A;</mo>
+              </mrow>
+            </mrow> 
+            <mo>|</mo>
+          </mrow>
+          <mo>:</mo>
+          <msub>
+            <mrow>
+              <mrow>
+                <mo>&#x2016;</mo> 
+                <mi>x</mi> 
+                <mo>&#x02016;</mo>
+              </mrow>
+            </mrow>
+            <mi>X</mi>
+          </msub>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow> 
+        <mo>}</mo>
+      </mrow>
+    </mrow>
+  </math>
+  .</p>
+<p>Megjegyzés: ha
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>&#x03BB;</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  az A operátor olyan sajátértéke, amelyre 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>|</mo> 
+        <mrow>
+          <msub>
+            <mi>&#x03BB;</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>|</mo>
+      </mrow>
+      <mo>=</mo>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mi>A</mi> 
+        <mo>&#x02016;</mo>
+      </mrow>
+    </mrow>
+  </math>
+  és 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  olyan sajátelem, hogy 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mrow>
+          <msub>
+            <mi>x</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>&#x02016;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+  </math>
+  , azaz 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>A</mi>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>=</mo>
+      <msub>
+        <mi>&#x03BB;</mi>
+        <mn>1</mn>
+      </msub>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  , 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mrow>
+          <msub>
+            <mi>x</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>&#x02016;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+  </math>
+  , akkor 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>|</mo> 
+        <mrow>
+          <mrow>
+            <mo>&#x2329;</mo> 
+            <mrow>
+              <mi>A</mi>
+              <msub>
+                <mi>x</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>x</mi>
+                <mn>1</mn>
+              </msub>
+              
+            </mrow> 
+            <mo>&#x0232A;</mo>
+          </mrow>
+        </mrow> 
+        <mo>|</mo>
+      </mrow>
+      <mo>=</mo>
+      <mrow>
+        <mo>|</mo> 
+        <mrow>
+          <mrow>
+            <mo>&#x2329;</mo> 
+            <mrow>
+              <msub>
+                <mi>&#x03BB;</mi>
+                <mn>1</mn>
+              </msub>
+              <msub>
+                <mi>x</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>x</mi>
+                <mn>1</mn>
+              </msub>
+              
+            </mrow> 
+            <mo>&#x0232A;</mo>
+          </mrow>
+        </mrow> 
+        <mo>|</mo>
+      </mrow>
+      <mo>=</mo>
+      <mrow>
+        <mo>|</mo> 
+        <mrow>
+          <msub>
+            <mi>&#x03BB;</mi>
+            <mn>1</mn>
+          </msub>
+          <mrow>
+            <mo>&#x2329;</mo> 
+            <mrow>
+              <msub>
+                <mi>x</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>x</mi>
+                <mn>1</mn>
+              </msub>
+              
+            </mrow> 
+            <mo>&#x0232A;</mo>
+          </mrow>
+        </mrow> 
+        <mo>|</mo>
+      </mrow>
+      <mo>=</mo>
+      <mrow>
+        <mo>|</mo> 
+        <mrow>
+          <msub>
+            <mi>&#x03BB;</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>|</mo>
+      </mrow>
+      <mo>=</mo>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mi>A</mi> 
+        <mo>&#x02016;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mi>sup</mi>
+      <mrow>
+        <mo>{</mo> 
+        <mrow>
+          <mrow>
+            <mo>|</mo> 
+            <mrow>
+              <mrow>
+                <mo>&#x2329;</mo> 
+                <mrow>
+                  <mi>A</mi>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>x</mi>
+                </mrow> 
+                <mo>&#x0232A;</mo>
+              </mrow>
+              <mo>:</mo>
+              <msub>
+                <mrow>
+                  <mrow>
+                    <mo>&#x2016;</mo> 
+                    <mi>x</mi> 
+                    <mo>&#x02016;</mo>
+                  </mrow>
+                </mrow>
+                <mi>X</mi>
+              </msub>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow> 
+            <mo>|</mo>
+          </mrow>
+        </mrow> 
+        <mo>}</mo>
+      </mrow>
+    </mrow>
+  </math>
+  . Más szóval, az 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>x</mi>
+      <mo>&#x21A6;</mo>
+      <mrow>
+        <mo>|</mo> 
+        <mrow>
+          <mrow>
+            <mo>&#x2329;</mo> 
+            <mrow>
+              <mi>A</mi>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>x</mi>
+            </mrow> 
+            <mo>&#x0232A;</mo>
+          </mrow>
+        </mrow> 
+        <mo>|</mo>
+      </mrow>
+    </mrow>
+  </math>
+  , ahol 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mi>x</mi> 
+        <mo>&#x02016;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+  </math>
+  , ez a függvény felveszi a suprémumot az 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>x</mi>
+      <mo>=</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  sajátelemen, a maximum (ami most a suprémum is) értéke 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mo>=</mo>
+      <mrow>
+        <mo>|</mo> 
+        <mrow>
+          <msub>
+            <mi>&#x03BB;</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>|</mo>
+      </mrow>
+    </mrow>
+  </math>
+  . Fordítva: ha 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mo>*</mo>
+      </msup>
+      
+    </mrow>
+  </math>
+  olyan, hogy 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mrow>
+          <msup>
+            <mi>x</mi>
+            <mo>*</mo>
+          </msup>
+          
+        </mrow> 
+        <mo>&#x02016;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+  </math>
+  , akkor ez sajátelem és a maximum egyenlő a sajátérték abszolút értékével. Ugyanis 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>|</mo> 
+        <mrow>
+          <mrow>
+            <mo>&#x2329;</mo> 
+            <mrow>
+              <mi>A</mi>
+              <msup>
+                <mi>x</mi>
+                <mo>*</mo>
+              </msup>
+              <mo>,</mo>
+              <msup>
+                <mi>x</mi>
+                <mo>*</mo>
+              </msup>
+              
+            </mrow> 
+            <mo>&#x0232A;</mo>
+          </mrow>
+        </mrow> 
+        <mo>|</mo>
+      </mrow>
+      <mo>&#x2264;</mo>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mrow>
+          <mi>A</mi>
+          <msup>
+            <mi>x</mi>
+            <mo>*</mo>
+          </msup>
+          
+        </mrow> 
+        <mo>&#x02016;</mo>
+      </mrow>
+      <mo>&#x22C5;</mo>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mrow>
+          <msup>
+            <mi>x</mi>
+            <mo>*</mo>
+          </msup>
+          
+        </mrow> 
+        <mo>&#x02016;</mo>
+      </mrow>
+      <mo>&#x2264;</mo>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mi>A</mi> 
+        <mo>&#x02016;</mo>
+      </mrow>
+      <mo>&#x22C5;</mo>
+      <msup>
+        <mrow>
+          <mrow>
+            <mo>&#x2016;</mo> 
+            <mrow>
+              <msup>
+                <mi>x</mi>
+                <mo>*</mo>
+              </msup>
+              
+            </mrow> 
+            <mo>&#x02016;</mo>
+          </mrow>
+        </mrow>
+        <mn>2</mn>
+      </msup>
+      <mo>=</mo>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mi>A</mi> 
+        <mo>&#x02016;</mo>
+      </mrow>
+    </mrow>
+  </math>
+  , a Cauchy-Schwarz egyenlőtlenségben egyenlőség pontosan akkor áll fenn, amikor 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>A</mi>
+      <msup>
+        <mi>x</mi>
+        <mo>*</mo>
+      </msup>
+      <mo>&#x2225;</mo>
+      <msup>
+        <mi>x</mi>
+        <mo>*</mo>
+      </msup>
+      
+    </mrow>
+  </math>
+  , azaz 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>A</mi>
+      <msup>
+        <mi>x</mi>
+        <mo>*</mo>
+      </msup>
+      <mo>=</mo>
+      <mi>c</mi>
+      <mi>o</mi>
+      <mi>n</mi>
+      <mi>s</mi>
+      <mi>t</mi>
+      <mo>&#x22C5;</mo>
+      <msup>
+        <mi>x</mi>
+        <mo>*</mo>
+      </msup>
+      
+    </mrow>
+  </math>
+  .  </p>
+<p>További sajátértékek, sajátelemek keresése.  </p>
+<p>Legyen
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>X</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>:</mo>
+      <mo>=</mo>
+      <mrow>
+        <mo>{</mo> 
+        <mrow>
+          <mi>x</mi>
+          <mo>&#x2208;</mo>
+          <mi>X</mi>
+          <mo>:</mo>
+          <mi>x</mi>
+          <mo>&#x22A5;</mo>
+          <msub>
+            <mi>x</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>}</mo>
+      </mrow>
+    </mrow>
+  </math>
+  , ahol 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>A</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>:</mo>
+      <mo>=</mo>
+      <msub>
+        <mrow>
+          <mrow>
+            <mi>A</mi>
+            <mo>|</mo>
+          </mrow>
+        </mrow>
+        <mrow>
+          <msub>
+            <mi>X</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow>
+      </msub>
+      
+    </mrow>
+  </math>
+  , a leszűkítés, és 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>A</mi>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>=</mo>
+      <msub>
+        <mi>&#x03BB;</mi>
+        <mn>1</mn>
+      </msub>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  .  </p>
+<p>Állítás:
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>X</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  invariáns altér, azaz 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>x</mi>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>X</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>&#x21D2;</mo>
+      <mi>A</mi>
+      <mi>x</mi>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>X</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  .  </p>
+<p>Bizonyítás: tfh
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>x</mi>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>X</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  ! 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>&#x2329;</mo> 
+        <mrow>
+          <mi>A</mi>
+          <mi>x</mi>
+          <mo>,</mo>
+          <msub>
+            <mi>x</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>&#x0232A;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mrow>
+        <mo>&#x2329;</mo> 
+        <mrow>
+          <mi>x</mi>
+          <mo>,</mo>
+          <mi>A</mi>
+          <msub>
+            <mi>x</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>&#x0232A;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mrow>
+        <mo>&#x2329;</mo> 
+        <mrow>
+          <mi>x</mi>
+          <mo>,</mo>
+          <msub>
+            <mi>&#x03BB;</mi>
+            <mn>1</mn>
+          </msub>
+          <msub>
+            <mi>x</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>&#x0232A;</mo>
+      </mrow>
+      <mo>=</mo>
+      <msub>
+        <mi>&#x03BB;</mi>
+        <mn>1</mn>
+      </msub>
+      <mrow>
+        <mo>&#x2329;</mo> 
+        <mrow>
+          <mi>x</mi>
+          <mo>,</mo>
+          <msub>
+            <mi>x</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>&#x0232A;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+  </math>
+  , tehát 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>A</mi>
+      <mi>x</mi>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>X</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  . Az előbbi tételt alkalmazhatjuk az 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>A</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  operátorra 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>X</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  Hilbert térben. Ekkor 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mo>&#x2203;</mo>
+      <msub>
+        <mi>&#x03BB;</mi>
+        <mn>2</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  sajátérték, hogy 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>|</mo> 
+        <mrow>
+          <msub>
+            <mi>&#x03BB;</mi>
+            <mn>2</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>|</mo>
+      </mrow>
+      <mo>=</mo>
+      <mrow>
+        <mo>&#x2016;</mo> 
+        <mrow>
+          <msub>
+            <mi>A</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>&#x02016;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mi>sup</mi>
+      <mrow>
+        <mo>{</mo> 
+        <mrow>
+          <mrow>
+            <mo>&#x2329;</mo> 
+            <mrow>
+              <msub>
+                <mi>A</mi>
+                <mn>1</mn>
+              </msub>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>x</mi>
+            </mrow> 
+            <mo>&#x0232A;</mo>
+          </mrow>
+          <mo>:</mo>
+          <msub>
+            <mrow>
+              <mrow>
+                <mo>&#x2016;</mo> 
+                <mi>x</mi> 
+                <mo>&#x02016;</mo>
+              </mrow>
+            </mrow>
+            <mi>X</mi>
+          </msub>
+          <mo>=</mo>
+          <mn>1,</mn>
+          <mi>x</mi>
+          <mo>&#x2208;</mo>
+          <msub>
+            <mi>X</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>}</mo>
+      </mrow>
+    </mrow>
+  </math>
+  . A maximum helye 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  sajátelem helyén van, 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>&#x03BB;</mi>
+        <mn>2</mn>
+      </msub>
+      <msub>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msub>
+      <mo>=</mo>
+      <mi>A</mi>
+      <msub>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  , 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msub>
+      <mo>&#x22A5;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  . Így egymás után megkaphatjuk az A operátor sajátértékeit és sajátelemeit, 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>|</mo> 
+        <mrow>
+          <msub>
+            <mi>&#x03BB;</mi>
+            <mn>1</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>|</mo>
+      </mrow>
+      <mo>&#x2265;</mo>
+      <mrow>
+        <mo>|</mo> 
+        <mrow>
+          <msub>
+            <mi>&#x03BB;</mi>
+            <mn>2</mn>
+          </msub>
+          
+        </mrow> 
+        <mo>|</mo>
+      </mrow>
+      <mo>&#x2265;</mo>
+      <mn>...</mn>
+    </mrow>
+  </math>
+  . Ha A véges rendű, akkor az eljárás véges sok lépés után befejeződik.  </p>
+<p>Tétel: legyenek az A önadjungált operátor sajátértékei
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>&#x03BB;</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  , 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>&#x03BB;</mi>
+        <mn>2</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  ,… és sajátelemei 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  , 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <msub>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msub>
+      
+    </mrow>
+  </math>
+  ,… A sajátelemekről feltehető, hogy ortonormált rendszert alkotnak. Ekkor 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mo>&#x2200;</mo>
+      <mi>x</mi>
+      <mo>&#x2208;</mo>
+      <mi>X</mi>
+    </mrow>
+  </math>
+  elemre 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>A</mi>
+      <mi>x</mi>
+      <mo>=</mo>
+      <mstyle displaystyle='true'>
+        <munder>
+          <mo>&#x2211;</mo>
+          <mi>k</mi>
+        </munder>
+        <mrow>
+          <msub>
+            <mi>&#x03BB;</mi>
+            <mi>k</mi>
+          </msub>
+          <mrow>
+            <mo>&#x2329;</mo> 
+            <mrow>
+              <mi>x</mi>
+              <mo>,</mo>
+              <msub>
+                <mi>x</mi>
+                <mi>k</mi>
+              </msub>
+              
+            </mrow> 
+            <mo>&#x0232A;</mo>
+          </mrow>
+          <msub>
+            <mi>x</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+      </mstyle>
+    </mrow>
+  </math>
+  . Az 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <msub>
+            <mi>x</mi>
+            <mi>k</mi>
+          </msub>
+          
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+  </math>
+  ortonormált rendszert kibővítve a 
+  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+    <mrow>
+      <mi>&#x03BB;</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+  </math>
+  -hoz tartozó sajátelemek ortonormált rendszerével, akkor ezek egy teljes ortonormált rendszert alkotnak.</p>
+</body>
+</html>

@@ -1,0 +1,2 @@
+pandoc -f html+tex_math_dollars+tex_math_single_backslash analizisIb.html -t markdown -o analizisIb.md -s --template=template.md
+pandoc -f markdown+header_attributes+auto_identifiers+ascii_identifiers --filter pandoc-latex-environment analizisIb.md -o analizisIb.tex -s --toc -H header.tex --variable=colorlinks:true  --toc-depth=6 --variable=secnumdepth:4 -N --template="template_header.tex"

@@ -1,0 +1,193 @@
+body {
+	/*font: 80% Arial;
+	background-color: white;*/
+}
+
+/* üzenetküldés */
+#msgsend {/*
+	display: block;
+	position: relative;
+	float: left;
+	left: 50%;
+	margin: 20px 0 20px -225px;*/
+	padding: 15px 35px 5px 15px;
+	border: 1px solid gray;
+	background-color: #D2D2D2;
+	font: 11px Arial;
+}
+input.msgform, textarea.msgform {
+	display: block;
+	position: relative;
+	left: 10px;
+	width: 150px;
+	height: 20px;
+	margin-bottom: 3px;
+	border: 1px solid gray;
+	font: 11px Arial;
+}
+#msgsend #msgtextformat {
+	display: block;
+	position: relative;
+	left: 10px;
+}
+#msgsend #msgtextformat input {
+	height: 20px;
+	font: 11px Arial;
+}
+textarea.msgform {
+	width: 400px;
+	height: 150px;
+	font-family: Courier New;
+	font-size: 120%;
+}
+
+/* üzenetek */
+#msgcontainer {
+	display: block;
+}
+div.msg {
+	position: relative;
+	background-color: white;
+	border-bottom: 1px dotted gray;
+}
+div.msg div.text {
+	margin: 5px 10px 5px 10px;
+	padding: 5px 5px 3px 5px;
+	border-top: 1px solid gray;
+}
+div.msg div.header {
+	padding: 5px 0 0 0;
+	margin: 0 0 0 5px;
+}
+div.msg div.header img { 
+	margin: 0 5px 0 10px;
+	border: none;
+	vertical-align: middle;
+}
+div.msg div.header a {
+	text-decoration: none;
+	color: black;
+}
+div.msg div.header a:hover {
+	text-decoration: underline;
+}
+div.msg input.adminedit {
+	position: absolute;
+	top: 5px;
+	left: 695px;
+}
+
+/* control panel */
+#controlpanel {
+	margin: 0 0 10px 0;
+	border-bottom: 1px solid gray;
+	height: 30px;
+	width: 100%;
+}
+#controlpanel input.button {
+	width: 60px;
+	height: 20px;
+	border: 1px solid gray;
+	margin: 0 0 5px 0;
+	font: 11px Arial;
+}
+#controlpanel #autorefresh {
+	float: left;
+}
+#controlpanel #autorefresh img {
+	margin: 0 5px 0 2px;
+	vertical-align: middle;
+}
+#controlpanel #autorefresh #archeck {
+	vertical-align: middle;
+}
+#controlpanel #autorefresh #arinput {
+	width: 30px;
+	height: 20px;
+	font: 11px Arial;
+}
+#controlpanel form {
+	float: right;
+}
+
+/* admin */
+#adminlogin {
+	visibility: hidden;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 200px;
+	margin-left: -100px;
+	padding: 5px 5px 5px 5px;
+	background-color: #AAAAAA;
+	text-align: center;
+	border: 1px solid black;
+	z-index: 1;
+}
+#adminlogin form input {
+	 height: 20px;
+	 font: 10px Arial;
+	 border: 1px solid black;
+	 margin: 5px 0 0 0;
+	 vertical-align: middle;
+}
+#msgcontainer div.msg textarea.text {
+	display: block;
+	position: relative;
+	left: 10px;
+	width: 500px;
+	height: 100px;
+	font: 11px Arial;
+	margin: 5px 0 3px 0;
+	border: 1px solid gray;
+}
+#msgcontainer div.msg input.msgstore {
+	position: relative;
+	left: 10px;
+	width: 50px;
+	height: 20px;
+	border: 1px solid black;
+	margin: 0 2px 5px 0px;
+	font: 11px Arial;
+}
+#adminmode {
+	position: absolute;
+	left: 50%;
+	width: 150px;
+	margin-left: -100px;
+	padding: 5px 5px 5px 5px;
+	border: 1px solid black;
+	background-color: #AAAAAA;
+	color: black;
+	font: 11px Arial;
+	text-align: center;
+	z-index: 1;
+}
+
+/* hiba */
+#error {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 200px;
+	margin: -20px 0 0 -100px;
+	padding: 20px 0 20px 0;
+	background-color: #f6b3b3;
+	color: #cb2727;
+	border: 1px solid #cb2727;
+	font: 12px Arial;
+	text-align: center;
+	text-decoration: none;
+	z-index: 1;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+/* egyéb */
+#version {
+	float: right;
+	clear: right;
+	color: gray;
+	font: 10px Arial;
+	text-align: right;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- TemplateBeginEditable name="description" -->
+<meta name="description" content="Dániel Tüzes' webpage; CV; publications; contact, research interests.">
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Dokumentumcím</title>
+<!-- TemplateEndEditable -->
+<meta name="author" content="Dániel Tüzes">
+<!-- Bootstrap core CSS -->
+<link href="http://metal.elte.hu/~tuzes/personal/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- What are you looking for so desperately in my code? -->
+<style>
+body {padding-top: 56px;}
+.hyphen_justify {hyphens: auto; text-align: justify;}
+.anchor:before, h1:before, h2:before, h3:before {display: block; content: ""; height: 80px; margin: -80px 0 0;}
+</style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="150">
+	<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container"> <a class="navbar-brand" href="http://metal.elte.hu/~tuzes/personal">Dániel Tüzes' webpage</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <!-- TemplateBeginEditable name="active_main_menu" -->
+          <li class="nav-item"> <a class="nav-link" href="http://metal.elte.hu/~tuzes/personal">CV <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"> <a class="nav-link" href="research/">Research</a></li>
+          <li class="nav-item pr-5"> <a class="nav-link" href="http://metal.elte.hu/~tuzes/personal/contact">Contact</a></li>
+          <li class="text-hide mt-2" style="background-image: url('http://metal.elte.hu/~tuzes/personal/img/hu.svg'); height: 24px; width: 32px" >Hungarian - magyarul</li>
+          <li class="nav-item"> <a class="nav-link" href="#">CV</a></li>
+          <li class="nav-item"> <a class="nav-link" href="#">Oktatás</a></li>
+        <!-- TemplateEndEditable -->
+      </ul>
+    </div>
+  </div>
+</nav>
+	
+	<div class="container" style="position: relative">
+  <div class="row">
+    <div class="col-md-8 mb-5">
+		<h1 class="mt-4 mb-2"><!-- TemplateBeginEditable name="Header" -->Header title<!-- TemplateEndEditable --></h1>
+		<!-- TemplateBeginEditable name="Left column content" -->Left column content<!-- TemplateEndEditable -->
+    </div>
+    <div class="col-md-4 mb-5 d-none d-md-block">
+        <nav id="myScrollspy" class="nav-pills navbar bg-light flex-column align-items-start" style="position:sticky; top: 5rem"><!-- TemplateBeginEditable name="secondary navigation panel" --><a class="nav-link" href="#biography">Biography</a> <a class="nav-link" href="#interests">Interests</a> <a class="nav-link" href="#education">Education</a> <a class="nav-link" href="#publications">Publications</a> <a class="nav-link" href="#talks_and_presentations">Talks and Presentations</a> <a class="nav-link" href="#teaching_and_authoring">Teaching and Authoring</a><!-- TemplateEndEditable --></nav>
+    </div>
+  </div>
+  <!-- /.row --> 
+  
+</div>
+	<!-- Footer -->
+<footer class="py-4 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white"><a href="callto:003613722805">+36-1-372-2805</a> | <a href="mailto:tuzes@metal.elte.hu">tuzes@metal.elte.hu</a> | <a href="vendor/LICENSE.txt">The code is under MIT license</a></p>
+  </div>
+  <!-- /.container --> 
+</footer>
+
+<!-- Still looking for something? Just send a mail, I will tell you. -->
+<!-- Bootstrap core JavaScript -->
+<script src="http://metal.elte.hu/~tuzes/personal/vendor/jquery/jquery.min.js"></script> 
+<script src="http://metal.elte.hu/~tuzes/personal/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

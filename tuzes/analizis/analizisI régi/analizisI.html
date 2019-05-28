@@ -1,0 +1,4018 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Analízis I</title>
+    <link href="math.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML">
+</script>
+    <meta name="author" content="Simon László">
+    <meta name="author" content="Tüzes Dániel">
+    <meta name="author" content="Izsák Ferenc">
+  </head>
+  <body>
+    <h1 class="title">Analízis I<br>
+      <span class="subtitle">Előadásjegyzet fizikusoknak matematikusoktól</span></h1>
+    <p>Ajánlott irodalom: </p>
+    <ol>
+      <li><a href="http://www.typotex.hu/index.php?page=konyvek&amp;book_id=240">Komornik
+          Vilmos: Valós analízis előadások</a></li>
+      <li><a href="https://notendur.hi.is/vae11/%C3%9Eekking/principles_of_mathematical_analysis_walter_rudin.pdf">W.
+          Rudin: Principles of Mathematical Analysis, McGraw-Hill, 1976. (angol
+          nyelvű)</a></li>
+      <li><a href="http://www.cs.elte.hu/%7Esimonp/jegyzet1.pdf">Mezei István,
+          Faragó István, Simon Péter: Bevezetés az analízisbe</a></li>
+    </ol>
+  <p>Ez a jegyzet <strong>nem</strong> szakirodalom és nem garantált, hogy az
+      órai anyagot teljesen lefedi, az előadásokra bejárni ajánlott. Az eredeti
+      jegyzet Simon László előadásai alapján Tüzes Dániel készítette, és
+      lektorálta 2009-ben Simon László, majd frissítette 2016-2017-ben Izsák
+      Ferenc.</p>
+    <p>Ha a jegyzetben helyesírási, tartalmi, vagy formai hibát találsz, kérlek
+      jelezd az előadónak vagy a <a href="mailto:tuzesdaniel@gmail.com">tuzesdaniel@gmail.com</a>
+      e-mail címen! Ha a jegyzet nem jelenik meg helyesen, olvasd el az <a href="http://fizweb.extra.hu/index.php?dir=kalkulus,analizis/analizisI/&amp;file=utmutato.html">útmutatót</a>,
+      vagy egyszerűen használd a <a href="http://www.mozilla.com/en-US/firefox/all.html">Firefox
+        legújabb böngészőjét!</a></p>
+    <p>A jegyzet korábbi, nem következetes jelölésétől eltérően a következőkben törekszünk arra, hogy egy függvényt <math>
+ <mrow>
+  <mi>f</mi><mo>:</mo><mi>X</mi><mo>&#x2192;</mo><mi>Y</mi></mrow>
+</math> alakban adunk meg, akkor az azt jelenti, hogy az értelmezési tartománya <math>
+ <mi>X</mi>
+</math>, nem pedig annak csak egy része. Ez utóbbira használjuk majd az 	<math>
+ <mrow>
+  <mi>f</mi><mo>:</mo><mi>X</mi><mo>&#x21A3;</mo><mi>Y</mi></mrow>
+</math>
+jelölést.
+</p>
+
+    <h1>Metrikus tér </h1>
+    <p>A korábban (középiskolában) tanultakból általánosítunk.
+      <math>
+        <mrow>
+          <msup>
+            <mi>ℝ</mi>
+            <mi>n</mi> </msup> </mrow> </math>-ben éltünk eddig, ahol vektor
+      alatt ezt értettük:
+      <math>
+        <mrow>
+          <mstyle mathsize="normal" mathvariant="bold">
+            <mi>v</mi> </mstyle>
+          <mo>=</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>v</mi>
+                <mn>1</mn> </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>v</mi>
+                <mn>2</mn> </msub>
+              <mn>...</mn>
+              <msub>
+                <mi>v</mi>
+                <mi>n</mi> </msub> </mrow>
+            <mo>)</mo> </mrow> </mrow> </math> ahol
+      <math>
+        <mrow>
+          <msub>
+            <mi>v</mi>
+            <mi>j</mi> </msub>
+          <mo>∈</mo><mi>ℝ</mi> </mrow> </math> és
+      <math>
+        <mrow>
+          <mstyle mathsize="normal" mathvariant="bold">
+            <mi>v</mi> </mstyle>
+          <mo>∈</mo>
+          <msup>
+            <mi>ℝ</mi>
+            <mi>n</mi> </msup> </mrow> </math>. Ezen vektorfogalmat fogjuk
+      általánosítani úgy, hogy a már korábban tanult vektorok némely
+      tulajdonságait kiválasztjuk, s egy halmaz (<math>
+        <mi>𝕍</mi> </math>) elemeit (<math><mi>a</mi></math>,
+      <math><mi>b</mi></math> és
+      <math><mi>c</mi></math>) akkor fogjuk vektoroknak nevezni, ha az alább
+      kiválaszott - és korábban (középiskolában) már tanult - tulajdonságokat (a
+      műveletekkel) teljesítik.</p>
+    <ul>
+      <li>összeadás +<br>
+        <math>
+          <mrow>
+            <msup>
+              <mi>ℝ</mi>
+              <mi>n</mi> </msup> </mrow> </math>-ben azt mondtuk, hogy
+        <math display="block">
+          <mrow>
+            <mstyle mathsize="normal" mathvariant="bold">
+              <mi>v</mi> </mstyle>
+            <mo>+</mo>
+            <mstyle mathsize="normal" mathvariant="bold">
+              <mi>u</mi> </mstyle>
+            <mo>=</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>v</mi>
+                  <mn>1</mn> </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>v</mi>
+                  <mn>2</mn> </msub>
+                <mn>...</mn>
+                <msub>
+                  <mi>v</mi>
+                  <mi>n</mi> </msub> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>+</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>u</mi>
+                  <mn>1</mn> </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>u</mi>
+                  <mn>2</mn> </msub>
+                <mn>...</mn>
+                <msub>
+                  <mi>u</mi>
+                  <mi>n</mi> </msub> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>=</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>v</mi>
+                  <mn>1</mn> </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>u</mi>
+                  <mn>1</mn> </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>v</mi>
+                  <mn>2</mn> </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>u</mi>
+                  <mn>2</mn> </msub>
+                <mn>...</mn>
+                <msub>
+                  <mi>v</mi>
+                  <mi>n</mi> </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>u</mi>
+                  <mi>n</mi> </msub> </mrow>
+              <mo>)</mo> </mrow> </mrow> </math> Ezek tulajdonságaiból az
+        alábbiakat általánosítjuk:
+        <ol>
+          <li>
+            <math>
+              <mrow>
+                <mi>a</mi><mo>+</mo>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mi>b</mi><mo>+</mo><mi>c</mi> </mrow>
+                  <mo>)</mo> </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mi>a</mi><mo>+</mo><mi>b</mi> </mrow>
+                  <mo>)</mo> </mrow>
+                <mo>+</mo><mi>c</mi> </mrow> </math> (asszociativitás)</li>
+          <li>
+            <math>
+              <mrow>
+                <mo>∃</mo><mo>!</mo><mn>0</mn><mo>∈</mo><mi>𝕍</mi>
+                <mo>:</mo><mi>a</mi><mo>+</mo><mn>0</mn><mo>=</mo><mn>0</mn><mo>+</mo><mi>a</mi><mo>=</mo><mi>a</mi>
+              </mrow> </math> (egység, semleges elem létezése)</li>
+          <li>
+            <math>
+              <mrow>
+                <mo>∀</mo><mi>a</mi><mo>∈</mo><mi>𝕍</mi><mo>∃</mo><mo>!</mo><mo
+
+                  stretchy="false">(</mo><mo>−</mo><mi>a</mi><mo stretchy="false">)</mo><mo>∈</mo><mi>𝕍</mi><mo>:</mo><mi>a</mi><mo>+</mo><mo
+
+                  stretchy="false">(</mo><mo>−</mo><mi>a</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn>
+              </mrow> </math> (inverz elem létezése)</li>
+          <li>
+            <math>
+              <mrow>
+                <mi>a</mi><mo>+</mo><mi>b</mi><mo>=</mo><mi>b</mi><mo>+</mo><mi>a</mi>
+              </mrow> </math> (kommutativitás)
+          </li>
+        </ol>
+        Az első három tulajdonsággal rendelkező struktúrát csoportnak, a negyedikkel
+        is rendelkezőt Abel-csoportnak vagy kommutatív csoportnak nevezzük.</li>
+      <li>Skalárral való szorzás ·<br>
+        Legyen
+        <math>
+          <mrow>
+            <mi>λ</mi><mo>,</mo><mi>β</mi><mo>∈</mo><mi>ℝ</mi> </mrow> </math>!
+        <math>
+          <mrow>
+            <msup>
+              <mi>ℝ</mi>
+              <mi>n</mi> </msup> </mrow> </math>-ben azt mondtuk, hogy
+        <math>
+          <mrow>
+            <mi>λ</mi>
+            <mstyle mathsize="normal" mathvariant="bold">
+              <mi>v</mi> </mstyle>
+            <mo>=</mo><mi>λ</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>v</mi>
+                  <mn>1</mn> </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>v</mi>
+                  <mn>2</mn> </msub>
+                <mn>...</mn>
+                <msub>
+                  <mi>v</mi>
+                  <mi>n</mi> </msub> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>=</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>λ</mi>
+                <msub>
+                  <mi>v</mi>
+                  <mn>1</mn> </msub>
+                <mo>,</mo><mi>λ</mi>
+                <msub>
+                  <mi>v</mi>
+                  <mn>2</mn> </msub>
+                <mn>...</mn><mi>λ</mi>
+                <msub>
+                  <mi>v</mi>
+                  <mi>n</mi> </msub> </mrow>
+              <mo>)</mo> </mrow> </mrow> </math>, ezek tulajdonságaiból az
+        alábbiakat általánosítjuk:
+        <ol>
+          <li>
+            <math>
+              <mrow>
+                <mi>λ</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mi>a</mi><mo>+</mo><mi>b</mi> </mrow>
+                  <mo>)</mo> </mrow>
+                <mo>=</mo><mi>λ</mi><mi>a</mi><mo>+</mo><mi>λ</mi><mi>b</mi><mo>,</mo>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mi>λ</mi><mo>+</mo><mi>μ</mi> </mrow>
+                  <mo>)</mo> </mrow>
+                <mi>a</mi><mo>=</mo><mi>λ</mi><mi>a</mi><mo>+</mo><mi>μ</mi><mi>a</mi>
+              </mrow> </math> (disztributivitás)</li>
+          <li>
+            <math>
+              <mrow>
+                <mi>λ</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mi>β</mi><mi>a</mi> </mrow>
+                  <mo>)</mo> </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mi>λ</mi><mi>β</mi> </mrow>
+                  <mo>)</mo> </mrow>
+                <mi>a</mi> </mrow> </math> </li>
+          <li>
+            <math>
+              <mrow>
+                <mn>1</mn><mi>a</mi><mo>=</mo><mi>a</mi> </mrow> </math> </li>
+        </ol>
+      </li>
+    </ul>
+    <div class="def">Definíció:<br>
+      Ha egy halmazon értelmezve van az összeadás és a skalárral való szorzás a
+      fentiek szerint, akkor azt vektortérnek (avagy lineáris térnek) nevezzük.</div>
+    <p>Ismert művelet volt
+      <math>
+        <mrow>
+          <msup>
+            <mi>ℝ</mi>
+            <mi>n</mi> </msup> </mrow> </math>-ben a skaláris szorzás, ezt
+      értettük alatta:
+      <math>
+        <mrow>
+          <mrow>
+            <mo>〈</mo>
+            <mrow>
+              <mstyle mathsize="normal" mathvariant="bold">
+                <mi>v</mi> </mstyle>
+              <mo>,</mo>
+              <mstyle mathsize="normal" mathvariant="bold">
+                <mi>u</mi> </mstyle> </mrow>
+            <mo>〉</mo> </mrow>
+          <mo>=</mo>
+          <mstyle displaystyle="true">
+            <munderover>
+              <mo>∑</mo>
+              <mrow>
+                <mi>j</mi><mo>=</mo><mn>1</mn> </mrow>
+              <mi>n</mi> </munderover>
+            <mrow>
+              <msub>
+                <mi>v</mi>
+                <mi>j</mi> </msub>
+              <msub>
+                <mi>u</mi>
+                <mi>j</mi> </msub> </mrow> </mstyle> </mrow> </math>. Erre
+      érvényesek az alábbi tulajdonságok:</p>
+    <ul>
+      <li>
+        <math>
+          <mrow>
+            <mrow>
+              <mo>〈</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>b</mi><mo>+</mo><mi>c</mi> </mrow>
+              <mo>〉</mo> </mrow>
+            <mo>=</mo>
+            <mrow>
+              <mo>〈</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+              <mo>〉</mo> </mrow>
+            <mo>+</mo>
+            <mrow>
+              <mo>〈</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>c</mi> </mrow>
+              <mo>〉</mo> </mrow> </mrow> </math> </li>
+      <li>
+        <math>
+          <mrow>
+            <mrow>
+              <mo>〈</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+              <mo>〉</mo> </mrow>
+            <mo>=</mo>
+            <mrow>
+              <mo>〈</mo>
+              <mrow>
+                <mi>b</mi><mo>,</mo><mi>a</mi> </mrow>
+              <mo>〉</mo> </mrow> </mrow> </math> </li>
+      <li>
+        <math>
+          <mrow>
+            <mi>λ</mi><mrow><mo>〈</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+              <mo>〉</mo></mrow><mo>=</mo><mrow><mo>〈</mo>
+              <mrow>
+                <mi>λ</mi><mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+              <mo>〉</mo></mrow> </mrow> </math> </li>
+      <li>
+        <math>
+          <mrow>
+            <mrow>
+              <mo>〈</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>a</mi> </mrow>
+              <mo>〉</mo> </mrow>
+            <mo>≥</mo><mn>0</mn> </mrow> </math> és
+        <math>
+          <mrow>
+            <mrow>
+              <mo>〈</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>a</mi> </mrow>
+              <mo>〉</mo> </mrow>
+            <mo>=</mo><mn>0</mn><mo>⇔</mo><mi>a</mi><mo>=</mo><mn>0</mn> </mrow>
+        </math> </li>
+    </ul>
+    <div class="def">Definíció:<br>
+      Legyen
+      <math><mi>X</mi></math> vektortér, amelynek elemei között értelmezve van a
+      skaláris szorzat (két elem skaláris szorzata egy
+      <math>
+        <mi>ℝ</mi> </math>-beli szám) a fenti tulajdonságokkal. Ekkor
+      <math><mi>X</mi></math>-t valós euklideszi (eukleidészi) térnek nevezzük.</div>
+    <div class="pelda">
+      P<strong>élda</strong><br>
+      A
+      <math>
+    <mrow>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <mn>0,1</mn> </mrow>
+    <mo>]</mo> </mrow> </mrow> </math> intervallumon értelmezett
+      folytonos függvények összessége (röviden
+      <math>
+        <mrow>
+          <mi>C</mi>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <mn>0,1</mn> </mrow>
+            <mo>]</mo> </mrow> </mrow> </math> ) a szokásos összeadással,
+      számmal való szorzással, ha a skaláris szorzat definíciója:
+      <math>
+        <mrow>
+          <mrow>
+            <mo>〈</mo>
+            <mrow>
+              <mi>f</mi><mo>,</mo><mi>g</mi> </mrow>
+            <mo>〉</mo> </mrow>
+          <mo>:</mo><mo>=</mo>
+          <mstyle displaystyle="true">
+            <mrow>
+              <msubsup>
+                <mo>∫</mo>
+                <mn>0</mn>
+                <mn>1</mn> </msubsup>
+              <mrow>
+                <mi>f</mi><mo>⋅</mo><mi>g</mi> </mrow> </mrow> </mstyle> </mrow>
+      </math>.</div>
+    <div class="def">Definíció:<br>
+      Legyen
+      <math><mi>X</mi></math> valós euklideszi tér! Ekkor egy
+      <math>
+        <mrow>
+          <mi>a</mi><mo>∈</mo><mi>X</mi> </mrow> </math> elem normáját így
+      határozhatjuk meg:
+      <math>
+        <mrow>
+          <mrow>
+            <mo>‖</mo>
+            <mi>a</mi>
+            <mo>∥</mo> </mrow>
+          <mo>:</mo><mo>=</mo>
+          <msqrt>
+            <mrow>
+              <mrow>
+                <mo>〈</mo>
+                <mrow>
+                  <mi>a</mi><mo>,</mo><mi>a</mi> </mrow>
+                <mo>〉</mo> </mrow> </mrow> </msqrt> </mrow> </math>
+  </div>
+      A norma tulajdonságai:
+  <ol>
+      <li>
+        <math>
+          <mrow>
+            <mrow>
+              <mo>‖</mo>
+              <mi>a</mi>
+              <mo>∥</mo> </mrow>
+            <mo>≥</mo><mn>0</mn> </mrow> </math> és
+        <math>
+          <mrow>
+            <mrow>
+              <mo>‖</mo>
+              <mi>a</mi>
+              <mo>∥</mo> </mrow>
+            <mo>=</mo><mn>0</mn><mo>⇔</mo><mi>a</mi><mo>=</mo><mn>0</mn> </mrow>
+        </math> </li>
+      <li>
+        <math>
+          <mrow>
+            <mrow>
+              <mo>‖</mo>
+              <mrow>
+                <mi>λ</mi><mi>a</mi> </mrow>
+              <mo>∥</mo> </mrow>
+            <mo>=</mo>
+            <mrow>
+              <mo>|</mo>
+              <mi>λ</mi>
+              <mo>|</mo> </mrow>
+            <mo>⋅</mo>
+            <mrow>
+              <mo>‖</mo>
+              <mi>a</mi>
+              <mo>∥</mo> </mrow> </mrow> </math> </li>
+      <li>
+        <math>
+          <mrow>
+            <mrow>
+              <mo>‖</mo>
+              <mrow>
+                <mi>a</mi><mo>+</mo><mi>b</mi> </mrow>
+              <mo>∥</mo> </mrow>
+            <mo>≤</mo>
+            <mrow>
+              <mo>‖</mo>
+              <mi>a</mi>
+              <mo>∥</mo> </mrow>
+            <mo>+</mo>
+            <mrow>
+              <mo>‖</mo>
+              <mi>b</mi>
+              <mo>∥</mo> </mrow> </mrow> </math> (háromszög egyenlőtlenség),
+        mert
+        <math>
+          <mrow>
+            <mrow>
+              <mo>〈</mo>
+              <mrow>
+                <mi>a</mi><mo>+</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo>+</mo><mi>b</mi>
+              </mrow>
+              <mo>〉</mo> </mrow>
+            <mo>=</mo>
+            <mrow>
+              <mo>〈</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>a</mi> </mrow>
+              <mo>〉</mo> </mrow>
+            <mo>+</mo>
+            <mrow>
+              <mo>〈</mo>
+              <mrow>
+                <mi>b</mi><mo>,</mo><mi>a</mi> </mrow>
+              <mo>〉</mo> </mrow>
+            <mo>+</mo>
+            <mrow>
+              <mo>〈</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+              <mo>〉</mo> </mrow>
+            <mo>+</mo>
+            <mrow>
+              <mo>〈</mo>
+              <mrow>
+                <mi>b</mi><mo>,</mo><mi>b</mi> </mrow>
+              <mo>〉</mo> </mrow>
+            <mo>=</mo> </mrow> </math>
+        <math>
+          <mrow>
+            <mo>=</mo>
+            <msup>
+              <mrow>
+                <mrow>
+                  <mo>‖</mo>
+                  <mi>a</mi>
+                  <mo>∥</mo> </mrow> </mrow>
+              <mn>2</mn> </msup>
+            <mo>+</mo>
+            <msup>
+              <mrow>
+                <mrow>
+                  <mo>‖</mo>
+                  <mi>b</mi>
+                  <mo>∥</mo> </mrow> </mrow>
+              <mn>2</mn> </msup>
+            <mo>+</mo><mn>2</mn>
+            <mrow>
+              <mo>〈</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+              <mo>〉</mo> </mrow>
+            <mo>≤</mo>
+            <msup>
+              <mrow>
+                <mrow>
+                  <mo>‖</mo>
+                  <mi>a</mi>
+                  <mo>∥</mo> </mrow> </mrow>
+              <mn>2</mn> </msup>
+            <mo>+</mo>
+            <msup>
+              <mrow>
+                <mrow>
+                  <mo>‖</mo>
+                  <mi>b</mi>
+                  <mo>∥</mo> </mrow> </mrow>
+              <mn>2</mn> </msup>
+            <mo>+</mo><mn>2</mn>
+            <mrow>
+              <mo>‖</mo>
+              <mi>a</mi>
+              <mo>∥</mo> </mrow>
+            <mo>⋅</mo>
+            <mrow>
+              <mo>‖</mo>
+              <mi>b</mi>
+              <mo>∥</mo> </mrow>
+            <mo>=</mo>
+            <msup>
+              <mrow>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mrow>
+                      <mo>‖</mo>
+                      <mi>a</mi>
+                      <mo>∥</mo> </mrow>
+                    <mo>+</mo>
+                    <mrow>
+                      <mo>‖</mo>
+                      <mi>b</mi>
+                      <mo>∥</mo> </mrow> </mrow>
+                  <mo>)</mo> </mrow> </mrow>
+              <mn>2</mn> </msup> </mrow> </math>. Itt felhasználtuk az ún
+        Cauchy-Schwarz-egyenlőtlenséget, mely szerint:</li>
+  </ol>
+    <div class="tetel" id="cauchy-schwarz">Tétel (Cauchy-Schwarz
+      egyenlőtlenség, CS):<br>
+      Legyen
+      <math><mi>X</mi></math> valós euklideszi tér! Ekkor
+      <math>
+        <mrow>
+          <mo>∀</mo>
+          <mi>a</mi>
+          <mo>,</mo>
+          <mi>b</mi>
+          <mo>∈</mo>
+          <mi>X</mi> </mrow> </math> esetén
+      <math>
+        <mrow>
+          <mrow>
+            <mo>|</mo>
+            <mrow>
+              <mrow>
+                <mo>〈</mo>
+                <mrow>
+                  <mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+                <mo>〉</mo> </mrow> </mrow>
+            <mo>|</mo> </mrow>
+          <mo>≤</mo>
+          <mrow>
+            <mo>‖</mo>
+            <mi>a</mi>
+            <mo>∥</mo> </mrow>
+          <mo>⋅</mo>
+          <mrow>
+            <mo>‖</mo>
+            <mi>b</mi>
+      <mo>∥</mo> </mrow> </mrow> </math>.</div>
+    <div class="bizonyitas">Bizonyítás:<br>
+      <math>
+        <mrow>
+          <mn>0</mn><mo>≤</mo>
+          <mrow>
+            <mo>〈</mo>
+            <mrow>
+              <mi>a</mi><mo>+</mo><mi>λ</mi><mi>b</mi><mo>,</mo><mi>a</mi><mo>+</mo><mi>λ</mi><mi>b</mi>
+            </mrow>
+            <mo>〉</mo> </mrow>
+          <mo>=</mo>
+          <mrow>
+            <mo>〈</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>a</mi> </mrow>
+            <mo>〉</mo> </mrow>
+          <mo>+</mo>
+          <mrow>
+            <mo>〈</mo>
+            <mrow>
+              <mi>λ</mi><mi>b</mi><mo>,</mo><mi>a</mi> </mrow>
+            <mo>〉</mo> </mrow>
+          <mo>+</mo>
+          <mrow>
+            <mo>〈</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>λ</mi><mi>b</mi> </mrow>
+            <mo>〉</mo> </mrow>
+          <mo>+</mo>
+          <mrow>
+            <mo>〈</mo>
+            <mrow>
+              <mi>λ</mi><mi>b</mi><mo>,</mo><mi>λ</mi><mi>b</mi> </mrow>
+            <mo>〉</mo> </mrow>
+          <mo>=</mo>
+          <mrow>
+            <mo>〈</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>a</mi> </mrow>
+            <mo>〉</mo> </mrow>
+          <mo>+</mo><mn>2</mn><mi>λ</mi>
+          <mrow>
+            <mo>〈</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+            <mo>〉</mo> </mrow>
+          <mo>+</mo>
+          <msup>
+            <mi>λ</mi>
+            <mn>2</mn> </msup>
+          <mrow>
+            <mo>〈</mo>
+            <mrow>
+              <mi>b</mi><mo>,</mo><mi>b</mi> </mrow>
+            <mo>〉</mo> </mrow> </mrow> </math>, ez teljesül minden
+      <math>
+        <mi>λ</mi> </math> értékre, így
+      <math>
+        <mrow>
+          <mn>4</mn>
+          <msup>
+            <mrow>
+              <mrow>
+                <mo>〈</mo>
+                <mrow>
+                  <mi>a</mi>
+                  <mo>,</mo>
+                  <mi>b</mi> </mrow>
+                <mo>〉</mo> </mrow> </mrow>
+            <mn>2</mn> </msup>
+          <mo>−</mo>
+          <mn>4</mn>
+          <mrow>
+            <mo>〈</mo>
+            <mrow>
+              <mi>a</mi>
+              <mo>,</mo>
+              <mi>a</mi> </mrow>
+            <mo>〉</mo> </mrow>
+          <mrow>
+            <mo>〈</mo>
+            <mrow>
+              <mi>b</mi>
+              <mo>,</mo>
+              <mi>b</mi> </mrow>
+            <mo>〉</mo> </mrow>
+          <mo>≤</mo>
+          <mn>0</mn> </mrow> </math>, vagyis
+      <math display='block'>
+ <mrow>
+  <msup>
+   <mrow>
+    <mrow><mo>&#x2329;</mo> <mrow>
+     <mi>a</mi><mo>,</mo><mi>b</mi></mrow> <mo>&#x232A;</mo></mrow></mrow>
+   <mn>2</mn>
+  </msup>
+  <mo>&#x2264;</mo><mrow><mo>&#x2329;</mo> <mrow>
+   <mi>a</mi><mo>,</mo><mi>a</mi></mrow> <mo>&#x232A;</mo></mrow><mrow><mo>&#x2329;</mo> <mrow>
+   <mi>b</mi><mo>,</mo><mi>b</mi></mrow> <mo>&#x232A;</mo></mrow><mo>&#x21D2;</mo><mrow><mo>|</mo> <mrow>
+   <mrow><mo>&#x2329;</mo> <mrow>
+    <mi>a</mi><mo>,</mo><mi>b</mi></mrow> <mo>&#x232A;</mo></mrow></mrow> <mo>|</mo></mrow><mo>&#x2264;</mo><msqrt>
+   <mrow>
+    <mrow><mo>&#x2329;</mo> <mrow>
+     <mi>a</mi><mo>,</mo><mi>a</mi></mrow> <mo>&#x232A;</mo></mrow></mrow>
+  </msqrt>
+  <msqrt>
+   <mrow>
+    <mrow><mo>&#x2329;</mo> <mrow>
+     <mi>b</mi><mo>,</mo><mi>b</mi></mrow> <mo>&#x232A;</mo></mrow></mrow>
+  </msqrt>
+  <mo>=</mo><mrow><mo>&#x2016;</mo> <mi>a</mi> <mo>&#x2016;</mo></mrow><mo>&#x22C5;</mo><mrow><mo>&#x2016;</mo> <mi>b</mi> <mo>&#x2016;</mo></mrow><mo>.</mo></mrow>
+</math>
+ ■ </div>
+    <div class="def">Definíció:<br>
+      Legyen
+        <math><mi>X</mi></math> vektortér, amelyen értelmezve van egy norma a
+      fenti tulajdonságokkal, ekkor
+      <math><mi>X</mi></math>-t normált térnek nevezzük.</div>
+    <div class="pelda">Példa:<br>
+      <math>
+        <mrow>
+          <mi>X</mi>
+          <mo>=</mo>
+          <mi>C</mi>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <mn>0,1</mn> </mrow>
+            <mo>]</mo> </mrow> </mrow> </math>, a függvény normája pedig
+      <math>
+        <mrow>
+          <mrow>
+            <mo>‖</mo>
+            <mi>f</mi>
+            <mo>∥</mo> </mrow>
+          <mo>:</mo>
+          <mo>=</mo>
+          <mi>sup</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>|</mo>
+            <mi>f</mi>
+            <mo>|</mo> </mrow> </mrow> </math>.</div>
+    <p>Egy normált térben mindig értelmezhető az elemek
+      <math>
+        <mi>ρ</mi> </math> távolsága,
+      <math>
+        <mrow>
+          <mi>ρ</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>:</mo><mo>=</mo>
+          <mrow>
+            <mo>‖</mo>
+            <mrow>
+              <mi>a</mi><mo>−</mo><mi>b</mi> </mrow>
+            <mo>∥</mo> </mrow> </mrow> </math>. A távolság (metrika)
+      tulajdonságai:</p>
+    <ol>
+      <li>
+        <math>
+          <mrow>
+            <mi>ρ</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>≥</mo><mn>0</mn> </mrow> </math> és
+        <math>
+          <mrow>
+            <mi>ρ</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>=</mo><mn>0</mn><mo>⇔</mo><mi>a</mi><mo>=</mo><mi>b</mi> </mrow>
+        </math> </li>
+      <li>
+        <math>
+          <mrow>
+            <mi>ρ</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>=</mo><mi>ρ</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>b</mi><mo>,</mo><mi>a</mi> </mrow>
+              <mo>)</mo> </mrow> </mrow> </math> </li>
+      <li>
+        <math>
+          <mrow>
+            <mi>ρ</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>c</mi> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>≤</mo><mi>ρ</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>+</mo><mi>ρ</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>b</mi><mo>,</mo><mi>c</mi> </mrow>
+              <mo>)</mo> </mrow> </mrow> </math> (háromszög egyenlőtlenség) </li>
+    </ol>
+    <div class="def">Definíció:<br>
+      Legyen
+      <math><mi>X</mi></math> valamilyen halmaz és tfh értelmezve van
+      <math>
+        <mrow>
+          <mi>ρ</mi>
+          <mo>:</mo>
+          <mi>X</mi>
+          <mo>×</mo>
+          <mi>X</mi>
+          <mo>→</mo>
+          <mi>ℝ</mi> </mrow> </math> függvény (metrika, távolság) a fenti
+      tulajdonságokkal! Ekkor
+      <math><mi>X</mi></math>-t metrikus térnek nevezzük.</div>
+    <h2>Topológiai alapfogalmak a metrikus térben</h2>
+    <div class="def">Definíció:<br>
+      Legyen
+      <math>
+        <mi>X</mi> </math> metrikus tér! Egy
+      <math>
+        <mrow>
+          <mi>a</mi>
+          <mo>∈</mo>
+          <mi>X</mi> </mrow> </math> pont
+      <math>
+        <mi>r</mi> </math> sugarú környezete azon pontok összessége, amelyek
+      <math>
+        <mi>a</mi> </math>-tól
+      <math>
+        <mi>r</mi> </math>-nél kisebb távolságra vannak:
+      <math>
+        <mrow>
+          <msub>
+            <mi>B</mi>
+            <mi>r</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow>
+          <mo>:</mo>
+          <mo>=</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <mi>x</mi>
+              <mo>∈</mo>
+              <mi>X</mi>
+              <mo>:</mo>
+              <mi>ρ</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>a</mi> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>&lt;</mo>
+              <mi>r</mi> </mrow>
+            <mo>}</mo> </mrow> </mrow><mo>.</mo> </math> </div>
+    <h3>Pont és halmaz viszonya</h3>
+    <p>Legyen
+      <math>
+        <mrow>
+          <mi>a</mi>
+          <mo>∈</mo>
+          <mi>X</mi>
+          <mo>,</mo>
+          <mi>M</mi>
+          <mo>⊂</mo>
+          <mi>X</mi> </mrow> </math>! </p>
+    <div class="def">Definíció:<br>
+      Azt mondjuk, hogy az
+        <math><mi>a</mi></math> pont az
+      <math><mi>M</mi></math> halmaznak belső pontja, ha létezik
+      <math><mi>a</mi></math>-nak olyan
+      <math><mi>r</mi></math> sugarú környezete, hogy
+      <math>
+        <mrow>
+          <msub>
+            <mi>B</mi>
+            <mi>r</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow>
+          <mo>⊂</mo>
+          <mi>M</mi> </mrow> </math>. Jele:
+      <math>
+        <mrow>
+          <mi>a</mi>
+          <mo>∈</mo>
+          <mi>int</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow> </mrow><mo>.</mo> </math> </div>
+    <div class="def">Definíció:<br>
+      Az <math><mi>a</mi></math> pont az
+      <math><mi>M</mi></math> halmaznak külső pontja, ha létezik
+      <math><mi>a</mi></math>-nak olyan
+      <math><mi>r</mi></math> sugarú környezete, hogy
+      <math>
+        <mrow>
+          <msub>
+            <mi>B</mi>
+            <mi>r</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow>
+          <mo>∩</mo>
+          <mi>M</mi>
+          <mo>=</mo>
+          <mo>∅</mo> </mrow> </math>. Jele:
+      <math>
+        <mrow>
+          <mi>a</mi>
+          <mo>∈</mo>
+          <mi>ext</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow> </mrow><mo>.</mo> </math> </div>
+    <div class="def">Definíció:<br>
+      Az
+        <math><mi>a</mi></math> pont
+      <math><mi>M</mi></math>-nek határpontja, ha
+      <math><mi>a</mi></math> minden
+      <math><mi>r</mi></math> sugarú környezete esetén
+      <math>
+        <mrow>
+          <msub>
+            <mi>B</mi>
+            <mi>r</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow>
+          <mo>∩</mo>
+          <mi>M</mi>
+          <mo>≠</mo>
+          <mo>∅</mo> </mrow> </math> és
+      <math>
+        <mrow>
+          <msub>
+            <mi>B</mi>
+            <mi>r</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow>
+          <mo>∩</mo>
+          <msup>
+            <mi>M</mi>
+            <mi>C</mi> </msup>
+          <mo>≠</mo>
+          <mo>∅</mo> </mrow> </math>. Jele:
+      <math>
+        <mrow>
+          <mi>a</mi>
+          <mo>∈</mo>
+          <mo>∂</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow>
+          <mo>=</mo>
+          <mi>front</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow> </mrow> <mo>.</mo></math> </div>
+    <div class="allitas">Állítás:<br>
+      <math>
+        <mrow>
+          <mo>∂</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow>
+          <mo>,</mo><mi>ext</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow>
+          <mo>,</mo><mi>int</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow> </mrow> </math> halmazok diszjunktak, uniójuk
+      kiadja
+      <math><mi>X</mi></math>-et.</div>
+    <div class="def">Definíció:<br>
+      Egy
+        <math>
+        <mrow>
+          <mi>a</mi>
+          <mo>∈</mo>
+          <mi>X</mi> </mrow> </math> pontot az
+      <math><mi>M</mi></math> halmaz torlódási pontjának nevezünk, ha az
+      <math><mi>a</mi></math> pont minden környezetében van
+      <math><mi>M</mi></math>-beli, de
+      <math><mi>a</mi></math>-tól különböző pont, formailag:
+      <math><mi>a</mi></math> torlódási pont, ha
+      <math>
+        <mrow>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <msub>
+                <mi>B</mi>
+                <mi>r</mi> </msub>
+              <mrow>
+                <mo>(</mo>
+                <mi>a</mi>
+                <mo>)</mo> </mrow>
+              <mo>\</mo>
+              <mrow>
+                <mo>{</mo>
+                <mi>a</mi>
+                <mo>}</mo> </mrow> </mrow>
+            <mo>}</mo> </mrow>
+          <mo>∩</mo><mi>M</mi><mo>≠</mo><mo>∅</mo> </mrow> </math>. Az
+      <math><mi>M</mi></math> halmaz torlódási pontjainak halmazát
+      <math><mi>M</mi></math> '-vel jelöljük.</div>
+  <div class="megj"> Megjegyzés:<br>
+      Ha az
+        <math><mi>a</mi></math> pont
+      <math><mi>M</mi></math>-nek torlódási pontja, akkor
+      <math><mi>a</mi></math>-nak minden környezete végtelen sok pontot
+      tartalmaz az
+      <math><mi>M</mi></math> halmazból.</div>
+    <div class="def">Definíció:<br>
+    Az 
+      <math><mi>M</mi></math> halmaz belső és határpontjainak összességét az
+      <math><mi>M</mi></math> halmaz lezárásának nevezzük,
+      <math>
+        <mrow>
+          <mover accent="true">
+            <mi>M</mi>
+            <mo stretchy="true">¯</mo> </mover>
+          <mo>=</mo><mi>int</mi><mo>⁡</mo><mi>M</mi><mo>∪</mo><mo>∂</mo><mi>M</mi>
+  </mrow> </math>. </div>
+    <div class="pelda">
+      <p>Példák:
+      </p>
+      <ul>
+        <li>
+          <math>
+            <mrow>
+              <mi>X</mi><mo>=</mo><mi>ℝ</mi><mo>,</mo><mi>M</mi><mo>=</mo>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mn>0,1</mn> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>⇒</mo><mi>M</mi><mo>'</mo><mo>=</mo>
+              <mrow>
+                <mo>[</mo>
+                <mrow>
+                  <mn>0,1</mn> </mrow>
+                <mo>]</mo> </mrow> </mrow> </math>, 
+          <math>
+            <mrow>
+              <mo>∂</mo><mi>M</mi><mo>=</mo>
+              <mrow>
+                <mo>{</mo>
+                <mrow>
+                  <mn>0,1</mn> </mrow>
+                <mo>}</mo> </mrow>
+              <mo>,</mo><mi>int</mi><mo>⁡</mo><mi>M</mi><mo>=</mo>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mn>0,1</mn> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>,</mo>
+              <mover accent="true">
+                <mi>M</mi>
+                <mo stretchy="true">¯</mo> </mover>
+              <mo>=</mo>
+              <mrow>
+                <mo>[</mo>
+                <mrow>
+                  <mn>0,1</mn> </mrow>
+        <mo>]</mo> </mrow> </mrow> </math> </li>
+        <li>
+          <math>
+            <mrow>
+              <mi>X</mi><mo>=</mo><mi>ℝ</mi><mo>,</mo><mi>M</mi><mo>=</mo><mi>ℤ</mi><mo>⇒</mo><mi>M</mi><mo>'</mo><mo>=</mo><mo>∅</mo>
+            </mrow> </math>
+          , 
+          <math>
+            <mrow>
+              <mo>∂</mo><mi>M</mi><mo>=</mo><mi>ℤ</mi><mo>,</mo><mi>int</mi><mo>⁡</mo><mi>M</mi><mo>=</mo><mo>∅</mo><mo>,</mo>
+              <mover accent="true">
+                <mi>M</mi>
+                <mo stretchy="true">¯</mo> </mover>
+          <mo>=</mo><mi>ℤ</mi> </mrow> </math> </li>
+        <li>
+          <math>
+            <mrow>
+              <mi>X</mi><mo>=</mo><mi>ℝ</mi><mo>,</mo><mi>M</mi><mo>=</mo>
+              <mrow>
+                <mo>[</mo>
+                <mrow>
+                  <mn>0,1</mn> </mrow>
+                <mo>]</mo> </mrow>
+              <mo>⇒</mo><mi>M</mi><mo>'</mo><mo>=</mo>
+              <mrow>
+                <mo>[</mo>
+                <mrow>
+                  <mn>0,1</mn> </mrow>
+                <mo>]</mo> </mrow> </mrow> </math>
+          , 
+          <math>
+            <mrow>
+              <mo>∂</mo><mi>M</mi><mo>=</mo>
+              <mrow>
+                <mo>{</mo>
+                <mrow>
+                  <mn>0,1</mn> </mrow>
+                <mo>}</mo> </mrow>
+              <mo>,</mo><mi>int</mi><mo>⁡</mo><mi>M</mi><mo>=</mo>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mn>0,1</mn> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>,</mo>
+              <mover accent="true">
+                <mi>M</mi>
+                <mo stretchy="true">¯</mo> </mover>
+              <mo>=</mo>
+              <mrow>
+                <mo>[</mo>
+                <mrow>
+                  <mn>0,1</mn> </mrow>
+          <mo>]</mo> </mrow> </mrow> </math> </li>
+      </ul>
+  </div>
+    <h3>Nyílt és zárt halmazok </h3>
+    <div class="def">Definíció:<br>
+      Egy
+        <math>
+        <mrow>
+          <mi>M</mi>
+          <mo>⊂</mo>
+          <mi>X</mi> </mrow> </math> halmazt nyíltnak nevezünk, ha
+      <math>
+        <mrow>
+          <mo>∀</mo><mi>x</mi><mo>∈</mo><mi>M</mi> </mrow> </math> esetén
+      <math display="block">
+        <mrow>
+          <mi>x</mi><mo>∈</mo><mi>int</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow>
+          <mo>⇔</mo><mi>M</mi><mo>⊂</mo><mi>int</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow>
+          <mo>⇔</mo><mi>M</mi><mo>∩</mo><mo>∂</mo><mi>M</mi><mo>=</mo><mo>∅</mo><mo>.</mo>
+        </mrow></math> </div>
+    <div class="def">Definíció:<br>
+      Egy
+        <math><mi>M</mi></math> halmazt zártnak nevezünk, ha tartalmazza az összes
+      határpontját
+      <math>
+        <mrow>
+          <mo>⇔</mo>
+          <mo>∂</mo>
+          <mi>M</mi>
+          <mo>⊂</mo>
+          <mi>M</mi> </mrow> </math>.</div>
+    <div class="pelda">
+      <p>Példák:<br>
+      Legyen
+        <math>
+          <mrow>
+            <mi>X</mi>
+            <mo>:</mo>
+            <mo>=</mo>
+            <mi>ℝ</mi>
+          </mrow>
+        </math>
+        , ekkor:
+      </p>
+      <ul>
+        <li>
+          <math>
+            <mrow>
+              <mi>M</mi><mo>=</mo>
+              <mrow>
+                <mo>[</mo>
+                <mrow>
+                  <mn>0,1</mn> </mrow>
+        <mo>]</mo> </mrow> </mrow> </math> zárt halmaz</li>
+        <li>
+          <math>
+            <mrow>
+              <mi>M</mi><mo>=</mo>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mn>0,1</mn> </mrow>
+                <mo>)</mo> </mrow> </mrow> </math> nyílt halmaz</li>
+        <li>
+          <math>
+            <mrow>
+              <mi>M</mi><mo>=</mo>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mn>0,1</mn> </mrow>
+                <mo>]</mo> </mrow> </mrow> </math> se nem nyílt, se nem zárt
+          halmaz</li>
+        <li>
+          <math>
+            <mrow>
+              <mi>M</mi><mo>=</mo><mi>ℤ</mi> </mrow> </math>
+          zárt halmaz</li>
+      </ul>
+  </div>
+    <div class="allitas">Állítás:<br>
+      Egy
+        <math>
+        <mrow>
+          <mi>M</mi>
+          <mo>⊂</mo>
+          <mi>X</mi> </mrow> </math> halmaz zárt
+      <math>
+        <mrow>
+          <mo>⇔</mo>
+          <mi>M</mi>
+          <mo>=</mo>
+          <mover accent="true">
+            <mi>M</mi>
+            <mo stretchy="true">¯</mo> </mover>
+          <mo>⇔</mo>
+          <mi>M</mi>
+          <mo>'</mo>
+          <mo>⊂</mo>
+          <mi>M</mi> </mrow> </math>. </div>
+    <div class="tetel">Tétel:<br>
+      Tetszőleges
+        <math><mi>M</mi></math> halmaz esetén
+      <math>
+        <mrow>
+          <mi>int</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow> </mrow> </math> és
+      <math>
+        <mrow>
+          <mi>ext</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow> </mrow> </math> nyílt halmaz.</div>
+    <div class="bizonyitas">Bizonyítás<br>
+      (<math>
+        <mrow>
+          <mi>int</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow> </mrow> </math> nyílt halmaz): legyen
+      <math>
+        <mrow>
+          <mi>a</mi>
+          <mo>∈</mo>
+          <mi>int</mi>
+          <mo>⁡</mo>
+          <mi>M</mi> </mrow> </math>. Azt kellene megmutatni, hogy
+      <math>
+        <mrow>
+          <mo>∃</mo>
+          <msub>
+            <mi>B</mi>
+            <mi>r</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow>
+          <mo>⊂</mo>
+          <mi>int</mi>
+          <mo>⁡</mo>
+          <mi>M</mi> </mrow> </math>.
+      <math>
+        <mrow>
+          <mi>a</mi>
+          <mo>∈</mo>
+          <mi>int</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow>
+          <mo>⇒</mo>
+          <mo>∃</mo>
+          <msub>
+            <mi>B</mi>
+            <mi>R</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow>
+          <mo>⊂</mo>
+          <mi>M</mi> </mrow> </math>. Legyen
+      <math>
+        <mrow>
+          <mi>r</mi>
+          <mo>:</mo>
+          <mo>=</mo>
+          <mi>R</mi>
+          <mo>/</mo>
+          <mn>2</mn> </mrow> </math>, ekkor
+      <math>
+        <mrow>
+          <msub>
+            <mi>B</mi>
+            <mi>r</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow>
+          <mo>⊂</mo>
+          <mi>int</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow> </mrow> </math>, ugyanis ha
+      <math>
+        <mrow>
+          <mi>b</mi><mo>∈</mo>
+          <msub>
+            <mi>B</mi>
+            <mi>r</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow> </mrow> </math>, akkor a háromszög
+      egyenlőtlenség miatt
+      <math>
+        <mrow>
+          <msub>
+            <mi>B</mi>
+            <mi>r</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>b</mi>
+            <mo>)</mo> </mrow>
+          <mo>⊂</mo>
+          <msub>
+            <mi>B</mi>
+            <mi>R</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow>
+          <mo>⊂</mo><mi>M</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi>int</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow>
+          <mo>⇒</mo>
+          <msub>
+            <mi>B</mi>
+            <mi>r</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow>
+          <mo>⊂</mo><mi>int</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow> </mrow> </math> .■</div>
+    <div class="allitas">Állítás:<br>
+      <math>
+        <mrow>
+          <mo>∂</mo>
+          <mi>M</mi>
+          <mo>,</mo>
+          <mover accent="true">
+            <mi>M</mi>
+            <mo stretchy="true">¯</mo> </mover>
+          <mo>,</mo>
+          <mi>M</mi>
+          <mo>'</mo> </mrow> </math> zárt halmazok.</div>
+    <div class="tetel">Tétel:<br>
+      Ha
+        <math>
+        <mrow>
+          <mi>M</mi><mo>⊂</mo><mi>X</mi> </mrow> </math> nyílt, akkor
+      <math>
+        <mrow>
+          <msup>
+            <mi>M</mi>
+            <mi>C</mi> </msup>
+          <mo>=</mo><mi>X</mi>
+          <mtext> \ </mtext>
+          <mi>M</mi> </mrow> </math> zárt halmaz.</div>
+    <div class="bizonyitas">Bizonyítás:<br>
+      Tfh
+        <math><mi>M</mi></math> nyílt halmaz, ekkor
+      <math>
+        <mrow>
+          <mo>∂</mo><mi>M</mi><mo>∩</mo><mi>M</mi><mo>=</mo><mo>∅</mo> </mrow>
+      </math>,
+      <math>
+        <mrow>
+          <mo>∂</mo><mi>M</mi><mo>=</mo><mo>∂</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msup>
+                <mi>M</mi>
+                <mi>c</mi> </msup> </mrow>
+            <mo>)</mo> </mrow> </mrow> </math>, ezért
+      <math display="block">
+        <mrow>
+          <mo>∂</mo>
+          <msup>
+            <mi>M</mi>
+            <mi>C</mi> </msup>
+          <mo>∩</mo><mi>M</mi><mo>=</mo><mo>∅</mo><mo>⇒</mo><mo>∂</mo>
+          <msup>
+            <mi>M</mi>
+            <mi>C</mi> </msup>
+          <mo>⊂</mo>
+          <msup>
+            <mi>M</mi>
+            <mi>C</mi> </msup> </mrow><mo>,</mo> </math> vagyis
+      <math>
+        <mrow>
+          <msup>
+            <mi>M</mi>
+            <mi>C</mi> </msup> </mrow> </math> zárt. ■</div>
+    <div class="tetel">Tétel:<br>
+      Akárhány nyílt halmaz uniója nyílt halmaz, és véges sok nyílt halmaz
+      metszete is nyílt.</div>
+    <div class="bizonyitas">Bizonyítás:<br>
+      Legyenek
+        <math>
+        <mrow>
+          <msub>
+            <mi>M</mi>
+            <mrow>
+              <mi>γ</mi>
+              <mo>∈</mo>
+              <mi>I</mi> </mrow> </msub> </mrow> </math> nyílt halmazok (<math><mi>I</mi></math>
+      indexhalmaz)! Belátjuk, hogy
+      <math>
+        <mrow>
+          <mi>M</mi>
+          <mo>:</mo>
+          <mo>=</mo>
+          <mstyle displaystyle="true">
+            <munder>
+              <mo>∪</mo>
+              <mrow>
+                <mi>γ</mi>
+                <mo>∈</mo>
+                <mi>I</mi> </mrow> </munder>
+            <mrow>
+              <msub>
+                <mi>M</mi>
+                <mi>γ</mi> </msub> </mrow> </mstyle> </mrow> </math> nyílt.
+      Legyen
+      <math>
+        <mrow>
+          <mi>a</mi>
+          <mo>∈</mo>
+          <mi>M</mi>
+          <mo>⇒</mo>
+          <mo>∃</mo>
+          <mi>γ</mi>
+          <mo>:</mo>
+          <mi>a</mi>
+          <mo>∈</mo>
+          <msub>
+            <mi>M</mi>
+            <mi>γ</mi> </msub> </mrow> </math>. Mivel
+      <math>
+        <mrow>
+          <msub>
+            <mi>M</mi>
+            <mi>γ</mi> </msub> </mrow> </math> nyílt, ezért
+      <math display="block">
+        <mrow>
+          <mo>∃</mo>
+          <msub>
+            <mi>B</mi>
+            <mi>r</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow>
+          <mo>⊂</mo>
+          <msub>
+            <mi>M</mi>
+            <mi>γ</mi> </msub>
+          <mo>⇒</mo>
+          <msub>
+            <mi>B</mi>
+            <mi>r</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow>
+          <mo>⊂</mo>
+          <mi>M</mi> </mrow><mo>.</mo> </math><br>
+      Legyenek
+      <math>
+        <mrow>
+          <msub>
+            <mi>M</mi>
+            <mrow>
+              <mi>j</mi><mo>∈</mo><mi>I</mi> </mrow> </msub> </mrow> </math>
+      nyílt halmazok (<math><mi>I</mi></math> indexhalmaz)! Belátjuk, hogy
+      <math>
+        <mrow>
+          <mi>M</mi><mo>:</mo><mo>=</mo>
+          <mstyle displaystyle="true">
+            <munderover>
+              <mo>∩</mo>
+              <mrow>
+                <mi>j</mi><mo>=</mo><mn>1</mn> </mrow>
+              <mi>p</mi> </munderover>
+            <mrow>
+              <msub>
+                <mi>M</mi>
+                <mi>j</mi> </msub> </mrow> </mstyle> </mrow> </math> nyílt
+      halmaz. Legyen
+      <math>
+        <mrow>
+          <mi>a</mi><mo>∈</mo><mi>M</mi><mo>⇒</mo><mi>a</mi><mo>∈</mo>
+          <msub>
+            <mi>M</mi>
+            <mi>j</mi> </msub>
+          <mo>,</mo><mo>∀</mo><mi>j</mi><mo>=</mo><mn>1,2...</mn><mi>p</mi> </mrow>
+      </math>. Mivel
+      <math>
+        <mrow>
+          <msub>
+            <mi>M</mi>
+            <mi>j</mi> </msub> </mrow> </math> nyílt, ezért
+      <math>
+        <mrow>
+          <mo>∃</mo>
+          <msub>
+            <mi>r</mi>
+            <mi>j</mi> </msub>
+          <mo>:</mo>
+          <msub>
+            <mi>B</mi>
+            <mrow>
+              <msub>
+                <mi>r</mi>
+                <mi>j</mi> </msub> </mrow> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow>
+          <mo>⊂</mo>
+          <msub>
+            <mi>M</mi>
+            <mi>j</mi> </msub> </mrow> </math>. Legyen
+      <math>
+        <mrow>
+          <mi>r</mi><mo>=</mo><mi>min</mi><mo>⁡</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <msub>
+                <mi>r</mi>
+                <mn>1</mn> </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>r</mi>
+                <mn>2</mn> </msub>
+              <mn>,..,</mn>
+              <msub>
+                <mi>r</mi>
+                <mi>p</mi> </msub> </mrow>
+            <mo>}</mo> </mrow>
+          <mo>⇒</mo>
+          <msub>
+            <mi>B</mi>
+            <mi>r</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow>
+          <mo>⊂</mo>
+          <mstyle displaystyle="true">
+            <munderover>
+              <mo>∩</mo>
+              <mrow>
+                <mi>j</mi><mo>=</mo><mn>1</mn> </mrow>
+              <mi>p</mi> </munderover>
+            <mrow>
+              <msub>
+                <mi>M</mi>
+                <mi>j</mi> </msub> </mrow> </mstyle> </mrow> </math> . ■</div>
+    <div class="tetel">Tétel:<br>
+      Akárhány zárt halmaz metszete zárt halmaz, és véges sok zárt halmaz uniója
+      is zárt.</div>
+  <div class="bizonyitas">Bizonyítás:<br>
+      (Belátjuk, hogy metszetük zárt.) Tfh
+        <math>
+        <mrow>
+          <msub>
+            <mi>M</mi>
+            <mi>γ</mi> </msub> </mrow> </math> zárt! Ekkor
+      <math>
+        <mrow>
+          <msubsup>
+            <mi>M</mi>
+            <mi>γ</mi>
+            <mi>C</mi> </msubsup> </mrow> </math> nyílt halmaz. Ezért
+    <math display='block'>
+ <mrow>
+  <mstyle displaystyle='true'>
+   <munder>
+    <mo>⋂</mo>
+    <mrow>
+     <mi>&#x03B3;</mi><mo>&#x2208;</mo><mi>I</mi></mrow>
+   </munder>
+   <mrow>
+    <msub>
+     <mi>M</mi>
+     <mi>&#x03B3;</mi>
+    </msub>
+    </mrow>
+  </mstyle><mo>=</mo><msup>
+   <mrow>
+    <mrow><mo>(</mo>
+     <mrow>
+      <mstyle displaystyle='true'>
+       <munder>
+        <mo>&#x222A;</mo>
+        <mrow>
+         <mi>&#x03B3;</mi><mo>&#x2208;</mo><mi>I</mi></mrow>
+       </munder>
+       <mrow>
+        <msubsup>
+         <mi>M</mi>
+         <mi>&#x03B3;</mi>
+         <mi>C</mi>
+        </msubsup>
+        </mrow>
+      </mstyle></mrow>
+    <mo>)</mo></mrow></mrow>
+   <mi>C</mi>
+  </msup>
+  </mrow>
+</math>
+ 
+      zárt. Az unió esete hasonlóan
+      bizonyítható. ■<br>
+  </div><div class="megj">Megjegyzés: végtelen sok nyílt halmaz metszete általában nem nyílt, az alaphalmaz és az üres halmaz nyílt és zárt egyszerre. </div>
+    <div class="ajanlo"> <div class="ajanlofig"><a href="https://xkcd.com"><img src="wikipedian_protester.png"
+
+          alt="Fun image" height="271" width="500"></a></div>
+      <p><em><strong><a href="https://xkcd.com/">xkcd</a></strong></em>,
+        sometimes styled <em><strong>XKCD</strong></em>,<a href="https://en.wikipedia.org/wiki/Xkcd#cite_note-aboutxkcd-3">[‡
+          1]</a> is a <a href="https://en.wikipedia.org/wiki/Webcomic" title="Webcomic">webcomic</a>
+        created by <a href="https://en.wikipedia.org/wiki/Randall_Munroe" title="Randall Munroe">Randall
+          Munroe</a>. The comic's <a href="https://en.wikipedia.org/wiki/Tagline"
+
+          title="Tagline">tagline</a> describes it as "A webcomic of romance,
+        sarcasm, math, and language".<a href="https://en.wikipedia.org/wiki/Xkcd#cite_note-4">[‡
+          2]</a><a href="https://en.wikipedia.org/wiki/Xkcd#cite_note-Boston.com-5">[3]</a>
+        Munroe states on the comic's website that the name of the comic is not
+        an <a href="https://en.wikipedia.org/wiki/Acronym" title="Acronym">acronym</a>
+        but "just a word with no phonetic pronunciation".</p>
+      <p>The subject matter of the comic varies from statements on life and love
+        to <a href="https://en.wikipedia.org/wiki/Mathematical_joke" title="Mathematical joke">mathematical</a>
+        and <a href="https://en.wikipedia.org/wiki/Science" title="Science">scientific</a>
+        <a href="https://en.wikipedia.org/wiki/In-joke" title="In-joke">in-jokes</a>.
+        Some strips feature simple humor or <a href="https://en.wikipedia.org/wiki/Pop-culture"
+
+          title="Pop-culture">pop-culture</a> references. Although it has a cast
+        of <a href="https://en.wikipedia.org/wiki/Stick_figures" title="Stick figures">stick
+          figures</a>,<a href="https://en.wikipedia.org/wiki/Xkcd#cite_note-Guzman-6">[4]</a><a
+
+          href="https://en.wikipedia.org/wiki/Xkcd#cite_note-7">[5]</a> the
+        comic occasionally features landscapes and intricate mathematical
+        patterns such as <a href="https://en.wikipedia.org/wiki/Fractal" title="Fractal">fractals</a>,
+        graphs and <a href="https://en.wikipedia.org/wiki/Chart" title="Chart">charts</a>.<a
+
+          href="https://en.wikipedia.org/wiki/Xkcd#cite_note-8">[6]</a> New
+        comics are added three times a week, on Mondays, Wednesdays, and
+        Fridays,<a href="https://en.wikipedia.org/wiki/Xkcd#cite_note-aboutxkcd-3">[‡
+          1]</a><a href="https://en.wikipedia.org/wiki/Xkcd#cite_note-redhat-9">[7]</a>
+        although on some occasions they have been added every weekday.</p>
+    </div>
+    <h2>Sorozatok határértéke a metrikus térben</h2>
+    <div class="def">Definíció:<br>
+      Egy
+        <math>
+        <mrow>
+          <mi>f</mi><mo>:</mo><mi>ℕ</mi><mo>→</mo><mi>X</mi> </mrow> </math> (<math><mi>X</mi></math>
+      metrikus tér) függvényt
+      <math><mi>X</mi></math>-beli sorozatnak nevezünk. Jelölés: a sorozat
+      <math><mi>k</mi></math>-adik tagja
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi>
+            <mi>k</mi> </msub>
+          <mo>:</mo><mo>=</mo><mi>f</mi>
+          <mrow>
+            <mo>(</mo>
+            <mi>k</mi>
+            <mo>)</mo> </mrow> </mrow> </math>-nek, a sorozat
+      <math>
+        <mrow>
+          <msub>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub> </mrow>
+                <mo>)</mo> </mrow> </mrow>
+            <mrow>
+              <mi>k</mi><mo>∈</mo><mi>ℕ</mi> </mrow> </msub>
+          <mo>:</mo><mo>=</mo><mi>f</mi> </mrow> </math>
+      <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo><mi>f</mi> </mrow> </math>.</div>
+    <div class="def">Definíció:<br>
+      Azt mondjuk, hogy az
+        <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow> </mrow> </math> sorozat határértéke (limesze)
+      <math>
+        <mrow>
+          <mi>a</mi><mo>∈</mo><mi>X</mi> </mrow> </math>, ha az
+      <math><mi>a</mi></math> pont tetszőleges
+      <math>
+        <mi>ε</mi> </math> sugarú környezetéhez létezik olyan
+      <math>
+        <mrow>
+          <msub>
+            <mi>k</mi>
+            <mn>0</mn> </msub>
+          <mo>∈</mo><mi>ℕ</mi> </mrow> </math> küszöbszám, hogy
+      <math>
+        <mrow>
+          <mi>k</mi><mo>&gt;</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>0</mn> </msub>
+          <mo>,</mo><mi>k</mi><mo>∈</mo><mi>ℕ</mi> </mrow> </math> esetén
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi>
+            <mi>k</mi> </msub>
+          <mo>∈</mo>
+          <msub>
+            <mi>B</mi>
+            <mi>ε</mi> </msub>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo> </mrow> </mrow> </math>. Másképp:
+      <math>
+        <mrow>
+          <mo>∀</mo><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mo>∃</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>0</mn> </msub>
+          <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>0</mn> </msub>
+          <mo>⇒</mo><mi>ρ</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub>
+              <mo>,</mo><mi>a</mi> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>&lt;</mo><mi>ε</mi> </mrow> </math>, ezt így jelöljük:
+      <math>
+        <mrow>
+          <mi>lim</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>≡</mo>
+          <munder>
+            <mrow>
+              <mi>lim</mi><mo>⁡</mo> </mrow>
+            <mrow>
+              <mi>k</mi><mo>→</mo><mi>∞</mi> </mrow> </munder>
+          <msub>
+            <mi>a</mi>
+            <mi>k</mi> </msub>
+          <mo>=</mo><mi>a</mi> </mrow><mo>.</mo> </math> </div>
+    <h3>A limesz tulajdonságai</h3>
+  <ol>
+      <li>Ha
+        <math>
+          <mrow>
+            <msub>
+              <mi>a</mi>
+              <mi>k</mi> </msub>
+            <mo>=</mo><mi>a</mi> </mrow> </math> (minden
+        <math><mi>k</mi></math>-ra), akkor
+        <math>
+          <mrow>
+            <mi>lim</mi><mo>⁡</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi>
+                  <mi>k</mi> </msub> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>=</mo><mi>a</mi> </mrow> </math> </li>
+      <li>Tfh
+        <math>
+          <mrow>
+            <mi>lim</mi><mo>⁡</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi>
+                  <mi>k</mi> </msub> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>=</mo><mi>a</mi> </mrow> </math>, akkor
+        <math>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi>
+                  <mi>k</mi> </msub> </mrow>
+              <mo>)</mo> </mrow> </mrow> </math> minden részsorozatának
+        határértéke létezik és értékük
+        <math><mi>a</mi></math>.<br>
+        Részsorozat:
+        <math>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi>
+                  <mi>k</mi> </msub> </mrow>
+              <mo>)</mo> </mrow> </mrow> </math> véges vagy végtelen sok
+        elemét elhagyom úgy, hogy még mindig végtelen sok maradjon, és a
+        sorrenden nem változtatok. Másképpen:
+        <math>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi>
+                  <mi>k</mi> </msub> </mrow>
+              <mo>)</mo> </mrow> </mrow> </math> részsorozata
+        <math>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi>
+                  <mrow>
+                    <msub>
+                      <mi>g</mi>
+                      <mi>k</mi> </msub> </mrow> </msub> </mrow>
+              <mo>)</mo> </mrow> </mrow> </math>, ahol
+        <math>
+          <mrow>
+            <mi>g</mi><mo>:</mo><mi>ℕ</mi><mo>→</mo><mi>ℕ</mi> </mrow> </math>
+        szigorúan monoton növő.
+        <p></p>
+        <div class="bizonyitas">Bizonyítás:<br>
+          <math>
+            <mrow>
+              <mi>lim</mi><mo>⁡</mo>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>:</mo><mo>=</mo><mi>a</mi><mo>⇒</mo><mo>∀</mo><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mo>∃</mo>
+              <msub>
+                <mi>k</mi>
+                <mn>0</mn> </msub>
+              <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+              <msub>
+                <mi>k</mi>
+                <mn>0</mn> </msub>
+              <mo>⇒</mo><mi>ρ</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub>
+                  <mo>,</mo><mi>a</mi> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>&lt;</mo><mi>ε</mi> </mrow> </math>. Mivel
+          <math>
+            <mrow>
+              <msub>
+                <mi>g</mi>
+                <mi>k</mi> </msub>
+              <mo>≥</mo><mi>k</mi><mo>⇒</mo><mi>k</mi><mo>&gt;</mo>
+              <msub>
+                <mi>k</mi>
+                <mn>0</mn> </msub> </mrow> </math>-ra
+          <math>
+            <mrow>
+              <mi>ρ</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mrow>
+                      <msub>
+                        <mi>g</mi>
+                        <mi>k</mi> </msub> </mrow> </msub>
+                  <mo>,</mo><mi>a</mi> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>&lt;</mo><mi>ε</mi> </mrow> </math>, hisz ekkor
+          <math>
+            <mrow>
+              <msub>
+                <mi>g</mi>
+                <mi>k</mi> </msub>
+              <mo>&gt;</mo>
+              <msub>
+                <mi>k</mi>
+                <mn>0</mn> </msub> </mrow> </math>.</div>
+      </li>
+      <li>A határérték egyértelmű.
+        <p></p>
+        <div class="bizonyitas">Bizonyítás:<br>
+          Tfh
+            <math>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub> </mrow>
+                <mo>)</mo> </mrow> </mrow> </math> határértékei
+          <math><mi>a</mi></math> és
+          <math><mi>b</mi></math> (<math><mi>X</mi></math> 
+          elemei). Belátandó,
+          hogy
+          <math>
+            <mrow>
+              <mi>a</mi><mo>=</mo><mi>b</mi> </mrow> </math>
+          . Ekkor egyrészt:
+          <math display="block">
+            <mrow>
+              <mo>∀</mo><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mo>∃</mo>
+              <msub>
+                <mi>k</mi>
+                <mn>0</mn> </msub>
+              <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+              <msub>
+                <mi>k</mi>
+                <mn>0</mn> </msub>
+              <mo>⇒</mo><mi>ρ</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub>
+                  <mo>,</mo><mi>a</mi> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>&lt;</mo><mi>ε</mi> </mrow><mo>,</mo> </math> másrészt
+          <math>
+            <mrow>
+              <mo>∀</mo><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mo>∃</mo>
+              <msub>
+                <mi>k</mi>
+                <mn>1</mn> </msub>
+              <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+              <msub>
+                <mi>k</mi>
+                <mn>1</mn> </msub>
+              <mo>,</mo><mi>ρ</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub>
+                  <mo>,</mo><mi>b</mi> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>&lt;</mo><mi>ε</mi> </mrow> </math>
+          <math>
+            <mrow>
+              <mo>⇒</mo><mi>k</mi><mo>&gt;</mo><mi>max</mi><mo>⁡</mo>
+              <mrow>
+                <mo>{</mo>
+                <mrow>
+                  <msub>
+                    <mi>k</mi>
+                    <mn>0</mn> </msub>
+                  <mo>,</mo>
+                  <msub>
+                    <mi>k</mi>
+                    <mn>1</mn> </msub> </mrow>
+                <mo>}</mo> </mrow> </mrow> </math> esetén
+          <math>
+            <mrow>
+              <mi>ρ</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub>
+                  <mo>,</mo><mi>a</mi> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>&lt;</mo><mi>ε</mi><mo>,</mo><mi>ρ</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub>
+                  <mo>,</mo><mi>b</mi> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>&lt;</mo><mi>ε</mi> </mrow> </math>, így a háromszög
+          egyenlőtlenség alapján
+          <math>
+            <mrow>
+              <mi>ρ</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>≤</mo><mi>ρ</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>a</mi><mo>,</mo>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>+</mo><mi>ρ</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub>
+                  <mo>,</mo><mi>b</mi> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>&lt;</mo><mn>2</mn><mi>ε</mi><mo>,</mo><mo>∀</mo><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mo>⇒</mo><mi>ρ</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>a</mi><mo>,</mo><mi>b</mi> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>=</mo><mn>0</mn><mo>⇔</mo><mi>a</mi><mo>=</mo><mi>b</mi> </mrow>
+          </math> </div>
+      </li>
+      <li>Ha
+        <math>
+          <mrow>
+            <mi>lim</mi><mo>⁡</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi>
+                  <mi>k</mi> </msub> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>=</mo><mi>a</mi><mo>⇒</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi>
+                  <mi>k</mi> </msub> </mrow>
+              <mo>)</mo> </mrow> </mrow> </math> 
+        minden átrendezésének a
+        határértéke szintén
+        <math><mi>a</mi></math><br>
+        Egy
+        <math>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi>
+                  <mi>k</mi> </msub> </mrow>
+              <mo>)</mo> </mrow> </mrow> </math> átrendezése: veszek egy
+        <math>
+          <mrow>
+            <mi>g</mi><mo>:</mo><mi>ℕ</mi><mo>→</mo><mi>ℕ</mi> </mrow> </math>
+        bijekciót, az átrendezett sorozat:
+        <math>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi>
+                  <mrow>
+                    <msub>
+                      <mi>g</mi>
+                      <mi>k</mi> </msub> </mrow> </msub> </mrow>
+              <mo>)</mo> </mrow> </mrow> </math>.</li>
+      <li>Sorozatok összefésülése:<br>
+        <math>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi>
+                  <mi>k</mi> </msub> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>,</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>b</mi>
+                  <mi>k</mi> </msub> </mrow>
+              <mo>)</mo> </mrow> </mrow> </math>
+        <math><mi>X</mi></math>-beli sorozatok összefésülése olyan
+        <math>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>c</mi>
+                  <mi>k</mi> </msub> </mrow>
+              <mo>)</mo> </mrow> </mrow> </math>
+        <math><mi>X</mi></math>-beli sorozat, melynek elemei
+        <math>
+          <mrow>
+            <msub>
+              <mi>a</mi>
+              <mn>1</mn> </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>b</mi>
+              <mn>1</mn> </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>a</mi>
+              <mn>2</mn> </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>b</mi>
+              <mn>2</mn> </msub>
+            <mn>...</mn> </mrow> </math>. Ha
+        <math>
+          <mrow>
+            <mi>lim</mi><mo>⁡</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>a</mi>
+                  <mi>k</mi> </msub> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>=</mo><mi>a</mi><mo>=</mo><mi>lim</mi><mo>⁡</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>b</mi>
+                  <mi>k</mi> </msub> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>⇒</mo><mi>lim</mi><mo>⁡</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>c</mi>
+                  <mi>k</mi> </msub> </mrow>
+              <mo>)</mo> </mrow>
+            <mo>=</mo><mi>a</mi> </mrow> </math> </li>
+      <li>Ha egy sorozatnak létezik a limesze, akkor korlátos is. (Korlátos:
+        létezik olyan
+        <math><mi>n</mi></math> dimenziós gömb, mely tartalmazza a sorozat
+        összes elemét.)
+        <p></p>
+        <div class="bizonyitas">Bizonyítás:<br>
+          <math>
+            <mrow>
+              <mi>lim</mi><mo>⁡</mo>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>=</mo><mi>a</mi><mo>⇒</mo><mi>ε</mi><mo>=</mo><mn>1</mn><mo>∃</mo>
+              <msub>
+                <mi>k</mi>
+                <mn>0</mn> </msub>
+              <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+              <msub>
+                <mi>k</mi>
+                <mn>0</mn> </msub>
+              <mo>⇒</mo><mi>ρ</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub>
+                  <mo>,</mo><mi>a</mi> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>&lt;</mo><mn>1</mn> </mrow> </math>, így
+          <math display="block">
+            <mrow>
+              <mi>r</mi><mo>:</mo><mo>=</mo><mi>max</mi><mo>⁡</mo>
+              <mrow>
+                <mo>{</mo>
+                <mrow>
+                  <mi>ρ</mi>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mi>a</mi><mo>,</mo>
+                      <msub>
+                        <mi>a</mi>
+                        <mn>1</mn> </msub> </mrow>
+                    <mo>)</mo> </mrow>
+                  <mo>,</mo><mi>ρ</mi>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mi>a</mi><mo>,</mo>
+                      <msub>
+                        <mi>a</mi>
+                        <mn>2</mn> </msub> </mrow>
+                    <mo>)</mo> </mrow>
+                  <mn>,...,</mn><mi>ρ</mi>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mi>a</mi><mo>,</mo>
+                      <msub>
+                        <mi>a</mi>
+                        <mrow>
+                          <msub>
+                            <mi>k</mi>
+                            <mn>0</mn> </msub> </mrow> </msub> </mrow>
+                    <mo>)</mo> </mrow> </mrow>
+                <mo>}</mo> </mrow> </mrow> </math> esetén
+          <math>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub>
+              <mo>∈</mo>
+              <msub>
+                <mi>B</mi>
+                <mrow>
+                  <mi>r</mi><mo>+</mo><mn>1</mn> </mrow> </msub>
+              <mrow>
+                <mo>(</mo>
+                <mi>a</mi>
+                <mo>)</mo> </mrow>
+              <mo>∀</mo><mi>k</mi> </mrow> </math>.</div>
+      </li>
+    </ol>
+    <h3>A limesz műveleti tulajdonságai normált terekben</h3>
+    <p>A következőkben <math>
+ <mi>X</mi>
+</math>
+ mindig egy normált teret jelöl, <math>
+ <mrow>
+  <mrow><mo>(</mo>
+   <mrow>
+    <msub>
+     <mi>a</mi>
+     <mi>k</mi>
+    </msub>
+    </mrow>
+  <mo>)</mo></mrow></mrow>
+</math>
+, illetve <math>
+ <mrow>
+  <mrow><mo>(</mo>
+   <mrow>
+    <msub>
+     <mi>b</mi>
+     <mi>k</mi>
+    </msub>
+    </mrow>
+  <mo>)</mo></mrow></mrow>
+</math>
+ pedig egy-egy <math>
+ <mi>X</mi>
+</math>-beli sorozatot.</p><p>A bizonyítások során 
+    az egész félévben külön hivatkozás nélkül használjuk azt a tényt, hogy ha egy 
+  <math>
+ <mrow>
+  <msub>
+   <mi>x</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>&#x2282;</mo><mi>X</mi></mrow>
+</math>
+ sorozatra <math>
+ <mrow>
+  <mi>lim</mi><mrow><mo>&#x2016;</mo> <mrow>
+   <msub>
+    <mi>x</mi>
+    <mi>n</mi>
+   </msub>
+   </mrow> <mo>&#x2016;</mo></mrow><mo>&#x2264;</mo><mn>0</mn></mrow>
+</math>
+, akkor <math>
+ <mrow>
+  <msub>
+   <mi>x</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>&#x2192;</mo><mn>0</mn></mrow>
+</math>
+. </p>
+    <h4>Összeadás</h4>
+    <div class="tetel">Tétel:<br>
+      Ha
+      <math>
+        <mrow>
+          <mi>lim</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo>
+          <mi>a</mi>
+          <mo>,</mo>
+          <mi>lim</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>b</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo>
+          <mi>b</mi>
+          <mo>⇒</mo>
+          <mi>lim</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>b</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo>
+          <mi>a</mi>
+          <mo>+</mo>
+      <mi>b</mi> </mrow> </math>. </div>
+  <div class="bizonyitas">Bizonyítás:<br>
+      mivel
+      <math>
+        <mrow>
+          <mi>lim</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo>
+          <mi>a</mi> </mrow> </math>, ezért
+      <math>
+        <mrow>
+          <mo>∀</mo><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mo>∃</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>0</mn> </msub>
+          <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>0</mn> </msub>
+          <mo>⇒</mo><mi>ρ</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>a</mi><mo>,</mo>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo>
+          <mrow>
+            <mo>‖</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub>
+              <mo>−</mo><mi>a</mi> </mrow>
+            <mo>∥</mo> </mrow>
+          <mo>&lt;</mo><mi>ε</mi> </mrow> </math> és mivel
+      <math>
+        <mrow>
+          <mi>lim</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>b</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo>
+          <mi>b</mi> </mrow> </math>, ezért
+      <math>
+        <mrow>
+          <mo>∀</mo><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mo>∃</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>1</mn> </msub>
+          <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>1</mn> </msub>
+          <mo>⇒</mo><mi>ρ</mi>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>b</mi><mo>,</mo>
+              <msub>
+                <mi>b</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo>
+          <mrow>
+            <mo>‖</mo>
+            <mrow>
+              <msub>
+                <mi>b</mi>
+                <mi>k</mi> </msub>
+              <mo>−</mo><mi>b</mi> </mrow>
+            <mo>∥</mo> </mrow>
+          <mo>&lt;</mo><mi>ε</mi> </mrow><mo>,</mo> </math> így
+      <math display='block'>
+ <mtable columnalign='left'>
+  <mtr>
+   <mtd>
+    <mi>&#x03C1;</mi><mrow><mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>a</mi>
+       <mi>k</mi>
+      </msub>
+      <mo>+</mo><msub>
+       <mi>b</mi>
+       <mi>k</mi>
+      </msub>
+      <mo>,</mo><mi>a</mi><mo>+</mo><mi>b</mi></mrow>
+    <mo>)</mo></mrow><mo>=</mo><mrow><mo>&#x2016;</mo> <mrow>
+     <mrow><mo>(</mo>
+      <mrow>
+       <msub>
+        <mi>a</mi>
+        <mi>k</mi>
+       </msub>
+       <mo>+</mo><msub>
+        <mi>b</mi>
+        <mi>k</mi>
+       </msub>
+       </mrow>
+     <mo>)</mo></mrow><mo>&#x2212;</mo><mrow><mo>(</mo>
+      <mrow>
+       <mi>a</mi><mo>+</mo><mi>b</mi></mrow>
+     <mo>)</mo></mrow></mrow> <mo>&#x2016;</mo></mrow><mo>=</mo>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
+    <mrow><mo>&#x2016;</mo> <mrow>
+     <mrow><mo>(</mo>
+      <mrow>
+       <msub>
+        <mi>a</mi>
+        <mi>k</mi>
+       </msub>
+       <mo>&#x2212;</mo><mi>a</mi></mrow>
+     <mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo>
+      <mrow>
+       <msub>
+        <mi>b</mi>
+        <mi>k</mi>
+       </msub>
+       <mo>&#x2212;</mo><mi>b</mi></mrow>
+     <mo>)</mo></mrow></mrow> <mo>&#x2016;</mo></mrow><mo>&#x2264;</mo><mrow><mo>&#x2016;</mo> <mrow>
+     <msub>
+      <mi>a</mi>
+      <mi>k</mi>
+     </msub>
+     <mo>&#x2212;</mo><mi>a</mi></mrow> <mo>&#x2016;</mo></mrow><mo>+</mo><mrow><mo>&#x2016;</mo> <mrow>
+     <msub>
+      <mi>b</mi>
+      <mi>k</mi>
+     </msub>
+     <mo>&#x2212;</mo><mi>b</mi></mrow> <mo>&#x2016;</mo></mrow><mo>&#x003C;</mo><mn>2</mn><mi>&#x03B5;</mi><mo>,</mo>
+   </mtd>
+  </mtr>
+ </mtable>
+ 
+</math>
+ha
+      <math>
+        <mrow>
+          <mi>k</mi>
+          <mo>&gt;</mo>
+          <mi>max</mi>
+          <mo>⁡</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <msub>
+                <mi>k</mi>
+                <mn>0</mn> </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>k</mi>
+                <mn>1</mn> </msub> </mrow>
+            <mo>}</mo> </mrow> </mrow> </math> . ■</div>
+    <h4>Szorzás</h4>
+    <div class="allitas">Állítás:<br>
+      Legyen
+        <math>
+        <mi>X</mi>
+      </math>
+      normált tér! Ha
+  <math>
+    <mrow>
+      <mi>lim</mi>
+      <mo>⁡</mo>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <msub>
+            <mi>λ</mi>
+            <mi>k</mi>
+          </msub>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+  </math>
+      és
+  <math>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <msub>
+            <mi>a</mi>
+            <mi>k</mi>
+          </msub>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+  </math>
+      korlátos,
+  <math>
+    <mrow>
+      <mo>⇒</mo>
+      <mi>lim</mi>
+      <mo>⁡</mo>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <msub>
+            <mi>λ</mi>
+            <mi>k</mi>
+          </msub>
+          <msub>
+            <mi>a</mi>
+            <mi>k</mi>
+          </msub>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow><mo>.</mo>
+  </math>
+    </div>
+    <div class="tetel">Tétel:<br>
+      Tfh
+      <math>
+        <mrow>
+          <mi>lim</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+      <mo>=</mo><mi>a</mi> </mrow> </math> és
+      <math>
+        <mrow>
+          <mi>lim</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>λ</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo><mi>λ</mi> </mrow> </math> (
+      <math>
+        <mrow>
+          <msub>
+            <mi>λ</mi>
+            <mi>k</mi> </msub>
+          <mo>∈</mo><mi>ℝ</mi> </mrow> </math> ). Ekkor
+      <math>
+        <mrow>
+          <mi>lim</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>λ</mi>
+                <mi>k</mi> </msub>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+  <mo>=</mo><mi>λ</mi><mi>a</mi> </mrow> </math>.</div>
+  <div class="bizonyitas">Bizonyítás:<br>
+      Mivel
+        <math>
+        <mrow>
+          <mi>lim</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo><mi>a</mi> </mrow> </math> ezért
+      <math>
+        <mrow>
+          <mo>∀</mo><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mo>∃</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>0</mn> </msub>
+          <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>0</mn> </msub>
+          <mo>⇒</mo>
+          <mrow>
+            <mo>‖</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub>
+              <mo>−</mo><mi>a</mi> </mrow>
+            <mo>∥</mo> </mrow>
+          <mo>&lt;</mo><mi>ε</mi> </mrow> </math>. Mivel
+      <math>
+        <mrow>
+          <mi>lim</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>λ</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo><mi>k</mi> </mrow> </math> ezért
+      <math>
+        <mrow>
+          <mo>∀</mo><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mo>∃</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>1</mn> </msub>
+          <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>1</mn> </msub>
+          <mo>⇒</mo>
+          <mrow>
+            <mo>|</mo>
+            <mrow>
+              <msub>
+                <mi>λ</mi>
+                <mi>k</mi> </msub>
+              <mo>−</mo><mi>λ</mi> </mrow>
+            <mo>|</mo> </mrow>
+          <mo>&lt;</mo><mi>ε</mi> </mrow> </math>. Tehát
+      <math>
+        <mrow>
+          <mi>k</mi><mo>&gt;</mo><mi>max</mi><mo>⁡</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <msub>
+                <mi>k</mi>
+                <mn>0</mn> </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>k</mi>
+                <mn>1</mn> </msub> </mrow>
+            <mo>}</mo> </mrow> </mrow> </math> esetén
+      <math>
+        <mrow>
+          <mrow>
+            <mo>‖</mo>
+            <mrow>
+              <msub>
+                <mi>λ</mi>
+                <mi>k</mi> </msub>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub>
+              <mo>−</mo><mi>λ</mi><mi>a</mi> </mrow>
+            <mo>∥</mo> </mrow>
+          <mo>=</mo>
+          <mrow>
+            <mo>‖</mo>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>λ</mi>
+                    <mi>k</mi> </msub>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub>
+                  <mo>−</mo><mi>λ</mi>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub> </mrow>
+                <mo>)</mo> </mrow>
+              <mo>+</mo>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>λ</mi>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub>
+                  <mo>−</mo><mi>λ</mi><mi>a</mi> </mrow>
+                <mo>)</mo> </mrow> </mrow>
+            <mo>∥</mo> </mrow>
+          <mo>≤</mo>
+          <mrow>
+            <mo>‖</mo>
+            <mrow>
+              <msub>
+                <mi>λ</mi>
+                <mi>k</mi> </msub>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub>
+              <mo>−</mo><mi>λ</mi>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>∥</mo> </mrow>
+          <mo>+</mo>
+          <mrow>
+            <mo>‖</mo>
+            <mrow>
+              <mi>λ</mi>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub>
+              <mo>−</mo><mi>λ</mi><mi>a</mi> </mrow>
+            <mo>∥</mo> </mrow>
+          <mo>=</mo> </mrow> </math>
+      <math>
+        <mrow>
+          <mo>=</mo>
+          <mrow>
+            <mo>‖</mo>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>λ</mi>
+                    <mi>k</mi> </msub>
+                  <mo>−</mo><mi>λ</mi> </mrow>
+                <mo>)</mo> </mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>∥</mo> </mrow>
+          <mo>+</mo>
+          <mrow>
+            <mo>‖</mo>
+            <mrow>
+              <mi>λ</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub>
+                  <mo>−</mo><mi>a</mi> </mrow>
+                <mo>)</mo> </mrow> </mrow>
+            <mo>∥</mo> </mrow>
+          <mo>=</mo>
+          <munder>
+            <munder>
+              <mrow>
+                <mrow>
+                  <mo>|</mo>
+                  <mrow>
+                    <msub>
+                      <mi>λ</mi>
+                      <mi>k</mi> </msub>
+                    <mo>−</mo><mi>λ</mi> </mrow>
+                  <mo>|</mo> </mrow> </mrow>
+              <mo stretchy="true">⏟</mo> </munder>
+            <mrow>
+              <mo>&lt;</mo><mi>ε</mi> </mrow> </munder>
+          <mrow>
+            <mo>‖</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>∥</mo> </mrow>
+          <mo>+</mo>
+          <munder>
+            <munder>
+              <mrow>
+                <mrow>
+                  <mo>|</mo>
+                  <mi>λ</mi>
+                  <mo>|</mo> </mrow> </mrow>
+              <mo stretchy="true">⏟</mo> </munder>
+            <mrow>
+              <mtext>rögz.</mtext> </mrow> </munder>
+          <munder>
+            <munder>
+              <mrow>
+                <mrow>
+                  <mo>‖</mo>
+                  <mrow>
+                    <msub>
+                      <mi>a</mi>
+                      <mi>k</mi> </msub>
+                    <mo>−</mo><mi>a</mi> </mrow>
+                  <mo>∥</mo> </mrow> </mrow>
+              <mo stretchy="true">⏟</mo> </munder>
+            <mrow>
+              <mo>&lt;</mo><mi>ε</mi> </mrow> </munder> </mrow> </math>.
+      Mivel
+      <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow> </mrow> </math> korlátos,
+      <math>
+        <mrow>
+          <mo>∃</mo><mi>M</mi><mo>&gt;</mo><mn>0</mn><mo>:</mo>
+          <mrow>
+            <mo>‖</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>∥</mo> </mrow>
+          <mo>&lt;</mo><mi>M</mi><mo>∀</mo><mi>k</mi><mo>∈</mo><mi>ℕ</mi> </mrow>
+      </math>-re, tehát
+      <math>
+        <mrow>
+          <mi>k</mi><mo>&gt;</mo><mi>max</mi><mo>⁡</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <msub>
+                <mi>k</mi>
+                <mn>0</mn> </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>k</mi>
+                <mn>1</mn> </msub> </mrow>
+            <mo>}</mo> </mrow> </mrow> </math> esetén
+      <math>
+        <mrow>
+          <mrow>
+            <mo>‖</mo>
+            <mrow>
+              <msub>
+                <mi>λ</mi>
+                <mi>k</mi> </msub>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub>
+              <mo>−</mo><mi>λ</mi><mi>a</mi> </mrow>
+            <mo>∥</mo> </mrow>
+          <mo>&lt;</mo><mi>ε</mi><mi>M</mi><mo>+</mo>
+          <mrow>
+            <mo>|</mo>
+            <mi>λ</mi>
+            <mo>|</mo> </mrow>
+          <mi>ε</mi><mo>=</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>M</mi><mo>+</mo>
+              <mrow>
+                <mo>|</mo>
+                <mi>λ</mi>
+                <mo>|</mo> </mrow> </mrow>
+            <mo>)</mo> </mrow>
+          <mi>ε</mi> </mrow> </math> . ■</div>
+  <h4>Osztás</h4>
+    <div class="tetel">Tétel:<br>
+      Legyen
+        <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow> </mrow> </math> egy valós vagy komplex
+      sorozat. Ha
+      <math>
+        <mrow>
+          <mi>a</mi><mo>=</mo><mi>lim</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>≠</mo><mn>0</mn><mo>⇒</mo><mi>lim</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mfrac>
+                <mn>1</mn>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub> </mrow> </mfrac> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mi>a</mi> </mfrac> </mrow> </math>. </div>
+    <div class="bizonyitas">Bizonyítás:<br>
+      Mivel
+        <math>
+        <mrow>
+          <mi>lim</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo><mi>a</mi><mo>⇒</mo><mo>∀</mo><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mo>∃</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>0</mn> </msub>
+          <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>0</mn> </msub>
+          <mo>⇒</mo>
+          <mrow>
+            <mo>|</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub>
+              <mo>−</mo><mi>a</mi> </mrow>
+            <mo>|</mo> </mrow>
+          <mo>&lt;</mo><mi>ε</mi> </mrow> </math>, így
+      <math display="block">
+        <mrow>
+          <mo>∃</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>1</mn> </msub>
+          <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>1</mn> </msub>
+          <mo>⇒</mo>
+          <mrow>
+            <mo>|</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub>
+              <mo>−</mo><mi>a</mi> </mrow>
+            <mo>|</mo> </mrow>
+          <mo>&lt;</mo><mi>ε</mi>
+          <msup>
+            <mrow>
+              <mrow>
+                <mo>|</mo>
+                <mi>a</mi>
+                <mo>|</mo> </mrow> </mrow>
+            <mn>2</mn> </msup>
+          <mo>/</mo><mn>2</mn> </mrow> <mo>.</mo></math> Legyen
+      <math>
+        <mrow>
+          <mi>ε</mi><mo>:</mo><mo>=</mo>
+          <mfrac>
+            <mrow>
+              <mrow>
+                <mo>|</mo>
+                <mi>a</mi>
+                <mo>|</mo> </mrow> </mrow>
+            <mn>2</mn> </mfrac> </mrow> </math>, ekkor
+      <math>
+        <mrow>
+          <mo>∃</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>2</mn> </msub>
+          <mo>:</mo><mi>k</mi><mo>&gt;</mo>
+          <msub>
+            <mi>k</mi>
+            <mn>2</mn> </msub>
+          <mo>⇒</mo>
+          <mrow>
+            <mo>|</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>|</mo> </mrow>
+          <mo>&gt;</mo>
+          <mfrac>
+            <mrow>
+              <mrow>
+                <mo>|</mo>
+                <mi>a</mi>
+                <mo>|</mo> </mrow> </mrow>
+            <mn>2</mn> </mfrac> </mrow> </math>. Legyen
+      <math>
+        <mrow>
+          <mi>k</mi><mo>&gt;</mo><mi>max</mi><mo>⁡</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <msub>
+                <mi>k</mi>
+                <mn>1</mn> </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>k</mi>
+                <mn>2</mn> </msub> </mrow>
+            <mo>}</mo> </mrow> </mrow> </math>, ekkor
+      <math display="block">
+        <mrow>
+          <mrow>
+            <mo>|</mo>
+            <mrow>
+              <mfrac>
+                <mn>1</mn>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub> </mrow> </mfrac>
+              <mo>−</mo>
+              <mfrac>
+                <mn>1</mn>
+                <mi>a</mi> </mfrac> </mrow>
+            <mo>|</mo> </mrow>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <mrow>
+                <mo>|</mo>
+                <mrow>
+                  <mi>a</mi><mo>−</mo>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub> </mrow>
+                <mo>|</mo> </mrow> </mrow>
+            <mrow>
+              <mrow>
+                <mo>|</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub>
+                  <mi>a</mi> </mrow>
+                <mo>|</mo> </mrow> </mrow> </mfrac>
+          <mo>&lt;</mo>
+          <mfrac>
+            <mrow>
+              <mi>ε</mi>
+              <msup>
+                <mrow>
+                  <mrow>
+                    <mo>|</mo>
+                    <mi>a</mi>
+                    <mo>|</mo> </mrow> </mrow>
+                <mn>2</mn> </msup>
+              <mo>/</mo><mn>2</mn> </mrow>
+            <mrow>
+              <mrow>
+                <mo>|</mo>
+                <mrow>
+                  <msub>
+                    <mi>a</mi>
+                    <mi>k</mi> </msub> </mrow>
+                <mo>|</mo> </mrow>
+              <mrow>
+                <mo>|</mo>
+                <mi>a</mi>
+                <mo>|</mo> </mrow> </mrow> </mfrac>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <mi>ε</mi>
+              <mrow>
+                <mo>|</mo>
+                <mi>a</mi>
+                <mo>|</mo> </mrow>
+              <mo>/</mo><mn>2</mn> </mrow>
+            <mrow>
+              <mrow>
+                <mo>|</mo>
+                <mi>a</mi>
+                <mo>|</mo> </mrow>
+              <mo>/</mo><mn>2</mn> </mrow> </mfrac>
+          <mo>=</mo><mi>ε</mi> </mrow> <mo>.</mo></math>
+      ■</div>
+    <h3>Zárt halmazok jellemzése sorozatokkal</h3>
+    <p>Emlékeztető:
+      <math><mi>X</mi></math> metrikus térben egy
+      <math><mi>M</mi></math> halmazt zártnak neveztünk, ha
+      <math display="block">
+        <mrow>
+          <mo>∂</mo><mi>M</mi><mo>⊂</mo><mi>M</mi><mo>⇔</mo>
+          <mover accent="true">
+            <mi>M</mi>
+            <mo stretchy="true">¯</mo> </mover>
+          <mo>⊂</mo><mi>M</mi><mo>⇔</mo>
+          <mover accent="true">
+            <mi>M</mi>
+            <mo stretchy="true">¯</mo> </mover>
+          <mo>=</mo><mi>M</mi> </mrow><mo>,</mo> </math> ahol
+      <math>
+        <mrow>
+          <mover accent="true">
+            <mi>M</mi>
+            <mo stretchy="true">¯</mo> </mover>
+          <mo>=</mo><mi>int</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mi>M</mi>
+            <mo>)</mo> </mrow>
+          <mo>∪</mo><mo>∂</mo><mi>M</mi> </mrow> </math> , továbbá
+      <math>
+        <mrow>
+          <mi>a</mi><mo>∈</mo>
+          <mover accent="true">
+            <mi>M</mi>
+            <mo stretchy="true">¯</mo> </mover>
+          <mo>⇔</mo> </mrow> </math> ha
+      <math><mi>a</mi></math> bármely környezete tartalmaz
+      <math><mi>M</mi></math> beli pontot is. Ezek szerint
+      <math><mi>M</mi></math> zárt halmaz pontosan akkor, ha minden olyan pont,
+      amelynek bármely környezetében van
+      <math><mi>M</mi></math> beli pont, az
+      <math><mi>M</mi></math>-hez tartozik.</p>
+    <div class="tetel">Tétel:<br>
+      Egy
+        <math>
+        <mrow>
+          <mi>M</mi><mo>⊂</mo><mi>X</mi> </mrow> </math> halmaz zárt pontosan
+      akkor, ha tetszőleges konvergens sorozatot nézve, melynek tagjai
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi>
+            <mi>k</mi> </msub>
+          <mo>∈</mo><mi>M</mi> </mrow> </math>
+      <math>
+        <mrow>
+          <mi>lim</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>∈</mo><mi>M</mi> </mrow> </math>. </div>
+    <div class="bizonyitas">Bizonyítás:<br>
+      Az előbbiek szerint
+        <math><mi>M</mi></math> halmaz zárt pontosan akkor, ha minden olyan pont,
+      amelynek bármely környezetében van
+      <math><mi>M</mi></math> beli pont, az
+      <math><mi>M</mi></math>-hez tartozik.<br>
+      <math>
+        <mo>⇒</mo> </math> irányban: tfh
+      <math><mi>M</mi></math> zárt! Ha
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi>
+            <mi>k</mi> </msub>
+          <mo>∈</mo><mi>M</mi> </mrow> </math> és
+      <math>
+        <mrow>
+          <mi>lim</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo><mi>a</mi> </mrow> </math>, akkor
+      <math>
+        <mrow>
+          <mi>a</mi><mo>∈</mo><mi>M</mi> </mrow> </math>, mert a minden
+      környezetében van
+      <math><mi>M</mi></math> beli pont is (nevezetesen
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi>
+            <mi>k</mi> </msub> </mrow> </math> ).<br>
+      <math>
+        <mo>⇐</mo> </math> irányban: fordítva is igaz, ha
+      <math><mi>a</mi></math> minden környezete tartalmaz
+      <math><mi>M</mi></math> beli pontot, akkor
+      <math>
+        <mrow>
+          <mo>∃</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>∈</mo><mi>M</mi><mo>:</mo><mi>lim</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo><mi>a</mi> </mrow> </math>. Vagyis minden olyan pont (<math><mi>a</mi></math>),
+      amelynek minden környezetében van
+      <math><mi>M</mi></math>-beli pont (az
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi>
+            <mi>k</mi> </msub> </mrow> </math>-k), az
+      <math><mi>M</mi></math>-nek eleme, és a fentiek szerint ebből következik,
+      hogy
+      <math><mi>M</mi></math> zárt. ■</div>
+    <h4 class="big">Korlátos és zárt halmazok, illetve sorozatkompakt halmazok </h4>
+  <div class="tetel">Tétel (Bolzano-Weierstrass-féle kiválasztási tétel
+    <math>
+      <mrow>
+        <msup>
+          <mi>ℝ</mi>
+          <mi>n</mi>
+        </msup>
+      </mrow>
+    </math>
+    -ben) :<br>
+      Legyen
+        <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+            <mo>)</mo> </mrow> </mrow> </math> korlátos sorozat
+      <math>
+        <mrow>
+          <msup>
+            <mi>ℝ</mi>
+            <mi>n</mi> </msup> </mrow> </math>-ben! Ekkor
+    <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub> </mrow>
+          <mo>)</mo> </mrow> </mrow> </math>
+       sorozatnak létezik konvergens
+      részsorozata. </div>
+    <div class="bizonyitas">Bizonyítás:<br>
+      Először
+        <math>
+        <mrow>
+          <mi>n</mi><mo>=</mo><mn>1</mn> </mrow> </math> esetre, ekkor
+      <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mi>k</mi> </msub>
+              <mo>∈</mo><mi>ℝ</mi> </mrow>
+            <mo>)</mo> </mrow> </mrow> </math> korlátos
+      <math>
+        <mrow>
+          <mo>⇒</mo><mo>∃</mo>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <mi>c</mi><mo>,</mo><mi>d</mi> </mrow>
+            <mo>]</mo> </mrow>
+          <mo>∍</mo>
+          <msub>
+            <mi>a</mi>
+            <mi>k</mi> </msub>
+          <mo>,</mo><mo>∀</mo><mi>k</mi> </mrow> </math>. Felezzük
+      <math>
+        <mrow>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <mi>c</mi><mo>,</mo><mi>d</mi> </mrow>
+            <mo>]</mo> </mrow> </mrow> </math> intervallumot! Ekkor a két
+      zárt fél intervallum közül legalább az egyik végtelen sok tagot tartalmaz
+      a sorozatból. Ez legyen
+      <math>
+        <mrow>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <msub>
+                <mi>c</mi>
+                <mn>1</mn> </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>d</mi>
+                <mn>1</mn> </msub> </mrow>
+            <mo>]</mo> </mrow> </mrow> </math>. Ezt megint felezzük, melyek
+      közül legalább az egyik végtelen sok tagot tartalmaz a sorozatból, ez
+      legyen
+      <math>
+        <mrow>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <msub>
+                <mi>c</mi>
+                <mn>2</mn> </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>d</mi>
+                <mn>2</mn> </msub> </mrow>
+            <mo>]</mo> </mrow> </mrow> </math> …Így
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi>
+            <mi>k</mi> </msub> </mrow> </math>-ból kiválasztható egy
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <msub>
+                <mi>k</mi>
+                <mi>l</mi> </msub> </mrow> </msub> </mrow> </math>
+      részsorozat úgy, hogy
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <msub>
+                <mi>k</mi>
+                <mi>l</mi> </msub> </mrow> </msub>
+          <mo>∈</mo>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <msub>
+                <mi>c</mi>
+                <mi>l</mi> </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>d</mi>
+                <mi>l</mi> </msub> </mrow>
+            <mo>]</mo> </mrow> </mrow> </math>. Belátjuk, hogy
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <msub>
+                <mi>k</mi>
+                <mi>l</mi> </msub> </mrow> </msub> </mrow> </math>
+      részsorozat konvergens. <br>
+      <math>
+        <mrow>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <mi>c</mi><mo>,</mo><mi>d</mi> </mrow>
+            <mo>]</mo> </mrow>
+          <mo>⊃</mo>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <msub>
+                <mi>c</mi>
+                <mn>1</mn> </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>d</mi>
+                <mn>1</mn> </msub> </mrow>
+            <mo>]</mo> </mrow>
+          <mo>⊃</mo>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <msub>
+                <mi>c</mi>
+                <mn>2</mn> </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>d</mi>
+                <mn>2</mn> </msub> </mrow>
+            <mo>]</mo> </mrow>
+          <mo>⊃</mo><mn>...</mn><mo>⊃</mo>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <msub>
+                <mi>c</mi>
+                <mi>l</mi> </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>d</mi>
+                <mi>l</mi> </msub> </mrow>
+            <mo>]</mo> </mrow> </mrow> </math>,
+      <math>
+        <mrow>
+          <munder>
+            <mrow>
+              <mi>lim</mi><mo>⁡</mo> </mrow>
+            <mrow>
+              <mi>l</mi><mo>→</mo><mi>∞</mi> </mrow> </munder>
+          <mrow>
+            <mo>|</mo>
+            <mrow>
+              <msub>
+                <mi>c</mi>
+                <mi>l</mi> </msub>
+              <mo>−</mo>
+              <msub>
+                <mi>d</mi>
+                <mi>l</mi> </msub> </mrow>
+            <mo>|</mo> </mrow>
+          <mo>=</mo>
+          <munder>
+            <mrow>
+              <mi>lim</mi><mo>⁡</mo> </mrow>
+            <mrow>
+              <mi>l</mi><mo>→</mo><mi>∞</mi> </mrow> </munder>
+          <mfrac>
+            <mrow>
+              <mi>c</mi><mo>−</mo><mi>d</mi> </mrow>
+            <mrow>
+              <msup>
+                <mn>2</mn>
+                <mi>l</mi> </msup> </mrow> </mfrac>
+          <mo>=</mo><mn>0</mn> </mrow> </math>. Tudjuk, hogy
+      <math>
+        <mrow>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <msub>
+                <mi>c</mi>
+                <mi>l</mi> </msub>
+              <mo>:</mo><mi>l</mi><mo>∈</mo><mi>ℕ</mi> </mrow>
+            <mo>}</mo> </mrow> </mrow> </math> felülről korlátos
+      <math>
+        <mrow>
+          <mo>⇒</mo><mo>∃</mo><mi>sup</mi><mo>⁡</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <msub>
+                <mi>c</mi>
+                <mi>l</mi> </msub>
+              <mo>:</mo><mi>l</mi><mo>∈</mo><mi>ℕ</mi> </mrow>
+            <mo>}</mo> </mrow> </mrow> </math> és azt is, hogy
+      <math>
+        <mrow>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <msub>
+                <mi>d</mi>
+                <mi>l</mi> </msub>
+              <mo>:</mo><mi>l</mi><mo>∈</mo><mi>ℕ</mi> </mrow>
+            <mo>}</mo> </mrow> </mrow> </math> alulról korlátos
+      <math>
+        <mrow>
+          <mo>⇒</mo><mo>∃</mo><mi>inf</mi><mo>⁡</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <msub>
+                <mi>d</mi>
+                <mi>l</mi> </msub>
+              <mo>:</mo><mi>l</mi><mo>∈</mo><mi>ℕ</mi> </mrow>
+            <mo>}</mo> </mrow> </mrow> </math>. Mivel
+      <math display="block">
+        <mrow>
+          <munder>
+            <mrow>
+              <mi>lim</mi><mo>⁡</mo> </mrow>
+            <mrow>
+              <mi>l</mi><mo>→</mo><mi>∞</mi> </mrow> </munder>
+          <mrow>
+            <mo>|</mo>
+            <mrow>
+              <msub>
+                <mi>c</mi>
+                <mi>l</mi> </msub>
+              <mo>−</mo>
+              <msub>
+                <mi>d</mi>
+                <mi>l</mi> </msub> </mrow>
+            <mo>|</mo> </mrow>
+          <mo>=</mo><mn>0</mn><mo>⇒</mo><mi>sup</mi><mo>⁡</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <msub>
+                <mi>c</mi>
+                <mi>l</mi> </msub>
+              <mo>:</mo><mi>l</mi><mo>∈</mo><mi>ℕ</mi> </mrow>
+            <mo>}</mo> </mrow>
+          <mo>=</mo><mi>inf</mi><mo>⁡</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <msub>
+                <mi>d</mi>
+                <mi>l</mi> </msub>
+              <mo>:</mo><mi>l</mi><mo>∈</mo><mi>ℕ</mi> </mrow>
+            <mo>}</mo> </mrow>
+          <mo>:</mo><mo>=</mo><mi>α</mi> </mrow><mo>,</mo> </math> továbbá
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <msub>
+                <mi>k</mi>
+                <mi>l</mi> </msub> </mrow> </msub>
+          <mo>∈</mo>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <msub>
+                <mi>c</mi>
+                <mi>l</mi> </msub>
+              <mo>,</mo>
+              <msub>
+                <mi>d</mi>
+                <mi>l</mi> </msub> </mrow>
+            <mo>]</mo> </mrow>
+          <mo>⇒</mo><mi>lim</mi><mo>⁡</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mrow>
+                  <msub>
+                    <mi>k</mi>
+                    <mi>l</mi> </msub> </mrow> </msub> </mrow>
+            <mo>)</mo> </mrow>
+          <mo>=</mo><mi>α</mi> </mrow> </math> („rendőr-elv”).<br>
+      <math>
+        <mrow>
+          <mi>n</mi><mo>=</mo><mn>2</mn> </mrow> </math> esetre, ekkor
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi>
+            <mi>k</mi> </msub>
+          <mo>=</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msubsup>
+                <mi>a</mi>
+                <mi>k</mi>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>1</mn>
+                    <mo>)</mo> </mrow> </mrow> </msubsup>
+              <mo>,</mo>
+              <msubsup>
+                <mi>a</mi>
+                <mi>k</mi>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>2</mn>
+                    <mo>)</mo> </mrow> </mrow> </msubsup> </mrow>
+            <mo>)</mo> </mrow> </mrow> </math>. Mivel
+      <math>
+        <mrow>
+          <msub>
+            <mi>a</mi>
+            <mi>k</mi> </msub> </mrow> </math> korlátos sorozat
+      <math>
+        <mrow>
+          <msup>
+            <mi>ℝ</mi>
+            <mn>2</mn> </msup> </mrow> </math>-ben, így
+      <math>
+        <mrow>
+          <msubsup>
+            <mi>a</mi>
+            <mi>k</mi>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mn>1</mn>
+                <mo>)</mo> </mrow> </mrow> </msubsup>
+          <mo>,</mo>
+          <msubsup>
+            <mi>a</mi>
+            <mi>k</mi>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mn>2</mn>
+                <mo>)</mo> </mrow> </mrow> </msubsup> </mrow> </math>
+      korlátos sorozatok
+      <math>
+        <mi>ℝ</mi> </math>-ben. Az előzőek szerint az előbbiből kiválasztható
+      ebből egy konvergens részsorozat,
+      <math>
+        <mrow>
+          <msub>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msubsup>
+                    <mi>a</mi>
+                    <mrow>
+                      <msub>
+                        <mi>k</mi>
+                        <mi>l</mi> </msub> </mrow>
+                    <mrow>
+                      <mrow>
+                        <mo>(</mo>
+                        <mn>1</mn>
+                        <mo>)</mo> </mrow> </mrow> </msubsup> </mrow>
+                <mo>)</mo> </mrow> </mrow>
+            <mrow>
+              <mi>l</mi><mo>∈</mo><mi>ℕ</mi> </mrow> </msub> </mrow> </math>.
+      Tekintsük az
+      <math>
+        <mrow>
+          <msubsup>
+            <mi>a</mi>
+            <mi>k</mi>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mn>2</mn>
+                <mo>)</mo> </mrow> </mrow> </msubsup> </mrow> </math>
+      ugyanilyen indexű elemekből álló
+      <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msubsup>
+                <mi>a</mi>
+                <mrow>
+                  <msub>
+                    <mi>k</mi>
+                    <mi>l</mi> </msub> </mrow>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>2</mn>
+                    <mo>)</mo> </mrow> </mrow> </msubsup> </mrow>
+            <mo>)</mo> </mrow> </mrow> </math> részsorozatát (mely korlátos
+      <math>
+        <mi>ℝ</mi> </math>-ben). Az előzőek szerint ennek létezik konvergens
+      részsorozata,
+      <math>
+        <mrow>
+          <msub>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msubsup>
+                    <mi>a</mi>
+                    <mrow>
+                      <msub>
+                        <mi>k</mi>
+                        <mrow>
+                          <msub>
+                            <mi>l</mi>
+                            <mi>m</mi> </msub> </mrow> </msub> </mrow>
+                    <mrow>
+                      <mrow>
+                        <mo>(</mo>
+                        <mn>2</mn>
+                        <mo>)</mo> </mrow> </mrow> </msubsup> </mrow>
+                <mo>)</mo> </mrow> </mrow>
+            <mrow>
+              <mi>m</mi><mo>∈</mo><mi>ℕ</mi> </mrow> </msub> </mrow> </math>.
+      <math>
+        <mrow>
+          <msub>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msubsup>
+                    <mi>a</mi>
+                    <mrow>
+                      <msub>
+                        <mi>k</mi>
+                        <mi>l</mi> </msub> </mrow>
+                    <mrow>
+                      <mrow>
+                        <mo>(</mo>
+                        <mn>1</mn>
+                        <mo>)</mo> </mrow> </mrow> </msubsup> </mrow>
+                <mo>)</mo> </mrow> </mrow>
+            <mrow>
+              <mi>l</mi><mo>∈</mo><mi>ℕ</mi> </mrow> </msub> </mrow> </math>
+      konvergens, így
+      <math>
+        <mrow>
+          <msub>
+            <mrow>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <msubsup>
+                    <mi>a</mi>
+                    <mrow>
+                      <msub>
+                        <mi>k</mi>
+                        <mrow>
+                          <msub>
+                            <mi>l</mi>
+                            <mi>m</mi> </msub> </mrow> </msub> </mrow>
+                    <mrow>
+                      <mrow>
+                        <mo>(</mo>
+                        <mn>1</mn>
+                        <mo>)</mo> </mrow> </mrow> </msubsup> </mrow>
+                <mo>)</mo> </mrow> </mrow>
+            <mrow>
+              <mi>m</mi><mo>∈</mo><mi>ℕ</mi> </mrow> </msub> </mrow> </math>
+      is az, így
+      <math>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>a</mi>
+                <mrow>
+                  <msub>
+                    <mi>k</mi>
+                    <mrow>
+                      <msub>
+                        <mi>l</mi>
+                        <mi>m</mi> </msub> </mrow> </msub> </mrow> </msub>
+            </mrow>
+            <mo>)</mo> </mrow>
+          <mo>:</mo><mo>=</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msubsup>
+                <mi>a</mi>
+                <mrow>
+                  <msub>
+                    <mi>k</mi>
+                    <mrow>
+                      <msub>
+                        <mi>l</mi>
+                        <mi>m</mi> </msub> </mrow> </msub> </mrow>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>1</mn>
+                    <mo>)</mo> </mrow> </mrow> </msubsup>
+              <mo>,</mo>
+              <msubsup>
+                <mi>a</mi>
+                <mrow>
+                  <msub>
+                    <mi>k</mi>
+                    <mrow>
+                      <msub>
+                        <mi>l</mi>
+                        <mi>m</mi> </msub> </mrow> </msub> </mrow>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>2</mn>
+                    <mo>)</mo> </mrow> </mrow> </msubsup> </mrow>
+            <mo>)</mo> </mrow> </mrow> </math> részsorozat konvergens. <br>
+      <math>
+        <mrow>
+          <mi>n</mi><mo>=</mo><mn>3</mn> </mrow> </math> esetén hasonló módon,
+      mint
+      <math>
+        <mrow>
+          <mi>n</mi><mo>=</mo><mn>1</mn> </mrow> </math>-ről váltottunk
+      <math>
+        <mrow>
+          <mi>n</mi><mo>=</mo><mn>2</mn> </mrow> </math> -re, itt is
+      igazolható (tkp teljes indukció). ■</div>
+    <div class="megj">Megjegyzés:<br>
+      Hasonló jellegű állítások általában nem igazak tetszőleges normált
+      terekben, csak véges dimenzióban!</div>
+    <div class="ajanlo">
+      <div class="ajanlofig"><a href="https://www.youtube.com/watch?v=e8o6rt6o4LA"><img src="tomandjerry.jpg"
+
+            alt="Filmkocka a videóból" longdesc="https://www.youtube.com/watch?v=e8o6rt6o4LA"
+
+            height="269" width="365"></a></div><p>Ne feledjétek,
+        ebből a tárgyól vizsga lesz! Ha hétről hétre tanulsz, és a kérdéseket
+        időben felteszed a tanárnak, sokkal könnyebb felkészülni a vizsgára. </p>
+    </div>
+  </body>
+</html>

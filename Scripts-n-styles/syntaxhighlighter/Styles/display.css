@@ -1,0 +1,42 @@
+@charset "utf-8";
+body {
+	font-family: Calibri, Arial;
+}
+.mainclass {
+	text-align:left;
+	width:21cm;
+	/*background-color:#F8F8F8;*/
+	/*border: 1px solid #CCC;*/
+	padding:0.5cm;
+}
+.centeredtext {
+	text-align: center;
+}
+p {
+	line-height:200%;
+	font-weight:lighter;
+	color:#33528C;
+	widows:5;
+}
+math {
+	color:#000;
+}
+.svgim {
+	padding:3px;
+	margin:0px;	
+}
+.floatright {
+	float:right;
+	/*background-color:#F0F4F9;*/
+	border: 0.5pt solid #CCC;
+	margin:10px;
+	text-align: center;
+}
+.imagetext {
+	padding-top: 2px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	text-align:center;
+	font-size:70%;
+}

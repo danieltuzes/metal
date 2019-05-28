@@ -1,0 +1,2 @@
+pandoc -f html+tex_math_dollars+tex_math_single_backslash-fenced_divs+native_divs analizisII.html -t markdown-fenced_divs -o analizisII.md -s --template=template.md
+pandoc -f markdown+header_attributes+auto_identifiers+ascii_identifiers --filter pandoc-latex-environment analizisII.md -o analizisII.tex -s --toc -H header.tex --variable=colorlinks:true  --toc-depth=6 --variable=secnumdepth:4 -N --template="template_header.tex"

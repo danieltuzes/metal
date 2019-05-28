@@ -1,0 +1,2 @@
+pandoc analizisI.html -t markdown -o analizisI.md -s --template=template.md
+pandoc -f markdown+header_attributes+auto_identifiers+ascii_identifiers --filter pandoc-latex-environment analizisI.md -o analizisI.tex -s --toc -H header.tex --variable=documentclass:scrartcl --toc-depth=6 --template="template_header.tex"

@@ -1,0 +1,30 @@
+/* login */
+#login {
+	position: relative;
+	left: 50%;
+	width: 250px;
+	margin: 50px 0 20px -125px;
+	padding: 5px 0px 10px 0px;
+	border: 1px solid gray;
+	text-align: center;
+	font: 12px Arial;
+}
+#login form {
+	margin: 10px 0 10px 0;
+}
+#login form input {
+	 height: 20px;
+	 font: 10px Arial;
+	 vertical-align: middle;
+}
+/* egyéb */
+#version {
+	display: block;
+	position: relative;
+	left: 50%;
+	margin: 0 0 0 -50px;
+	width: 100px;
+	color: gray;
+	font: 10px Arial;
+	text-align: center;
+}

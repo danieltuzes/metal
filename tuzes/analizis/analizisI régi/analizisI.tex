@@ -1,0 +1,962 @@
+\documentclass[]{scrartcl}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdftitle={Analízis I},
+            pdfauthor={Simon László; Tüzes Dániel; Izsák Ferenc},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{amsthm}
+\usepackage{newunicodechar}
+\newunicodechar{■}{\qed}
+\newunicodechar{∎}{\qed}
+
+\subtitle{Előadásjegyzet fizikusoknak matematikusoktól}
+
+\renewcommand{\contentsname}{Tartalomjegyzék}
+
+\usepackage{xcolor}
+\definecolor{sotetvoros}{HTML}{900000}
+\definecolor{sotetzold}{HTML}{009900}
+\usepackage{mdframed}
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+
+\newenvironment{definicio}{}{}
+\tcolorboxenvironment{definicio}{blanker,breakable,left=5mm, right=5mm,
+before skip=10pt,after skip=10pt,borderline west={1.5mm}{0pt}{black},borderline east={1.5mm}{0pt}{black}}
+
+\newenvironment{tetel}{}{}
+\tcolorboxenvironment{tetel}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={1.5mm}{0pt}{sotetvoros},borderline east={1.5mm}{0pt}{sotetvoros}}
+
+\newenvironment{bizonyitas}{}{}
+\tcolorboxenvironment{bizonyitas}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={1.5mm}{0pt}{sotetvoros},borderline east={1.5mm}{0pt}{sotetvoros}}
+
+\newenvironment{allitas}{}{}
+\tcolorboxenvironment{allitas}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={0.75mm}{0pt}{sotetvoros},borderline east={0.75mm}{0pt}{sotetvoros}}
+
+\newenvironment{pelda}{}{}
+\tcolorboxenvironment{pelda}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={1.5mm}{	0pt}{sotetzold},borderline east={1.5mm}{0pt}{sotetzold}}
+
+\newenvironment{megjegyzes}{}{}
+\tcolorboxenvironment{megjegyzes}{blanker,breakable,left=5mm,right=5mm,
+before skip=10pt,after skip=10pt,borderline west={0.75mm}{0pt}{lightgray},borderline east={0.75mm}{0pt}{lightgray}}
+
+\newenvironment{ajanlofig}{\begin{figure}\begin{center}}{
+\end{center}\end{figure}}
+
+\newenvironment{ajanlo}{\begin{samepage}}{\end{samepage}}
+
+\title{Analízis I}
+\author{Simon László \and Tüzes Dániel \and Izsák Ferenc}
+\date{}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{6}
+\tableofcontents
+}
+Ajánlott irodalom:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{http://www.typotex.hu/index.php?page=konyvek\&book_id=240}{Komornik
+  Vilmos: Valós analízis előadások}
+\item
+  \href{https://notendur.hi.is/vae11/\%C3\%9Eekking/principles_of_mathematical_analysis_walter_rudin.pdf}{W.
+  Rudin: Principles of Mathematical Analysis, McGraw-Hill, 1976. (angol
+  nyelvű)}
+\item
+  \href{http://www.cs.elte.hu/\%7Esimonp/jegyzet1.pdf}{Mezei István,
+  Faragó István, Simon Péter: Bevezetés az analízisbe}
+\end{enumerate}
+
+Ez a jegyzet \textbf{nem} szakirodalom és nem garantált, hogy az órai
+anyagot teljesen lefedi, az előadásokra bejárni ajánlott. Az eredeti
+jegyzet Simon László előadásai alapján Tüzes Dániel készítette, és
+lektorálta 2009-ben Simon László, majd frissítette 2016-2017-ben Izsák
+Ferenc.
+
+Ha a jegyzetben helyesírási, tartalmi, vagy formai hibát találsz, kérlek
+jelezd az előadónak vagy a
+\href{mailto:tuzesdaniel@gmail.com}{\nolinkurl{tuzesdaniel@gmail.com}}
+e-mail címen! Ha a jegyzet nem jelenik meg helyesen, olvasd el az
+\href{http://fizweb.extra.hu/index.php?dir=kalkulus,analizis/analizisI/\&file=utmutato.html}{útmutatót},
+vagy egyszerűen használd a
+\href{http://www.mozilla.com/en-US/firefox/all.html}{Firefox legújabb
+böngészőjét!}
+
+A jegyzet korábbi, nem következetes jelölésétől eltérően a következőkben
+törekszünk arra, hogy egy függvényt \(\left. f:X\rightarrow Y \right.\)
+alakban adunk meg, akkor az azt jelenti, hogy az értelmezési tartománya
+\(X\), nem pedig annak csak egy része. Ez utóbbira használjuk majd az
+\(\left. f:X\rightarrowtail Y \right.\) jelölést.
+
+\section{Metrikus tér}\label{metrikus-ter}
+
+A korábban (középiskolában) tanultakból általánosítunk.
+\({\mathbb{R}}^{n}\)-ben éltünk eddig, ahol vektor alatt ezt értettük:
+\(\mathbf{v} = \left( {v_{1},v_{2}...v_{n}} \right)\) ahol
+\(v_{j} \in {\mathbb{R}}\) és \(\mathbf{v} \in {\mathbb{R}}^{n}\). Ezen
+vektorfogalmat fogjuk általánosítani úgy, hogy a már korábban tanult
+vektorok némely tulajdonságait kiválasztjuk, s egy halmaz
+(\(\mathbb{V}\)) elemeit (\(a\), \(b\) és \(c\)) akkor fogjuk
+vektoroknak nevezni, ha az alább kiválaszott - és korábban
+(középiskolában) már tanult - tulajdonságokat (a műveletekkel)
+teljesítik.
+
+\begin{itemize}
+\tightlist
+\item
+  összeadás +\\
+  \({\mathbb{R}}^{n}\)-ben azt mondtuk, hogy
+  \[\mathbf{v} + \mathbf{u} = \left( {v_{1},v_{2}...v_{n}} \right) + \left( {u_{1},u_{2}...u_{n}} \right) = \left( {v_{1} + u_{1},v_{2} + u_{2}...v_{n} + u_{n}} \right)\]
+  Ezek tulajdonságaiból az alábbiakat általánosítjuk:
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    \(a + \left( {b + c} \right) = \left( {a + b} \right) + c\)
+    (asszociativitás)
+  \item
+    \(\exists!0 \in {\mathbb{V}}:a + 0 = 0 + a = a\) (egység, semleges
+    elem létezése)
+  \item
+    \(\forall a \in {\mathbb{V}}\exists!( - a) \in {\mathbb{V}}:a + ( - a) = 0\)
+    (inverz elem létezése)
+  \item
+    \(a + b = b + a\) (kommutativitás)
+  \end{enumerate}
+
+  Az első három tulajdonsággal rendelkező struktúrát csoportnak, a
+  negyedikkel is rendelkezőt Abel-csoportnak vagy kommutatív csoportnak
+  nevezzük.
+\item
+  Skalárral való szorzás ·\\
+  Legyen \(\lambda,\beta \in {\mathbb{R}}\)! \({\mathbb{R}}^{n}\)-ben
+  azt mondtuk, hogy
+  \(\lambda\mathbf{v} = \lambda\left( {v_{1},v_{2}...v_{n}} \right) = \left( {\lambda v_{1},\lambda v_{2}...\lambda v_{n}} \right)\),
+  ezek tulajdonságaiból az alábbiakat általánosítjuk:
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    \(\lambda\left( {a + b} \right) = \lambda a + \lambda b,\left( {\lambda + \mu} \right)a = \lambda a + \mu a\)
+    (disztributivitás)
+  \item
+    \(\lambda\left( {\beta a} \right) = \left( {\lambda\beta} \right)a\)
+  \item
+    \(1a = a\)
+  \end{enumerate}
+\end{itemize}
+
+\begin{definicio}
+
+Definíció:\\
+Ha egy halmazon értelmezve van az összeadás és a skalárral való szorzás
+a fentiek szerint, akkor azt vektortérnek (avagy lineáris térnek)
+nevezzük.
+
+\end{definicio}
+
+Ismert művelet volt \({\mathbb{R}}^{n}\)-ben a skaláris szorzás, ezt
+értettük alatta:
+\({\mathbf{v},\mathbf{u}} = {\sum\limits_{j = 1}^{n}{v_{j}u_{j}}}\).
+Erre érvényesek az alábbi tulajdonságok:
+
+\begin{itemize}
+\tightlist
+\item
+  \({a,b + c} = {a,b} + {a,c}\)
+\item
+  \({a,b} = {b,a}\)
+\item
+  \(\lambda{a,b} = {\lambda a,b}\)
+\item
+  \({a,a} \geq 0\) és \(\left. {a,a} = 0\Leftrightarrow a = 0 \right.\)
+\end{itemize}
+
+\begin{definicio}
+
+Definíció:\\
+Legyen \(X\) vektortér, amelynek elemei között értelmezve van a skaláris
+szorzat (két elem skaláris szorzata egy \(\mathbb{R}\)-beli szám) a
+fenti tulajdonságokkal. Ekkor \(X\)-t valós euklideszi (eukleidészi)
+térnek nevezzük.
+
+\end{definicio}
+
+\begin{pelda}
+
+P\textbf{élda}\\
+A \(\left\lbrack 0,1 \right\rbrack\) intervallumon értelmezett folytonos
+függvények összessége (röviden \(C\left\lbrack 0,1 \right\rbrack\) ) a
+szokásos összeadással, számmal való szorzással, ha a skaláris szorzat
+definíciója: \({f,g}: = {\int_{0}^{1}{f \cdot g}}\).
+
+\end{pelda}
+
+\begin{definicio}
+
+Definíció:\\
+Legyen \(X\) valós euklideszi tér! Ekkor egy \(a \in X\) elem normáját
+így határozhatjuk meg: \(\left\| a \parallel \right.: = \sqrt{a,a}\)
+
+\end{definicio}
+
+A norma tulajdonságai:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\left\| a \parallel \right. \geq 0\) és
+  \(\left. \left\| a \parallel \right. = 0\Leftrightarrow a = 0 \right.\)
+\item
+  \(\left\| {\lambda a} \parallel \right. = \left| \lambda \right| \cdot \left\| a \parallel \right.\)
+\item
+  \(\left\| {a + b} \parallel \right. \leq \left\| a \parallel \right. + \left\| b \parallel \right.\)
+  (háromszög egyenlőtlenség), mert
+  \({a + b,a + b} = {a,a} + {b,a} + {a,b} + {b,b} =\)
+  \(= \left\| a \parallel \right.^{2} + \left\| b \parallel \right.^{2} + 2{a,b} \leq \left\| a \parallel \right.^{2} + \left\| b \parallel \right.^{2} + 2\left\| a \parallel \right. \cdot \left\| b \parallel \right. = \left( {\left\| a \parallel \right. + \left\| b \parallel \right.} \right)^{2}\).
+  Itt felhasználtuk az ún Cauchy-Schwarz-egyenlőtlenséget, mely szerint:
+\end{enumerate}
+
+\hypertarget{cauchy-schwarz}{}
+\begin{tetel}
+
+Tétel (Cauchy-Schwarz egyenlőtlenség, CS):\\
+Legyen \(X\) valós euklideszi tér! Ekkor \(\forall a,b \in X\) esetén
+\(\left| {a,b} \right| \leq \left\| a \parallel \right. \cdot \left\| b \parallel \right.\).
+
+\end{tetel}
+
+\begin{bizonyitas}
+
+Bizonyítás:\\
+\(0 \leq {a + \lambda b,a + \lambda b} = {a,a} + {\lambda b,a} + {a,\lambda b} + {\lambda b,\lambda b} = {a,a} + 2\lambda{a,b} + \lambda^{2}{b,b}\),
+ez teljesül minden \(\lambda\) értékre, így
+\(4{a,b}^{2} - 4{a,a}{b,b} \leq 0\), vagyis
+\[\left. \left\langle {a,b} \right\rangle^{2} \leq \left\langle {a,a} \right\rangle\left\langle {b,b} \right\rangle\Rightarrow\left| \left\langle {a,b} \right\rangle \right| \leq \sqrt{\left\langle {a,a} \right\rangle}\sqrt{\left\langle {b,b} \right\rangle} = \left\| a \right\| \cdot \left\| b \right\|. \right.\]
+■
+
+\end{bizonyitas}
+
+\begin{definicio}
+
+Definíció:\\
+Legyen \(X\) vektortér, amelyen értelmezve van egy norma a fenti
+tulajdonságokkal, ekkor \(X\)-t normált térnek nevezzük.
+
+\end{definicio}
+
+\begin{pelda}
+
+Példa:\\
+\(X = C\left\lbrack 0,1 \right\rbrack\), a függvény normája pedig
+\(\left\| f \parallel \right.: = \sup\left| f \right|\).
+
+\end{pelda}
+
+Egy normált térben mindig értelmezhető az elemek \(\rho\) távolsága,
+\(\rho\left( {a,b} \right): = \left\| {a - b} \parallel \right.\). A
+távolság (metrika) tulajdonságai:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\rho\left( {a,b} \right) \geq 0\) és
+  \(\left. \rho\left( {a,b} \right) = 0\Leftrightarrow a = b \right.\)
+\item
+  \(\rho\left( {a,b} \right) = \rho\left( {b,a} \right)\)
+\item
+  \(\rho\left( {a,c} \right) \leq \rho\left( {a,b} \right) + \rho\left( {b,c} \right)\)
+  (háromszög egyenlőtlenség)
+\end{enumerate}
+
+\begin{definicio}
+
+Definíció:\\
+Legyen \(X\) valamilyen halmaz és tfh értelmezve van
+\(\left. \rho:X \times X\rightarrow{\mathbb{R}} \right.\) függvény
+(metrika, távolság) a fenti tulajdonságokkal! Ekkor \(X\)-t metrikus
+térnek nevezzük.
+
+\end{definicio}
+
+\subsection{Topológiai alapfogalmak a metrikus
+térben}\label{topologiai-alapfogalmak-a-metrikus-terben}
+
+\begin{definicio}
+
+Definíció:\\
+Legyen \(X\) metrikus tér! Egy \(a \in X\) pont \(r\) sugarú környezete
+azon pontok összessége, amelyek \(a\)-tól \(r\)-nél kisebb távolságra
+vannak:
+\({B_{r}\left( a \right): = \left\{ {x \in X:\rho\left( {x,a} \right) < r} \right\}}.\)
+
+\end{definicio}
+
+\subsubsection{Pont és halmaz viszonya}\label{pont-es-halmaz-viszonya}
+
+Legyen \(a \in X,M \subset X\)!
+
+\begin{definicio}
+
+Definíció:\\
+Azt mondjuk, hogy az \(a\) pont az \(M\) halmaznak belső pontja, ha
+létezik \(a\)-nak olyan \(r\) sugarú környezete, hogy
+\(B_{r}\left( a \right) \subset M\). Jele:
+\({a \in {int}\left( M \right)}.\)
+
+\end{definicio}
+
+\begin{definicio}
+
+Definíció:\\
+Az \(a\) pont az \(M\) halmaznak külső pontja, ha létezik \(a\)-nak
+olyan \(r\) sugarú környezete, hogy
+\(B_{r}\left( a \right) \cap M = \varnothing\). Jele:
+\({a \in {ext}\left( M \right)}.\)
+
+\end{definicio}
+
+\begin{definicio}
+
+Definíció:\\
+Az \(a\) pont \(M\)-nek határpontja, ha \(a\) minden \(r\) sugarú
+környezete esetén \(B_{r}\left( a \right) \cap M \neq \varnothing\) és
+\(B_{r}\left( a \right) \cap M^{C} \neq \varnothing\). Jele:
+\({a \in \partial\left( M \right) = {front}\left( M \right)}.\)
+
+\end{definicio}
+
+\begin{allitas}
+
+Állítás:\\
+\(\partial\left( M \right),{ext}\left( M \right),{int}\left( M \right)\)
+halmazok diszjunktak, uniójuk kiadja \(X\)-et.
+
+\end{allitas}
+
+\begin{definicio}
+
+Definíció:\\
+Egy \(a \in X\) pontot az \(M\) halmaz torlódási pontjának nevezünk, ha
+az \(a\) pont minden környezetében van \(M\)-beli, de \(a\)-tól
+különböző pont, formailag: \(a\) torlódási pont, ha
+\(\left\{ {B_{r}\left( a \right)\backslash\left\{ a \right\}} \right\} \cap M \neq \varnothing\).
+Az \(M\) halmaz torlódási pontjainak halmazát \(M\) '-vel jelöljük.
+
+\end{definicio}
+
+\begin{megjegyzes}
+
+Megjegyzés:\\
+Ha az \(a\) pont \(M\)-nek torlódási pontja, akkor \(a\)-nak minden
+környezete végtelen sok pontot tartalmaz az \(M\) halmazból.
+
+\end{megjegyzes}
+
+\begin{definicio}
+
+Definíció:\\
+Az \(M\) halmaz belső és határpontjainak összességét az \(M\) halmaz
+lezárásának nevezzük, \(\overline{M} = {int}M \cup \partial M\).
+
+\end{definicio}
+
+\begin{pelda}
+
+Példák:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\left. X = {\mathbb{R}},M = \left( 0,1 \right)\Rightarrow M' = \left\lbrack 0,1 \right\rbrack \right.\),
+  \(\partial M = \left\{ 0,1 \right\},{int}M = \left( 0,1 \right),\overline{M} = \left\lbrack 0,1 \right\rbrack\)
+\item
+  \(\left. X = {\mathbb{R}},M = {\mathbb{Z}}\Rightarrow M' = \varnothing \right.\)
+  ,
+  \(\partial M = {\mathbb{Z}},{int}M = \varnothing,\overline{M} = {\mathbb{Z}}\)
+\item
+  \(\left. X = {\mathbb{R}},M = \left\lbrack 0,1 \right\rbrack\Rightarrow M' = \left\lbrack 0,1 \right\rbrack \right.\)
+  ,
+  \(\partial M = \left\{ 0,1 \right\},{int}M = \left( 0,1 \right),\overline{M} = \left\lbrack 0,1 \right\rbrack\)
+\end{itemize}
+
+\end{pelda}
+
+\subsubsection{Nyílt és zárt halmazok}\label{nyilt-es-zart-halmazok}
+
+\begin{definicio}
+
+Definíció:\\
+Egy \(M \subset X\) halmazt nyíltnak nevezünk, ha \(\forall x \in M\)
+esetén
+\[\left. x \in {int}\left( M \right)\Leftrightarrow M \subset {int}\left( M \right)\Leftrightarrow M \cap \partial M = \varnothing. \right.\]
+
+\end{definicio}
+
+\begin{definicio}
+
+Definíció:\\
+Egy \(M\) halmazt zártnak nevezünk, ha tartalmazza az összes
+határpontját \(\left. \Leftrightarrow\partial M \subset M \right.\).
+
+\end{definicio}
+
+\begin{pelda}
+
+Példák:\\
+Legyen \(X: = {\mathbb{R}}\) , ekkor:
+
+\begin{itemize}
+\tightlist
+\item
+  \(M = \left\lbrack 0,1 \right\rbrack\) zárt halmaz
+\item
+  \(M = \left( 0,1 \right)\) nyílt halmaz
+\item
+  \(M = \left( 0,1 \right\rbrack\) se nem nyílt, se nem zárt halmaz
+\item
+  \(M = {\mathbb{Z}}\) zárt halmaz
+\end{itemize}
+
+\end{pelda}
+
+\begin{allitas}
+
+Állítás:\\
+Egy \(M \subset X\) halmaz zárt
+\(\left. \Leftrightarrow M = \overline{M}\Leftrightarrow M' \subset M \right.\).
+
+\end{allitas}
+
+\begin{tetel}
+
+Tétel:\\
+Tetszőleges \(M\) halmaz esetén \({int}\left( M \right)\) és
+\({ext}\left( M \right)\) nyílt halmaz.
+
+\end{tetel}
+
+\begin{bizonyitas}
+
+Bizonyítás\\
+(\({int}\left( M \right)\) nyílt halmaz): legyen \(a \in {int}M\). Azt
+kellene megmutatni, hogy
+\(\exists B_{r}\left( a \right) \subset {int}M\).
+\(\left. a \in {int}\left( M \right)\Rightarrow\exists B_{R}\left( a \right) \subset M \right.\).
+Legyen \(r: = R/2\), ekkor
+\(B_{r}\left( a \right) \subset {int}\left( M \right)\), ugyanis ha
+\(b \in B_{r}\left( a \right)\), akkor a háromszög egyenlőtlenség miatt
+\(\left. B_{r}\left( b \right) \subset B_{R}\left( a \right) \subset M,b \in {int}\left( M \right)\Rightarrow B_{r}\left( a \right) \subset {int}\left( M \right) \right.\)
+.■
+
+\end{bizonyitas}
+
+\begin{allitas}
+
+Állítás:\\
+\(\partial M,\overline{M},M'\) zárt halmazok.
+
+\end{allitas}
+
+\begin{tetel}
+
+Tétel:\\
+Ha \(M \subset X\) nyílt, akkor \(M^{C} = X\text{\textbackslash}M\) zárt
+halmaz.
+
+\end{tetel}
+
+\begin{bizonyitas}
+
+Bizonyítás:\\
+Tfh \(M\) nyílt halmaz, ekkor \(\partial M \cap M = \varnothing\),
+\(\partial M = \partial\left( M^{c} \right)\), ezért
+\[\left. \partial M^{C} \cap M = \varnothing\Rightarrow\partial M^{C} \subset M^{C} \right.,\]
+vagyis \(M^{C}\) zárt. ■
+
+\end{bizonyitas}
+
+\begin{tetel}
+
+Tétel:\\
+Akárhány nyílt halmaz uniója nyílt halmaz, és véges sok nyílt halmaz
+metszete is nyílt.
+
+\end{tetel}
+
+\begin{bizonyitas}
+
+Bizonyítás:\\
+Legyenek \(M_{\gamma \in I}\) nyílt halmazok (\(I\) indexhalmaz)!
+Belátjuk, hogy \(M: = {\underset{\gamma \in I}{\cup}M_{\gamma}}\) nyílt.
+Legyen
+\(\left. a \in M\Rightarrow\exists\gamma:a \in M_{\gamma} \right.\).
+Mivel \(M_{\gamma}\) nyílt, ezért
+\[\left. \exists B_{r}\left( a \right) \subset M_{\gamma}\Rightarrow B_{r}\left( a \right) \subset M \right..\]\\
+Legyenek \(M_{j \in I}\) nyílt halmazok (\(I\) indexhalmaz)! Belátjuk,
+hogy \(M: = {\underset{j = 1}{\overset{p}{\cap}}M_{j}}\) nyílt halmaz.
+Legyen
+\(\left. a \in M\Rightarrow a \in M_{j},\forall j = 1,2...p \right.\).
+Mivel \(M_{j}\) nyílt, ezért
+\(\exists r_{j}:B_{r_{j}}\left( a \right) \subset M_{j}\). Legyen
+\(\left. r = \min\left\{ {r_{1},r_{2},..,r_{p}} \right\}\Rightarrow B_{r}\left( a \right) \subset {\underset{j = 1}{\overset{p}{\cap}}M_{j}} \right.\)
+. ■
+
+\end{bizonyitas}
+
+\begin{tetel}
+
+Tétel:\\
+Akárhány zárt halmaz metszete zárt halmaz, és véges sok zárt halmaz
+uniója is zárt.
+
+\end{tetel}
+
+\begin{bizonyitas}
+
+Bizonyítás:\\
+(Belátjuk, hogy metszetük zárt.) Tfh \(M_{\gamma}\) zárt! Ekkor
+\(M_{\gamma}^{C}\) nyílt halmaz. Ezért
+\[{\bigcap\limits_{\gamma \in I}M_{\gamma}} = \left( {\underset{\gamma \in I}{\cup}M_{\gamma}^{C}} \right)^{C}\]
+zárt. Az unió esete hasonlóan bizonyítható. ■\\
+
+\end{bizonyitas}
+
+\begin{megjegyzes}
+
+Megjegyzés: végtelen sok nyílt halmaz metszete általában nem nyílt, az
+alaphalmaz és az üres halmaz nyílt és zárt egyszerre.
+
+\end{megjegyzes}
+
+\begin{ajanlo}
+
+\begin{ajanlofig}
+
+\href{https://xkcd.com}{\includegraphics[width=5.20833in,height=2.82292in]{wikipedian_protester.png}}
+
+\end{ajanlofig}
+
+\textbf{\emph{\href{https://xkcd.com/}{xkcd}}}, sometimes styled
+\textbf{\emph{XKCD}},\href{https://en.wikipedia.org/wiki/Xkcd\#cite_note-aboutxkcd-3}{{[}‡
+1{]}} is a \href{https://en.wikipedia.org/wiki/Webcomic}{webcomic}
+created by \href{https://en.wikipedia.org/wiki/Randall_Munroe}{Randall
+Munroe}. The comic's
+\href{https://en.wikipedia.org/wiki/Tagline}{tagline} describes it as
+``A webcomic of romance, sarcasm, math, and
+language''.\href{https://en.wikipedia.org/wiki/Xkcd\#cite_note-4}{{[}‡
+2{]}}\href{https://en.wikipedia.org/wiki/Xkcd\#cite_note-Boston.com-5}{{[}3{]}}
+Munroe states on the comic's website that the name of the comic is not
+an \href{https://en.wikipedia.org/wiki/Acronym}{acronym} but ``just a
+word with no phonetic pronunciation''.
+
+The subject matter of the comic varies from statements on life and love
+to \href{https://en.wikipedia.org/wiki/Mathematical_joke}{mathematical}
+and \href{https://en.wikipedia.org/wiki/Science}{scientific}
+\href{https://en.wikipedia.org/wiki/In-joke}{in-jokes}. Some strips
+feature simple humor or
+\href{https://en.wikipedia.org/wiki/Pop-culture}{pop-culture}
+references. Although it has a cast of
+\href{https://en.wikipedia.org/wiki/Stick_figures}{stick
+figures},\href{https://en.wikipedia.org/wiki/Xkcd\#cite_note-Guzman-6}{{[}4{]}}\href{https://en.wikipedia.org/wiki/Xkcd\#cite_note-7}{{[}5{]}}
+the comic occasionally features landscapes and intricate mathematical
+patterns such as \href{https://en.wikipedia.org/wiki/Fractal}{fractals},
+graphs and
+\href{https://en.wikipedia.org/wiki/Chart}{charts}.\href{https://en.wikipedia.org/wiki/Xkcd\#cite_note-8}{{[}6{]}}
+New comics are added three times a week, on Mondays, Wednesdays, and
+Fridays,\href{https://en.wikipedia.org/wiki/Xkcd\#cite_note-aboutxkcd-3}{{[}‡
+1{]}}\href{https://en.wikipedia.org/wiki/Xkcd\#cite_note-redhat-9}{{[}7{]}}
+although on some occasions they have been added every weekday.
+
+\end{ajanlo}
+
+\subsection{Sorozatok határértéke a metrikus
+térben}\label{sorozatok-hatarerteke-a-metrikus-terben}
+
+\begin{definicio}
+
+Definíció:\\
+Egy \(\left. f:{\mathbb{N}}\rightarrow X \right.\) (\(X\) metrikus tér)
+függvényt \(X\)-beli sorozatnak nevezünk. Jelölés: a sorozat \(k\)-adik
+tagja \(a_{k}: = f\left( k \right)\)-nek, a sorozat
+\(\left( a_{k} \right)_{k \in {\mathbb{N}}}: = f\)
+\(\left( a_{k} \right) = f\).
+
+\end{definicio}
+
+\begin{definicio}
+
+Definíció:\\
+Azt mondjuk, hogy az \(\left( a_{k} \right)\) sorozat határértéke
+(limesze) \(a \in X\), ha az \(a\) pont tetszőleges \(\varepsilon\)
+sugarú környezetéhez létezik olyan \(k_{0} \in {\mathbb{N}}\)
+küszöbszám, hogy \(k > k_{0},k \in {\mathbb{N}}\) esetén
+\(a_{k} \in B_{\varepsilon}\left( a \right)\). Másképp:
+\(\left. \forall\varepsilon > 0\exists k_{0}:k > k_{0}\Rightarrow\rho\left( {a_{k},a} \right) < \varepsilon \right.\),
+ezt így jelöljük:
+\({\lim\left( a_{k} \right) \equiv \underset{k\rightarrow\infty}{\lim}a_{k} = a}.\)
+
+\end{definicio}
+
+\subsubsection{A limesz tulajdonságai}\label{a-limesz-tulajdonsagai}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Ha \(a_{k} = a\) (minden \(k\)-ra), akkor
+  \(\lim\left( a_{k} \right) = a\)
+\item
+  Tfh \(\lim\left( a_{k} \right) = a\), akkor \(\left( a_{k} \right)\)
+  minden részsorozatának határértéke létezik és értékük \(a\).\\
+  Részsorozat: \(\left( a_{k} \right)\) véges vagy végtelen sok elemét
+  elhagyom úgy, hogy még mindig végtelen sok maradjon, és a sorrenden
+  nem változtatok. Másképpen: \(\left( a_{k} \right)\) részsorozata
+  \(\left( a_{g_{k}} \right)\), ahol
+  \(\left. g:{\mathbb{N}}\rightarrow{\mathbb{N}} \right.\) szigorúan
+  monoton növő.
+
+  \begin{bizonyitas}
+
+  Bizonyítás:\\
+  \(\left. \lim\left( a_{k} \right): = a\Rightarrow\forall\varepsilon > 0\exists k_{0}:k > k_{0}\Rightarrow\rho\left( {a_{k},a} \right) < \varepsilon \right.\).
+  Mivel \(\left. g_{k} \geq k\Rightarrow k > k_{0} \right.\)-ra
+  \(\rho\left( {a_{g_{k}},a} \right) < \varepsilon\), hisz ekkor
+  \(g_{k} > k_{0}\).
+
+  \end{bizonyitas}
+\item
+  A határérték egyértelmű.
+
+  \begin{bizonyitas}
+
+  Bizonyítás:\\
+  Tfh \(\left( a_{k} \right)\) határértékei \(a\) és \(b\) (\(X\)
+  elemei). Belátandó, hogy \(a = b\) . Ekkor egyrészt:
+  \[\left. \forall\varepsilon > 0\exists k_{0}:k > k_{0}\Rightarrow\rho\left( {a_{k},a} \right) < \varepsilon \right.,\]
+  másrészt
+  \(\forall\varepsilon > 0\exists k_{1}:k > k_{1},\rho\left( {a_{k},b} \right) < \varepsilon\)
+  \(\left. \Rightarrow k > \max\left\{ {k_{0},k_{1}} \right\} \right.\)
+  esetén
+  \(\rho\left( {a_{k},a} \right) < \varepsilon,\rho\left( {a_{k},b} \right) < \varepsilon\),
+  így a háromszög egyenlőtlenség alapján
+  \(\left. \rho\left( {a,b} \right) \leq \rho\left( {a,a_{k}} \right) + \rho\left( {a_{k},b} \right) < 2\varepsilon,\forall\varepsilon > 0\Rightarrow\rho\left( {a,b} \right) = 0\Leftrightarrow a = b \right.\)
+
+  \end{bizonyitas}
+\item
+  Ha
+  \(\left. \lim\left( a_{k} \right) = a\Rightarrow\left( a_{k} \right) \right.\)
+  minden átrendezésének a határértéke szintén \(a\)\\
+  Egy \(\left( a_{k} \right)\) átrendezése: veszek egy
+  \(\left. g:{\mathbb{N}}\rightarrow{\mathbb{N}} \right.\) bijekciót, az
+  átrendezett sorozat: \(\left( a_{g_{k}} \right)\).
+\item
+  Sorozatok összefésülése:\\
+  \(\left( a_{k} \right),\left( b_{k} \right)\) \(X\)-beli sorozatok
+  összefésülése olyan \(\left( c_{k} \right)\) \(X\)-beli sorozat,
+  melynek elemei \(a_{1},b_{1},a_{2},b_{2}...\). Ha
+  \(\left. \lim\left( a_{k} \right) = a = \lim\left( b_{k} \right)\Rightarrow\lim\left( c_{k} \right) = a \right.\)
+\item
+  Ha egy sorozatnak létezik a limesze, akkor korlátos is. (Korlátos:
+  létezik olyan \(n\) dimenziós gömb, mely tartalmazza a sorozat összes
+  elemét.)
+
+  \begin{bizonyitas}
+
+  Bizonyítás:\\
+  \(\left. \lim\left( a_{k} \right) = a\Rightarrow\varepsilon = 1\exists k_{0}:k > k_{0}\Rightarrow\rho\left( {a_{k},a} \right) < 1 \right.\),
+  így
+  \[r: = \max\left\{ {\rho\left( {a,a_{1}} \right),\rho\left( {a,a_{2}} \right),...,\rho\left( {a,a_{k_{0}}} \right)} \right\}\]
+  esetén \(a_{k} \in B_{r + 1}\left( a \right)\forall k\).
+
+  \end{bizonyitas}
+\end{enumerate}
+
+\subsubsection{A limesz műveleti tulajdonságai normált
+terekben}\label{a-limesz-muveleti-tulajdonsagai-normalt-terekben}
+
+A következőkben \(X\) mindig egy normált teret jelöl,
+\(\left( a_{k} \right)\) , illetve \(\left( b_{k} \right)\) pedig
+egy-egy \(X\)-beli sorozatot.
+
+A bizonyítások során az egész félévben külön hivatkozás nélkül
+használjuk azt a tényt, hogy ha egy \(x_{n} \subset X\) sorozatra
+\(\lim\left\| x_{n} \right\| \leq 0\) , akkor
+\(\left. x_{n}\rightarrow 0 \right.\) .
+
+\paragraph{Összeadás}\label{osszeadas}
+
+\begin{tetel}
+
+Tétel:\\
+Ha
+\(\left. \lim\left( a_{k} \right) = a,\lim\left( b_{k} \right) = b\Rightarrow\lim\left( {a_{k} + b_{k}} \right) = a + b \right.\).
+
+\end{tetel}
+
+\begin{bizonyitas}
+
+Bizonyítás:\\
+mivel \(\lim\left( a_{k} \right) = a\), ezért
+\(\left. \forall\varepsilon > 0\exists k_{0}:k > k_{0}\Rightarrow\rho\left( {a,a_{k}} \right) = \left\| {a_{k} - a} \parallel \right. < \varepsilon \right.\)
+és mivel \(\lim\left( b_{k} \right) = b\), ezért
+\(\left. \forall\varepsilon > 0\exists k_{1}:k > k_{1}\Rightarrow\rho\left( {b,b_{k}} \right) = \left\| {b_{k} - b} \parallel \right. < \varepsilon \right.,\)
+így \[\begin{array}{l}
+{\rho\left( {a_{k} + b_{k},a + b} \right) = \left\| {\left( {a_{k} + b_{k}} \right) - \left( {a + b} \right)} \right\| =} \\
+{\left\| {\left( {a_{k} - a} \right) + \left( {b_{k} - b} \right)} \right\| \leq \left\| {a_{k} - a} \right\| + \left\| {b_{k} - b} \right\| < 2\varepsilon,} \\
+\end{array}\] ha \(k > \max\left\{ {k_{0},k_{1}} \right\}\) . ■
+
+\end{bizonyitas}
+
+\paragraph{Szorzás}\label{szorzas}
+
+\begin{allitas}
+
+Állítás:\\
+Legyen \(X\) normált tér! Ha \(\lim\left( \lambda_{k} \right) = 0\) és
+\(\left( a_{k} \right)\) korlátos,
+\(\left. \Rightarrow\lim\left( {\lambda_{k}a_{k}} \right) = 0 \right..\)
+
+\end{allitas}
+
+\begin{tetel}
+
+Tétel:\\
+Tfh \(\lim\left( a_{k} \right) = a\) és
+\(\lim\left( \lambda_{k} \right) = \lambda\) (
+\(\lambda_{k} \in {\mathbb{R}}\) ). Ekkor
+\(\lim\left( {\lambda_{k}a_{k}} \right) = \lambda a\).
+
+\end{tetel}
+
+\begin{bizonyitas}
+
+Bizonyítás:\\
+Mivel \(\lim\left( a_{k} \right) = a\) ezért
+\(\left. \forall\varepsilon > 0\exists k_{0}:k > k_{0}\Rightarrow\left\| {a_{k} - a} \parallel \right. < \varepsilon \right.\).
+Mivel \(\lim\left( \lambda_{k} \right) = k\) ezért
+\(\left. \forall\varepsilon > 0\exists k_{1}:k > k_{1}\Rightarrow\left| {\lambda_{k} - \lambda} \right| < \varepsilon \right.\).
+Tehát \(k > \max\left\{ {k_{0},k_{1}} \right\}\) esetén
+\(\left\| {\lambda_{k}a_{k} - \lambda a} \parallel \right. = \left\| {\left( {\lambda_{k}a_{k} - \lambda a_{k}} \right) + \left( {\lambda a_{k} - \lambda a} \right)} \parallel \right. \leq \left\| {\lambda_{k}a_{k} - \lambda a_{k}} \parallel \right. + \left\| {\lambda a_{k} - \lambda a} \parallel \right. =\)
+\(= \left\| {\left( {\lambda_{k} - \lambda} \right)a_{k}} \parallel \right. + \left\| {\lambda\left( {a_{k} - a} \right)} \parallel \right. = \underset{< \varepsilon}{\underbrace{\left| {\lambda_{k} - \lambda} \right|}}\left\| a_{k} \parallel \right. + \underset{\text{rögz.}}{\underbrace{\left| \lambda \right|}}\underset{< \varepsilon}{\underbrace{\left\| {a_{k} - a} \parallel \right.}}\).
+Mivel \(\left( a_{k} \right)\) korlátos,
+\(\exists M > 0:\left\| a_{k} \parallel \right. < M\forall k \in {\mathbb{N}}\)-re,
+tehát \(k > \max\left\{ {k_{0},k_{1}} \right\}\) esetén
+\(\left\| {\lambda_{k}a_{k} - \lambda a} \parallel \right. < \varepsilon M + \left| \lambda \right|\varepsilon = \left( {M + \left| \lambda \right|} \right)\varepsilon\)
+. ■
+
+\end{bizonyitas}
+
+\paragraph{Osztás}\label{osztas}
+
+\begin{tetel}
+
+Tétel:\\
+Legyen \(\left( a_{k} \right)\) egy valós vagy komplex sorozat. Ha
+\(\left. a = \lim\left( a_{k} \right) \neq 0\Rightarrow\lim\left( \frac{1}{a_{k}} \right) = \frac{1}{a} \right.\).
+
+\end{tetel}
+
+\begin{bizonyitas}
+
+Bizonyítás:\\
+Mivel
+\(\left. \lim\left( a_{k} \right) = a\Rightarrow\forall\varepsilon > 0\exists k_{0}:k > k_{0}\Rightarrow\left| {a_{k} - a} \right| < \varepsilon \right.\),
+így
+\[\left. \exists k_{1}:k > k_{1}\Rightarrow\left| {a_{k} - a} \right| < \varepsilon\left| a \right|^{2}/2 \right..\]
+Legyen \(\varepsilon: = \frac{\left| a \right|}{2}\), ekkor
+\(\left. \exists k_{2}:k > k_{2}\Rightarrow\left| a_{k} \right| > \frac{\left| a \right|}{2} \right.\).
+Legyen \(k > \max\left\{ {k_{1},k_{2}} \right\}\), ekkor
+\[{\left| {\frac{1}{a_{k}} - \frac{1}{a}} \right| = \frac{\left| {a - a_{k}} \right|}{\left| {a_{k}a} \right|} < \frac{\varepsilon\left| a \right|^{2}/2}{\left| a_{k} \right|\left| a \right|} = \frac{\varepsilon\left| a \right|/2}{\left| a \right|/2} = \varepsilon}.\]
+■
+
+\end{bizonyitas}
+
+\subsubsection{Zárt halmazok jellemzése
+sorozatokkal}\label{zart-halmazok-jellemzese-sorozatokkal}
+
+Emlékeztető: \(X\) metrikus térben egy \(M\) halmazt zártnak neveztünk,
+ha
+\[\left. \partial M \subset M\Leftrightarrow\overline{M} \subset M\Leftrightarrow\overline{M} = M \right.,\]
+ahol \(\overline{M} = {int}\left( M \right) \cup \partial M\) , továbbá
+\(\left. a \in \overline{M}\Leftrightarrow \right.\) ha \(a\) bármely
+környezete tartalmaz \(M\) beli pontot is. Ezek szerint \(M\) zárt
+halmaz pontosan akkor, ha minden olyan pont, amelynek bármely
+környezetében van \(M\) beli pont, az \(M\)-hez tartozik.
+
+\begin{tetel}
+
+Tétel:\\
+Egy \(M \subset X\) halmaz zárt pontosan akkor, ha tetszőleges
+konvergens sorozatot nézve, melynek tagjai \(a_{k} \in M\)
+\(\lim\left( a_{k} \right) \in M\).
+
+\end{tetel}
+
+\begin{bizonyitas}
+
+Bizonyítás:\\
+Az előbbiek szerint \(M\) halmaz zárt pontosan akkor, ha minden olyan
+pont, amelynek bármely környezetében van \(M\) beli pont, az \(M\)-hez
+tartozik.\\
+\(\Rightarrow\) irányban: tfh \(M\) zárt! Ha \(a_{k} \in M\) és
+\(\lim\left( a_{k} \right) = a\), akkor \(a \in M\), mert a minden
+környezetében van \(M\) beli pont is (nevezetesen \(a_{k}\) ).\\
+\(\Leftarrow\) irányban: fordítva is igaz, ha \(a\) minden környezete
+tartalmaz \(M\) beli pontot, akkor
+\(\exists\left( a_{k} \right) \in M:\lim\left( a_{k} \right) = a\).
+Vagyis minden olyan pont (\(a\)), amelynek minden környezetében van
+\(M\)-beli pont (az \(a_{k}\)-k), az \(M\)-nek eleme, és a fentiek
+szerint ebből következik, hogy \(M\) zárt. ■
+
+\end{bizonyitas}
+
+\paragraph{Korlátos és zárt halmazok, illetve sorozatkompakt
+halmazok}\label{korluxe1tos-uxe9s-zuxe1rt-halmazok-illetve-sorozatkompakt-halmazok}
+
+\begin{tetel}
+
+Tétel (Bolzano-Weierstrass-féle kiválasztási tétel \({\mathbb{R}}^{n}\)
+-ben) :\\
+Legyen \(\left( a_{k} \right)\) korlátos sorozat
+\({\mathbb{R}}^{n}\)-ben! Ekkor \(\left( a_{k} \right)\) sorozatnak
+létezik konvergens részsorozata.
+
+\end{tetel}
+
+\begin{bizonyitas}
+
+Bizonyítás:\\
+Először \(n = 1\) esetre, ekkor
+\(\left( {a_{k} \in {\mathbb{R}}} \right)\) korlátos
+\(\left. \Rightarrow\exists\left\lbrack {c,d} \right\rbrack a_{k},\forall k \right.\).
+Felezzük \(\left\lbrack {c,d} \right\rbrack\) intervallumot! Ekkor a két
+zárt fél intervallum közül legalább az egyik végtelen sok tagot
+tartalmaz a sorozatból. Ez legyen
+\(\left\lbrack {c_{1},d_{1}} \right\rbrack\). Ezt megint felezzük,
+melyek közül legalább az egyik végtelen sok tagot tartalmaz a
+sorozatból, ez legyen \(\left\lbrack {c_{2},d_{2}} \right\rbrack\)
+\ldots{}Így \(a_{k}\)-ból kiválasztható egy \(a_{k_{l}}\) részsorozat
+úgy, hogy \(a_{k_{l}} \in \left\lbrack {c_{l},d_{l}} \right\rbrack\).
+Belátjuk, hogy \(a_{k_{l}}\) részsorozat konvergens.\\
+\(\left\lbrack {c,d} \right\rbrack \supset \left\lbrack {c_{1},d_{1}} \right\rbrack \supset \left\lbrack {c_{2},d_{2}} \right\rbrack \supset ... \supset \left\lbrack {c_{l},d_{l}} \right\rbrack\),
+\(\underset{l\rightarrow\infty}{\lim}\left| {c_{l} - d_{l}} \right| = \underset{l\rightarrow\infty}{\lim}\frac{c - d}{2^{l}} = 0\).
+Tudjuk, hogy \(\left\{ {c_{l}:l \in {\mathbb{N}}} \right\}\) felülről
+korlátos
+\(\left. \Rightarrow\exists\sup\left\{ {c_{l}:l \in {\mathbb{N}}} \right\} \right.\)
+és azt is, hogy \(\left\{ {d_{l}:l \in {\mathbb{N}}} \right\}\) alulról
+korlátos
+\(\left. \Rightarrow\exists\inf\left\{ {d_{l}:l \in {\mathbb{N}}} \right\} \right.\).
+Mivel
+\[\left. \underset{l\rightarrow\infty}{\lim}\left| {c_{l} - d_{l}} \right| = 0\Rightarrow\sup\left\{ {c_{l}:l \in {\mathbb{N}}} \right\} = \inf\left\{ {d_{l}:l \in {\mathbb{N}}} \right\}: = \alpha \right.,\]
+továbbá
+\(\left. a_{k_{l}} \in \left\lbrack {c_{l},d_{l}} \right\rbrack\Rightarrow\lim\left( a_{k_{l}} \right) = \alpha \right.\)
+(„rendőr-elv'').\\
+\(n = 2\) esetre, ekkor
+\(a_{k} = \left( {a_{k}^{(1)},a_{k}^{(2)}} \right)\). Mivel \(a_{k}\)
+korlátos sorozat \({\mathbb{R}}^{2}\)-ben, így
+\(a_{k}^{(1)},a_{k}^{(2)}\) korlátos sorozatok \(\mathbb{R}\)-ben. Az
+előzőek szerint az előbbiből kiválasztható ebből egy konvergens
+részsorozat, \(\left( a_{k_{l}}^{(1)} \right)_{l \in {\mathbb{N}}}\).
+Tekintsük az \(a_{k}^{(2)}\) ugyanilyen indexű elemekből álló
+\(\left( a_{k_{l}}^{(2)} \right)\) részsorozatát (mely korlátos
+\(\mathbb{R}\)-ben). Az előzőek szerint ennek létezik konvergens
+részsorozata,
+\(\left( a_{k_{l_{m}}}^{(2)} \right)_{m \in {\mathbb{N}}}\).
+\(\left( a_{k_{l}}^{(1)} \right)_{l \in {\mathbb{N}}}\) konvergens, így
+\(\left( a_{k_{l_{m}}}^{(1)} \right)_{m \in {\mathbb{N}}}\) is az, így
+\(\left( a_{k_{l_{m}}} \right): = \left( {a_{k_{l_{m}}}^{(1)},a_{k_{l_{m}}}^{(2)}} \right)\)
+részsorozat konvergens.\\
+\(n = 3\) esetén hasonló módon, mint \(n = 1\)-ről váltottunk \(n = 2\)
+-re, itt is igazolható (tkp teljes indukció). ■
+
+\end{bizonyitas}
+
+\begin{megjegyzes}
+
+Megjegyzés:\\
+Hasonló jellegű állítások általában nem igazak tetszőleges normált
+terekben, csak véges dimenzióban!
+
+\end{megjegyzes}
+
+\begin{ajanlo}
+
+\begin{ajanlofig}
+
+\href{https://www.youtube.com/watch?v=e8o6rt6o4LA}{\includegraphics[width=3.80208in,height=2.80208in]{tomandjerry.jpg}}
+
+\end{ajanlofig}
+
+Ne feledjétek, ebből a tárgyól vizsga lesz! Ha hétről hétre tanulsz, és
+a kérdéseket időben felteszed a tanárnak, sokkal könnyebb felkészülni a
+vizsgára.
+
+\end{ajanlo}
+
+\end{document}

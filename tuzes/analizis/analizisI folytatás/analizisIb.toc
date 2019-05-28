@@ -1,0 +1,45 @@
+\select@language {magyar} \contentsline {section}{\numberline {1}Metrikus t\IeC {\'e}r}{3}{section.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {1.1}Vektort\IeC {\'e}r}{3}{subsection.1.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2}Norm\IeC {\'a}lt t\IeC {\'e}r}{4}{subsection.1.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {1.3}Topol\IeC {\'o}giai alapfogalmak a metrikus t\IeC {\'e}rben}{5}{subsection.1.3}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {1.3.1}Pont \IeC {\'e}s halmaz viszonya}{5}{subsubsection.1.3.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {1.3.2}Ny\IeC {\'\i }lt \IeC {\'e}s z\IeC {\'a}rt halmazok}{6}{subsubsection.1.3.2}
+\select@language {magyar} \contentsline {section}{\numberline {2}Sorozatok hat\IeC {\'a}r\IeC {\'e}rt\IeC {\'e}ke a metrikus t\IeC {\'e}rben}{8}{section.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1}A limesz tulajdons\IeC {\'a}gai}{8}{subsection.2.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {2.1.1}A limesz m\IeC {\H u}veleti tulajdons\IeC {\'a}gai norm\IeC {\'a}lt terekben}{9}{subsubsection.2.1.1}
+\select@language {magyar} \contentsline {paragraph}{\numberline {2.1.1.1}\IeC {\"O}sszead\IeC {\'a}s}{9}{paragraph.2.1.1.1}
+\select@language {magyar} \contentsline {paragraph}{\numberline {2.1.1.2}Szorz\IeC {\'a}s}{10}{paragraph.2.1.1.2}
+\select@language {magyar} \contentsline {paragraph}{\numberline {2.1.1.3}Oszt\IeC {\'a}s}{10}{paragraph.2.1.1.3}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {2.1.2}Z\IeC {\'a}rt halmazok jellemz\IeC {\'e}se sorozatokkal}{11}{subsubsection.2.1.2}
+\select@language {magyar} \contentsline {paragraph}{\numberline {2.1.2.1}Korl\IeC {\'a}tos \IeC {\'e}s z\IeC {\'a}rt halmazok, illetve sorozatkompakt halmazok}{11}{paragraph.2.1.2.1}
+\select@language {magyar} \contentsline {paragraph}{\numberline {2.1.2.2}Cauchy-f\IeC {\'e}le konvergencia-krit\IeC {\'e}rium, teljess\IeC {\'e}g}{13}{paragraph.2.1.2.2}
+\select@language {magyar} \contentsline {section}{\numberline {3}F\IeC {\"u}ggv\IeC {\'e}nyek limesze (hat\IeC {\'a}r\IeC {\'e}rt\IeC {\'e}ke)}{14}{section.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.1}\IeC {\'A}tviteli elv}{15}{subsection.3.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.1.1}M\IeC {\H u}veleti szab\IeC {\'a}lyok}{16}{subsubsection.3.1.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.1.2}M\IeC {\H u}veleti szab\IeC {\'a}lyok folytonoss\IeC {\'a}gra}{17}{subsubsection.3.1.2}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.1.3}A kompoz\IeC {\'\i }ci\IeC {\'o} f\IeC {\"u}ggv\IeC {\'e}ny}{17}{subsubsection.3.1.3}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.1.4}Inverz f\IeC {\"u}ggv\IeC {\'e}ny folytonoss\IeC {\'a}ga}{18}{subsubsection.3.1.4}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2}A folytonos f\IeC {\"u}ggv\IeC {\'e}nyek alaptulajdons\IeC {\'a}gai}{20}{subsection.3.2}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.2.1}Bolzano-t\IeC {\'e}tel metrikus terekben}{23}{subsubsection.3.2.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.2.2}F\IeC {\"u}ggv\IeC {\'e}nysorok \IeC {\'e}s sorozatok egyenletes konvergenci\IeC {\'a}ja}{24}{subsubsection.3.2.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3}Hatv\IeC {\'a}nysorok}{26}{subsection.3.3}
+\select@language {magyar} \contentsline {section}{\numberline {4}Differenci\IeC {\'a}lhat\IeC {\'o}s\IeC {\'a}g}{27}{section.4}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.1}Line\IeC {\'a}ris lek\IeC {\'e}pez\IeC {\'e}sek}{28}{subsection.4.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.1.1}Line\IeC {\'a}ris lek\IeC {\'e}pez\IeC {\'e}sek inverze}{31}{subsubsection.4.1.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.1.2}Line\IeC {\'a}ris \IeC {\'e}s folytonos oper\IeC {\'a}torok}{32}{subsubsection.4.1.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2}A deriv\IeC {\'a}l\IeC {\'a}s m\IeC {\H u}velete, m\IeC {\H u}veleti szab\IeC {\'a}lyok}{38}{subsection.4.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3}Differenci\IeC {\'a}lhat\IeC {\'o}s\IeC {\'a}g \(\left . {\mathbb {R}}^{n}\rightarrowtail {\mathbb {R}}^{m} \right .\)-ben}{40}{subsection.4.3}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.1}Egyv\IeC {\'a}ltoz\IeC {\'o}s kit\IeC {\'e}r\IeC {\'e}s}{41}{subsubsection.4.3.1}
+\select@language {magyar} \contentsline {paragraph}{\numberline {4.3.1.1}Lok\IeC {\'a}lis n\IeC {\"o}veked\IeC {\'e}s, fogy\IeC {\'a}s -- lok\IeC {\'a}lis sz\IeC {\'e}ls\IeC {\H o}\IeC {\'e}rt\IeC {\'e}k}{41}{paragraph.4.3.1.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4}Monoton n\IeC {\"o}veked\IeC {\'e}s \IeC {\'e}s fogy\IeC {\'a}s}{43}{subsection.4.4}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.5}Magasabbrend\IeC {\H u} differenci\IeC {\'a}lhat\IeC {\'o}s\IeC {\'a}g}{47}{subsection.4.5}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.6}Biline\IeC {\'a}ris oper\IeC {\'a}torok}{50}{subsection.4.6}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.7}Multiline\IeC {\'a}ris lek\IeC {\'e}pez\IeC {\'e}sek}{53}{subsection.4.7}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.1}Alkalmaz\IeC {\'a}s a magasabbrend\IeC {\H u} deriv\IeC {\'a}ltak \IeC {\'e}rtelmez\IeC {\'e}s\IeC {\'e}re}{53}{subsubsection.4.7.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.2}A Lagrange-f\IeC {\'e}le k\IeC {\"o}z\IeC {\'e}p\IeC {\'e}rt\IeC {\'e}kt\IeC {\'e}tel t\IeC {\"o}bbv\IeC {\'a}ltoz\IeC {\'o}s f\IeC {\"u}ggv\IeC {\'e}nyekre}{54}{subsubsection.4.7.2}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.3}Alkalmaz\IeC {\'a}s}{55}{subsubsection.4.7.3}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.4}F\IeC {\"u}ggv\IeC {\'e}nysorok \IeC {\'e}s sorozatok \IeC {\'e}s deriv\IeC {\'a}l\IeC {\'a}sa}{56}{subsubsection.4.7.4}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.5}L' H\IeC {\^o}pital szab\IeC {\'a}ly}{57}{subsubsection.4.7.5}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.6}Hatv\IeC {\'a}nysorok integr\IeC {\'a}l\IeC {\'a}sa \IeC {\'e}s deriv\IeC {\'a}l\IeC {\'a}sa}{57}{subsubsection.4.7.6}
+\select@language {magyar} \contentsline {paragraph}{\numberline {4.7.6.1}Taylor-formula}{58}{paragraph.4.7.6.1}
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.7.7}Taylor-formula Lagrange-f\IeC {\'e}le marad\IeC {\'e}ktaggal}{58}{subsubsection.4.7.7}

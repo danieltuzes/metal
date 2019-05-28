@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* CSS Document */
+.subtitle {
+	font-size:60%;
+	font-weight:normal;
+}
+annotation {
+	display: none;
+}
+.bigger {/*
+	background-color: #FFF9D7;
+	border: 1px solid #999999;
+	margin: 4%;
+	padding: 1%;*/
+}
+.big {
+	font-size: 105%;
+	font-weight: bold;
+}
+
+.ajanlo img {
+	float:right;
+	margin: 1em;
+}
+.ajanlofig {}
+.ajanlo {
+	padding-top:1em;
+	padding-bottom:1em;
+	padding-left:2em;
+	padding-right:2em;
+	margin-left:-0.5em;
+	margin-right:-0.5em;
+	background-color:#F7F7F7;
+	overflow:auto;
+	border-bottom:1px solid #999;
+	border-top:1px solid #999;
+}
+
+math {
+	display:inline;
+	padding-right:0px;
+	margin-right:0px;
+}
+.underline {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: dashed;
+	border-right-style: dashed;
+	border-bottom-style: dashed;
+	border-left-style: dashed;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+}
+h1, h2 {
+	text-align: center;
+}
+h1, h2, h3, h4, h5 {
+	margin-bottom:0px;
+	padding-bottom:0px;
+	clear:both;
+}
+
+
+.allitas, .megj, .pelda, .tetel, .bizonyitas, .def{
+	padding-left: 1em;
+	padding-bottom:0.2em;
+	padding-top:0.2em;
+	margin-bottom:0.5em;
+}
+
+.tetel, .bizonyitas, .def, .pelda {
+	border-left:4px solid;
+}
+
+.tetel::first-line, .bizonyitas::first-line, .allitas::first-line {
+	color:#900;
+}
+
+.tetel, .bizonyitas {
+	border-color:#900;
+}
+
+.pelda::first-line, .pelda > p::first-line {
+	color:#090;
+}
+
+.pelda {
+	border-color:#090;
+}
+
+.pelda > p {
+	margin:0;
+	padding:0;
+	}
+
+.tetel::first-line, .def::first-line, .pelda::first-line, .pelda > p::first-line {
+	font-weight:bold;
+}
+
+
+
+p {
+	line-height:200%;
+}
+math {
+	line-height:100%;
+}
+.indent {
+	padding-left:5%;
+}
