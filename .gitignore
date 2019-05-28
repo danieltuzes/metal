@@ -1,3 +1,7 @@
 phd/
 MSC_diploma/
 Scripts-n-styles/mathjax/
+*.aux
+*.log
+*.out
+*.gz
