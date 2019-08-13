@@ -55,7 +55,7 @@ body {padding-top: 56px;}
 	<!-- Footer -->
 <footer class="py-4 bg-dark">
   <div class="container">
-    <p class="m-0 text-center text-white"><a href="callto:003613722805">+36-1-372-2805</a> | <a href="mailto:tuzes@metal.elte.hu">tuzes@metal.elte.hu</a> | <a href="vendor/LICENSE.txt">The code is under MIT license</a></p>
+    <p class="m-0 text-center text-white"><a href="callto:003613722805">+36-1-372-2805</a> | <a href="mailto:tuzes@metal.elte.hu">tuzes@metal.elte.hu</a> | <a href="vendor/LICENSE.txt">copyright</a></p>
   </div>
   <!-- /.container --> 
 </footer>
