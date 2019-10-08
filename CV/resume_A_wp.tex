@@ -1,0 +1,155 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,USletter,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Dániel}{Tüzes}
+%\title{Resumé}                               % optional, remove / comment the line if not wanted
+
+\address{Eötvös University, Budapest, Hungary}{}{}
+\phone[mobile]{+36 70 335 8043}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\email{danieltuzes@gmail.com}                               % optional, remove / comment the line if not wanted
+% optional, remove / comment the line if not wanted             % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{picture}
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\section{Education}
+\textbf{Eötvös University}, \emph{Budapest, Hungary}  \hfill \textbf{2012--2019}\\
+\emph{PhD in Physics}, summa cum laude, GPA 5.00 (scale: 1 to 5)\\
+Materials science and condensed matter physics. Thesis: Stochastic properties of dislocation motion and rearrangement.  % arguments 3 to 6 can be left empty
+
+\vspace{4pt}
+\textbf{Friedrich Alexander University Nuremberg-Erlangen}, \emph{Nuremberg, Germany} \hfill \textbf{2015--2017}\\
+\emph{Visiting research scientist}
+
+\vspace{4pt}
+\textbf{Eötvös University}, \emph{Budapest, Hungary}  \hfill \textbf{2007--2012}\\
+\emph{M.Sc.\ and B.Sc. in Physics}, GPA 4.97 and 4.87 (scale: 1 to 5)\\
+Atomic and molecular physics. Thesis: Determining polarization of dislocation ensembles.
+
+\section{Skills}
+\begin{itemize}
+\item \textbf{Technical}: Expert level knowledge in modeling complex stochastic and deterministic systems with partial differential equations, model simplification with proper approximations, analysis of asymptotic behavior in small and infinite large systems. Gathering, evaluating and presenting real word noisy data. Expertise in maximum likelihood estimations, numeric PDE solving, equilibrium finding, linear stability analysis, Fourier-analysis, hypothesis testing and setting up different computational models.
+\vspace{4pt}
+\item \textbf{Computer}: Advanced, practical knowledge in C++, used on a daily basis (classes, templates, lambdas, STL and other libraries). Intermediate level scripting practice in Gnuplot to visualize data and plot figures. Intermediate to advanced level in describing languages as LaTeX, Markdown and pandoc. Intermediate level scripting in bash, regular expressions and git, basic usage of Python. Basic level practice in HTML, PHP, MySQL and JS.
+\vspace{4pt}
+\item \textbf{Language}: English (fluent), Hungarian (native), German (intermediate), French (elementary).
+\end{itemize}
+
+\section{Experience}
+\textbf{Eötvös University}, \emph{Budapest, Hungary}  \hfill \textbf{2012--2019}\\
+\textbf{Friedrich Alexander University Nuremberg-Erlangen}, \emph{Nuremberg, Germany}\\
+Teaching assistant, research assistant and lecturer
+\begin{itemize}
+\item Designed and implemented stochastic simulations using non-deterministic PDEs
+\item Improved the efficiency of existing simulations by a factor of 2 using mathematical identities, and by a factor of 5 eliminating cache mismatches; implemented a stochastic model on GPU
+\item Developed a sensitive way of investigating patterns on a 2D scalar field using Fourier-analysis
+\item Prepared fast, live data visualization and constructed educational material from scratch
+\item Initiated a new investigation topic in an international research group with an output of a PRB article
+\item Coded in C++ for different operating systems; used different compilers and options for different target systems and purposes; used STL intensively, along with industry-standard libraries, such as FFTW, LAPACK, Boost and CUDA; used classes, templates, lambdas
+\item Created scripts in gnuplot, producing informative and figures for data visualization
+\item Created documentations in LaTeX, pandoc and different flavors of Markdown
+\item Collaborated in an international and multicultural environment. Encouraged more involvement of research peers in research projects and social events
+\end{itemize}
+\vspace{6pt}
+
+\textbf{Franz-Fertig}, \emph{Buchen, Germany}  \hfill \textbf{7.2019 -- 9.2019}\\
+Production leader and manager at Budapest based production site
+
+\begin{itemize}
+\item Restored the information technology system at Dunapol in Budapest after its breakdown under prior management
+\item Investigated the factory's technology and methods to infer working conditions prior the breakdown; measured damages
+\item Within two weeks, set up the original automated production management system, and by involving database specialist, repaired the damaged data
+\item Coordinated cargo deliveries between the parent company and the subsidiary, managed the production workflow, coordinated employees and helped managing acquisitions and invoicing
+\end{itemize}
+\vspace{3pt}
+
+\section{Publications, talks and presentations}
+\subsection{Peer reviwed journals}
+\begin{itemize}
+\item Wu, RH; \textbf{Tüzes, D}; Ispanovity, PD; Groma, I; Hochrainer, T; Zaiser, M\\
+	\emph{Instability of dislocation fluxes in a single slip: Deterministic and stochastic models of dislocation patterning}\\
+    \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.98.054110}{PHYSICAL REVIEW B 98 : 5 Paper: 054110 , 15 p. (2018)};
+    \href{https://arxiv.org/pdf/1708.05533}{arxiv PDF}
+\item István, Hegyi Ádám; Dusán, Ispánovity Péter; Knapek, Michal; \textbf{Tüzes, Dániel}; Máthis, Krisztián; Chmelík, František; Dankházi, Zoltán; Varga, Gábor; Groma, István\\
+    \emph{Micron-Scale Deformation: A Coupled In Situ Study of Strain Bursts and Acoustic Emission}\\
+    \href{https://www.cambridge.org/core/journals/microscopy-and-microanalysis/article/micronscale-deformation-a-coupled-in-situ-study-of-strain-bursts-and-acoustic-emission/DAF84F7E4CC7C2A211E39A1FFBCCB2D0}{MICROSCOPY AND MICROANALYSIS 23 : 6 pp. 1076-1081. , 6 p. (2017)};
+    \href{https://arxiv.org/pdf/1604.01815}{arxiv PDF}
+\item \textbf{Tüzes, D}; Ispánovity, PD; Zaiser, M\\
+    \emph{Disorder is good for you: the influence of local disorder on strain localization and ductility of strain softening materials}\\
+    \href{https://link.springer.com/article/10.1007\%2Fs10704-017-0187-1}{INTERNATIONAL JOURNAL OF FRACTURE 205 : 2 pp. 139-150. , 12 p. (2017)};
+    \href{https://arxiv.org/pdf/1604.01821}{arxiv PDF}
+\item Ispánovity, PD; \textbf{Tüzes, D}; Szabó, P; Zaiser, M; Groma, I\\
+    \emph{Role of weakest links and system-size scaling in multiscale modeling of stochastic plasticity}\\
+    \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.95.054108}{PHYSICAL REVIEW B 95 : 5 Paper: 054108 , 13 p. (2017)};
+    \href{https://arxiv.org/pdf/1604.01645}{arxiv PDF}
+\item Groma, I; \textbf{Tüzes, D}; Ispánovity, PD\\
+    \emph{Asymmetric X-ray line broadening caused by dislocation polarization induced by external load}\\
+    \href{https://www.sciencedirect.com/science/article/pii/S1359646213000110}{SCRIPTA MATERIALIA 68 : 9 pp. 755-758. , 4 p. (2013)}; \href{http://metal.elte.hu/~tuzes/docs/pre\%20AsymmetricX-ray\%20line\%20broadening\%20caused\%20by\%20dislocation\%20polarization\%20induced\%20by\%20external\%20load.pdf}{early version PDF}
+\end{itemize}
+    
+\subsection{Books, lecture notes (Hungarian)}
+\begin{itemize}
+\item Analysis I - III: The official coursebook for physicists at Eötvös University, 173p, ISBN: 978-963-489-089-8
+\item Mechanics practice: short summary of the lecture notes and examples for calculation, 93p
+\item Continuum mechanics practice: Introduction to deformations and strains, and examples for calculation, 47p
+\item Quantum many body physics: A lecture note for MSc students. Lecturer: Gergely Szirmai and András Csordás, 26p
+\end{itemize}
+\vspace{6pt}
+Took part in numerous prestigious international conferences and seminars, held presentations and introduced his research results using posters as well. 
+
+\section{Scholarships and awards}
+\cvitem{2018--2019}{two-year research scholarship (Hungarian Competitiveness and Excellence Program)}
+\cvitem{2017/2018}{New Hungarian Excellence Program scholarship (Ministry of Human Capacities)}
+\cvitem{2016/2017}{one-year research scholarship granted by Prof. Michael Zaiser}
+\cvitem{2015/2016}{one-year PhD scholarship granted by BayHost}
+\cvitem{2012--2017}{PhD scholarship granted by the Hungarian Ministry of Education}
+\cvitem{2011/2012}{Excellence of Faculty (99.2th percentile)}
+\cvitem{2011/2012}{Fellowship granted by the President of the Hungarian Republic (99.2th percentile)}
+\cvitem{2009/2010}{Fellowship granted by the President of the Hungarian Republic (99.2th percentile)}
+\cvitem{2008}{2nd place at \href{https://ortvay.elte.hu/main.html}{Rudolf Ortvay International Competition in Physics}}
+
+\section{Community services and affiliations}
+\cvitem{2008 -- }{Organizer in the Dürer Competition in Mathematics, Physics and Chemistry\newline
+A competition for secondary school students, and from 2017 mentor in the \href{http://hypt.elte.hu/}{Hungarian team} of the International Young Physicists Tournament}
+\cvitem{2008 -- }{Founder and maintainer of \href{http://fizweb.elte.hu/}{FizWeb}, the largest lecture note, example, exercise and book sharing platform for physicists at Eötvös University}
+\cvitem{2008 -- }{Content manager and maintainer of numerous talent-related websites across Europe, like from 2013, \href{https://talentcentrebudapest.eu/}{the website of the Talent Center Budapest} (EUTCB is founded to foster and coordinate the joint European talent support activities), until 2014, \href{http://tehetsegpont.hu/}{the (Hungarian) National Talent Support Council}, from 2016, the \href{http://echa.info/}{European Council for High Ability} and the \href{http://etsn.eu/}{European Talent Support Network}}
+\cvitem{2007 -- 2013}{\href{http://www.linkgroup.hu/}{Developer, content manager and maintainer of LinkGroup, the homepage of a biochemistry and network oriented research group led by \href{https://en.wikipedia.org/wiki/Peter_Csermely}{Péter Csermely}}}
+\cvitem{2007 -- 2012}{Member of Bolyai College, the elite college of the Science Faculty}
+
+\end{document}
