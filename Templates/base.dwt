@@ -11,27 +11,29 @@
 <!-- TemplateEndEditable -->
 <meta name="author" content="Dániel Tüzes">
 <!-- Bootstrap core CSS -->
-<link href="http://metal.elte.hu/~tuzes/personal/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://metal.elte.hu/~tuzes/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- What are you looking for so desperately in my code? -->
 <style>
 body {padding-top: 56px;}
 .hyphen_justify {hyphens: auto; text-align: justify;}
 .anchor:before, h1:before, h2:before, h3:before {display: block; content: ""; height: 80px; margin: -80px 0 0;}
+    #reference :target {background-color: #FFE6C6;}
+    figure {text-align: center; margin-left: auto; margin-right: auto;}
+    figcaption {font-size: 90%; width: 80%; margin-left: auto; margin-right: auto; text-align: left;}
 </style>
 </head>
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="150">
 	<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container"> <a class="navbar-brand" href="http://metal.elte.hu/~tuzes/personal">Dániel Tüzes' webpage</a>
+  <div class="container"> <a class="navbar-brand" href="http://metal.elte.hu/~tuzes">Dániel Tüzes' webpage</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <!-- TemplateBeginEditable name="active_main_menu" -->
-          <li class="nav-item"> <a class="nav-link" href="http://metal.elte.hu/~tuzes/personal">CV <span class="sr-only">(current)</span></a></li>
-          <li class="nav-item"> <a class="nav-link" href="research/">Research</a></li>
-          <li class="nav-item pr-5"> <a class="nav-link" href="http://metal.elte.hu/~tuzes/personal/contact">Contact</a></li>
-          <li class="text-hide mt-2" style="background-image: url('http://metal.elte.hu/~tuzes/personal/img/hu.svg'); height: 24px; width: 32px" >Hungarian - magyarul</li>
-          <li class="nav-item"> <a class="nav-link" href="#">CV</a></li>
+          <li class="nav-item"> <a class="nav-link" href="http://metal.elte.hu/~tuzes">CV <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"> <a class="nav-link" href="http://metal.elte.hu/~tuzes/research">Research</a></li>
+          <li class="nav-item pr-5"> <a class="nav-link" href="http://metal.elte.hu/~tuzes/contact">Contact</a></li>
+          <li class="text-hide mt-2" style="background-image: url('http://metal.elte.hu/~tuzes/img/hu.svg'); height: 24px; width: 32px" >Hungarian - magyarul</li>
           <li class="nav-item"> <a class="nav-link" href="#">Oktatás</a></li>
         <!-- TemplateEndEditable -->
       </ul>
@@ -55,14 +57,19 @@ body {padding-top: 56px;}
 	<!-- Footer -->
 <footer class="py-4 bg-dark">
   <div class="container">
-    <p class="m-0 text-center text-white"><a href="callto:003613722805">+36-1-372-2805</a> | <a href="mailto:tuzes@metal.elte.hu">tuzes@metal.elte.hu</a> | <a href="vendor/LICENSE.txt">copyright</a></p>
+    <p class="m-0 text-center text-white"><a href="callto:003613722805">+36-1-372-2805</a> | <a href="mailto:tuzes@metal.elte.hu">tuzes@metal.elte.hu</a> | <a href="http://metal.elte.hu/~tuzes/vendor/LICENSE.txt">copyright</a></p>
   </div>
   <!-- /.container --> 
 </footer>
 
 <!-- Still looking for something? Just send a mail, I will tell you. -->
 <!-- Bootstrap core JavaScript -->
-<script src="http://metal.elte.hu/~tuzes/personal/vendor/jquery/jquery.min.js"></script> 
-<script src="http://metal.elte.hu/~tuzes/personal/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://metal.elte.hu/~tuzes/vendor/jquery/jquery.min.js"></script> 
+<script src="http://metal.elte.hu/~tuzes/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+$(function () {
+    $("[rel='tooltip']").tooltip();
+    });
+</script>
 </body>
 </html>

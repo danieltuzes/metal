@@ -1,38 +1,405 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/base.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Tüzes Dániel</title>
-<link href="Scripts-n-styles/main.css" rel="stylesheet" type="text/css" />
-<link href="Scripts-n-styles/fonts.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- InstanceBeginEditable name="description" -->
+<meta name="description" content="Dániel Tüzes' webpage; CV; publications; contact, research interests.">
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Dániel Tüzes - CV</title>
+<!-- InstanceEndEditable -->
+<meta name="author" content="Dániel Tüzes">
+<!-- Bootstrap core CSS -->
+<link href="http://metal.elte.hu/~tuzes/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- What are you looking for so desperately in my code? -->
+<style>
+body {padding-top: 56px;}
+.hyphen_justify {hyphens: auto; text-align: justify;}
+.anchor:before, h1:before, h2:before, h3:before {display: block; content: ""; height: 80px; margin: -80px 0 0;}
+    #reference :target {background-color: #FFE6C6;}
+    figure {text-align: center; margin-left: auto; margin-right: auto;}
+    figcaption {font-size: 90%; width: 80%; margin-left: auto; margin-right: auto; text-align: left;}
+</style>
 </head>
-
-<body>
-<nav> <a href="/~tuzes/index.html">Nyitóoldal</a> | <a href="/~tuzes/phd/index.html">avalanche2</a> | <a href="/~tuzes/phd/pattern.html">avalanche3</a> | <a href="http://metalog.elte.hu/~tuzes/">CPU statisztika</a></nav>
-<h1>Tartalom</h1>
-<p>Kézzel szerkesztett, statikus oldalaim az alábbi linkekről érhetőek el.</p>
-<h2>PhD</h2>
-<ul>
-  <li>Anyagfizikai szimuláció
-    <ul>
-      <li>eredeti SCPM model, avalanche 1 és 2
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="150">
+	<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container"> <a class="navbar-brand" href="http://metal.elte.hu/~tuzes">Dániel Tüzes' webpage</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <!-- InstanceBeginEditable name="active_main_menu" -->
+          <li class="nav-item active"> <a class="nav-link" href="http://metal.elte.hu/~tuzes">CV <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"> <a class="nav-link" href="http://metal.elte.hu/~tuzes/research">Research</a></li>
+          <li class="nav-item pr-5"> <a class="nav-link" href="http://metal.elte.hu/~tuzes/contact">Contact</a></li>
+          <li class="text-hide mt-2" style="background-image: url('http://metal.elte.hu/~tuzes/img/hu.svg'); height: 24px; width: 32px" >Hungarian - magyarul</li>
+          <li class="nav-item"> <a class="nav-link" href="http://metal.elte.hu/~tuzes/oktatas">Oktatás</a></li>
+        <!-- InstanceEndEditable -->
+      </ul>
+    </div>
+  </div>
+</nav>
+	
+	<div class="container" style="position: relative">
+  <div class="row">
+    <div class="col-md-8 mb-5">
+		<h1 class="mt-4 mb-2"><!-- InstanceBeginEditable name="Header" -->Dániel Tüzes <a href="mailto:tuzes@metal.elte.hu" title="Send an e-mail">✉ </a> <img src="img/profile_wf.jpg" width="146" height="191" alt="" style="float:right" class="m-3"/><!-- InstanceEndEditable --></h1>
+		<!-- InstanceBeginEditable name="Left column content" --><p class="lead mb-5">Research physicist in continuum<br>
+ and condensed matter physics</p>
+      <h2 id="biography">Biography <a class="btn btn-primary" href="CV/resume_A_wp.pdf">Download in PDF</a></h2>
+      <hr>
+      <p class="hyphen_justify">Dániel Tüzes is a Ph.D postgraduate student, earned his title in the field of physics in May, 2019. He did his research at Eötvös University, Budapest and at Friedrich Alexander Universität Nürnberg-Erlangen. His research interest includes stochastic simulations and modelling of non-conservative systems and verifying the predictions by experimental investigation. He exploits the efficiency of C++ and the compute power of GPGPU in his stochastic simulations.</p>
+      <p class="hyphen_justify"><em>Theoretic aspects:</em> describing dislocation systems as a non-conservative N-body problem; using mean-field or local density approximation and finding the corresponding equations of motion. Derive predictions of the constructed models investigable by experiments.</p>
+      <p class="hyphen_justify"><em>Numerical aspects:</em> solving the partial differential equations describing the equation of motion in a numeric way requires effective coding achieved with C++. Dániel Tüzes is enthusiastic in exploiting the advantages of GPU programming in simulations.</p>
+      <p class="hyphen_justify"><em>Experimental aspects:</em> the predictions of the models can be verified by experiments using in-situ nanoindentation of single crystals with coupled acoustic emission detection.</p>
+      <p class="hyphen_justify"><strong>Interest keywords</strong>: stochastic noise, Monte Carlo simulation, partial differential equations (PDE), correlation analysis, Fourier analysis, linear stability analysis, C++, GPGPU </p>
+      <h3 id="education">Education</h3>
+      <table class="table mb-5" title="Education" id="reference">
+        <tbody>
+          <tr>
+            <td style="text-align: right; width: 25%"><strong>Ph.D. in Physics<br>
+            2019<br></strong>
+            </td>
+            <td><p><em>Eötvös University</em>, Budapest and<br>
+              <em>Friedrich Alexander University</em>, Nuremberg<br>
+                Materials science and condensed matter physics<br>
+                Thesis: Stochastic properties of dislocation motion and rearrangement; Qualification: summa cum laude. GPA: 5.00; scale: 1 to 5.</p>
+            <p><a href="http://metal.elte.hu/~tuzes/tantargy/thesis.pdf" class="btn btn-primary btn-sm">Download the thesis</a></p></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>M.Sc. in Physics<br>
+2012</strong></td>
+            <td><p><em>Eötvös University</em>, Budapest</p>
+              <p>Research physicist training program; Atomic and Molecular Physics<br>
+            Thesis: Determining polarization of dislocation ensembles.<br>
+            GPA: 4.97; scale: 1 to 5.              </p></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>B.Sc. in Physics<br>
+            2010</strong></td>
+            <td><p><em>Eötvös University</em>, Budapest</p>
+            <p>GPA: 4.87; scale: 1 to 5.</p></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="experience">Experience</h3>
+      <h4>Vocational</h4>
+		<table class="table mb-5" title="vocational experience">
+        <tbody>
+          <tr>
+            
+          </tr>
+          <tr>
+            <td style="text-align: right; width: 25%"><strong>2012 - 2019<br>
+            PhD Student<br>
+            Eötvös University, Budapest</strong></td>
+            <td><p>Teacher assistant and lecturer in the field of Mechanics</p>
+              <p>International collaboration in research groups</p>
+              <p><strong>Detailed achievements:</strong></p>
+              <ul>
+                <li>wrote  stochastic  simulations to integrate non-deterministic PDEs</li>
+                <li>improved the efficiency of existing PDE solver by a factor 2 using mathematical identities</li>
+                <li>improved code efficiency by a factor from 2 to 5, by eliminating cache mismaches</li>
+                <li>implemented the stochastic model on GPU</li>
+                <li>developed a more impressive, detailed, sophisticated and sensitive way of analyzing patterns on a 2D scalar field</li>
+                <li>constructed study material from scratch; prepared setups for demonstrations and fast, live data visualization</li>
+                <li>initiated a new investigation topic in an international research collaboration with an output of a PRB article</li>
+              </ul>
+            <p><strong>Achieved skills:</strong></p>
+            <ul>
+              <li>advanced level programming in C++
+                <ul>
+                  <li>wrote code for different operating systems</li>
+                  <li>used different compilers and options for different target systems and purposes</li>
+                  <li>used STL intensively, along with industry-standard libraries, for example FFTW, LAPACK and CUDA</li>
+                  <li>used classes, templates, lambdas</li>
+                </ul>
+              </li>
+              <li>advanced level scripting in gnuplot, producing informative and impressive figures for data visualization</li>
+              <li>creating documentations in LaTeX, pandoc and different flavours of Markdown</li>
+              <li>high level of collaboration and cooperation, the ability to socialize and involve lonely researchers in the workgroup</li>
+              <li> intermediate level scripting in bash, regular expressions and git</li>
+            </ul></td>
+          </tr>
+        <tr>
+          <td style="text-align: right; width: 25%"><strong>2014 - 2016<br>
+          PhD Student<br>
+          Friedrich-Alexander Universität, Nürnberg-Erlangen</strong></td>
+          <td><p>Guest PhD student and invited researcher</p>
+          <p><strong>Achievements and skills</strong></p>
+          <ul>
+            <li>successful international cooperation resulting in two papers, one of them is published in PRB</li>
+            <li>working in an international and multicultural environment</li>
+            <li>fluent use of English</li>
+            <li>basic Python programming</li>
+          </ul></td></tbody></table>
+		<h4>Miscellaneous</h4>
+		<table class="table mb-5" title="miscellaneous experience">
+  <tbody>
+    <tr>
+      <td width="25%" style="text-align: right"><strong>7.2019 - 9.2019<br>
+Production leader and manager<br>
+Franz-Fertig - DUNAPOL</strong></td>
+      <td><p>After a major internal and external attack on the company DUNAPOL, he reconstructed the information technology system at DUNAPOL, commissioned by Franz-Fertig. He investigated the used technology and methods how the company was supposedly working and measured the damages. He recreated the IT infrastructure, including the automated production management system, and by involving database specialist, he repaired the damaged files. With the assistance of the company owner, he coordinated the transportation between the parent company and the subsidiary, ordered and arranged work for the employees and helped managing the acquisitions and the invoicing.</p>
+        <p><strong>Achieved skills:</strong></p>
         <ul>
-          <li><a href="phd/index.html">összefoglalója</a></li>
-          <li><a href="phd/prog.html">programozási előremenetele</a></li>
-        </ul>
-      </li>
-      <li><a href="phd/pattern.html">Mintázatos model (avalanche 3)</a></li>
-    </ul>
-  </li>
-<li><a href="https://metalog.elte.hu/nextcloud/index.php/s/iB65YB6Zpz5EeNR">Foundations of Computational Materials Science</a></li> 
-</ul>
-<h2>MSc</h2>
-<ul>
-  <li><a href="thesis.pdf">MSc-s diplomamunkám</a><a href="read.html"></a> </li>
-  <li><a href="tantargy/szmod/index.html">Számítógépes modellezés c. óra előremenetele</a></li>
-  <li><a href="tantargy/soktestII/index.html">Soktestprobléma II órai jegyzetem</a><a href="https://metalog.elte.hu/nextcloud/index.php/s/j8iMWpeABmZBg5N">.</a></li>
-</ul>
-<p>Feltöltenél valamit? Töltsd fel <a href="https://metalog.elte.hu/nextcloud/index.php/s/zTnrhKKVFTlShpj">a tanszék nextcloud szerverére</a>! Az én fiókomba kerülnek a fileok.</p>
-<p>Hej, psszt! Kell egy kis tárhely? Amíg nem veszem észre, <a href="https://metalog.elte.hu/nextcloud/index.php/s/9daffzCXstAtTQE">ide feltöltheted</a>.</p>
+          <li>working in an employee - employer relationship</li>
+          <li>ordering and arranging tasks for workers below him</li>
+          <li>high workload: 12hrs a day, 7 day a week for couple of weeks</li>
+          <li>using German and Hungarian side by side</li>
+        </ul></td>
+    </tr>
+  </tbody>
+</table>
+
+      <h3 id="publications">Publications</h3>
+      <h4>Peer reviwed journals</h4>
+      <ol>
+        <li>Wu, RH ; <strong>Tüzes, D</strong> ;  Ispanovity, PD ; Groma, I ; Hochrainer, T ; Zaiser, M<br>
+          Instability of dislocation fluxes in a single slip: Deterministic and  stochastic models of dislocation patterning<br>
+          <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.98.054110">PHYSICAL REVIEW B 98 : 5 Paper: 054110 , 15 p. (2018)</a>; <a href="https://arxiv.org/pdf/1708.05533" >arxiv PDF</a></li>
+        <li>István, Hegyi Ádám ;  Dusán, Ispánovity Péter ; Knapek, Michal ;<strong> Tüzes, Dániel</strong> ; Máthis, Krisztián ;  Chmelík, František ; Dankházi, Zoltán ; Varga, Gábor ; Groma, István<br>
+          Micron-Scale Deformation: A Coupled In Situ Study of Strain Bursts and Acoustic  Emission<br>
+          <a href="https://www.cambridge.org/core/journals/microscopy-and-microanalysis/article/micronscale-deformation-a-coupled-in-situ-study-of-strain-bursts-and-acoustic-emission/DAF84F7E4CC7C2A211E39A1FFBCCB2D0">MICROSCOPY AND MICROANALYSIS 23 : 6 pp. 1076-1081. , 6 p. (2017)</a>; <a href="https://arxiv.org/pdf/1604.01815">arxiv PDF</a></li>
+        <li><strong>Tüzes, D</strong> ; Ispánovity, PD  ; Zaiser, M<br>
+          Disorder is good for you: the influence of local disorder on strain  localization and ductility of strain softening materials<br>
+          <a href="https://link.springer.com/article/10.1007%2Fs10704-017-0187-1">INTERNATIONAL JOURNAL OF FRACTURE 205 : 2 pp. 139-150. , 12 p. (2017)</a>; <a href="https://arxiv.org/pdf/1604.01821" >arxiv PDF</a></li>
+        <li>Ispánovity, PD ; <strong>Tüzes, D </strong>; Szabó, P ; Zaiser, M ; Groma, I<br>
+          Role of weakest links and system-size scaling in multiscale modeling of  stochastic plasticity<br>
+          <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.95.054108">PHYSICAL REVIEW B 95 : 5 Paper: 054108 , 13 p. (2017)</a>; <a href="https://arxiv.org/pdf/1604.01645">arxiv PDF</a></li>
+        <li>Groma, I ; <strong>Tüzes, D</strong> ;  Ispánovity, PD<br>
+          Asymmetric X-ray line broadening caused by dislocation polarization induced by  external load<br>
+          <a href="https://www.sciencedirect.com/science/article/pii/S1359646213000110">SCRIPTA MATERIALIA 68 : 9 pp. 755-758. , 4 p. (2013)</a>; <a href="../docs/pre AsymmetricX-ray line broadening caused by dislocation polarization induced by external load.pdf">early version PDF</a></li>
+      </ol>
+		<h4>Books, lecture notes</h4>
+		<ol class="mb-5">
+		  <li>Analysis I - III: The official coursebook for physicists at Eötvös University (Hungarian)<br>
+		    Original title: 
+		  &quot;Analízis jegyzetek I-III&quot;. ISBN: (soon) <a href="http://web.cs.elte.hu/~tarcsay/analizis-jegyzetek.pdf">Download in PDF</a></li>
+		  <li>Mechanics practice: Short summary of the lecture notes and examples for calculation (Hungarian)<br>
+		    Original
+		  title: &quot;Mechanika (emelt szint), gyakorlat&quot;. <a href="https://metalog.elte.hu/nextcloud/index.php/s/AKqe8ZxjCswPrJE">Download in PDF</a></li>
+		  <li>Continuum mechanics practice: introduction to deformations and strains, and examples for calculation (Hungarian)<br>
+		    Original title: &quot;Folytonos közegek mechanikája  (emelt szint), gyakorlat&quot;. <a href="https://metalog.elte.hu/nextcloud/index.php/s/QcPbMpB6cR6MsNE">Download in PDF</a></li>
+		  <li>Quantum many body physics: a lecture note for MSc students. Lecturer: Gergely Szirmai and András Csordás (Hungarian)<br>
+	      Original title: &quot;Soktestprobléma II&quot;. <a href="http://metal.elte.hu/~tuzes/tantargy/soktestII/elso_negyedev.pdf">Download in PDF</a> </li>
+      </ol>
+      <h3 id="talks_and_presentations">Talks and presentations</h3>
+      <table class="table mb-5" title="Talks and presentations">
+        <tbody>
+          <tr>
+            <td style="text-align: right; width: 25%"><strong>Budapest, Hungary<br>
+              24th, May, 2018</strong></td>
+            <td>Dislocation patterns in a 2D stochastic model<br>
+              <small> Original title: "Diszlokcáiómintázatok 2D-s sztochasztikus modellben";<br>
+              Presentation; report for the New National Excellence Program</small></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>Budapest, Hungary<br>
+              27th, February, 2018</strong></td><td> Dislocation patterning in a 2D stochastic continuum model<br>
+              <small> Original title: "Diszlokcáiómintázatok 2D-s sztochasztikus modellben";<br>
+              Presentation; seminar talk at the Eötvös University, Department of Materials Physics</small></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>Nuremberg, Germany<br>
+              2nd, February, 2018</strong></td><td>Dislocation patterning in a 2D stochastic continuum model<br>
+              <small> Presentation; seminar talk at FAU, Institute of Materials Simulation</small></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>Vienna, Austria<br>
+              10-12th, November, 2017</strong></td><td> Dislocation patterning in a 2D stochastic continuum model<br>
+              <small> Presentation; 9th Seminar for Central European PhD Students – Research in Materials Science</small></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>Lugano, Switzerland<br>
+              1st, March, 2017</strong></td><td>A mesoscopic stochastic model for micron-scale plasticity<br>
+              <small> Presentation; CECAM, Challenges in crystal plasticity: from discrete dislocations to continuum models</small></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>Budapest, Hungary<br>
+              18th, October, 2016</strong></td><td>The role of disorder in dislocation localization<br>
+              <small> Original title: "A rendezetlenség szerepe a deformáció lokalizációjában"<br>
+              Presentation; seminar talk at Eötvös University, Department of Materials Physics</small></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>Prague, Czech Republic<br>
+              19-22nd, October, 2014</strong></td><td>A mesoscopic stochastic model for micron-scale plasticity<br>
+              <small> Presentation; 9th Seminar for Central European PhD Students – Research in Materials Science</small></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>Muenchen, Germany<br>
+              15th, October, 2014</strong></td><td>Micropillar compressions and a mesoscopic stochastic model for micron-scale plasticity<br>
+              <small> Presentation; BAYHOST Seminar</small></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>Berkeley, California<br>
+              6-10th, October, 2014</strong></td><td>A mesoscopic stochastic model for micron-scale plasticity<br>
+              <small>Poster section; Proceedings of the 7th international conference on multiscale materials modeling, MMM-7</small></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>Çeşme, Turkey<br>
+              2-4th, February, 2014</strong></td><td>A mesoscopic stochastic model for micron-scale plasticity<br>
+              <small> Poster section; 3rd International Workshop on Physics Based Material Models and Experimental Observations, IWPMEO</small></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="Scholarships">Scholarships and awards</h3>
+      <table class="table mb-5" title="Talks and presentations">
+        <tbody>
+          <tr>
+            <td style="text-align: right; width: 25%"><strong>2018-2019</strong></td><td>two-year research scholarship<br>
+            <small>granted by the National Competitiveness and Excellence Program</small></td>
+          </tr>
+			<tr>
+            <td style="text-align: right"><strong>2017/2018</strong></td><td>1 year "New National Excellence Program scholarship"<br>
+              <small>granted by the Ministry of Human Capacities (sic)</small></td>
+          </tr>
+			<tr>
+            <td style="text-align: right"><strong>2016/2017</strong></td><td>1 year research scholarship granted by <a href="http://www.matsim.techfak.uni-erlangen.de/staff/prof-dr-michael-zaiser.shtml">Prof. Michael Zaiser</a></td>
+          </tr>
+			<tr>
+			  <td style="text-align: right"><strong>2015/2016</strong></td><td>1 year PhD scholarship granted by <a href="https://www.uni-regensburg.de/bayhost/english/index.html">BayHost</a></td>
+		  </tr>
+			<tr>
+			  <td style="text-align: right"><strong>2012-2017</strong></td><td>PhD scholarship granted by the Hungarian State</td>
+		  </tr>
+			<tr>
+			  <td style="text-align: right"><strong>2011/2012
+			  </strong></td><td>Excellence of Faculty</td>
+		  </tr>
+			<tr>
+			  <td style="text-align: right"><strong>2011/2012</strong></td><td>Fellowship granted by the Republic</td>
+		  </tr>
+			<tr>
+			  <td style="text-align: right"><strong>2009/2010</strong></td>
+			  <td>Fellowship granted by the Republic</td>
+		  </tr>
+			<tr>
+            <td style="text-align: right"><strong>2008</strong></td>
+            <td>2nd place at <a href="https://ortvay.elte.hu/main.html">Rudolf Ortvay International Competition in Physics</a></td>
+          </tr>
+        </tbody>
+      </table>
+<h3 id="teaching">Teaching <span class="small">(last two years)</span></h3>
+      <table class="table mb-5" title="teaching activities in the last two years" >
+		  
+        <tbody>
+        <tr>
+          <td style="text-align: right; width: 25%"><strong>Spring 2018/2019</strong>
+          </td><td>
+            Instructor at Continuum Mechanics practice<br>
+            Demonstrator at Electromagnetism<small></small> lecture
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: right"><strong>Fall 2018/2019</strong>
+          </td><td>Instructor at Mechanics practice</td>
+        </tr>
+          <tr>
+            <td style="text-align: right"><strong>Spring 2017/2018</strong>
+            </td><td>Instructor at Continuum Mechanics practice<br>
+            Demonstrator at Continuum Mechanics lecture</td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>Fall 2017/2018</strong>
+            </td><td>Instructor at  Mechanics practice<br>
+            Demonstrator at  Mechanics lecture</td>
+          </tr>
+        </tbody>
+      </table>
+<h3 id="community_services">Community services and affiliations</h3>
+		<table class="table mb-5" title="teaching activities in the last two years" >
+		  
+        <tbody>
+        <tr>
+          <td style="text-align: right; width: 25%"><strong>2008 -</strong></td><td>Organizer in the <a href="https://durerinfo.hu/">Dürer Competition in Mathematics, Physics and Chemistry</a><br>
+            <small>A comptetition for secondary school students</small></td>
+        </tr>
+        <tr>
+          <td style="text-align: right"><strong>2017 -</strong></td><td>Mentor in the <a href="http://hypt.elte.hu/">Hungarian team</a> of the <a href="http://iypt.org/">International Young Physicists Tournament</a></td>
+        </tr>
+          <tr>
+            <td style="text-align: right"><strong>2008 -</strong></td><td>Founder and maintainer of <a href="http://fizweb.elte.hu">FizWeb</a><br>
+              <small>The largest lecture note, example, exercise and book sharing platform for physicists at Eötvös University</small></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>2013 - 2019</strong></td>
+            <td>Content manager and maintainer of <a href="http://www.talentcentrebudapest.eu/">European Talent Center Budapest</a><br>
+            <small>EUTCB is founded to foster and coordinate the joint European talent support activities</small></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>2016 - 2018</strong></td>
+            <td>Content manager and maintainer of the <a href="http://echa.info/">European Council for High Ability</a> and <a href="http://etsn.eu/">European Talent Support Network</a></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>2008 - 2014</strong></td>
+            <td>Content manager and maintainer of the <a href="http://tehetsegpont.hu/en">National Talent Support Council</a></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>2007 - 2013</strong></td>
+            <td>Developer, content manager and maintainer of <a href="http://linkgroup.hu">LINK-group</a><br>
+           <small>the homepage of a biochemistry and network oriented research group  led by<a href="https://en.wikipedia.org/wiki/Peter_Csermely"> Péter Csermely</a></small></td>
+          </tr>
+          <tr>
+            <td style="text-align: right"><strong>2007 - 2012</strong></td>
+            <td>Member of Bolyai College, the elite college of the Science Faculty</td>
+          </tr>
+        </tbody>
+      </table>
+<h3 id="contact">Contact <a class="btn btn-primary ml-3" href="tuzes_daniel.vcf">Download in vCard</a>		</h3>
+		<table class="table mb-5 table-hover" title="e-mail, professional profiles, cell phone, office phone and postal address">
+		  <tbody>
+		    <tr>
+		      <td style="text-align:right; width: 25%"><strong>E-mail</strong>
+		      </td><td><a href="mailto:tuzes@metal.elte.hu">tuzes@metal.elte.hu</a></td>
+	        </tr>
+		    <tr>
+		      <td style="text-align:right"><strong>Professional profiles</strong>
+		      </td><td><a href="https://scholar.google.hu/citations?hl=en&user=CCrwBwMAAAAJ">Google Scholar</a>; <a href="https://www.researchgate.net/profile/Daniel_Tuezes/info">ResearchGate</a>; <a href="https://www.linkedin.com/in/dániel-tüzes-87ab76103/">LinkedIn</a></td>
+	        </tr>
+		    <tr>
+		      <td style="text-align:right"><strong>Phone (cell)</strong>
+		      </td><td><a href="callto:+36 70 335 8043">+36 70 335 8043</a>; <a href="callto:+49 1525 7833289">+49 1525 7833289</a></td>
+	        </tr>
+		    <tr>
+		      <td style="text-align:right"><strong>Phone (office)</strong>
+		      </td><td><a href="callto:+361 372 2805">+36 1 372 2805</a></td>
+	        </tr>
+		    <tr>
+		      <td style="text-align:right"><strong>Postal address</strong>
+		      </td><td><a href="https://goo.gl/maps/pW1S4Ge7HMm">Eötvös University, Dept. of Mat. Physics<br>
+		        Room 4.71, Pázmány Péter sétány 1/A<br>
+		        1117, Budapest, Hungary</a></td>
+	        </tr>
+	      </tbody>
+	    </table><p style="text-align: center">
+<iframe title="Map of the region of Eötvös University, Dept. of Mat. Physics" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d674.2024468445691!2d19.061779829267138!3d47.47413599869848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDI4JzI2LjkiTiAxOcKwMDMnNDQuNCJF!5e0!3m2!1sen!2shu!4v1553346921247" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></p>
+	  <!-- InstanceEndEditable -->
+    </div>
+    <div class="col-md-4 mb-5 d-none d-md-block">
+        <nav id="myScrollspy" class="nav-pills navbar bg-light flex-column align-items-start" style="position:sticky; top: 5rem"><!-- InstanceBeginEditable name="secondary navigation panel" --><a class="nav-link" href="#biography">Biography</a> <a class="nav-link" href="#education">Education</a> <a class="nav-link" href="#experience">Experience</a> <a class="nav-link" href="#publications">Publications</a> <a class="nav-link" href="#talks_and_presentations">Talks and Presentations</a> <a class="nav-link" href="#Scholarships">Scholarships</a> <a class="nav-link" href="#teaching">Teaching</a> <a class="nav-link" href="#community_services">Community services</a> <a class="nav-link" href="#contact">Contact</a><!-- InstanceEndEditable --></nav>
+    </div>
+  </div>
+  <!-- /.row --> 
+  
+</div>
+	<!-- Footer -->
+<footer class="py-4 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white"><a href="callto:003613722805">+36-1-372-2805</a> | <a href="mailto:tuzes@metal.elte.hu">tuzes@metal.elte.hu</a> | <a href="http://metal.elte.hu/~tuzes/vendor/LICENSE.txt">copyright</a></p>
+  </div>
+  <!-- /.container --> 
+</footer>
+
+<!-- Still looking for something? Just send a mail, I will tell you. -->
+<!-- Bootstrap core JavaScript -->
+<script src="http://metal.elte.hu/~tuzes/vendor/jquery/jquery.min.js"></script> 
+<script src="http://metal.elte.hu/~tuzes/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+$(function () {
+    $("[rel='tooltip']").tooltip();
+    });
+</script>
 </body>
-</html>
+<!-- InstanceEnd --></html>
