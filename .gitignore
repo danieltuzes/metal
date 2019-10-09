@@ -6,3 +6,4 @@ Scripts-n-styles/mathjax/
 *.out
 *.gz
 CV/**/*.pdf
+**/_notes/*
