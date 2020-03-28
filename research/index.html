@@ -51,25 +51,29 @@ body {padding-top: 56px;}
         <h2 id="active">Active interests</h2>
         Every project includes several tasks and subtasks therefore I try to focus one project at a time, and switch   between them only couple of times a month at maximum.
         <h3 id="DDD_patterning">Dislocation patterning in DDD</h3>
-        Although in experimental physics the phenomenon of dislocation patterning is well known for decades, there are still no N-body simulations out there showing similar behaviour.
+        Although in experimental physics the phenomenon of dislocation patterning is well known for decades, there are still no N-body simulations out there showing similar behavior.
         <ol><li>Why N-body dislocation simulations don't show dislocation patterning?</li>
           <li>How could we detect if there were any?</li>
           <li>How could we make N-body simulations to produce dislocation patterning?</li>
         </ol>
+        <p>In my research I collected couple of methods used in this field to evaluate dislocation configurations and also implemented two new ones. The evaluation on randomized and patternized dislocation configurations showed the difference and effectiveness of the different evaluation techniques.</p>
+        <p>With a sensitive enough evaluation method one can show that discrete dislocation systems indeed exhibit pattern formation and the characteristic length scales with the average dislocation spacing instead of the simulation space for large enough system sizes.</p>
+        <figure><img src="figs/dislocation_densities_box_counting.gif">
+        <figcaption>Calculating dislocation densities from a discrete distribution of dislocations with the method called box counting. This method is easy to understand and to implement. The resolution is 8×8 and 32 positive and negative dislocations are simulated.</figcaption></figure>
         
         <h3 id="CDDD_solute_patterning">Dislocation patterning and solute atoms in CDDD</h3>
-        <p>Dislocation pattering on the continuum level is more advanced than on discrete level: dislocation patterning is predicted and numerically investigated already. How could one incorporate solute atoms into the picture? One can express the coupled partial differential equations for dislocations and solute atoms including their self and cross interaction, but those equations are still complicated, even in their linearized form. The number of parameters is also high, and it makes the investigation not simply difficult but also <span lang="en"><span title="">lengthy</span></span>. </p>
+        <p>The mergence of dislocation patterns on  a continuum level can be shown with a minimalistic 2D single slip system, the characteristic scale of patterns is well predicted and has been numerically investigated already. How could one incorporate solute atoms into the picture? One can express the coupled partial differential equations for  dislocation densities and for the non-pinned solute atom density, including their self and cross interaction. The resulting coupled differential equations are complicated even in their linearized form. The number of parameters is also high, and it makes the investigation not simply difficult but also <span lang="en"><span title="">lengthy</span></span>. </p>
 		<h2 id="previous">Previous works</h2>
 		<p>There are research topics I were involved in before, but I put no more focus on these fields.</p>
 		<h3 id="strain_localisation">Strain localisation</h3>
 		<p>In my work published in <a href="#disorder">Disorder is good for you ...</a> a model was proposed for the deformation of a locally disordered but macroscopically 
-		  homogeneous material which shows softening during plastic deformation. A measure for the internal structural disorder was introduced and its role in strain localisation was investigated with respect to the formation of macroscopic shear bands in such materials.	The study has shown strong positive effect of increased heterogeneity and randomness on the deformation properties. </p><figure><img src="strain_loc.png" width="600" height="513" alt=""/><figcaption>Plastic strain patterns at the highest external stress, right before the onset of softening (left), and at the end of the simulation, at system failure (right) at higher disorder (up) and lower disorder (down).</figcaption></figure></p>
+		  homogeneous material which shows softening during plastic deformation. A measure for the internal structural disorder was introduced and its role in strain localisation was investigated with respect to the formation of macroscopic shear bands in such materials.	The study has shown strong positive effect of increased heterogeneity and randomness on the deformation properties. </p><figure><img src="figs/strain_loc.png" width="600" height="513" alt=""/><figcaption>Plastic strain patterns at the highest external stress, right before the onset of softening (left), and at the end of the simulation, at system failure (right) at higher disorder (up) and lower disorder (down).</figcaption></figure></p>
 	    <h3 id="asymmetric_xray">Asymmetric X-ray line broadening</h3>
 	    <p >In my work published in <a href="#asymmetric">Asymmetric X-ray line broadening ...</a> I experimentally investigated the phenomenon   of asymmetric X-ray line broadening caused by dislocation
         polarization. In the experiments I performed, I used single Cu crystals and put external stress on the samples while I was measuring their X-ray diffraction pattern with high angular precision.
-            <figure><img src="polarization.png" width="298" height="236" alt=""/><figcaption>Four possible dipole configurations (a–d) under external shear change their polarization.</figcaption></figure>
+            <figure><img src="figs/polarization.png" width="298" height="236" alt=""/><figcaption>Four possible dipole configurations (a–d) under external shear change their polarization.</figcaption></figure>
             The dislocation polarization is proportional to the external stress and causes   the  asymmetricity of the X-ray peaks. Therefore, by measuring the X-ray diffraction one can tell the average polarization of the dislocation systems where the constant factor can be called as an effective susceptibility for dislocation systems.
-            <figure><img src="asymetricity.png" width="400" height="302" alt=""/>
+            <figure><img src="figs/asymetricity.png" width="400" height="302" alt=""/>
               <figcaption>The polarization ⟨|s|⟩ as a function of the external stress  for two different pre-deformation levels.</figcaption></figure></p><h2 id="publications">Publications in peer reviwed journals</h2>
       <ol id="reference">
         <li>Wu, RH ; <strong>Tüzes, D</strong> ;  Ispanovity, PD ; Groma, I ; Hochrainer, T ; Zaiser, M<br>
