@@ -19,7 +19,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.82]{geometry}
+\usepackage[scale=0.85]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -32,7 +32,7 @@
 \email{danieltuzes@gmail.com}                               % optional, remove / comment the line if not wanted
 % optional, remove / comment the line if not wanted             % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
-
+%\photo[64pt][0.4pt]{picture}
 % bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
 %   to show numerical labels in the bibliography (default is to show no labels)
 \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
@@ -50,7 +50,7 @@
 \makecvtitle
 \section{Education}
 \textbf{Eötvös University}, \emph{Budapest, Hungary}  \hfill \textbf{2012--2019}\\
-\emph{PhD in Physics} (summa cum laude)\\
+\emph{PhD in Physics}, summa cum laude, GPA 5.00 (scale: 1 to 5)\\
 Materials science and condensed matter physics. Thesis: Stochastic properties of dislocation motion and rearrangement.  % arguments 3 to 6 can be left empty
 
 \vspace{4pt}
@@ -59,38 +59,36 @@ Materials science and condensed matter physics. Thesis: Stochastic properties of
 
 \vspace{4pt}
 \textbf{Eötvös University}, \emph{Budapest, Hungary}  \hfill \textbf{2007--2012}\\
-\emph{M.Sc.\ and B.Sc. in Physics} \textcolor{red}{(GPA ....)}\\
+\emph{M.Sc.\ and B.Sc. in Physics}, GPA 4.97 and 4.87 (scale: 1 to 5)\\
 Atomic and molecular physics. Thesis: Determining polarization of dislocation ensembles.
 
 \section{Skills}
 \begin{itemize}
-\item \textbf{Technical}: Expert level knowledge in modeling complex stochastic and deterministic systems with partial differential equations, model simplification with proper approximations, analysis of asymptotic behavior in small and infinite large systems. Gathering, evaluating and presenting real word noisy data. Expertise in maximum likelihood estimations, numeric PDE solving, equilibrium finding, linear stability analysis, Fourier-analysis, hypothesis testing and setting up different computational models.
+\item \textbf{Technical}: Expert level knowledge in modeling complex stochastic and deterministic systems with partial differential equations, model simplification with proper approximations, analysis of asymptotic behavior in small and infinite large systems. Experienced in gathering, filtering, processing, analyzing, presenting and interpreting noisy data. Expertise in maximum likelihood estimations, numeric PDE solving, equilibrium finding, linear stability analysis, Fourier-analysis, hypothesis testing and setting up different computational models.
 \vspace{4pt}
-\item \textbf{Computer}: Advanced, practical knowledge in C++, used on a daily basis (classes, templates, lambdas, STL and other libraries). Intermediate level scripting practice in Gnuplot to visualize data and plot figures. Intermediate to advanced level in describing languages as LaTeX, Markdown and pandoc. Intermediate level scripting in bash, regular expressions and git, basic usage of Python. Basic level practice in HTML, PHP, MySQL and JS.
+\item \textbf{Computer}: Advanced, practical knowledge in C++ (5+ years of experience), used on a daily basis (classes, templates, lambdas, STL and other libraries). Intermediate level scripting practice in Gnuplot to visualize data and plot figures. Intermediate to advanced level in describing languages as LaTeX, Markdown and pandoc. Intermediate level scripting in bash, awk, regular expressions and git, basic usage of Python. Basic level practice in HTML, PHP, MySQL and JS.
 \vspace{4pt}
 \item \textbf{Language}: English (fluent), Hungarian (native), German (intermediate), French (elementary).
 \end{itemize}
 
 \section{Experience}
-\textbf{Eötvös University}, \emph{Budapest, Hungary}  \hfill \textbf{2012--2019}\\
+\textbf{Eötvös University}, \emph{Budapest, Hungary}  \hfill \textbf{2012--2020}\\
 \textbf{Friedrich Alexander University Nuremberg-Erlangen}, \emph{Nuremberg, Germany}\\
 Teaching assistant, research assistant and lecturer
 \begin{itemize}
 \item Designed and implemented stochastic simulations using non-deterministic PDEs
 \item Improved the efficiency of existing simulations by a factor of 2 using mathematical identities, and by a factor of 5 eliminating cache mismatches; implemented a stochastic model on GPU
 \item Developed a sensitive way of investigating patterns on a 2D scalar field using Fourier-analysis
-\item Prepared fast, live data visualization
-\item Constructed educational material from scratch
+\item Prepared fast, live data visualization and constructed educational material from scratch
 \item Initiated a new investigation topic in an international research group with an output of a PRB article
-\item Coded in C++ for different operating systems; used different compilers and options for different target systems and purposes; used STL intensively, along with industry-standard libraries, such as FFTW, LAPACK, Boost and CUDA; used classes, templates, lambdas
-\item Created scripts in gnuplot, producing informative and figures for data visualization
-\item Created documentations in LaTeX, pandoc and different flavors of Markdown
-\item Collaborated in an international and multicultural environment. Encouraged more involvement of research peers in research projects and social events
+\item Cross-platform C++ programming; used different compilers and options for different target systems and purposes; STL and industry-standard libraries: FFTW, LAPACK, Boost and Thrust::CUDA
+\item Data visualization and documentation using gnuplot, LaTeX, pandoc and Markdown
+% \item Collaborated in an international and multicultural environment. Encouraged more involvement of research peers in research projects and social events
 \end{itemize}
 \vspace{6pt}
 
 \textbf{Franz-Fertig}, \emph{Buchen, Germany}  \hfill \textbf{7.2019 -- 9.2019}\\
-Production leader and manager at Budapest based production site
+Production leader and manager at a Budapest based production site
 
 \begin{itemize}
 \item Restored the information technology system at Dunapol in Budapest after its breakdown under prior management
@@ -126,16 +124,16 @@ Production leader and manager at Budapest based production site
     
 \subsection{Books, lecture notes (Hungarian)}
 \begin{itemize}
-\item Analysis I - III: The official coursebook for physicists at Eötvös University
-\item Mechanics practice: short summary of the lecture notes and examples for calculation 
-\item Continuum mechanics practice: Introduction to deformations and strains, and examples for calculation
-\item Quantum many body physics: A lecture note for MSc students. Lecturer: Gergely Szirmai and András Csordás
+\item Analysis I - III: The official coursebook for physicists at Eötvös University, 173p, ISBN: 978-963-489-089-8
+\item Mechanics practice: short summary of the lecture notes and examples for calculation, 93p
+\item Continuum mechanics practice: Introduction to deformations and strains, and examples for calculation, 47p
+\item Quantum many body physics: A lecture note for MSc students. Lecturer: Gergely Szirmai and András Csordás, 26p
 \end{itemize}
 \vspace{6pt}
-Took part in numerous prestigious international conferences and seminars, held presentations and introduced his research results using posters as well. 
+Took part in numerous prestigious international conferences and seminars, held presentations and introduced the research results using posters too. 
 
 \section{Scholarships and awards}
-\cvitem{2018--2019}{two-year research scholarship (Hungarian Competitiveness and Excellence Program)}
+\cvitem{2018--2020}{two-year research scholarship (Hungarian Competitiveness and Excellence Program)}
 \cvitem{2017/2018}{New Hungarian Excellence Program scholarship (Ministry of Human Capacities)}
 \cvitem{2016/2017}{one-year research scholarship granted by Prof. Michael Zaiser}
 \cvitem{2015/2016}{one-year PhD scholarship granted by BayHost}

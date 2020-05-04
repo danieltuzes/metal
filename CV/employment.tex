@@ -1,0 +1,79 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,USletter,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Dániel}{Tüzes}
+%\title{Resumé}                               % optional, remove / comment the line if not wanted
+
+\address{Eötvös University, Budapest, Hungary}{}{}
+\phone[mobile]{+36 70 335 8043}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\email{danieltuzes@gmail.com}                               % optional, remove / comment the line if not wanted
+% optional, remove / comment the line if not wanted             % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\section{Employment}
+\textbf{Eötvös University}, \emph{Budapest, Hungary}  \hfill \textbf{2012--2020}\\
+\textbf{Friedrich Alexander University Nuremberg-Erlangen}, \emph{Nuremberg, Germany}\\
+Teaching assistant, research assistant and lecturer
+\begin{itemize}
+\item Designed and implemented stochastic simulations using non-deterministic PDEs
+\item Improved the efficiency of existing simulations by a factor of 2 using mathematical identities, and by a factor of 5 eliminating cache mismatches; implemented a stochastic model on GPU
+\item Developed a sensitive way of investigating patterns on a 2D scalar field using Fourier-analysis
+\item Prepared fast, live data visualization and constructed educational material from scratch
+\item Initiated a new investigation topic in an international research group with an output of a PRB article
+\item Cross-platform C++ programming; used different compilers and options for different target systems and purposes; STL and industry-standard libraries: FFTW, LAPACK, Boost and Thrust::CUDA
+\item Data visualization and documentation using gnuplot, LaTeX, pandoc and Markdown
+% \item Collaborated in an international and multicultural environment. Encouraged more involvement of research peers in research projects and social events
+\end{itemize}
+\vspace{6pt}
+
+\textbf{Franz-Fertig}, \emph{Buchen, Germany}  \hfill \textbf{7.2019 -- 9.2019}\\
+Production leader and manager at a Budapest based production site
+
+\begin{itemize}
+\item Restored the information technology system at Dunapol in Budapest after its breakdown under prior management
+\item Investigated the factory's technology and methods to infer working conditions prior the breakdown; measured damages
+\item Within two weeks, set up the original automated production management system, and by involving database specialist, repaired the damaged data
+\item Coordinated cargo deliveries between the parent company and the subsidiary, managed the production workflow, coordinated employees and helped managing acquisitions and invoicing
+\end{itemize}
+\vspace{3pt}
+
+
+\end{document}
