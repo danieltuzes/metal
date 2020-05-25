@@ -1,0 +1,59 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.78]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Daniel}{Tuzes}
+\title{Application letter}                               % optional, remove / comment the line if not wanted
+\address{Pázmány Péter stny 1/A 4.71}{1117 Budapest}{Hungary}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+36~70~335~8043}                   % optional, remove / comment the line if not wanted
+\email{tuzes@metal.elte.hu}                               % optional, remove / comment the line if not wanted
+\homepage{metal.elte.hu/\textasciitilde tuzes/}                         % optional, remove / comment the line if not wanted
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Zurich University of Applied Sciences}{Institute of Data Analysis and Process Design}
+\date{May 19, 2020}
+\opening{Dear Esther Huber,}
+\closing{Yours faithfully,}
+\makelettertitle
+
+A research topic can be never finished, but I reached a point in my post-doctoral research, where I can look back and see how my previous work forms a unit. Although I am satisfied with my topic and field, it is time to move on, and experience more applicable, more industry-oriented fields.
+
+I started my Ph.D.\ research on dislocation avalanches and micron-scale crystal plasticity, which relies on a statistical description of correlated crystalline defect motion. In this work I helped to develop a nanoindentation tool to compress samples in the micron scale. In such experiments, not only one, but tens of similarly conducted compression tests are performed to gain a statistical amount of data from different detectors. During the design process of the nanoindentation tool, I had to understand how the motors and sensors will be controlled, how the data will be collected from the vacuum chamber of the electron microscope. Such experience provided me an insight into engineering. I also developed a simulation program that implements the key features of the continuum description of dislocation systems and exhibits the avalanche-like behavior. I conducted such stochastic simulations for different realizations and analyzed the data from a statistical point of view. This helped me to understand and implement standard statistical tools.
+
+The last and yet active topic of my research involves stochastic simulation of dislocation ensembles. I developed a simulation program for the continuum description of dislocations and evaluated the results concerning to their pattern forming properties. I am just about to finish my last milestone to perform similar simulations with individual dislocations to directly identify the key quantities and properties of dislocation pattern formation. My specific and novel approach was, instead of using and analyzing pair-correlation functions just as others do, to implement a Fourier-analysis technique on the discrete or continuous dislocation arrangement. During the development of this innovative statistical method, I had to start from mathematical textbooks to implement, test, and apply a unique technique. This research area requested the skill to look at an old and well-known problem from a new point of view, and implement a new technique.
+
+I did my Ph.D.\ research in an international research collaboration group and as a teacher assistant I also held some laboratories and courses in physics. In the last years my role in the research group has slightly changed, and now I am responsible for a part of our team’s research and partially supervise some of our students’ research work.
+
+I am eager to explain more about my previous research and to present my skills according to your needs.
+
+\makeletterclosing
+
+\end{document}
