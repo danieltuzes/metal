@@ -1,0 +1,61 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.80]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Daniel}{Tuzes}
+\title{Cover Letter\newline Machine Learning Intern}                               % optional, remove / comment the line if not wanted
+\address{Pázmány Péter stny 1/A 4.71}{1117 Budapest}{Hungary}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+36~70~335~8043}                   % optional, remove / comment the line if not wanted
+\email{tuzes@metal.elte.hu}                               % optional, remove / comment the line if not wanted
+\homepage{metal.elte.hu/\textasciitilde tuzes/}                         % optional, remove / comment the line if not wanted
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Scandit}{HR Management}
+\date{\today}
+\opening{To Whom It May Concern,}
+\closing{Yours faithfully,}
+\makelettertitle
+
+A research topic can be never finished, but I reached a point in my post-doctoral research, where I can look back and see how my previous work forms a unit. Although I am satisfied with my topic and field, it is time to move on, and experience more applicable, more industry-oriented fields.
+
+The internship program I am applying to would be a desirable step towards a successful career in the industry. Scandit is using cutting edge technologies and has the resource to invest in RD, therefore during the internship, I can not only learn and apply new techniques but I can also become acquainted with the work culture of Scandit. After the internship program, I will know at which department of Scandit I can be the most useful.
+
+I started my Ph.D.\ research on dislocation avalanches and micron-scale crystal plasticity, which relies on the statistical description of the correlated motion of dislocations. In this work, I helped to develop experimental setups, where a statistical amount of data from different detectors are collected. I also developed a simulation program that implements the key features of the continuum description of dislocations. I conducted such stochastic simulations for different realizations and analyzed the data from a statistical point of view. This helped me to understand and implement standard statistical tools.
+
+The last and yet active topic of my research is about dislocation pattern formation. I developed a simulation program for the continuum description of dislocations and evaluated the results concerning their pattern forming properties. Nowadays I perform similar simulations with individual dislocations to directly identify the key quantities and properties of pattern formation. My specific and novel approach was, to implement a Fourier-analysis technique on the discrete or continuous dislocation arrangement, instead of using and analyzing pair-correlation functions. During the development of this innovative statistical method, I had to start from mathematical textbooks to implement, test, and apply a unique technique. 
+
+I did my Ph.D.\ research in an international research collaboration group at Friedrich Alexander Universität Nürnberg-Erlangen and at Eötvös University Budapest. In the last years, my role in the research group has slightly changed, and now I am responsible for a part of our team’s research and partially supervise some of our students’ research work.
+
+I am eager to explain more about my previous research and to present my skills according to your needs.
+
+\makeletterclosing
+
+\end{document}
