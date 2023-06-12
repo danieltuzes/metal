@@ -1,14 +1,14 @@
 BEGIN:VCARD
 VERSION:3.0
-FN;:Dániel Tüzes
-N;:Tüzes;Dániel;;;
+FN;:DÃ¡niel TÃ¼zes
+N;:TÃ¼zes;DÃ¡niel;;;
 TEL;TYPE=CELL:+3670 335 8043
-TEL;TYPE=WORK,VOICE:+361 372 2805
-LABEL;;TYPE=WORK:Eötvös University, Dept. of Mat. Physics
-ADR;;TYPE=WORK:;;Room 4.71, Pázmány Péter sétány 1/A;Budapest;Hungary;1117;Budapest
+EMAIL:tuzesdaniel@gmail.com
+LABEL;;TYPE=WORK:EÃ¶tvÃ¶s University, Dept. of Mat. Physics
+ADR;;TYPE=WORK:;;Room 4.71, PÃ¡zmÃ¡ny PÃ©ter sÃ©tÃ¡ny 1/A;Budapest;Hungary;1117;Budapest
 TITLE;:Junior assistant professor
 ROLE;:Research physicist in continuum and condensed matter physics
-ORG;:Eötvös University, Dept. of Mat. Physics
+ORG;:EÃ¶tvÃ¶s University, Dept. of Mat. Physics
 URL;type=WORK;:http://metal.elte.hu/~tuzes/personal
 REV:2019-03-20T16:03:26.093Z
 NOTE:Research physicist in continuum and condensed matter physics
